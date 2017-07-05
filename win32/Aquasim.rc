@@ -1,0 +1,4405 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\AQUASIM.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  \t// Standard components\r\n"
+    "#include ""afxprint.rc""\t// printing/print preview resources\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\AQUASIM.ico"
+IDR_SYSTEMTYPE          ICON                    "res\\aqdoc_w.ico"
+IDR_PLOTCURVES          ICON                    "res\\idr_plot.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW_AQUA
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN_AQUA
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE_AQUA
+        MENUITEM "&Save...\tCtrl+S",            ID_FILE_SAVE_AQUA
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS_AQUA
+        MENUITEM "&Revert to Saved",            ID_FILE_REVERT
+        MENUITEM SEPARATOR
+        MENUITEM "Print Options...",            ID_FILE_PRINTOPT
+        MENUITEM "&Print to File...\tCtrl+P",   ID_FILE_PRINT_AQUA
+        MENUITEM SEPARATOR
+        MENUITEM "Abou&t...",                   ID_FILE_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&System...",                  ID_EDIT_SYSTEM
+        MENUITEM SEPARATOR
+        MENUITEM "&Variables...",               ID_EDIT_VARIABLES
+        MENUITEM "&Processes...",               ID_EDIT_PROCESSES
+        MENUITEM "&Compartments...",            ID_EDIT_COMPARTMENTS
+        MENUITEM "&Links...",                   ID_EDIT_LINKS
+        MENUITEM SEPARATOR
+        MENUITEM "&Numerical Parameters...",    ID_EDIT_NUMERICALPARAMETERS
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete States...",           ID_EDIT_DELETESTATES
+    END
+    POPUP "&Calc"
+    BEGIN
+        MENUITEM "&Simulation...",              ID_CALC_SIMULATION
+        MENUITEM SEPARATOR
+        MENUITEM "Sensitivity &Analysis...",    ID_CALC_SENSITIVITYANALYSIS
+        MENUITEM SEPARATOR
+        MENUITEM "Parameter &Estimation...",    ID_CALC_PARAMETERESTIMATION
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Results...",                 ID_VIEW_RESULTS
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "Close &Dialogs",              ID_VIEW_CLOSEDIALOGS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About AQUASIM...",           ID_APP_ABOUT
+    END
+END
+
+IDR_PLOT_TYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW_AQUA
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN_AQUA
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE_AQUA
+        MENUITEM "&Save...\tCtrl+S",            ID_FILE_SAVE_AQUA
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS_AQUA
+        MENUITEM "&Revert to Saved",            ID_FILE_REVERT
+        MENUITEM SEPARATOR
+        MENUITEM "Print Options...",            ID_FILE_PRINTOPT
+        MENUITEM "&Print to File...\tCtrl+P",   ID_FILE_PRINT_AQUA
+        MENUITEM SEPARATOR
+        MENUITEM "Abou&t...",                   ID_FILE_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&System...",                  ID_EDIT_SYSTEM
+        MENUITEM SEPARATOR
+        MENUITEM "&Variables...",               ID_EDIT_VARIABLES
+        MENUITEM "&Processes...",               ID_EDIT_PROCESSES
+        MENUITEM "&Compartments...",            ID_EDIT_COMPARTMENTS
+        MENUITEM "&Links...",                   ID_EDIT_LINKS
+        MENUITEM SEPARATOR
+        MENUITEM "&Numerical Parameters...",    ID_EDIT_NUMERICALPARAMETERS
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete States...",           ID_EDIT_DELETESTATES
+        MENUITEM SEPARATOR
+        MENUITEM "Copy \tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&Calc"
+    BEGIN
+        MENUITEM "&Simulation...",              ID_CALC_SIMULATION
+        MENUITEM SEPARATOR
+        MENUITEM "Sensitivity &Analysis...",    ID_CALC_SENSITIVITYANALYSIS
+        MENUITEM SEPARATOR
+        MENUITEM "Parameter &Estimation...",    ID_CALC_PARAMETERESTIMATION
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Results...",                 ID_VIEW_RESULTS
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "Close &Dialogs",              ID_VIEW_CLOSEDIALOGS
+        MENUITEM SEPARATOR
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "Close &Plots",                ID_VIEW_CLOSEPLOTS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About AQUASIM...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "N",            ID_FILE_NEW_AQUA,       VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN_AQUA,      VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE_AQUA,      VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  34, 22, 157, 185
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About AQUASIM"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "AQUASIM",IDC_STATIC,61,3,34,8
+    CTEXT           "Computer Program for the Identification",IDC_STATIC,14,
+                    15,128,8
+    CTEXT           "and Simulation of Aquatic Systems",IDC_STATIC,21,25,113,
+                    8
+    CTEXT           "Version 2.0",IDC_TX_VERSION,3,41,151,8,NOT WS_GROUP
+    CTEXT           "Peter Reichert, Jürg Ruchti and Werner Simon",
+                    IDC_STATIC,4,62,147,8
+    CTEXT           "Department of Systems Analysis,",IDC_STATIC,5,72,146,8
+    CTEXT           "Swiss Federal Institute for Environmental",IDC_STATIC,9,
+                    92,134,8
+    LTEXT           "Science and Technology   (EAWAG)",IDC_STATIC,16,103,119,
+                    8
+    CTEXT           "CH - 8600 Dübendorf, Switzerland",IDC_STATIC,20,113,112,
+                    8
+    LTEXT           "Contact Person:",IDC_STATIC,5,128,54,8
+    LTEXT           "Peter Reichert",IDC_STATIC,62,128,48,8
+    LTEXT           "Email:  reichert@eawag.ch",IDC_STATIC,62,137,88,8
+    LTEXT           "Fax:  +41 1 823 5375",IDC_STATIC,62,146,71,8
+    DEFPUSHBUTTON   "OK",IDOK,61,162,32,14,WS_GROUP
+    CTEXT           "Integrated Assessment and Modelling",IDC_STATIC,4,82,
+                    146,8
+END
+
+IDD_EDIT_VARIABLES DIALOGEX 5, 23, 208, 173
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Edit Variables"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LB_VARLIST,5,6,139,150,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEW,151,6,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLICATE,151,22,50,14,WS_DISABLED
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,151,38,50,14,WS_DISABLED
+    PUSHBUTTON      "Edit Type",IDC_BU_EDITTYPE,151,54,50,14,WS_DISABLED
+    PUSHBUTTON      "Exchange",IDC_BU_EXCHANGE,151,70,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,151,86,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDCANCEL,151,138,50,14
+    LTEXT           "Type:",IDC_STATIC,6,158,20,8
+    LTEXT           "",IDC_TX_TYPE,34,158,164,8
+END
+
+IDD_EDIT_PROCESSES DIALOGEX 220, 23, 208, 173
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Edit Processes"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LB_PROCLIST,5,6,139,150,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEW,151,6,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLICATE,151,22,50,14,WS_DISABLED
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,151,38,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,151,54,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDCANCEL,151,138,50,14
+    LTEXT           "Type:",IDC_STATIC,5,158,20,8
+    LTEXT           "",IDC_TX_TYPE,33,158,164,8
+END
+
+IDD_EDIT_COMPARTMENTS DIALOGEX 5, 213, 208, 173
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Edit Compartments"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LB_COMPLIST,5,6,139,150,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEW,151,6,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLICATE,151,22,50,14,WS_DISABLED
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,151,38,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,151,54,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDCANCEL,151,138,50,14
+    LTEXT           "Type:",IDC_STATIC,6,158,20,8
+    LTEXT           "",IDC_TX_TYPE,35,158,163,8
+    PUSHBUTTON      "Activate",IDC_BU_ACT,151,87,50,14,WS_GROUP
+    PUSHBUTTON      "Inactivate",IDC_BU_INACT,151,103,50,14,WS_GROUP
+END
+
+IDD_EDIT_LINKS DIALOGEX 220, 213, 208, 173
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Edit Links"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LB_LINKLIST,5,6,139,150,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEW,151,6,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLICATE,151,22,50,14,WS_DISABLED
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,151,38,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,151,54,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDCANCEL,151,138,50,14
+    LTEXT           "Type:",IDC_STATIC,6,158,20,8
+    LTEXT           "",IDC_TX_TYPE,34,158,164,8
+END
+
+IDD_CALC_SIMULATION DIALOG  440, 0, 296, 153
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Simulation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Initialize",IDC_BU_INITIALIZE,8,132,50,14
+    PUSHBUTTON      "Start/Continue",IDC_BU_START,122,132,51,14
+    DEFPUSHBUTTON   "Close",IDCANCEL,239,132,50,14
+    LTEXT           "Calculation Definitions:",IDC_STATIC,7,4,166,8
+    LTEXT           "active",IDC_STATIC,7,15,22,8
+    LISTBOX         IDC_LB_ACTCALC,7,25,109,101,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "available",IDC_STATIC,178,15,31,8
+    LISTBOX         IDC_LB_AVAILCALC,178,25,110,102,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEW,122,25,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLICATE,122,41,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,122,57,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,122,73,50,14
+    PUSHBUTTON      "Activate",IDC_BU_ACTCALC,122,92,50,14
+    PUSHBUTTON      "Inactivate",IDC_BU_INACTCALC,122,108,50,14
+END
+
+IDD_CALC_SENSANALYSIS DIALOGEX 120, 60, 352, 281
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Sensitivity Analysis"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Parameters:",IDC_STATIC,5,4,40,8
+    LTEXT           "active",IDC_STATIC,5,15,22,8
+    LISTBOX         IDC_LB_ACTPAR,5,24,139,102,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "available",IDC_STATIC,207,15,31,8
+    LISTBOX         IDC_LB_AVAILPAR,209,24,137,102,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Activate",IDC_BU_ACTPAR,152,56,50,14,WS_DISABLED
+    PUSHBUTTON      "Inactivate",IDC_BU_INACTPAR,152,73,50,14,WS_DISABLED
+    LTEXT           "Calculation Definitions:",IDC_STATIC,5,128,90,8
+    LTEXT           "active",IDC_STATIC,5,137,22,8
+    LISTBOX         IDC_LB_ACTCALC,5,147,139,111,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "available",IDC_STATIC,209,137,31,8
+    LISTBOX         IDC_LB_AVAILCALC,209,148,138,111,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEW,152,149,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLICATE,152,165,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,152,181,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,152,197,50,14
+    PUSHBUTTON      "Activate",IDC_BU_ACTCALC,152,224,50,14
+    PUSHBUTTON      "Inactivate",IDC_BU_INACTCALC,152,240,50,14
+    PUSHBUTTON      "Start",IDC_BU_START,6,260,50,15
+    DEFPUSHBUTTON   "Close",IDCANCEL,298,261,50,14
+END
+
+IDD_CALC_PARESTIMATION DIALOGEX 200, 80, 352, 298
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Parameter Estimation"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Parameters:",IDC_STATIC,5,4,40,8
+    LTEXT           "active",IDC_STATIC,5,15,22,8
+    LISTBOX         IDC_LB_ACTPAR,5,24,139,102,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "available",IDC_STATIC,210,15,31,8
+    LISTBOX         IDC_LB_AVAILPAR,210,24,137,102,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Activate",IDC_BU_ACTPAR,153,53,50,14,WS_DISABLED
+    PUSHBUTTON      "Inactivate",IDC_BU_INACTPAR,153,70,50,14,WS_DISABLED
+    LTEXT           "Calculations:",IDC_STATIC,5,129,43,8
+    LTEXT           "active",IDC_STATIC,5,140,22,8
+    LISTBOX         IDC_LB_ACTCALC,5,149,139,103,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "available",IDC_STATIC,208,140,31,8
+    LISTBOX         IDC_LB_AVAILCALC,209,150,139,101,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEWFIT,153,150,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLFIT,153,166,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDFIT,153,182,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETEFIT,153,198,50,14
+    PUSHBUTTON      "Activate",IDC_BU_ACTFIT,153,217,50,14
+    PUSHBUTTON      "Inactivate",IDC_BU_INACTFIT,153,233,50,14
+    LTEXT           "Method:",IDC_STATIC,6,258,27,8
+    CONTROL         "secant",IDC_RB_SECANT,"Button",BS_AUTORADIOBUTTON,38,
+                    258,33,10
+    CONTROL         "simplex",IDC_RB_SIMPLEX,"Button",BS_AUTORADIOBUTTON,74,
+                    258,35,10
+    LTEXT           "Maximum Number of Iterations:",IDC_STATIC,153,259,105,8
+    EDITTEXT        IDC_ED_MAXIT,278,257,70,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Start",IDC_BU_START,6,278,50,15
+    DEFPUSHBUTTON   "Close",IDCANCEL,298,279,50,14
+END
+
+IDD_VIEW_RESULTS DIALOGEX 530, 170, 211, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "View Results"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LB_PLOTLIST,5,6,139,126,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_BU_NEW,153,7,50,14
+    PUSHBUTTON      "Duplicate",IDC_BU_DUPLICATE,153,22,50,14,WS_DISABLED
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,153,37,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,153,52,50,14,WS_DISABLED
+    PUSHBUTTON      "Plot to Screen",IDC_BU_PLOTTOSCREEN,5,135,110,14,
+                    WS_DISABLED
+    PUSHBUTTON      "Plot to File",IDC_BU_PLOTTOFILE,5,151,110,14,
+                    WS_DISABLED
+    PUSHBUTTON      "List to File",IDC_BU_LISTTOFILE,5,167,110,14,
+                    WS_DISABLED
+    PUSHBUTTON      "Scr. Opt.",IDC_BU_SCROPT,153,135,50,14
+    PUSHBUTTON      "File Opt.",IDC_BU_FILEOPT,153,151,50,14
+    PUSHBUTTON      "List Opt.",IDC_BU_LISTOPT,153,167,50,14
+    DEFPUSHBUTTON   "Close",IDCANCEL,153,107,50,14
+END
+
+IDD_EDIT_DELSTATES DIALOG  400, 45, 157, 170
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Delete Calculated States"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Calc. Numbers:",IDC_STATIC,5,5,66,8
+    LISTBOX         IDC_LB_CALCLIST,5,18,70,103,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "States:",IDC_TX_STATES,83,5,66,8
+    LISTBOX         IDC_LB_STATELIST,81,18,70,105,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_BU_DELETECALCS,15,124,50,14,WS_DISABLED
+    PUSHBUTTON      "Delete",IDC_BU_DELETESTATES,91,124,50,14,WS_DISABLED
+    DEFPUSHBUTTON   "Close",IDCANCEL,52,150,50,14
+END
+
+IDD_EDIT_SELVARTYPE DIALOG  0, 0, 115, 108
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select Variable Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "State Variable",IDC_RB_STATEVAR,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,5,6,104,10
+    CONTROL         "Program Variable",IDC_RB_PROGVAR,"Button",
+                    BS_AUTORADIOBUTTON,5,17,104,10
+    CONTROL         "Constant Variable",IDC_RB_PARVAR,"Button",
+                    BS_AUTORADIOBUTTON,5,28,104,10
+    CONTROL         "Real List Variable",IDC_RB_REALLISTVAR,"Button",
+                    BS_AUTORADIOBUTTON,5,39,104,10
+    CONTROL         "Variable List Variable",IDC_RB_VARLISTVAR,"Button",
+                    BS_AUTORADIOBUTTON,5,50,104,10
+    CONTROL         "Formula Variable",IDC_RB_FORMVAR,"Button",
+                    BS_AUTORADIOBUTTON,5,61,104,10
+    CONTROL         "Probe Variable",IDC_RB_PROBEVAR,"Button",
+                    BS_AUTORADIOBUTTON,6,72,103,10
+    DEFPUSHBUTTON   "OK",IDOK,5,87,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,59,87,50,14
+END
+
+IDD_VIEW_SCREENOPT DIALOG  65386, 65436, 255, 129
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Plot to Screen Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Window:",IDC_STATIC,7,9,37,8
+    LTEXT           "Width:",IDC_STATIC,51,9,26,8
+    EDITTEXT        IDC_WINWIDTH,88,7,49,12,ES_AUTOHSCROLL
+    LTEXT           "Height:",IDC_STATIC,157,9,30,8
+    EDITTEXT        IDC_WINHEIGHT,199,7,49,12,ES_AUTOHSCROLL
+    LTEXT           "Margins:",IDC_STATIC,7,24,35,8
+    LTEXT           "Left:",IDC_STATIC,51,24,24,8
+    EDITTEXT        IDC_MARGINLEFT,88,22,49,12,ES_AUTOHSCROLL
+    LTEXT           "Top:",IDC_STATIC,157,24,27,8
+    EDITTEXT        IDC_MARGINTOP,199,22,49,12,ES_AUTOHSCROLL
+    LTEXT           "Right:",IDC_STATIC,51,37,24,8
+    EDITTEXT        IDC_MARGINRIGHT,88,35,49,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom:",IDC_STATIC,157,37,35,8
+    EDITTEXT        IDC_MARGINBOTTOM,199,35,49,12,ES_AUTOHSCROLL
+    LTEXT           "Legend:",IDC_STATIC,7,54,39,8
+    LTEXT           "Width:",IDC_STATIC,51,54,33,8
+    EDITTEXT        IDC_LEGWIDTH,88,52,49,12,ES_AUTOHSCROLL
+    LTEXT           "Font Size:",IDC_STATIC,7,71,36,8
+    LTEXT           "Title:",IDC_STATIC,51,71,23,8
+    EDITTEXT        IDC_FONTTITLE,88,68,49,12,ES_AUTOHSCROLL
+    LTEXT           "Labels:",IDC_STATIC,157,71,32,8
+    EDITTEXT        IDC_FONTLABEL,199,68,49,12,ES_AUTOHSCROLL
+    LTEXT           "Legend:",IDC_STATIC,51,84,29,8
+    EDITTEXT        IDC_FONTLEGEND,88,81,49,12,ES_AUTOHSCROLL
+    LTEXT           "Numbers:",IDC_STATIC,157,84,36,8
+    EDITTEXT        IDC_FONTNUMBERS,199,81,49,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,108,50,14
+    CONTROL         "cascade",IDC_CASCADE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,71,109,46,13
+    PUSHBUTTON      "Defaults",IDC_DEFAULTS,129,108,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,198,108,50,14
+END
+
+IDD_VIEW_PSOPT DIALOG  65386, 65436, 249, 206
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Plot to File Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Paper Size:",IDC_STATIC,7,9,45,8
+    COMBOBOX        IDC_PAPERSIZE,56,7,186,50,CBS_DROPDOWNLIST | WS_VSCROLL
+    LTEXT           "Orientation:",IDC_STATIC,7,26,46,8
+    CONTROL         "Portrait",IDC_RB_PORTRAIT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,56,26,60,8
+    CONTROL         "Landscape",IDC_RB_LANDSCAPE,"Button",BS_AUTORADIOBUTTON,
+                    154,26,56,8
+    LTEXT           "Plots:",IDC_STATIC,7,42,26,8
+    LTEXT           "Columns:",IDC_STATIC,56,42,34,8
+    EDITTEXT        IDC_PLOTCOLUMNS,92,40,49,12,ES_AUTOHSCROLL
+    LTEXT           "Rows:",IDC_STATIC,154,42,25,8
+    EDITTEXT        IDC_PLOTROWS,193,40,49,12,ES_AUTOHSCROLL
+    LTEXT           "Margins:",IDC_STATIC,7,58,33,8
+    LTEXT           "Left:",IDC_STATIC,56,58,22,8
+    EDITTEXT        IDC_MARGINLEFT,92,56,49,12,ES_AUTOHSCROLL
+    LTEXT           "Top:",IDC_STATIC,154,58,21,8
+    EDITTEXT        IDC_MARGINTOP,193,56,49,12,ES_AUTOHSCROLL
+    LTEXT           "Right:",IDC_STATIC,56,72,26,8
+    EDITTEXT        IDC_MARGINRIGHT,92,70,49,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom:",IDC_STATIC,154,72,26,8
+    EDITTEXT        IDC_MARGINBOTTOM,193,70,49,12,ES_AUTOHSCROLL
+    LTEXT           "Legend:",IDC_STATIC,7,90,32,8
+    LTEXT           "Width:",IDC_STATIC,56,90,26,8
+    EDITTEXT        IDC_LEGWIDTH,92,88,49,12,ES_AUTOHSCROLL
+    LTEXT           "Font Size:",IDC_STATIC,7,107,35,8
+    LTEXT           "Title:",IDC_STATIC,56,107,21,8
+    EDITTEXT        IDC_FONTTITLE,92,105,49,12,ES_AUTOHSCROLL
+    LTEXT           "Labels:",IDC_STATIC,154,107,25,8
+    EDITTEXT        IDC_FONTLABEL,193,105,49,12,ES_AUTOHSCROLL
+    LTEXT           "Legend:",IDC_STATIC,56,122,31,8
+    EDITTEXT        IDC_FONTLEGEND,92,120,49,12,ES_AUTOHSCROLL
+    LTEXT           "Numbers:",IDC_STATIC,154,122,33,8
+    EDITTEXT        IDC_FONTNUMBERS,193,120,49,12,ES_AUTOHSCROLL
+    LTEXT           "Color:",IDC_STATIC,7,140,43,8
+    CONTROL         "color",IDC_RB_COLOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,56,140,85,8
+    CONTROL         "black/white",IDC_RB_BLACKWHITE,"Button",
+                    BS_AUTORADIOBUTTON,154,140,88,8
+    LTEXT           "Units:",IDC_STATIC,7,153,41,8
+    CONTROL         "cm",IDC_RB_CM,"Button",BS_AUTORADIOBUTTON | WS_GROUP,56,
+                    153,86,8
+    CONTROL         "inch",IDC_RB_INCH,"Button",BS_AUTORADIOBUTTON,154,153,
+                    88,8
+    DEFPUSHBUTTON   "OK",IDOK,7,185,50,14
+    PUSHBUTTON      "Defaults",IDC_DEFAULTS,97,185,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,192,185,50,14
+    LTEXT           "File Format:",IDC_STATIC,7,167,45,8
+    CONTROL         "postscript",IDC_RB_PTS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,56,167,88,8
+    CONTROL         "encapsulated postscript",IDC_RB_EPS,"Button",
+                    BS_AUTORADIOBUTTON,154,167,88,8
+END
+
+IDD_VIEW_LISTOPT DIALOG  65386, 65436, 132, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit List to File Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Sign. Digits:",IDC_STATIC,7,9,43,9
+    EDITTEXT        IDC_DIGITS,75,7,50,12,ES_AUTOHSCROLL
+    LTEXT           "Separator:",IDC_STATIC,7,28,42,9
+    CONTROL         "Tab",IDC_RB_TAB,"Button",BS_AUTORADIOBUTTON,75,28,50,8
+    CONTROL         "Comma",IDC_RB_Comma,"Button",BS_AUTORADIOBUTTON,75,42,
+                    50,8
+    CONTROL         "Space",IDC_RB_SPACE,"Button",BS_AUTORADIOBUTTON,75,56,
+                    50,8
+    DEFPUSHBUTTON   "OK",IDOK,7,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,75,73,50,14
+END
+
+IDD_VIEW_EDPLOTDEF DIALOGEX 65336, 65436, 280, 228
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Plot Definition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,32,8
+    EDITTEXT        IDC_NAME,69,7,129,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,44,8
+    EDITTEXT        IDC_DESCRIPTION,69,20,204,12,ES_AUTOHSCROLL
+    LTEXT           "Title:",IDC_STATIC,7,36,24,8
+    EDITTEXT        IDC_TITLE,69,34,204,12,ES_AUTOHSCROLL
+    LTEXT           "Abscissa:",IDC_STATIC,7,52,32,8
+    CONTROL         "Time",IDC_RB_ABSCTIME,"Button",BS_AUTORADIOBUTTON,70,52,
+                    57,8
+    CONTROL         "Space",IDC_RB_ABSCSPACE,"Button",BS_AUTORADIOBUTTON,163,
+                    52,63,8
+    LTEXT           "Label:",IDC_STATIC,71,64,23,8
+    EDITTEXT        IDC_ABSCISSALABEL,105,62,168,12,ES_AUTOHSCROLL
+    LTEXT           "Ordinate:",IDC_STATIC,7,81,33,8
+    LTEXT           "Label:",IDC_STATIC,71,81,22,8
+    EDITTEXT        IDC_ORDINATELABEL,105,79,168,12,ES_AUTOHSCROLL
+    LTEXT           "Curves:",IDC_STATIC,7,96,27,8
+    LTEXT           "Type : Variable(Par) [CalcNum,Comp,Zone,Time/Space]",
+                    IDC_STATIC,70,95,203,10
+    LISTBOX         IDC_CURVELIST,70,106,203,67,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_ADD,71,182,50,14
+    PUSHBUTTON      "Edit",IDC_EDIT,149,182,50,14
+    PUSHBUTTON      "Delete",IDC_DELETE,223,182,50,14
+    PUSHBUTTON      "Scaling...",IDC_SCALING,7,182,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,207,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,223,207,50,14
+END
+
+IDD_VIEW_EDCURVEDEF DIALOGEX 20, 20, 271, 261
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Curve Definition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Type:",IDC_STATIC,7,7,26,8
+    CONTROL         "Value",IDC_RB_VALUE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,38,7,72,8
+    CONTROL         "Error Contribution",IDC_RB_ERROR,"Button",
+                    BS_AUTORADIOBUTTON,38,18,68,8
+    CONTROL         "Sensitivity Function:",IDC_RB_SENS,"Button",
+                    BS_AUTORADIOBUTTON,38,29,77,8
+    CONTROL         "AbsAbs",IDC_RB_ABSABS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,125,29,42,8
+    CONTROL         "RelAbs",IDC_RB_RELABS,"Button",BS_AUTORADIOBUTTON,172,
+                    28,38,8
+    CONTROL         "AbsRel",IDC_RB_ABSREL,"Button",BS_AUTORADIOBUTTON,125,
+                    38,42,8
+    CONTROL         "RelRel",IDC_RB_RELREL,"Button",BS_AUTORADIOBUTTON,172,
+                    38,38,8
+    LTEXT           "Variable:",IDC_STATIC,7,51,34,8
+    COMBOBOX        IDC_VAR,126,49,139,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Parameter:",IDC_TX_PAR,7,65,39,8
+    COMBOBOX        IDC_PAR,126,63,139,79,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Calculation Number:",IDC_STATIC,7,79,70,8
+    EDITTEXT        IDC_CALCNUM,126,77,69,12,ES_AUTOHSCROLL
+    LTEXT           "Compartment:",IDC_TX_COMP,7,92,50,8
+    COMBOBOX        IDC_COMP,126,91,139,81,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,106,23,8
+    COMBOBOX        IDC_ZONE,126,105,139,81,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Time/Space:",IDC_STATIC,7,120,46,8
+    EDITTEXT        IDC_TIMESPACE,126,119,139,12,ES_AUTOHSCROLL
+    LTEXT           "Legend:",IDC_STATIC,7,134,31,8
+    EDITTEXT        IDC_LEGEND,126,132,139,12,ES_AUTOHSCROLL
+    LTEXT           "Line:",IDC_STATIC,7,149,33,8
+    CONTROL         "active",IDC_LINEACT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,51,149,37,8
+    LTEXT           "Style:",IDC_STATIC,97,149,23,8
+    COMBOBOX        IDC_LINESTYLE,126,145,139,84,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Width:",IDC_STATIC,97,162,23,8
+    EDITTEXT        IDC_LINEWIDTH,126,159,70,12,ES_AUTOHSCROLL
+    LTEXT           "Color:",IDC_STATIC,97,175,23,8
+    COMBOBOX        IDC_LINECOLOR,126,173,139,81,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Marker:",IDC_STATIC,7,189,27,8
+    CONTROL         "active",IDC_MARKERACT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,51,189,37,8
+    LTEXT           "Style:",IDC_STATIC,97,189,18,8
+    COMBOBOX        IDC_MARKERSTYLE,126,187,139,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Size:",IDC_STATIC,97,203,20,8
+    EDITTEXT        IDC_MARKERSIZE,126,201,70,12,ES_AUTOHSCROLL
+    LTEXT           "Color:",IDC_STATIC,97,216,26,8
+    COMBOBOX        IDC_MARKERCOLOR,126,215,139,81,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,7,240,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,215,239,50,14
+    CONTROL         "rel.space",IDC_CB_SPACEREL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,79,121,47,8
+END
+
+IDD_VIEW_EDSCALING DIALOG  65486, 65486, 211, 148
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Plot Scaling"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Abscissa:",IDC_STATIC,7,10,34,8
+    LTEXT           "Minimum:",IDC_STATIC,51,10,35,8
+    CONTROL         "auto",IDC_CB_ABSCMIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,10,32,8
+    EDITTEXT        IDC_ED_ABSCMIN,134,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum:",IDC_STATIC,51,21,36,8
+    CONTROL         "auto",IDC_CB_ABSMAX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,21,32,8
+    EDITTEXT        IDC_ED_ABSCMAX,134,19,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Pos.:",IDC_STATIC,51,32,38,8
+    CONTROL         "auto",IDC_CB_ABSCTPOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,33,32,8
+    EDITTEXT        IDC_ED_ABSCTPOS,134,31,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Dist.:",IDC_STATIC,51,45,37,8
+    CONTROL         "auto",IDC_CB_ABSCTDIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,45,32,8
+    EDITTEXT        IDC_ED_ABSCTDIST,134,43,70,12,ES_AUTOHSCROLL
+    LTEXT           "Ordinate:",IDC_STATIC,7,68,33,8
+    LTEXT           "Minimum:",IDC_STATIC,51,68,35,8
+    CONTROL         "auto",IDC_CB_ORDMIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,68,32,8
+    EDITTEXT        IDC_ED_ORDMIN,134,65,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum:",IDC_STATIC,51,80,36,8
+    CONTROL         "auto",IDC_CB_ORDMAX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,80,32,8
+    EDITTEXT        IDC_ED_ORDMAX,134,78,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Pos.:",IDC_STATIC,51,92,38,8
+    CONTROL         "auto",IDC_CB_ORDTPOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,93,32,8
+    EDITTEXT        IDC_ED_ORDTPOS,134,91,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Dist.:",IDC_STATIC,51,105,37,8
+    CONTROL         "auto",IDC_CB_ORDTDIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,106,32,8
+    EDITTEXT        IDC_ED_ORDTDIST,134,104,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,127,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,154,127,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "AQUASIM MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "AQUASIM"
+            VALUE "LegalCopyright", "Copyright (c) 1995"
+            VALUE "OriginalFilename", "AQUASIM.EXE"
+            VALUE "ProductName", "AQUASIM Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_EDIT_VARIABLES, DIALOG
+    BEGIN
+        RIGHTMARGIN, 179
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_EDIT_PROCESSES, DIALOG
+    BEGIN
+        RIGHTMARGIN, 181
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_EDIT_COMPARTMENTS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 179
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_EDIT_LINKS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 179
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_CALC_SIMULATION, DIALOG
+    BEGIN
+        TOPMARGIN, 4
+    END
+
+    IDD_CALC_SENSANALYSIS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 294
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_CALC_PARESTIMATION, DIALOG
+    BEGIN
+        RIGHTMARGIN, 345
+        BOTTOMMARGIN, 277
+    END
+
+    IDD_VIEW_RESULTS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 179
+    END
+
+    IDD_EDIT_SELVARTYPE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 109
+    END
+
+    IDD_VIEW_SCREENOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_VIEW_PSOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_VIEW_LISTOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_VIEW_EDPLOTDEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+
+    IDD_VIEW_EDCURVEDEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 254
+    END
+
+    IDD_VIEW_EDSCALING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 204
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR                  "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "AQUASIM\n\nSYSTEM\nSYSTEM Files (*.aqu)\n.AQU\nAQUASIM.Document\nSYSTEM Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "AQUASIM"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_ABOUT           "About AQUASIM\nAbout"
+    ID_FILE_PRINT_AQUA      "Print the active system to a file\nPrint"
+    ID_FILE_NEW_AQUA        "Create a new system\nNew"
+    ID_FILE_OPEN_AQUA       "Open an existing system\nOpen"
+    ID_FILE_CLOSE_AQUA      "Close the active system\nClose"
+    ID_FILE_SAVE_AQUA       "Save the active system\nSave"
+    ID_FILE_SAVE_AS_AQUA    "Save under a new name\nSave As"
+    ID_VIEW_COORDINATES     "Toggle vbisibility of Mouse Coordinates in Plot"
+    ID_VIEW_CLOSEPLOTS      "Close plot windows\nClose Plots"
+    ID_FILE_PRINTOPT        "Edit Print Options\nPrint Options"
+    ID_PLOT_COPY            "Copy to Clipboard"
+    ID_PLOT_PRINT           "Print PostScript File"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE            "Save the active system\nSave"
+    ID_FILE_SAVE_AS         "Save the active system with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active system\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save system\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this system"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy Plot to Clipboard\nCopy Plot to Clipboard"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_VARIABLES       "Edit Variables\nVariables"
+    ID_EDIT_PROCESSES       "Edit Processes\nProcesses"
+    ID_EDIT_COMPARTMENTS    "Edit Compartments\nCompartments"
+    ID_EDIT_LINKS           "Edit Links\nLinks"
+    ID_EDIT_NUMERICALPARAMETERS 
+                            "Edit numerical parameters\nNumerical parameters"
+    ID_EDIT_DELETESTATES    "Delete States\nDelete States"
+    ID_CALC_SIMULATION      "Perform a simulation\nSimulation"
+    ID_CALC_SENSITIVITYANALYSIS 
+                            "Define and perform a sensitivity analysis\nSensitivity Analysis"
+    ID_CALC_PARAMETERESTIMATION 
+                            "Define and perform a parameter estimation\nParameter Estimation"
+    ID_VIEW_RESULTS         "View results\nView Results"
+    ID_EDIT_SYSTEM          "Edit system definitions\nEdit System"
+    ID_VIEW_CLOSEDIALOGS    "Close dialog boxes\nClose Dialogs"
+    ID_FILE_REVERT          "Revert to saved version\nRevert"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_PLOT_TYPE           "Display Results\nPlot"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Switzerland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DES)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN_SWISS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WAIT_CANCEL DIALOG  150, 75, 160, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "AQUASIM"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "...please wait...",IDC_WAIT_TEXT,7,10,146,20
+    DEFPUSHBUTTON   "Cancel",IDOK,55,33,50,14
+END
+
+IDD_WAIT_SIM DIALOG  150, 75, 131, 89
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "AQUASIM"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "...calculating...",IDC_WAIT_TEXT,7,9,117,15
+    LTEXT           "Simulation time:",IDC_WAIT_TIME_TXT,7,44,57,8
+    RTEXT           "",IDC_WAIT_TIME,72,44,52,8
+    DEFPUSHBUTTON   "Cancel",IDOK,41,68,50,14
+    LTEXT           "Calculation:",IDC_WAIT_CALC_TXT,7,32,40,8
+    RTEXT           "",IDC_WAIT_CALC,63,32,61,8
+END
+
+IDD_EDIT_SELCOMPTYPE DIALOG  0, 0, 163, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Select Compartment Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Mixed Reactor Compartment",IDC_RB_MIXEDCOMP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,149,8
+    CONTROL         "Biofilm Reactor Compartment",IDC_RB_FILMCOMP,"Button",
+                    BS_AUTORADIOBUTTON,7,19,149,8
+    CONTROL         "Advective-Diffusive Reactor Compartment",IDC_RB_ADVCOMP,
+                    "Button",BS_AUTORADIOBUTTON,7,31,149,8
+    CONTROL         "Saturated Soil Column Compartment",IDC_RB_SOILCOMP,
+                    "Button",BS_AUTORADIOBUTTON,7,43,149,8
+    CONTROL         "River Section Compartment",IDC_RB_RIVCOMP,"Button",
+                    BS_AUTORADIOBUTTON,7,55,149,8
+    CONTROL         "Lake Compartment",IDC_RB_LAKECOMP,"Button",
+                    BS_AUTORADIOBUTTON,7,67,149,8
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,106,98,50,14
+    CONTROL         "Sediment Compartment",IDC_RB_SEDCOMP,"Button",
+                    BS_AUTORADIOBUTTON,7,80,149,8
+END
+
+IDD_EDIT_COMPLAKE DIALOGEX 0, 0, 311, 231
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Edit Lake Compartment"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,126,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. Index:",IDC_STATIC,189,9,41,8
+    EDITTEXT        IDC_ED_COMPIND,234,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,245,12,ES_AUTOHSCROLL
+    LTEXT           "Options:",IDC_STATIC,7,35,41,8
+    DEFPUSHBUTTON   "Variables",IDC_BU_VARS,59,34,50,11
+    DEFPUSHBUTTON   "Processes",IDC_BU_PROCS,125,34,50,11
+    DEFPUSHBUTTON   "Init. Cond.",IDC_BU_INITS,190,34,50,11
+    DEFPUSHBUTTON   "Input",IDC_BU_INP,254,34,50,11
+    LTEXT           "Properties of:",IDC_STATIC,7,48,41,8
+    DEFPUSHBUTTON   "Particulate Variables",IDC_BU_PARTVARS,59,47,115,11
+    DEFPUSHBUTTON   "Dissolved Variables",IDC_BU_DISSVARS,190,47,114,11
+    LTEXT           "Grav. Accel.:",IDC_STATIC,7,61,50,8
+    EDITTEXT        IDC_ED_GRAVIT,59,59,70,12,ES_AUTOHSCROLL
+    LTEXT           "Top Coord.:",IDC_STATIC,7,76,49,8
+    EDITTEXT        IDC_ED_TOP,59,73,70,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom Coord.:",IDC_STATIC,150,75,51,8
+    EDITTEXT        IDC_ED_BOTTOM,234,73,70,12,ES_AUTOHSCROLL
+    LTEXT           "Cross Sect.:",IDC_STATIC,7,90,50,8
+    EDITTEXT        IDC_ED_CROSSSECT,59,87,245,12,ES_AUTOHSCROLL
+    LTEXT           "Density:",IDC_STATIC,7,102,33,8
+    EDITTEXT        IDC_ED_DENSITY,59,99,245,12,ES_AUTOHSCROLL
+    LTEXT           "Turb. Diffusion:",IDC_STATIC,7,114,49,8
+    EDITTEXT        IDC_ED_DIFFUSION,60,112,244,12,ES_AUTOHSCROLL
+    LTEXT           "Modes:",IDC_STATIC,7,152,31,8
+    CONTROL         "without Sediment",IDC_RB_SEDNO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,154,72,8
+    CONTROL         "with Sediment",IDC_RB_SEDYES,"Button",
+                    BS_AUTORADIOBUTTON,141,153,62,8
+    DEFPUSHBUTTON   "Sed. Prop.",IDC_BU_SED,254,152,50,11
+    CONTROL         "without TKE",IDC_RB_TKENO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,166,72,8
+    CONTROL         "with TKE",IDC_RB_TKEYES,"Button",BS_AUTORADIOBUTTON,141,
+                    165,61,8
+    DEFPUSHBUTTON   "TKE Prop.",IDC_BU_TKE,254,165,50,11
+    LTEXT           "Num. Grid Pts.:",IDC_STATIC,7,179,53,9
+    EDITTEXT        IDC_ED_NUMGRID,59,177,50,12,ES_AUTOHSCROLL
+    LTEXT           "Resolution:",IDC_STATIC,130,179,39,8
+    CONTROL         "low",IDC_RB_LOWRES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,176,179,29,8
+    CONTROL         "high",IDC_RB_HIGHRES,"Button",BS_AUTORADIOBUTTON,213,
+                    179,35,8
+    DEFPUSHBUTTON   "Acc.",IDC_BU_ACC,274,178,30,11
+    DEFPUSHBUTTON   "OK",IDOK,7,210,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,254,210,50,14
+    CONTROL         "active for calculation",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,60,191,150,8
+    LTEXT           "Surf. Light Int.:",IDC_STATIC,7,127,47,8
+    EDITTEXT        IDC_ED_ISURF,60,125,244,12,ES_AUTOHSCROLL
+    LTEXT           "Light Extinct.:",IDC_STATIC,7,140,49,8
+    EDITTEXT        IDC_ED_ETA,60,138,244,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPLAKESED DIALOG  0, 0, 282, 161
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lake Sediment Submodel"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Vol. Flux:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_VOLFLUX,59,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Resusp. Veloc.:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_RESUSP,59,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,140,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,225,140,50,14
+    LTEXT           "Zone Index:  Thickness, Porosity",IDC_STATIC,62,36,104,
+                    8
+    LISTBOX         IDC_LB_SEDLAYERS,61,47,214,67,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,62,114,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,145,114,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,225,114,50,14
+    LTEXT           "Sed. Layers:",IDC_STATIC,8,36,50,8
+END
+
+IDD_EDIT_COMPLAKETKE DIALOG  0, 0, 283, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lake Turbulent Kinetic Energy Submodel"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Prantl Number:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_PRANTL,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Surf. Shear:",IDC_STATIC,7,49,50,8
+    EDITTEXT        IDC_ED_SURFSHEAR,60,47,216,12,ES_AUTOHSCROLL
+    LTEXT           "Press. Grad.:",IDC_STATIC,7,63,50,8
+    EDITTEXT        IDC_ED_PRESS,60,60,216,12,ES_AUTOHSCROLL
+    LTEXT           "Prod. Diss.:",IDC_STATIC,7,75,50,8
+    EDITTEXT        IDC_ED_DISSIP,60,72,216,12,ES_AUTOHSCROLL
+    LTEXT           "Wind Excitat.:",IDC_STATIC,7,87,50,8
+    EDITTEXT        IDC_ED_PWIND,60,85,216,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom Frict.:",IDC_STATIC,7,99,50,8
+    EDITTEXT        IDC_ED_PBOTTOM,60,97,216,12,ES_AUTOHSCROLL
+    LTEXT           "Internal Frict.:",IDC_STATIC,7,111,50,8
+    EDITTEXT        IDC_ED_PINT,60,109,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,130,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,130,50,14
+    LTEXT           "Sigma TKE:",IDC_STATIC,7,22,50,8
+    LTEXT           "Sigma Diss.:",IDC_STATIC,157,22,40,8
+    EDITTEXT        IDC_ED_SIGTKE,60,20,70,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_SIGEPS,206,20,70,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_KZMIN,206,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Minimum Diffusion Coefficient for buoyancy production of TKE:",
+                    IDC_STATIC,7,36,196,8
+END
+
+IDD_EDIT_COMPLAKEPARTS DIALOG  0, 0, 281, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Particulate Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Part. Vars.:",IDC_STATIC,7,7,41,9
+    LTEXT           "Variable  :  Density, Sedimentation Velocity, Mobility",
+                    IDC_STATIC,57,7,217,8
+    LISTBOX         IDC_LB_VARS,58,20,216,82,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADD,58,104,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,141,104,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,224,104,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,130,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,130,50,14
+END
+
+IDD_EDIT_COMPLAKEPART DIALOGEX 0, 0, 281, 93
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Particulate Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Density:",IDC_STATIC,7,23,32,8
+    EDITTEXT        IDC_ED_DENSITY,58,20,216,12,ES_AUTOHSCROLL
+    LTEXT           "Sed. Veloc.:",IDC_STATIC,7,36,42,10
+    EDITTEXT        IDC_ED_SEDVELOC,58,34,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,71,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,71,50,14
+    LTEXT           "Mobility:",IDC_STATIC,7,50,42,10
+    EDITTEXT        IDC_ED_MOBILITY,58,48,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPLAKEDISSS DIALOG  0, 0, 283, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Dissolved Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Diss. Vars.:",IDC_STATIC,7,6,41,9
+    LTEXT           "Variable  :  Molecular Diffusion Coefficient",
+                    IDC_STATIC,57,6,140,8
+    LISTBOX         IDC_LB_VARS,58,20,216,83,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADD,58,104,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,141,104,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,224,104,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,130,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,130,50,14
+END
+
+IDD_EDIT_COMPLAKEDISS DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Dissolved Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,8,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Mol. Diffusion:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_SEDEXCH,58,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+END
+
+IDD_EDIT_COMPACTVAR DIALOGEX 0, 0, 352, 167
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Active State Variables"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Active Variables:",IDC_STATIC,7,7,64,8
+    LISTBOX         IDC_LB_ACT,7,17,137,127,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available Variables:",IDC_STATIC,211,7,67,8
+    LISTBOX         IDC_LB_AVAIL,210,17,135,127,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Activate",IDC_BU_ACT,152,63,50,14
+    DEFPUSHBUTTON   "Inactivate",IDC_BU_INACT,152,81,50,14
+    DEFPUSHBUTTON   "OK",IDOK,6,146,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,295,146,50,14
+END
+
+IDD_EDIT_COMPACTPROC DIALOGEX 0, 0, 352, 167
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Active Processes"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Active Processes:",IDC_STATIC,7,7,64,8
+    LISTBOX         IDC_LB_ACT,7,17,137,127,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Available Processes:",IDC_STATIC,211,7,67,8
+    LISTBOX         IDC_LB_AVAIL,211,17,134,127,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Activate",IDC_BU_ACT,152,63,50,14
+    DEFPUSHBUTTON   "Inactivate",IDC_BU_INACT,152,81,50,14
+    DEFPUSHBUTTON   "OK",IDOK,6,146,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,295,146,50,14
+END
+
+IDD_EDIT_COMPMIX DIALOGEX 0, 0, 310, 125
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Mixed Reactor Compartment"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,126,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. Index:",IDC_STATIC,190,9,43,8
+    EDITTEXT        IDC_ED_COMPIND,233,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,244,12,ES_AUTOHSCROLL
+    LTEXT           "Options:",IDC_STATIC,7,35,41,8
+    DEFPUSHBUTTON   "Variables",IDC_BU_VARS,59,34,50,11
+    DEFPUSHBUTTON   "Processes",IDC_BU_PROCS,124,34,50,11
+    DEFPUSHBUTTON   "Init. Cond.",IDC_BU_INITS,189,34,50,11
+    DEFPUSHBUTTON   "Input",IDC_BU_INP,253,34,50,11
+    LTEXT           "Reactor Type:",IDC_STATIC,7,49,47,8
+    CONTROL         "constant volume",IDC_RB_CONSTVOL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,49,71,8
+    CONTROL         "variable volume",IDC_RB_VARVOL,"Button",
+                    BS_AUTORADIOBUTTON,59,61,71,8
+    LTEXT           "Volume:",IDC_TX_VOL,215,49,49,8
+    EDITTEXT        IDC_ED_VOL,252,47,51,12,ES_AUTOHSCROLL
+    LTEXT           "Outflow:",IDC_TX_OUTFLOW,7,74,47,8
+    EDITTEXT        IDC_ED_OUTFLOW,60,72,243,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Acc.",IDC_BU_ACC,273,86,30,11
+    DEFPUSHBUTTON   "OK",IDOK,7,104,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,104,50,14
+    CONTROL         "active for calculation",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,61,85,130,8
+END
+
+IDD_EDIT_COMPMIXINPS DIALOG  0, 0, 283, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Input"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Loadings:",IDC_STATIC,7,23,43,8
+    LTEXT           "Variable  :  Loading",IDC_STATIC,60,23,72,10
+    LISTBOX         IDC_LB_INPUTS,60,34,216,64,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,102,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,102,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,102,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,125,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,125,50,14
+END
+
+IDD_EDIT_COMPMIXINP DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Input Loading"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Loading:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+END
+
+IDD_EDIT_COMPMIXINITS DIALOG  0, 0, 283, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Conditions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Init Conds.:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Initial Condition",IDC_STATIC,60,7,104,8
+    LISTBOX         IDC_LB_INITS,60,18,216,64,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,109,50,14
+END
+
+IDD_EDIT_COMPMIXINIT DIALOGEX 0, 0, 281, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,23,33,8
+    COMBOBOX        IDC_LE_ZONE,58,21,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Init. Cond.:",IDC_STATIC,7,38,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INITCOND,58,35,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,57,50,14
+END
+
+IDD_EDIT_COMPLAKEINITS DIALOG  0, 0, 283, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Conditions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Init Conds.:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Initial Condition",IDC_STATIC,60,7,104,8
+    LISTBOX         IDC_LB_INITS,60,18,216,64,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,109,50,14
+END
+
+IDD_EDIT_COMPLAKEINIT DIALOGEX 0, 0, 281, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,23,33,8
+    COMBOBOX        IDC_LE_ZONE,58,21,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Init. Cond.:",IDC_STATIC,7,38,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INITCOND,58,35,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,57,50,14
+END
+
+IDD_EDIT_COMPLAKESELINP DIALOG  0, 0, 129, 87
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Input Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Surface Input",IDC_RB_SURFINP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,71,8
+    CONTROL         "Lateral Input",IDC_RB_LATINP,"Button",
+                    BS_AUTORADIOBUTTON,7,20,87,8
+    CONTROL         "Point Inputs",IDC_RB_POINTINPS,"Button",
+                    BS_AUTORADIOBUTTON,7,33,79,8
+    CONTROL         "Sediment Input",IDC_RB_SEDINP,"Button",
+                    BS_AUTORADIOBUTTON,7,46,82,8
+    DEFPUSHBUTTON   "OK",IDOK,7,66,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,72,66,50,14
+END
+
+IDD_EDIT_COMPLAKESURFINPS DIALOG  0, 0, 283, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Surface Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Input Fluxes:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Input Flux",IDC_STATIC,60,7,72,10
+    LISTBOX         IDC_LB_INPUTS,60,18,216,57,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,109,50,14
+END
+
+IDD_EDIT_COMPLAKESURFINP DIALOGEX 0, 0, 281, 66
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Surface Input Flux"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Input Flux:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+END
+
+IDD_EDIT_COMPLAKELATINPS DIALOG  0, 0, 283, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Input Concs.:",IDC_STATIC,7,23,43,8
+    LTEXT           "Variable  :  Input Concentration",IDC_STATIC,60,23,109,
+                    10
+    LISTBOX         IDC_LB_INPUTS,60,34,216,64,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,102,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,102,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,102,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,125,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,125,50,14
+END
+
+IDD_EDIT_COMPLAKELATINP DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Input Concentration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Input Conc.:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+END
+
+IDD_EDIT_COMPLAKESEDINPS DIALOG  0, 0, 283, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sediment Input Fluxes"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Input Fluxes:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Input Flux",IDC_STATIC,60,7,109,10
+    LISTBOX         IDC_LB_INPUTS,60,18,216,57,LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,109,50,14
+END
+
+IDD_EDIT_COMPLAKESEDINP DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sediment Input Flux"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Input Conc.:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+END
+
+IDD_EDIT_COMPLAKEPOINTINPS DIALOGEX 0, 0, 259, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Point Inputs"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Point Inps.:",IDC_STATIC,7,7,41,9
+    LISTBOX         IDC_LB_PINPS,55,7,136,86,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADD,202,7,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,202,42,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,202,75,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,202,98,50,14
+END
+
+IDD_EDIT_COMPLAKEPOINTINP DIALOGEX 0, 0, 283, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Point Input"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,6,9,50,8
+    EDITTEXT        IDC_ED_NAME,60,7,138,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,6,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,60,21,216,12,ES_AUTOHSCROLL
+    LTEXT           "Mean Depth:",IDC_STATIC,6,38,50,8
+    EDITTEXT        IDC_ED_DEPTH,60,35,216,12,ES_AUTOHSCROLL
+    LTEXT           "Range:",IDC_STATIC,6,52,50,8
+    EDITTEXT        IDC_ED_RANGE,60,49,216,12,ES_AUTOHSCROLL
+    LTEXT           "Water Inflow:",IDC_STATIC,6,65,50,8
+    EDITTEXT        IDC_ED_WATINF,60,63,216,12,ES_AUTOHSCROLL
+    LTEXT           "Input Concs.:",IDC_STATIC,6,77,43,8
+    LTEXT           "Variable  :  Input Concentration",IDC_STATIC,60,77,109,
+                    10
+    LISTBOX         IDC_LB_INPUTS,60,89,216,57,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,156,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,156,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,156,50,14
+    DEFPUSHBUTTON   "OK",IDOK,6,179,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,179,50,14
+END
+
+IDD_EDIT_COMPLAKEPOINTINPCONC DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Point Input Concentration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Input Conc.:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+END
+
+IDD_EDIT_VARSTATE DIALOGEX 0, 0, 283, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit State Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,127,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,217,12,ES_AUTOHSCROLL
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_ED_UNIT,59,34,127,12,ES_AUTOHSCROLL
+    LTEXT           "Type:",IDC_STATIC,7,50,40,8
+    CONTROL         "dynamic",IDC_RB_DYN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,49,54,9
+    CONTROL         "equilibrium",IDC_RB_EQ,"Button",BS_AUTORADIOBUTTON,59,
+                    62,54,8
+    CONTROL         "volume",IDC_RB_VOL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,143,50,47,8
+    CONTROL         "surface",IDC_RB_SURF,"Button",BS_AUTORADIOBUTTON,211,50,
+                    47,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,7,75,50,8
+    EDITTEXT        IDC_ED_RELACC,59,73,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,153,75,49,8
+    EDITTEXT        IDC_ED_ABSACC,206,73,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,98,50,14
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+END
+
+IDD_EDIT_VARPROG DIALOGEX 0, 0, 283, 89
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Program Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,217,12,ES_AUTOHSCROLL
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_ED_UNIT,59,34,125,12,ES_AUTOHSCROLL
+    LTEXT           "Reference to:",IDC_STATIC,7,50,48,8
+    COMBOBOX        IDC_LE_REFTO,59,47,217,46,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,7,68,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,68,50,14
+END
+
+IDD_EDIT_VARPAR DIALOGEX 0, 0, 283, 116
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Constant Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,127,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,217,12,ES_AUTOHSCROLL
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_ED_UNIT,59,34,127,12,ES_AUTOHSCROLL
+    LTEXT           "Value:",IDC_STATIC,7,49,50,8
+    EDITTEXT        IDC_ED_VALUE,59,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "Std. Dev.:",IDC_STATIC,152,49,49,8
+    EDITTEXT        IDC_ED_STDEV,206,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "Minimum:",IDC_STATIC,7,62,50,8
+    EDITTEXT        IDC_ED_MIN,59,60,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum:",IDC_STATIC,152,62,49,8
+    EDITTEXT        IDC_ED_MAX,206,60,70,12,ES_AUTOHSCROLL
+    CONTROL         "active for sensitivity analysis",IDC_CB_SENSACT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,78,124,8
+    CONTROL         "active for parameter estimation",IDC_CB_FITACT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,152,78,124,8
+    DEFPUSHBUTTON   "OK",IDOK,7,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,95,50,14
+END
+
+IDD_EDIT_VARFORM DIALOGEX 0, 0, 283, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Formula Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,127,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,217,12,ES_AUTOHSCROLL
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_ED_UNIT,59,34,127,12,ES_AUTOHSCROLL
+    LTEXT           "Expression:",IDC_STATIC,7,49,50,8
+    EDITTEXT        IDC_ED_EXPR,59,47,217,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,69,50,14
+END
+
+IDD_EDIT_VARREALLIST DIALOGEX 0, 0, 281, 252
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Real List Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,127,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,215,12,ES_AUTOHSCROLL
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_ED_UNIT,59,34,127,12,ES_AUTOHSCROLL
+    LTEXT           "Argument:",IDC_STATIC,7,50,40,8
+    COMBOBOX        IDC_LE_ARG,59,48,139,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Std. Deviat.:",IDC_STATIC,7,64,40,8
+    CONTROL         "global",IDC_RB_GLOBAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,63,55,10
+    CONTROL         "individual",IDC_RB_INDIVIDUAL,"Button",
+                    BS_AUTORADIOBUTTON,149,63,55,11
+    LTEXT           "Rel. Std. Dev.:",IDC_TX_RELSTD,7,77,47,8
+    EDITTEXT        IDC_ED_RELSTD,59,75,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Std. Dev.:",IDC_TX_ABSSTD,149,77,49,8
+    EDITTEXT        IDC_ED_ABSSTD,204,75,70,12,ES_AUTOHSCROLL
+    LTEXT           "Minimum:",IDC_STATIC,7,91,47,8
+    EDITTEXT        IDC_ED_MIN,59,89,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum:",IDC_STATIC,149,91,49,8
+    EDITTEXT        IDC_ED_MAX,204,89,70,12,ES_AUTOHSCROLL
+    LTEXT           "Argument",IDC_STATIC,7,106,45,8
+    LTEXT           "Value",IDC_STATIC,76,106,45,8
+    LTEXT           "Std. Deviation",IDC_TX_STDDATA,143,106,45,8
+    LTEXT           "Pairs:",IDC_STATIC,203,106,21,8
+    RTEXT           "0",IDC_TX_NUMPAIRS,225,106,49,8
+    PUSHBUTTON      "Read",IDC_BU_READ,224,116,50,14
+    PUSHBUTTON      "Write",IDC_BU_WRITE,224,132,50,14
+    LISTBOX         IDC_LB_LIST,7,116,208,64,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,224,151,50,14
+    EDITTEXT        IDC_ED_ARGDATA,7,178,65,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_VALDATA,73,178,65,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_STDDATA,139,178,65,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add",IDC_BU_ADDVAL,224,169,50,14
+    PUSHBUTTON      "Replace",IDC_BU_REPLVAL,224,185,50,14
+    LTEXT           "Interpolation:",IDC_STATIC,7,203,50,9
+    CONTROL         "linear",IDC_RB_LINEAR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,71,202,30,10
+    CONTROL         "spline",IDC_RB_SPLINE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,139,202,32,11
+    CONTROL         "smooth",IDC_RB_SMOOTH,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,205,202,38,10
+    CONTROL         "active for sensitivity analysis",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,214,123,10
+    LTEXT           "Smooth. Width:",IDC_TX_WIDTH,149,215,49,8
+    EDITTEXT        IDC_ED_WIDTH,204,213,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,231,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,231,50,14
+END
+
+IDD_EDIT_VARVARLIST DIALOGEX 0, 0, 318, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Variable List Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,127,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,21,252,12,ES_AUTOHSCROLL
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_ED_UNIT,59,35,127,12,ES_AUTOHSCROLL
+    LTEXT           "Argument:",IDC_STATIC,7,50,40,8
+    COMBOBOX        IDC_LE_ARG,59,49,139,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "List of Data:",IDC_STATIC,7,64,44,9
+    LTEXT           "Argument",IDC_STATIC,59,64,45,8
+    LTEXT           "Value",IDC_STATIC,131,64,45,8
+    LTEXT           "Pairs:",IDC_STATIC,238,64,21,8
+    RTEXT           "0",IDC_TX_NUMPAIRS,271,64,38,8
+    LISTBOX         IDC_LB_LIST,59,74,193,62,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,261,93,50,14
+    EDITTEXT        IDC_ED_ARGDATA,59,139,63,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_LE_VALDATA,127,139,125,78,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADDVAL,261,129,50,14
+    PUSHBUTTON      "Replace",IDC_BU_REPLVAL,261,146,50,14
+    LTEXT           "Interpolation:",IDC_STATIC,7,166,50,9
+    CONTROL         "linear",IDC_RB_LINEAR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,59,166,32,10
+    CONTROL         "spline",IDC_RB_SPLINE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,97,166,34,11
+    CONTROL         "smooth",IDC_RB_SMOOTH,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,137,167,37,10
+    LTEXT           "Smooth. Width:",IDC_TX_WIDTH,183,168,49,8
+    EDITTEXT        IDC_ED_WIDTH,241,167,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,189,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,261,189,50,14
+END
+
+IDD_EDIT_VARPROBE DIALOGEX 0, 0, 391, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Probe Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,325,12,ES_AUTOHSCROLL
+    LTEXT           "Unit:",IDC_STATIC,7,37,40,8
+    EDITTEXT        IDC_ED_UNIT,59,34,125,12,ES_AUTOHSCROLL
+    LTEXT           "Variable:",IDC_STATIC,7,50,38,8
+    COMBOBOX        IDC_LE_VAR,59,48,136,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Compartment:",IDC_TX_COMP,202,50,46,8
+    COMBOBOX        IDC_LE_COMP,247,48,137,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_COMPZONE,7,64,27,8
+    COMBOBOX        IDC_LE_COMPZONE,59,62,136,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Location:",IDC_STATIC,202,64,41,8
+    EDITTEXT        IDC_ED_SPACE,247,62,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,334,98,50,14
+    CONTROL         "relative",IDC_CB_SPACEREL,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,273,78,111,10
+END
+
+IDD_EDIT_SELLINKTYPE DIALOG  0, 0, 119, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Link Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Advective Link",IDC_RB_ADVLINK,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,105,8
+    CONTROL         "Diffusive Link",IDC_RB_DIFFLINK,"Button",
+                    BS_AUTORADIOBUTTON,7,19,105,8
+    DEFPUSHBUTTON   "OK",IDOK,7,36,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,62,36,50,14
+END
+
+IDD_EDIT_SELPROCTYPE DIALOG  0, 0, 119, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Process Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Dynamic Process",IDC_RB_DYNPROC,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,105,8
+    CONTROL         "Equilibrium Process",IDC_RB_EQPROC,"Button",
+                    BS_AUTORADIOBUTTON,7,19,105,8
+    DEFPUSHBUTTON   "OK",IDOK,7,36,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,62,36,50,14
+END
+
+IDD_EDIT_PROCDYN DIALOGEX 0, 0, 281, 163
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Dynamic Process"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,216,12,ES_AUTOHSCROLL
+    LTEXT           "Rate:",IDC_STATIC,7,36,50,8
+    EDITTEXT        IDC_ED_RATE,59,34,216,12,ES_AUTOHSCROLL
+    LTEXT           "Stoichiometry:",IDC_STATIC,7,49,47,8
+    LTEXT           "Variable  :  Stoichiometric Coefficient",IDC_STATIC,60,
+                    49,122,8
+    LISTBOX         IDC_LB_STOICH,59,58,215,57,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,58,118,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,141,118,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,224,118,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,142,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,225,142,50,14
+END
+
+IDD_EDIT_PROCEQU DIALOGEX 0, 0, 281, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Equilibrium Processes"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,216,12,ES_AUTOHSCROLL
+    LTEXT           "Variable:",IDC_STATIC,7,36,50,8
+    COMBOBOX        IDC_LE_VAR,60,34,107,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Equation:    0 =",IDC_STATIC,7,50,50,8
+    EDITTEXT        IDC_ED_EQUATION,59,48,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,71,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,71,50,14
+END
+
+IDD_EDIT_LINKADV DIALOGEX 0, 0, 388, 141
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Advective Link"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,60,7,127,12,ES_AUTOHSCROLL
+    LTEXT           "Link Index:",IDC_STATIC,259,9,42,8
+    EDITTEXT        IDC_ED_LINKIND,311,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,60,20,321,12,ES_AUTOHSCROLL
+    LTEXT           "From Compart.:",IDC_TX_COMPIN,7,36,50,8
+    COMBOBOX        IDC_LE_COMPIN,60,34,137,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Connection:",IDC_TX_CONNIN,201,36,40,8
+    COMBOBOX        IDC_LE_CONNIN,244,34,137,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "To Compart.:",IDC_TX_COMPOUT,7,50,50,8
+    COMBOBOX        IDC_LE_COMPOUT,60,48,137,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Connection:",IDC_TX_CONNOUT,201,50,40,8
+    COMBOBOX        IDC_LE_CONNOUT,244,48,137,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Bifurcations:",IDC_STATIC,7,63,46,10
+    LISTBOX         IDC_LB_BIFS,60,63,137,56,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,205,63,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,205,81,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,205,99,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,120,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,331,120,50,14
+END
+
+IDD_EDIT_LINKDIFF DIALOGEX 0, 0, 339, 176
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Diffusive Link"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Link Index:",IDC_STATIC,217,9,44,8
+    EDITTEXT        IDC_ED_LINKIND,262,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,273,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. 1:",IDC_TX_COMP1,7,36,50,8
+    COMBOBOX        IDC_LE_COMP1,59,34,110,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Connection:",IDC_TX_CONN1,177,36,41,8
+    COMBOBOX        IDC_LE_CONN1,219,34,113,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Comp. 2:",IDC_TX_COMP2,7,50,50,8
+    COMBOBOX        IDC_LE_COMP2,59,48,110,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Connection:",IDC_TX_CONN2,177,50,41,8
+    COMBOBOX        IDC_LE_CONN2,219,48,113,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Ex. Coeff.:",IDC_STATIC,7,63,47,8
+    LTEXT           "Variable  :  Exchange Coefficient,  Conversion Factor 1",
+                    IDC_STATIC,60,63,272,8
+    LISTBOX         IDC_LB_EXCOEFF,59,71,273,57,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,131,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,141,131,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,282,131,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,155,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,282,155,50,14
+END
+
+IDD_EDIT_COMPFILM DIALOGEX 0, 0, 311, 207
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Biofilm Reactor Compartment"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,126,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. Index:",IDC_STATIC,190,9,41,8
+    EDITTEXT        IDC_ED_COMPIND,234,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,245,12,ES_AUTOHSCROLL
+    LTEXT           "Options:",IDC_STATIC,7,35,41,8
+    DEFPUSHBUTTON   "Variables",IDC_BU_VARS,59,34,50,11
+    DEFPUSHBUTTON   "Processes",IDC_BU_PROCS,123,34,50,11
+    DEFPUSHBUTTON   "Init. Cond.",IDC_BU_INITS,189,34,50,11
+    DEFPUSHBUTTON   "Input",IDC_BU_INP,254,34,50,11
+    LTEXT           "Properties of:",IDC_STATIC,7,48,41,8
+    DEFPUSHBUTTON   "Particulate Variables",IDC_BU_PARTVARS,59,47,114,11
+    DEFPUSHBUTTON   "Dissolved Variables",IDC_BU_DISSVARS,189,47,115,11
+    LTEXT           "Reactor Type:",IDC_STATIC,7,61,49,8
+    CONTROL         "confined",IDC_RB_CONFINED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,60,54,9
+    CONTROL         "unconfined",IDC_RB_UNCONFINED,"Button",
+                    BS_AUTORADIOBUTTON,59,72,54,9
+    LTEXT           "Reactor Volume:",IDC_TX_VOLREACT,167,61,56,8
+    EDITTEXT        IDC_ED_VOLREACT,234,59,70,12,ES_AUTOHSCROLL
+    LTEXT           "Bulk Volume:",IDC_TX_VOLBULK,167,74,56,8
+    EDITTEXT        IDC_ED_VOLBULK,234,72,70,12,ES_AUTOHSCROLL
+    LTEXT           "Pore Volume:",IDC_STATIC,7,87,47,8
+    CONTROL         "liquid phase only",IDC_RB_PORELIQ,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,87,73,8
+    CONTROL         "with suspended solids",IDC_RB_POREPART,"Button",
+                    BS_AUTORADIOBUTTON,164,87,95,8
+    LTEXT           "Biofilm Matrix:",IDC_STATIC,7,98,47,8
+    CONTROL         "rigid",IDC_RB_MATRIXRIGID,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,98,73,8
+    CONTROL         "diffusive",IDC_RB_MATRIXDIFF,"Button",
+                    BS_AUTORADIOBUTTON,164,98,73,8
+    LTEXT           "Surf. Detach.:",IDC_STATIC,7,109,47,8
+    CONTROL         "individual rate",IDC_RB_DETACHINDI,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,109,73,8
+    CONTROL         "global velocity:",IDC_RB_DETACHGLOB,"Button",
+                    BS_AUTORADIOBUTTON,164,109,73,8
+    EDITTEXT        IDC_ED_DETACH,59,120,245,12,ES_AUTOHSCROLL
+    LTEXT           "Biofilm Area:",IDC_STATIC,7,135,50,8
+    EDITTEXT        IDC_ED_AREA,59,133,245,12,ES_AUTOHSCROLL
+    LTEXT           "Rate Porosity:",IDC_STATIC,7,148,50,8
+    EDITTEXT        IDC_ED_RATEPOR,59,146,245,12,ES_AUTOHSCROLL
+    LTEXT           "Num. Grid Pts.:",IDC_STATIC,7,162,53,9
+    EDITTEXT        IDC_ED_NUMGRID,59,159,50,12,ES_AUTOHSCROLL
+    LTEXT           "Resolution:",IDC_STATIC,133,161,39,8
+    CONTROL         "low",IDC_RB_LOWRES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,179,161,29,8
+    CONTROL         "high",IDC_RB_HIGHRES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,216,161,35,8
+    DEFPUSHBUTTON   "Acc.",IDC_BU_ACC,274,160,30,11
+    DEFPUSHBUTTON   "OK",IDOK,7,186,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,254,186,50,14
+    CONTROL         "active for calculation",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,61,172,147,8
+END
+
+IDD_EDIT_COMPADV DIALOGEX 0, 0, 311, 151
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Advective-Diffusive Compartment"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. Index:",IDC_STATIC,190,9,41,8
+    EDITTEXT        IDC_ED_COMPIND,234,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,245,12,ES_AUTOHSCROLL
+    LTEXT           "Options:",IDC_STATIC,7,35,41,8
+    DEFPUSHBUTTON   "Variables",IDC_BU_VARS,59,34,50,11
+    DEFPUSHBUTTON   "Processes",IDC_BU_PROCS,123,34,50,11
+    DEFPUSHBUTTON   "Init. Cond.",IDC_BU_INITS,188,34,50,11
+    DEFPUSHBUTTON   "Input",IDC_BU_INP,254,34,50,11
+    LTEXT           "Start Coord.:",IDC_STATIC,7,50,49,8
+    EDITTEXT        IDC_ED_START,59,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "End Coord.:",IDC_STATIC,180,49,51,8
+    EDITTEXT        IDC_ED_END,234,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "Cross Sect.:",IDC_STATIC,7,63,50,8
+    EDITTEXT        IDC_ED_CROSSSECT,59,60,245,12,ES_AUTOHSCROLL
+    LTEXT           "Diffusion:",IDC_STATIC,7,74,47,8
+    CONTROL         "without diffusion",IDC_RB_WITHOUTDIFF,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,74,73,8
+    CONTROL         "with diffusion:",IDC_RB_WITHDIFF,"Button",
+                    BS_AUTORADIOBUTTON,164,74,73,8
+    EDITTEXT        IDC_ED_DIFF,59,83,245,12,ES_AUTOHSCROLL
+    LTEXT           "Num. Grid Pts.:",IDC_STATIC,7,100,53,9
+    EDITTEXT        IDC_ED_NUMGRID,59,97,50,12,ES_AUTOHSCROLL
+    LTEXT           "Resolution:",IDC_STATIC,138,99,39,8
+    CONTROL         "low",IDC_RB_LOWRES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,184,99,29,8
+    CONTROL         "high",IDC_RB_HIGHRES,"Button",BS_AUTORADIOBUTTON,221,99,
+                    35,8
+    DEFPUSHBUTTON   "Acc.",IDC_BU_ACC,274,97,30,11
+    DEFPUSHBUTTON   "OK",IDOK,7,130,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,254,130,50,14
+    CONTROL         "active for calculation",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,61,112,148,8
+END
+
+IDD_EDIT_COMPSOIL DIALOGEX 0, 0, 310, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Saturated Soil Column Compartment"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,126,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. Index:",IDC_STATIC,189,9,41,8
+    EDITTEXT        IDC_ED_COMPIND,233,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,244,12,ES_AUTOHSCROLL
+    LTEXT           "Options:",IDC_STATIC,7,35,41,8
+    DEFPUSHBUTTON   "Variables",IDC_BU_VARS,59,34,50,11
+    DEFPUSHBUTTON   "Processes",IDC_BU_PROCS,124,34,50,11
+    DEFPUSHBUTTON   "Init. Cond.",IDC_BU_INITS,189,34,50,11
+    DEFPUSHBUTTON   "Input",IDC_BU_INP,253,34,50,11
+    LTEXT           "Start Coord.:",IDC_STATIC,7,49,49,8
+    EDITTEXT        IDC_ED_START,59,46,70,12,ES_AUTOHSCROLL
+    LTEXT           "End Coord.:",IDC_STATIC,187,49,51,8
+    EDITTEXT        IDC_ED_END,233,46,70,12,ES_AUTOHSCROLL
+    LTEXT           "Cross Sect.:",IDC_STATIC,7,62,50,8
+    EDITTEXT        IDC_ED_CROSSSECT,59,59,244,12,ES_AUTOHSCROLL
+    LTEXT           "Mob.Vol.Fract:",IDC_STATIC,7,75,47,8
+    EDITTEXT        IDC_ED_ADVVOLFRACT,59,72,244,12,ES_AUTOHSCROLL
+    LTEXT           "Dispersion",IDC_STATIC,7,86,47,8,0,0,HIDC_STATIC
+    CONTROL         "without dispersion",IDC_RB_WITHOUTDIFF,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,86,73,8
+    CONTROL         "with dispersion:",IDC_RB_WITHDIFF,"Button",
+                    BS_AUTORADIOBUTTON,164,86,73,8
+    EDITTEXT        IDC_ED_DIFF,59,95,244,12,ES_AUTOHSCROLL
+    LTEXT           "Immobile Reg.:",IDC_STATIC,7,108,50,8
+    LISTBOX         IDC_LB_PARZONES,60,108,137,53,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD2,211,108,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,211,126,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,211,145,50,14
+    LTEXT           "Num. Grid Pts.:",IDC_STATIC,7,165,53,9
+    EDITTEXT        IDC_ED_NUMGRID,59,162,50,12,ES_AUTOHSCROLL
+    LTEXT           "Resolution:",IDC_STATIC,133,164,39,8
+    CONTROL         "low",IDC_RB_LOWRES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,179,164,29,8
+    CONTROL         "high",IDC_RB_HIGHRES,"Button",BS_AUTORADIOBUTTON,216,
+                    164,35,8
+    DEFPUSHBUTTON   "Acc.",IDC_BU_ACC,273,162,30,11
+    DEFPUSHBUTTON   "OK",IDOK,7,189,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,189,50,14
+    CONTROL         "active for calculation",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,60,176,124,8
+END
+
+IDD_EDIT_COMPRIV DIALOGEX 0, 0, 309, 250
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit River Section Compartment"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. Index:",IDC_STATIC,187,9,42,8
+    EDITTEXT        IDC_ED_COMPIND,232,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,243,12,ES_AUTOHSCROLL
+    LTEXT           "Options:",IDC_STATIC,7,35,41,8
+    DEFPUSHBUTTON   "Variables",IDC_BU_VARS,59,34,50,11
+    DEFPUSHBUTTON   "Processes",IDC_BU_PROCS,124,34,50,11
+    DEFPUSHBUTTON   "Init. Cond.",IDC_BU_INITS,188,34,50,11
+    DEFPUSHBUTTON   "Input",IDC_BU_INP,252,34,50,11
+    LTEXT           "Grav. Accel.:",IDC_STATIC,7,49,50,8
+    EDITTEXT        IDC_ED_GRAVIT,59,46,70,12,ES_AUTOHSCROLL
+    LTEXT           "Start Coord.:",IDC_STATIC,7,62,49,8
+    EDITTEXT        IDC_ED_START,59,59,70,12,ES_AUTOHSCROLL
+    LTEXT           "End Coord.:",IDC_STATIC,183,61,44,8
+    EDITTEXT        IDC_ED_END,232,59,70,12,ES_AUTOHSCROLL
+    LTEXT           "Cross Sect.:",IDC_STATIC,7,75,50,8
+    EDITTEXT        IDC_ED_CROSSSECT,59,72,243,12,ES_AUTOHSCROLL
+    LTEXT           "Perimeter:",IDC_STATIC,7,87,45,8
+    EDITTEXT        IDC_ED_PERIMETER,60,85,242,12,ES_AUTOHSCROLL
+    LTEXT           "Width:",IDC_STATIC,7,100,46,8
+    EDITTEXT        IDC_ED_WIDTH,60,98,242,12,ES_AUTOHSCROLL
+    LTEXT           "Frict. Slope:",IDC_STATIC,7,113,47,8
+    EDITTEXT        IDC_ED_FRICT,60,111,242,12,ES_AUTOHSCROLL
+    LTEXT           "Dispersion:",IDC_STATIC,7,126,47,8
+    CONTROL         "without dispersion",IDC_RB_WITHOUTDISP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,127,73,8
+    CONTROL         "with dispersion:",IDC_RB_WITHDISP,"Button",
+                    BS_AUTORADIOBUTTON,164,127,73,8
+    EDITTEXT        IDC_ED_DISP,59,136,243,12,ES_AUTOHSCROLL
+    LTEXT           "Method:",IDC_STATIC,7,150,47,8
+    CONTROL         "kinematic",IDC_RB_METHKIN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,150,73,8
+    CONTROL         "diffusive",IDC_RB_METHDIFF,"Button",BS_AUTORADIOBUTTON,
+                    164,150,73,8
+    CONTROL         "normal",IDC_RB_LEVNORM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,59,162,42,8
+    CONTROL         "critical",IDC_RB_LEVCRIT,"Button",BS_AUTORADIOBUTTON,
+                    135,162,42,8
+    CONTROL         "given:",IDC_RB_LEVGIVEN,"Button",BS_AUTORADIOBUTTON,217,
+                    162,42,8
+    EDITTEXT        IDC_ED_ENDLEVEL,59,172,243,12,ES_AUTOHSCROLL
+    LTEXT           "Num. Grid Pts.:",IDC_STATIC,7,202,53,9
+    EDITTEXT        IDC_ED_NUMGRID,59,199,50,12,ES_AUTOHSCROLL
+    LTEXT           "Resolution:",IDC_STATIC,132,202,39,8
+    CONTROL         "low",IDC_RB_LOWRES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,178,202,29,8
+    CONTROL         "high",IDC_RB_HIGHRES,"Button",BS_AUTORADIOBUTTON,215,
+                    202,35,8
+    DEFPUSHBUTTON   "Acc.",IDC_BU_ACC,272,199,30,11
+    DEFPUSHBUTTON   "OK",IDOK,7,229,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,252,229,50,14
+    LTEXT           "End Level:",IDC_TX_ENDLEVEL,7,162,47,8
+    CONTROL         "active for calculation",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,60,213,128,8
+    LTEXT           "Mode:",IDC_STATIC,7,186,31,8
+    CONTROL         "without Sediment",IDC_RB_SEDNO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,59,187,72,8
+    CONTROL         "with Sediment",IDC_RB_SEDYES,"Button",
+                    BS_AUTORADIOBUTTON,151,187,62,8
+    DEFPUSHBUTTON   "Sed. Prop.",IDC_BU_SED,252,186,50,11
+END
+
+IDD_CALC_CALCDEF DIALOG  0, 0, 281, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Calculation Definition"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,60,7,98,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,60,20,216,12,ES_AUTOHSCROLL
+    LTEXT           "Calc. Number:",IDC_STATIC,7,37,49,8
+    EDITTEXT        IDC_ED_CALCNUM,60,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Initial Time:",IDC_STATIC,7,50,40,8
+    EDITTEXT        IDC_ED_INITTIME,60,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "Initial State:",IDC_STATIC,7,63,40,8
+    CONTROL         "given, made consistent",IDC_RB_GIVEN,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,60,61,91,11
+    CONTROL         "steady state",IDC_RB_STEADY,"Button",BS_AUTORADIOBUTTON,
+                    183,62,91,11
+    LTEXT           "Status:",IDC_STATIC,7,173,40,8
+    CONTROL         "active for sensitivity analysis",IDC_CB_SENSSTATUS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,173,103,8
+    DEFPUSHBUTTON   "OK",IDOK,7,189,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,189,50,14
+    LTEXT           "Step Size:",IDC_STATIC,60,75,35,8
+    LTEXT           "Num. of Steps:",IDC_STATIC,126,75,50,8
+    LISTBOX         IDC_LB_LIST,60,84,145,60,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,224,107,50,14
+    EDITTEXT        IDC_ED_STEPSIZE,60,146,65,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_NUMSTEPS,126,146,65,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add",IDC_BU_ADD,224,138,50,14
+    PUSHBUTTON      "Replace",IDC_BU_REPLACE,224,154,50,14
+    LTEXT           "Output Steps:",IDC_STATIC,7,75,47,8
+    CONTROL         "active for simulation",IDC_CB_SIMSTATUS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,60,173,103,8
+END
+
+IDD_WAIT_SENS DIALOG  150, 75, 127, 81
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "AQUASIM"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "...analyzing sensitivity...",IDC_WAIT_TEXT,7,9,113,15
+    LTEXT           "Number of Simulations:",IDC_WAIT_NUMSIM_TXT,7,26,77,8
+    RTEXT           "0",IDC_WAIT_NUMSIM,89,26,32,8
+    LTEXT           "Current Simulation:",IDC_WAIT_CURSIM_TXT,7,39,84,8
+    RTEXT           "0",IDC_WAIT_CURSIM,68,39,53,8
+    DEFPUSHBUTTON   "Cancel",IDOK,38,60,50,14
+END
+
+IDD_WAIT_FIT DIALOG  150, 75, 125, 94
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "AQUASIM"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "...estimating parameters...",IDC_WAIT_TEXT,7,9,111,15
+    LTEXT           "Initial Chi^2:",IDC_WAIT_INICHI_TXT,7,25,52,8
+    RTEXT           "0",IDC_WAIT_INICHI,54,25,64,8
+    LTEXT           "Best Chi^2:",IDC_WAIT_BESTCHI_TXT,7,39,52,8
+    RTEXT           "0",IDC_WAIT_BESTCHI,54,39,64,8
+    LTEXT           "Current Chi^2:",IDC_WAIT_CURCHI_TXT,7,52,52,8
+    RTEXT           "0",IDC_WAIT_CURCHI,54,52,64,8
+    DEFPUSHBUTTON   "Cancel",IDOK,37,73,50,14
+END
+
+IDD_CALC_PARESTRES DIALOG  0, 0, 281, 170
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "AQUASIM"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Status:",IDC_STATIC,7,7,30,8
+    LTEXT           "status",IDC_TX_STATUS,112,7,162,8
+    LTEXT           "Number of iterations performed:",IDC_STATIC,7,18,103,8
+    LTEXT           "0",IDC_TX_NUMITER,112,18,162,8
+    LTEXT           "Parameter:  Start -> End  (Minimum,Maximum)",IDC_STATIC,
+                    7,30,267,8
+    LISTBOX         IDC_LB_LIST,7,42,267,80,NOT LBS_NOTIFY | 
+                    LBS_DISABLENOSCROLL | LBS_NOSEL | WS_VSCROLL
+    LTEXT           "Initial Chi^2:",IDC_STATIC,7,129,46,8
+    LTEXT           "0",IDC_TX_CHIINI,69,129,54,8
+    LTEXT           "Final Chi^2:",IDC_STATIC,139,129,41,8
+    LTEXT           "0",IDC_TX_CHIEND,200,129,58,8
+    DEFPUSHBUTTON   "OK",IDOK,115,149,50,14
+END
+
+IDD_CALC_PARESTCALC DIALOG  0, 0, 281, 215
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Calculation for Parameter Estimation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,10,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,97,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,216,12,ES_AUTOHSCROLL
+    LTEXT           "Calc. Number:",IDC_STATIC,7,37,49,8
+    EDITTEXT        IDC_ED_CALCNUM,59,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Initial Time:",IDC_STATIC,7,50,40,8
+    EDITTEXT        IDC_ED_INITTIME,59,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "Initial State:",IDC_STATIC,7,64,40,8
+    CONTROL         "given, made consistent",IDC_RB_GIVEN,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,60,62,91,11
+    CONTROL         "steady state",IDC_RB_STEADY,"Button",BS_AUTORADIOBUTTON,
+                    183,63,91,11
+    LTEXT           "Fit Targets:",IDC_STATIC,7,76,44,8
+    LTEXT           "Data  :  Variable(Compartment,Zone,Time/Space)",
+                    IDC_STATIC,59,76,215,8
+    LISTBOX         IDC_LB_TARGETS,60,87,214,66,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,157,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,143,157,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,224,157,50,14
+    LTEXT           "Status:",IDC_STATIC,7,179,40,8
+    CONTROL         "active for parameter estimation",IDC_CB_STATUS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,60,177,214,12
+    DEFPUSHBUTTON   "OK",IDOK,7,194,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,194,50,14
+END
+
+IDD_CALC_PARESTTARGET DIALOGEX 0, 0, 208, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Fit Target"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Data:",IDC_TX_DATA,7,9,27,8
+    COMBOBOX        IDC_LE_DATA,65,7,139,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Variable:",IDC_TX_VAR,7,23,35,8
+    COMBOBOX        IDC_LE_VAR,65,21,139,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Compartment:",IDC_TX_COMP,7,37,46,8
+    COMBOBOX        IDC_LE_COMP,65,35,139,78,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_COMPZONE,7,51,24,8
+    COMBOBOX        IDC_LE_COMPZONE,65,49,139,78,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Time/Space:",IDC_STATIC,7,66,45,8
+    EDITTEXT        IDC_ED_TORX,65,64,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,153,98,50,14
+    CONTROL         "relative space",IDC_CB_SPACEREL,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,65,78,110,9
+END
+
+IDD_EDIT_PROCDYNSTOICH DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Stoichiometric Coefficient"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Stoich. Coeff.:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_STOICH,58,20,216,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+END
+
+IDD_EDIT_VARREALLISTREAD DIALOG  0, 0, 203, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Read Data Pairs from a Text File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Start Row:",IDC_TX_START,7,9,110,8
+    EDITTEXT        IDC_ED_START,126,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "End Row (zero for end of file):",IDC_TX_END,7,22,113,8
+    EDITTEXT        IDC_ED_END,126,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Column Number of Argument:",IDC_TX_ARG,7,36,116,8
+    EDITTEXT        IDC_ED_ARG,126,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Column Number of Value:",IDC_TX_VAL,7,50,115,8
+    EDITTEXT        IDC_ED_VAL,126,48,70,12,ES_AUTOHSCROLL
+    LTEXT           "Column Number of Stand. Deviation:",IDC_TX_STD,7,64,116,
+                    8
+    EDITTEXT        IDC_ED_STD,126,62,70,12,ES_AUTOHSCROLL
+    CONTROL         "Delete existing data pairs",IDC_CB_DEL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,77,189,11
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,146,98,50,14
+END
+
+IDD_EDIT_NUMPAR DIALOG  0, 0, 308, 105
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Numerical Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Maximum Internal Step Size:",IDC_STATIC,7,9,220,8
+    EDITTEXT        IDC_ED_STEPSIZE,231,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum Integration Order [1-5]:",IDC_STATIC,7,22,220,8
+    EDITTEXT        IDC_ED_ORDER,231,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Number of Codiagonals of the Jacobian Matrix:",
+                    IDC_STATIC,7,36,220,8
+    EDITTEXT        IDC_ED_CODIAG,231,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum Number of Internal Time Steps for One External Time Step:",
+                    IDC_STATIC,7,51,217,8
+    EDITTEXT        IDC_ED_MAXSTEP,231,48,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,84,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,251,84,50,14
+    LTEXT           "Tolerance for Convergence of Parameter Estimation:",
+                    IDC_STATIC,7,65,217,8
+    EDITTEXT        IDC_ED_FITTOL,231,62,70,12,ES_AUTOHSCROLL | WS_GROUP
+END
+
+IDD_EDIT_LINKADVBIF DIALOGEX 0, 0, 340, 201
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Bifurcation"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,60,7,126,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,60,20,273,12,ES_AUTOHSCROLL
+    LTEXT           "To Compart.:",IDC_TX_COMPART,7,36,50,8
+    COMBOBOX        IDC_LE_COMPART,60,34,110,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Connection:",IDC_TX_CONNECT,179,36,40,8
+    COMBOBOX        IDC_LE_CONNECT,222,34,111,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Water Flow:",IDC_STATIC,7,51,50,8
+    EDITTEXT        IDC_ED_WATERFLOW,60,49,273,12,ES_AUTOHSCROLL
+    LTEXT           "Loadings:",IDC_STATIC,7,66,50,8
+    CONTROL         "with water flow",IDC_RB_WITHWATER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,60,66,73,8
+    CONTROL         "as given below:",IDC_RB_ASGIVEN,"Button",
+                    BS_AUTORADIOBUTTON,170,66,71,10
+    LTEXT           "Variable  :  Loading",IDC_TX_FLUXLIST,61,79,104,8
+    LISTBOX         IDC_LB_FLUXES,61,89,272,67,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,61,158,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,158,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,283,158,50,14
+    DEFPUSHBUTTON   "OK",IDOK,7,180,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,283,180,50,14
+END
+
+IDD_EDIT_LINKADVBIFFLUX DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Bifurcation Flux"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,59,7,139,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Loading:",IDC_STATIC,7,26,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_FLUX,58,23,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_LINKDIFFEXCH DIALOGEX 0, 0, 281, 79
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Exchange Coefficient"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,58,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,58,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Exch. Coeff.:",IDC_STATIC,7,25,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_EXCH,58,22,216,12,ES_AUTOHSCROLL
+    LTEXT           "Conv. Fact. 1:",IDC_STATIC,7,39,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_CONV1,58,36,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPRIVINITS DIALOG  0, 0, 283, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Conditions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,109,50,14
+    LTEXT           "Init Conds.:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Initial Condition",IDC_STATIC,60,7,104,8
+    LISTBOX         IDC_LB_INITS,60,18,216,60,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+END
+
+IDD_EDIT_COMPRIVINIT DIALOGEX 0, 0, 281, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,56,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,23,33,8
+    COMBOBOX        IDC_LE_ZONE,58,21,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Init. Cond.:",IDC_STATIC,7,38,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INITCOND,58,35,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPRIVSELINP DIALOG  0, 0, 125, 58
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Input Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,37,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,37,50,14
+    CONTROL         "Upstream Input",IDC_RB_UPSTREAMINP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,71,8
+    CONTROL         "Lateral Input",IDC_RB_LATINP,"Button",
+                    BS_AUTORADIOBUTTON,7,20,87,8
+END
+
+IDD_EDIT_COMPRIVUPINPS DIALOG  0, 0, 283, 145
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Upstream Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,124,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,124,50,14
+    LTEXT           "Loadings:",IDC_STATIC,7,21,43,8
+    LTEXT           "Variable  :  Loading",IDC_STATIC,60,21,72,10
+    LISTBOX         IDC_LB_INPUTS,60,32,216,60,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,100,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,100,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,100,50,14
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPRIVUPINP DIALOGEX 0, 0, 281, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Upstream Input Loading"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,41,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Loading:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPRIVLATINPS DIALOG  0, 0, 283, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,125,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,125,50,14
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Input Concs.:",IDC_STATIC,7,23,43,8
+    LTEXT           "Variable  :  Input Concentration",IDC_STATIC,60,23,109,
+                    10
+    LISTBOX         IDC_LB_INPUTS,60,34,216,60,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,102,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,102,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,102,50,14
+END
+
+IDD_EDIT_COMPRIVLATINP DIALOGEX 0, 0, 281, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Input Concentration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,41,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Input Conc.:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPADVINITS DIALOG  0, 0, 283, 134
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Conditions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,113,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,113,50,14
+    LTEXT           "Init Conds.:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Initial Condition",IDC_STATIC,60,7,104,8
+    LISTBOX         IDC_LB_INITS,60,18,216,63,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+END
+
+IDD_EDIT_COMPADVINIT DIALOGEX 0, 0, 281, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,57,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,138,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,23,33,8
+    COMBOBOX        IDC_LE_ZONE,58,21,138,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Init. Cond.:",IDC_STATIC,7,38,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INITCOND,58,35,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPADVSELINP DIALOG  0, 0, 126, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Input Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,36,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,69,36,50,14
+    CONTROL         "Inlet Input",IDC_RB_INLETINP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,71,8
+    CONTROL         "Lateral Input",IDC_RB_LATINP,"Button",
+                    BS_AUTORADIOBUTTON,7,20,87,8
+END
+
+IDD_EDIT_COMPADVININPS DIALOG  0, 0, 283, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Inlet Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,122,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,122,50,14
+    LTEXT           "Loadings:",IDC_STATIC,7,21,43,8
+    LTEXT           "Variable  :  Loading",IDC_STATIC,60,21,72,10
+    LISTBOX         IDC_LB_INPUTS,60,32,216,64,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,100,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,100,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,100,50,14
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPADVININP DIALOGEX 0, 0, 281, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Inlet Input Loading"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,42,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Loading:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPADVLATINPS DIALOG  0, 0, 283, 148
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,127,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,127,50,14
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Input Concs.:",IDC_STATIC,7,23,43,8
+    LTEXT           "Variable  :  Input Concentration",IDC_STATIC,60,23,109,
+                    10
+    LISTBOX         IDC_LB_INPUTS,60,34,216,66,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,102,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,102,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,102,50,14
+END
+
+IDD_EDIT_COMPADVLATINP DIALOGEX 0, 0, 281, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Input Concentration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,42,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,138,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Input Conc.:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSOILINITS DIALOG  0, 0, 283, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Conditions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,109,50,14
+    LTEXT           "Init Conds.:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Initial Condition",IDC_STATIC,60,7,104,8
+    LISTBOX         IDC_LB_INITS,60,18,216,67,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+END
+
+IDD_EDIT_COMPSOILINIT DIALOGEX 0, 0, 281, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,56,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,23,33,8
+    COMBOBOX        IDC_LE_ZONE,58,21,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Init. Cond.:",IDC_STATIC,7,38,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INITCOND,58,35,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSOILSELINP DIALOG  0, 0, 125, 58
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Input Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,37,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,37,50,14
+    CONTROL         "Inlet Input",IDC_RB_INLETINP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,7,7,71,8
+    CONTROL         "Lateral Input",IDC_RB_LATINP,"Button",
+                    BS_AUTORADIOBUTTON,7,20,87,8
+END
+
+IDD_EDIT_COMPSOILININPS DIALOG  0, 0, 283, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Inlet Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,122,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,122,50,14
+    LTEXT           "Loadings:",IDC_STATIC,7,21,43,8
+    LTEXT           "Variable  :  Loading",IDC_STATIC,60,21,72,10
+    LISTBOX         IDC_LB_INPUTS,60,32,216,68,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,100,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,100,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,100,50,14
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSOILININP DIALOGEX 0, 0, 281, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Inlet Input Loading"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,41,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Loading:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSOILLATINPS DIALOG  0, 0, 283, 145
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,124,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,124,50,14
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Input Concs.:",IDC_STATIC,7,23,43,8
+    LTEXT           "Variable  :  Input Concentration",IDC_STATIC,60,23,109,
+                    10
+    LISTBOX         IDC_LB_INPUTS,60,34,216,68,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,102,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,102,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,102,50,14
+END
+
+IDD_EDIT_COMPSOILLATINP DIALOGEX 0, 0, 281, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Lateral Input Concentration"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,42,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Input Conc.:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPFILMINPS DIALOG  0, 0, 283, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Input"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,125,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,125,50,14
+    LTEXT           "Water Inflow:",IDC_STATIC,7,9,50,8
+    EDITTEXT        IDC_ED_WATINF,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Loadings:",IDC_STATIC,7,23,43,8
+    LTEXT           "Variable  :  Loading",IDC_STATIC,60,23,72,10
+    LISTBOX         IDC_LB_INPUTS,60,34,216,67,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,102,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,102,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,102,50,14
+END
+
+IDD_EDIT_COMPFILMINP DIALOGEX 0, 0, 281, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Input Loading"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,44,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Loading",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INPFLUX,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPFILMINITS DIALOG  0, 0, 283, 132
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Conditions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,111,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,111,50,14
+    LTEXT           "Init Conds.:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Initial Condition",IDC_STATIC,60,7,104,8
+    LISTBOX         IDC_LB_INITS,60,18,216,65,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+END
+
+IDD_EDIT_COMPFILMINIT DIALOGEX 0, 0, 281, 79
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,58,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,58,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,23,33,8
+    COMBOBOX        IDC_LE_ZONE,58,21,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Init. Cond.:",IDC_STATIC,7,38,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INITCOND,58,35,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSOILPARZONE DIALOGEX 0, 0, 281, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Immobile Region"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,138,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,138,50,14
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,60,7,125,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,60,20,214,12,ES_AUTOHSCROLL
+    LTEXT           "Zone Index:  Volume Fraction",IDC_STATIC,61,35,104,8
+    LISTBOX         IDC_LB_SERZONES,60,46,214,67,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,61,114,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,114,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,224,114,50,14
+    LTEXT           "Mixed Zones:",IDC_STATIC,7,35,50,8
+END
+
+IDD_EDIT_COMPSOILSERZONE DIALOG  0, 0, 281, 159
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Mixed Zone"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,138,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,138,50,14
+    LTEXT           "Zone Index:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_ZONEIND,60,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Vol. Fraction:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_VOLFRACT,60,20,214,12,ES_AUTOHSCROLL
+    LTEXT           "Variable:  Exchange Coefficient, Conversion Factor",
+                    IDC_TX_EXCHLIST,61,35,213,8
+    LISTBOX         IDC_LB_EXCHPARS,60,46,214,66,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,61,114,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,114,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,224,114,50,14
+    LTEXT           "Exch. Pars.:",IDC_STATIC,7,35,52,8
+END
+
+IDD_EDIT_CONVSOILEXCH DIALOGEX 0, 0, 281, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Exchange Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,56,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Exch. Coeff.:",IDC_TX_EXCHCOEFF,7,22,47,8
+    LTEXT           "Conv. Fact.:",IDC_STATIC,7,37,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_CONVFACT,58,34,216,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ED_EXCHCOEFF,58,21,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPFILMPARTS DIALOGEX 0, 0, 264, 117
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Particulate Variables"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,96,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,207,96,50,14
+    LTEXT           "Part. Vars.:",IDC_STATIC,7,7,41,9
+    LISTBOX         IDC_LB_VARS,58,7,138,81,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADD,207,7,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,207,37,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,207,68,50,14
+END
+
+IDD_EDIT_COMPFILMPART DIALOGEX 0, 0, 284, 157
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Particulate Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,136,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,227,136,50,14
+    LTEXT           "Variable:",IDC_TX_VAR,7,7,50,8
+    COMBOBOX        IDC_LE_VAR,61,7,137,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Density:",IDC_STATIC,7,23,32,8
+    EDITTEXT        IDC_ED_DENSITY,61,20,216,12,ES_AUTOHSCROLL
+    LTEXT           "Surf. Att. Coeff.:",IDC_STATIC,7,36,50,10
+    EDITTEXT        IDC_ED_SURFATT,61,34,216,12,ES_AUTOHSCROLL
+    LTEXT           "Surf. Det.Coeff.:",IDC_STATIC,7,49,51,8
+    EDITTEXT        IDC_ED_SURFDET,61,47,216,12,ES_AUTOHSCROLL
+    LTEXT           "Vol. Att. Coeff.:",IDC_STATIC,7,63,52,10
+    EDITTEXT        IDC_ED_VOLATT,61,60,216,12,ES_AUTOHSCROLL
+    LTEXT           "Vol. Det. Coeff.:",IDC_STATIC,7,76,54,8
+    EDITTEXT        IDC_ED_VOLDET,61,73,216,12,ES_AUTOHSCROLL
+    LTEXT           "Bound. L. Res.:",IDC_STATIC,7,89,53,10
+    EDITTEXT        IDC_ED_BOUNDRES,61,87,216,12,ES_AUTOHSCROLL
+    LTEXT           "Pore Diff.:",IDC_STATIC,7,103,51,8
+    EDITTEXT        IDC_ED_POREDIFF,61,100,216,12,ES_AUTOHSCROLL
+    LTEXT           "Matrix Diff.:",IDC_STATIC,7,116,52,10
+    EDITTEXT        IDC_ED_MATRIXDIFF,61,114,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPFILMDISSS DIALOG  0, 0, 235, 116
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Dissolved Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,178,95,50,14
+    LTEXT           "Diss. Vars.:",IDC_STATIC,7,7,41,9
+    LISTBOX         IDC_LB_VARS,58,7,111,81,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADD,178,7,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,178,38,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,178,68,50,14
+END
+
+IDD_EDIT_COMPFILMDISS DIALOGEX 0, 0, 284, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Dissolved Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,227,56,50,14
+    LTEXT           "Variable:",IDC_TX_VAR,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,62,7,136,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Bound. L. Res.:",IDC_STATIC,7,23,53,10
+    EDITTEXT        IDC_ED_BOUNDRES,61,21,216,12,ES_AUTOHSCROLL
+    LTEXT           "Pore Diff.:",IDC_STATIC,7,37,51,8
+    EDITTEXT        IDC_ED_POREDIFF,61,34,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPLAKEACC DIALOG  0, 0, 317, 114
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Accuracies of Program Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Discharge:",IDC_STATIC,7,9,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,9,50,8
+    EDITTEXT        IDC_ED_RELACCQ,112,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,9,50,8
+    EDITTEXT        IDC_ED_ABSACCQ,240,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Dissipation:",IDC_STATIC,7,61,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,61,50,8
+    EDITTEXT        IDC_ED_RELACCN2,112,58,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,61,50,8
+    EDITTEXT        IDC_ED_ABSACCN2,240,58,70,12,ES_AUTOHSCROLL
+    LTEXT           "Horiz. Velocity:",IDC_STATIC,7,35,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,35,50,8
+    EDITTEXT        IDC_ED_RELACCU,112,32,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,35,50,8
+    EDITTEXT        IDC_ED_ABSACCU,240,32,70,12,ES_AUTOHSCROLL
+    LTEXT           "Turb. Kin. E.:",IDC_STATIC,7,48,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,48,50,8
+    EDITTEXT        IDC_ED_RELACCTKE,112,45,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,48,50,8
+    EDITTEXT        IDC_ED_ABSACCTKE,240,45,70,12,ES_AUTOHSCROLL
+    LTEXT           "Seiche Energy:",IDC_STATIC,7,74,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,74,50,8
+    EDITTEXT        IDC_ED_RELACCESEICHE,112,72,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,74,50,8
+    EDITTEXT        IDC_ED_ABSACCESEICHE,240,72,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,93,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,93,50,14
+    LTEXT           "Light Intensity:",IDC_STATIC,7,22,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,22,50,8
+    EDITTEXT        IDC_ED_RELACCI,112,19,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,22,50,8
+    EDITTEXT        IDC_ED_ABSACCI,240,19,70,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPMIXACC DIALOG  0, 0, 316, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Accuracies of Program Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Discharge:",IDC_STATIC,7,9,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,9,50,8
+    EDITTEXT        IDC_ED_RELACCQ,112,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,9,50,8
+    EDITTEXT        IDC_ED_ABSACCQ,240,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Volume:",IDC_STATIC,7,23,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,23,50,8
+    EDITTEXT        IDC_ED_RELACCV,112,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,23,50,8
+    EDITTEXT        IDC_ED_ABSACCV,240,20,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,259,42,50,14
+END
+
+IDD_EDIT_COMPSOILACC DIALOG  0, 0, 317, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Accuracies of Program Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Discharge:",IDC_STATIC,7,9,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,9,50,8
+    EDITTEXT        IDC_ED_RELACCQ,112,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,9,50,8
+    EDITTEXT        IDC_ED_ABSACCQ,240,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Dispersion:",IDC_STATIC,7,23,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,23,50,8
+    EDITTEXT        IDC_ED_RELACCD,112,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,23,50,8
+    EDITTEXT        IDC_ED_ABSACCD,240,20,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,42,50,14
+END
+
+IDD_EDIT_COMPADVACC DIALOG  0, 0, 317, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Accuracies of Program Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Discharge:",IDC_STATIC,7,9,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,9,50,8
+    EDITTEXT        IDC_ED_RELACCQ,112,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,9,50,8
+    EDITTEXT        IDC_ED_ABSACCQ,240,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Diffusion:",IDC_STATIC,7,23,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,23,50,8
+    EDITTEXT        IDC_ED_RELACCD,112,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,23,50,8
+    EDITTEXT        IDC_ED_ABSACCD,240,20,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,42,50,14
+END
+
+IDD_EDIT_COMPRIVACC DIALOG  0, 0, 317, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Accuracies of Program Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Discharge:",IDC_STATIC,7,9,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,9,50,8
+    EDITTEXT        IDC_ED_RELACCQ,112,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,9,50,8
+    EDITTEXT        IDC_ED_ABSACCQ,240,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Cross Section:",IDC_STATIC,7,23,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,23,50,8
+    EDITTEXT        IDC_ED_RELACCA,112,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,23,50,8
+    EDITTEXT        IDC_ED_ABSACCA,240,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Water Level:",IDC_STATIC,7,36,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,36,50,8
+    EDITTEXT        IDC_ED_RELACCZ,112,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,36,50,8
+    EDITTEXT        IDC_ED_ABSACCZ,240,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Dispersion:",IDC_STATIC,7,49,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,49,50,8
+    EDITTEXT        IDC_ED_RELACCE,112,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,49,50,8
+    EDITTEXT        IDC_ED_ABSACCE,240,47,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,69,50,14
+END
+
+IDD_EDIT_COMPFILMACC DIALOG  0, 0, 317, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Accuracies of Program Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Discharge:",IDC_STATIC,7,9,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,9,50,8
+    EDITTEXT        IDC_ED_RELACCQ,112,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,9,50,8
+    EDITTEXT        IDC_ED_ABSACCQ,240,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Volume:",IDC_STATIC,7,23,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,23,50,8
+    EDITTEXT        IDC_ED_RELACCV,112,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,23,50,8
+    EDITTEXT        IDC_ED_ABSACCV,240,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Biofilm Thickn.:",IDC_STATIC,7,36,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,36,50,8
+    EDITTEXT        IDC_ED_RELACCZ,112,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,36,50,8
+    EDITTEXT        IDC_ED_ABSACCZ,240,34,70,12,ES_AUTOHSCROLL
+    LTEXT           "Water Fract.:",IDC_STATIC,7,49,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,49,50,8
+    EDITTEXT        IDC_ED_RELACCEPS,112,47,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,49,50,8
+    EDITTEXT        IDC_ED_ABSACCEPS,240,47,70,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,69,50,14
+END
+
+IDD_FILE_PRINTOPT DIALOG  0, 0, 133, 47
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Print Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,76,26,50,14
+    LTEXT           "File Format:",IDC_STATIC,7,7,45,8
+    CONTROL         "long",IDC_RB_LONG,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,56,7,34,8
+    CONTROL         "short",IDC_RB_SHORT,"Button",BS_AUTORADIOBUTTON,92,7,34,
+                    8
+END
+
+IDD_VIEW_EDSCALINGS DIALOG  0, 0, 212, 146
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Plot Scalings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,126,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,155,126,50,14
+    LTEXT           "Abscissa:",IDC_STATIC,7,10,34,8
+    LTEXT           "Minimum:",IDC_STATIC,51,10,35,8
+    CONTROL         "auto",IDC_CB_ABSCMIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,10,32,8
+    EDITTEXT        IDC_ED_ABSCMIN,135,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum:",IDC_STATIC,51,21,36,8
+    CONTROL         "auto",IDC_CB_ABSMAX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,21,32,8
+    EDITTEXT        IDC_ED_ABSCMAX,135,19,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Pos.:",IDC_STATIC,51,32,38,8
+    CONTROL         "auto",IDC_CB_ABSCTPOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,33,32,8
+    EDITTEXT        IDC_ED_ABSCTPOS,135,31,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Dist.:",IDC_STATIC,51,45,37,8
+    CONTROL         "auto",IDC_CB_ABSCTDIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,45,32,8
+    EDITTEXT        IDC_ED_ABSCTDIST,135,43,70,12,ES_AUTOHSCROLL
+    LTEXT           "Ordinate:",IDC_STATIC,7,68,33,8
+    LTEXT           "Minimum:",IDC_STATIC,51,68,35,8
+    CONTROL         "auto",IDC_CB_ORDMIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,68,32,8
+    EDITTEXT        IDC_ED_ORDMIN,135,65,70,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum:",IDC_STATIC,51,80,36,8
+    CONTROL         "auto",IDC_CB_ORDMAX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,80,32,8
+    EDITTEXT        IDC_ED_ORDMAX,135,78,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Pos.:",IDC_STATIC,51,92,38,8
+    CONTROL         "auto",IDC_CB_ORDTPOS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,93,32,8
+    EDITTEXT        IDC_ED_ORDTPOS,135,91,70,12,ES_AUTOHSCROLL
+    LTEXT           "Tick Dist.:",IDC_STATIC,51,105,37,8
+    CONTROL         "auto",IDC_CB_ORDTDIST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,95,106,32,8
+    EDITTEXT        IDC_ED_ORDTDIST,135,104,70,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPLAKESEDLAYER DIALOG  0, 0, 281, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sediment Layer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,57,50,14
+    LTEXT           "Zone Index:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_ZONEIND,60,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Thickness:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_THICKNESS,60,20,214,12,ES_AUTOHSCROLL
+    LTEXT           "Porosity:",IDC_STATIC,7,36,50,8
+    EDITTEXT        IDC_ED_POROSITY,60,34,214,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPRIVSED DIALOG  0, 0, 282, 129
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sediment Layers"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,108,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,225,108,50,14
+    LTEXT           "Zone Index:  Area, Porosity, Discharge, Dispersion, Exch. Coeff.",
+                    IDC_STATIC,61,7,214,8
+    LISTBOX         IDC_LB_SEDLAYERS,61,17,214,65,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,61,84,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,145,84,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,225,84,50,14
+    LTEXT           "Sed. Layers:",IDC_STATIC,7,7,50,8
+END
+
+IDD_EDIT_COMPRIVSEDLAYER DIALOG  0, 0, 281, 116
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sediment Layer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,95,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,95,50,14
+    LTEXT           "Zone Index:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_ZONEIND,60,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Area:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_AREA,60,20,214,12,ES_AUTOHSCROLL
+    LTEXT           "Porosity:",IDC_STATIC,7,36,50,8
+    EDITTEXT        IDC_ED_POROSITY,60,33,214,12,ES_AUTOHSCROLL
+    LTEXT           "Discharge:",IDC_STATIC,7,49,50,8
+    EDITTEXT        IDC_ED_VELOCITY,60,47,214,12,ES_AUTOHSCROLL
+    LTEXT           "Exch. Coeff.:",IDC_STATIC,7,76,50,8
+    EDITTEXT        IDC_ED_EXCHCOEFF,60,74,214,12,ES_AUTOHSCROLL
+    LTEXT           "Dispersion:",IDC_STATIC,7,63,50,8
+    EDITTEXT        IDC_ED_DISPERSION,60,60,214,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSED DIALOGEX 0, 0, 310, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Sediment Compartment"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,122,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,122,50,14
+    LTEXT           "Name:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_ED_NAME,59,7,126,12,ES_AUTOHSCROLL
+    LTEXT           "Comp. Index:",IDC_STATIC,188,9,41,8
+    EDITTEXT        IDC_ED_COMPIND,233,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Description:",IDC_STATIC,7,23,50,8
+    EDITTEXT        IDC_ED_DESCRIPT,59,20,244,12,ES_AUTOHSCROLL
+    LTEXT           "Options:",IDC_STATIC,7,35,41,8
+    DEFPUSHBUTTON   "Variables",IDC_BU_VARS,59,34,50,11
+    DEFPUSHBUTTON   "Processes",IDC_BU_PROCS,124,34,50,11
+    DEFPUSHBUTTON   "Init. Cond.",IDC_BU_INITS,188,34,50,11
+    DEFPUSHBUTTON   "Input",IDC_BU_INP,253,34,50,11
+    LTEXT           "Properties of:",IDC_STATIC,7,48,41,8
+    DEFPUSHBUTTON   "Particulate Variables",IDC_BU_PARTVARS,59,47,115,11
+    DEFPUSHBUTTON   "Dissolved Variables",IDC_BU_DISSVARS,188,47,115,11
+    LTEXT           "Top Coord.:",IDC_STATIC,7,66,49,8
+    EDITTEXT        IDC_ED_TOP,59,63,70,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom Coord.:",IDC_STATIC,178,65,51,8
+    EDITTEXT        IDC_ED_BOTTOM,233,63,70,12,ES_AUTOHSCROLL
+    LTEXT           "Rate Por.:",IDC_STATIC,7,79,50,8
+    EDITTEXT        IDC_ED_RATEPOR,59,76,244,12,ES_AUTOHSCROLL
+    LTEXT           "Num. Grid Pts.:",IDC_STATIC,7,94,53,9
+    EDITTEXT        IDC_ED_NUMGRID,59,92,50,12,ES_AUTOHSCROLL
+    LTEXT           "Resolution:",IDC_STATIC,137,94,39,8
+    CONTROL         "low",IDC_RB_LOWRES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,183,94,29,8
+    CONTROL         "high",IDC_RB_HIGHRES,"Button",BS_AUTORADIOBUTTON,220,94,
+                    35,8
+    DEFPUSHBUTTON   "Acc.",IDC_BU_ACC,273,93,30,11
+    CONTROL         "active for calculation",IDC_CB_ACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,60,106,150,8
+END
+
+IDD_EDIT_COMPSEDINITS DIALOG  0, 0, 283, 130
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Conditions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,109,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,109,50,14
+    LTEXT           "Init Conds.:",IDC_STATIC,7,7,43,8
+    LTEXT           "Variable  :  Initial Condition",IDC_STATIC,60,7,104,8
+    LISTBOX         IDC_LB_INITS,60,18,216,64,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADD,59,86,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDIT,144,86,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETE,226,86,50,14
+END
+
+IDD_EDIT_COMPSEDINIT DIALOGEX 0, 0, 281, 76
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Initial Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,55,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Zone:",IDC_TX_ZONE,7,23,33,8
+    COMBOBOX        IDC_LE_ZONE,58,21,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Init. Cond.:",IDC_STATIC,7,38,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_INITCOND,58,35,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSEDINPS DIALOG  0, 0, 283, 261
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Inputs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,240,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,226,240,50,14
+    LTEXT           "Top Boundary:",IDC_STATIC,7,24,49,8
+    LTEXT           "Variable  :  Conc. of Dissolved Var. or Flux of Particulate Var.",
+                    IDC_STATIC,60,24,206,10
+    LISTBOX         IDC_LB_TOPBCS,60,35,216,68,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADDTOPBC,59,105,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDITTOPBC,144,105,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETETOPBC,226,105,50,14
+    LTEXT           "Surf. Porosity:",IDC_STATIC,7,9,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_SURFPOR,60,7,216,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom Bound.:",IDC_STATIC,7,135,49,8
+    LTEXT           "Variable  :  Conc. of Dissolved Variable (default is zero gradient)",
+                    IDC_STATIC,60,135,206,10
+    LISTBOX         IDC_LB_BOTTOMBCS,60,146,216,70,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Add",IDC_BU_ADDBOTTOMBC,59,216,50,14
+    DEFPUSHBUTTON   "Edit",IDC_BU_EDITBOTTOMBC,144,216,50,14
+    DEFPUSHBUTTON   "Delete",IDC_BU_DELETEBOTTOMBC,226,216,50,14
+END
+
+IDD_EDIT_COMPSEDTOPBC DIALOGEX 0, 0, 281, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Surface Boundary Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,41,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Conc. or Flux:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_CONC,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSEDACC DIALOG  0, 0, 317, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Accuracies of Program Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,41,50,14
+    LTEXT           "Discharge:",IDC_STATIC,7,9,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,9,50,8
+    EDITTEXT        IDC_ED_RELACCQ,112,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,9,50,8
+    EDITTEXT        IDC_ED_ABSACCQ,240,7,70,12,ES_AUTOHSCROLL
+    LTEXT           "Porosity:",IDC_STATIC,7,23,50,8
+    LTEXT           "Rel. Accuracy:",IDC_STATIC,60,23,50,8
+    EDITTEXT        IDC_ED_RELACCPOR,112,20,70,12,ES_AUTOHSCROLL
+    LTEXT           "Abs. Accuracy:",IDC_STATIC,188,23,50,8
+    EDITTEXT        IDC_ED_ABSACCPOR,240,20,70,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSEDPARTS DIALOG  0, 0, 281, 149
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Particulate Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,128,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,128,50,14
+    LTEXT           "Part. Vars.:",IDC_STATIC,7,7,41,9
+    LTEXT           "Variable  :  Density, Bioturbation",IDC_STATIC,57,7,211,
+                    8
+    LISTBOX         IDC_LB_VARS,58,20,216,79,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADD,58,104,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,141,104,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,224,104,50,14
+END
+
+IDD_EDIT_COMPSEDPART DIALOGEX 0, 0, 281, 77
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Particulate Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,56,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,56,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Density:",IDC_STATIC,7,23,32,8
+    EDITTEXT        IDC_ED_DENSITY,58,20,216,12,ES_AUTOHSCROLL
+    LTEXT           "Bioturbation:",IDC_STATIC,7,36,42,10
+    EDITTEXT        IDC_ED_BIOTURB,58,34,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSEDDISSS DIALOG  0, 0, 281, 150
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Dissolved Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,129,50,14
+    LTEXT           "Diss. Vars.:",IDC_STATIC,7,6,41,9
+    LTEXT           "Variable  :  Molecular Diffusion Coefficient",
+                    IDC_STATIC,57,6,140,8
+    LISTBOX         IDC_LB_VARS,58,20,216,83,LBS_EXTENDEDSEL | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BU_ADD,58,104,50,14
+    PUSHBUTTON      "Edit",IDC_BU_EDIT,141,104,50,14
+    PUSHBUTTON      "Delete",IDC_BU_DELETE,224,104,50,14
+END
+
+IDD_EDIT_COMPSEDDISS DIALOGEX 0, 0, 281, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Dissolved Variable"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,224,41,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,8,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Mol. Diffusion:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_SEDEXCH,58,20,216,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_COMPSEDBOTTOMBC DIALOGEX 0, 0, 279, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Bottom Boundary Condition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,43,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,222,43,50,14
+    LTEXT           "Variable:",IDC_STATIC,7,7,33,8
+    COMBOBOX        IDC_LE_VAR,58,7,140,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Concentration:",IDC_STATIC,7,23,48,8,NOT WS_GROUP
+    EDITTEXT        IDC_ED_CONC,58,20,216,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_WAIT_CANCEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_WAIT_SIM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_EDIT_SELCOMPTYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_EDIT_COMPLAKE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_EDIT_COMPLAKESED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_EDIT_COMPLAKETKE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_EDIT_COMPLAKEPARTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+        HORZGUIDE, 134
+    END
+
+    IDD_EDIT_COMPLAKEPART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_EDIT_COMPLAKEDISSS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_EDIT_COMPLAKEDISS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_COMPACTVAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_EDIT_COMPACTPROC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 345
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_EDIT_COMPMIX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_EDIT_COMPMIXINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_EDIT_COMPMIXINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_COMPMIXINITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDIT_COMPMIXINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_EDIT_COMPLAKEINITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDIT_COMPLAKEINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_EDIT_COMPLAKESELINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 122
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_EDIT_COMPLAKESURFINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+        HORZGUIDE, 102
+    END
+
+    IDD_EDIT_COMPLAKESURFINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_COMPLAKELATINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_EDIT_COMPLAKELATINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_COMPLAKESEDINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDIT_COMPLAKESEDINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_COMPLAKEPOINTINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_EDIT_COMPLAKEPOINTINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_EDIT_COMPLAKEPOINTINPCONC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_VARSTATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_EDIT_VARPROG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+
+    IDD_EDIT_VARPAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_EDIT_VARFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_EDIT_VARREALLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 245
+    END
+
+    IDD_EDIT_VARVARLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 311
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_EDIT_VARPROBE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 384
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_EDIT_SELLINKTYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 112
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_EDIT_SELPROCTYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 112
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_EDIT_PROCDYN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_EDIT_PROCEQU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_EDIT_LINKADV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 381
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_EDIT_LINKDIFF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 332
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_EDIT_COMPFILM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_EDIT_COMPADV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_EDIT_COMPSOIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_EDIT_COMPRIV, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_CALC_CALCDEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_WAIT_SENS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_WAIT_FIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_CALC_PARESTRES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_CALC_PARESTCALC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+        HORZGUIDE, 173
+    END
+
+    IDD_CALC_PARESTTARGET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_EDIT_PROCDYNSTOICH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_VARREALLISTREAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_EDIT_NUMPAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_EDIT_LINKADVBIF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_EDIT_LINKADVBIFFLUX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_LINKDIFFEXCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_EDIT_COMPRIVINITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDIT_COMPRIVINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_EDIT_COMPRIVSELINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_EDIT_COMPRIVUPINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_EDIT_COMPRIVUPINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_EDIT_COMPRIVLATINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_EDIT_COMPRIVLATINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_EDIT_COMPADVINITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_EDIT_COMPADVINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_EDIT_COMPADVSELINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 119
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_EDIT_COMPADVININPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_EDIT_COMPADVININP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_EDIT_COMPADVLATINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_EDIT_COMPADVLATINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_EDIT_COMPSOILINITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDIT_COMPSOILINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_EDIT_COMPSOILSELINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_EDIT_COMPSOILININPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_EDIT_COMPSOILININP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_EDIT_COMPSOILLATINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_EDIT_COMPSOILLATINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_EDIT_COMPFILMINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_EDIT_COMPFILMINP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_EDIT_COMPFILMINITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_EDIT_COMPFILMINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_EDIT_COMPSOILPARZONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_EDIT_COMPSOILSERZONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_EDIT_CONVSOILEXCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_EDIT_COMPFILMPARTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_EDIT_COMPFILMPART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_EDIT_COMPFILMDISSS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_EDIT_COMPFILMDISS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_EDIT_COMPLAKEACC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_EDIT_COMPMIXACC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_EDIT_COMPSOILACC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_EDIT_COMPADVACC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_EDIT_COMPRIVACC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_EDIT_COMPFILMACC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_FILE_PRINTOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 126
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_VIEW_EDSCALINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_EDIT_COMPLAKESEDLAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_EDIT_COMPRIVSED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_EDIT_COMPRIVSEDLAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_EDIT_COMPSED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_EDIT_COMPSEDINITS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDIT_COMPSEDINIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_EDIT_COMPSEDINPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 254
+    END
+
+    IDD_EDIT_COMPSEDTOPBC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_EDIT_COMPSEDACC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_EDIT_COMPSEDPARTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
+
+    IDD_EDIT_COMPSEDPART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_EDIT_COMPSEDDISSS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_EDIT_COMPSEDDISS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_EDIT_COMPSEDBOTTOMBC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Switzerland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\AQUASIM.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  	// Standard components
+#include "afxprint.rc"	// printing/print preview resources
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

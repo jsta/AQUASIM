@@ -1,0 +1,121 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Aquasim - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\reichert\LOCALS~1\Temp\RSP36.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D AQUA_OS=AQUA_NT /D AQUA_VERSION=AQUA_VCC /D "_AFXDLL" /D "_MBCS" /Fo".\WinRel/" /Fd".\WinRel/" /FD /c 
+"C:\Reichert\aquasim\aq21f\win32\aqcore\sedcomp.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\reichert\LOCALS~1\Temp\RSP36.tmp" 
+Creating temporary file "C:\DOCUME~1\reichert\LOCALS~1\Temp\RSP37.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:".\WinRel/aquasim.pdb" /machine:I386 /out:".\WinRel/aquasim.exe" 
+.\WinRel\Advcomp.obj
+.\WinRel\All.obj
+.\WinRel\Aqcomp.obj
+.\WinRel\aqdoc_w.obj
+.\WinRel\Aqlink.obj
+.\WinRel\Aqproc.obj
+.\WinRel\AQUASIM.obj
+.\WinRel\Aquasys.obj
+.\WinRel\Aqvar.obj
+.\WinRel\aqview_w.obj
+.\WinRel\caest_w.obj
+.\WinRel\CALCSYS.obj
+.\WinRel\casens_w.obj
+.\WinRel\casim_w.obj
+.\WinRel\Compsys.obj
+.\WinRel\Das.obj
+.\WinRel\Dassl.obj
+.\WinRel\dcolor_w.obj
+.\WinRel\delsta_w.obj
+.\WinRel\Drawpts.obj
+.\WinRel\drline_w.obj
+.\WinRel\drmark_w.obj
+.\WinRel\drtext_w.obj
+.\WinRel\edadv_w.obj
+.\WinRel\edadvl_w.obj
+.\WinRel\edcomp_w.obj
+.\WinRel\eddiff_w.obj
+.\WinRel\eddynp_w.obj
+.\WinRel\edequp_w.obj
+.\WinRel\edfilm_w.obj
+.\WinRel\edform_w.obj
+.\WinRel\edlake_w.obj
+.\WinRel\edlink_w.obj
+.\WinRel\edmix_w.obj
+.\WinRel\ednum_w.obj
+.\WinRel\edpar_w.obj
+.\WinRel\edprob_w.obj
+.\WinRel\edproc_w.obj
+.\WinRel\edprog_w.obj
+.\WinRel\edriv_w.obj
+.\WinRel\edrlis_w.obj
+.\WinRel\edsed_w.obj
+.\WinRel\edsoil_w.obj
+.\WinRel\edstat_w.obj
+.\WinRel\edvar_w.obj
+.\WinRel\edvlis_w.obj
+.\WinRel\file_w.obj
+.\WinRel\Fileio.obj
+.\WinRel\Filmcomp.obj
+.\WinRel\Fit.obj
+.\WinRel\Fitsys.obj
+.\WinRel\Formvar.obj
+.\WinRel\Fortran.obj
+.\WinRel\GAMMA.OBJ
+.\WinRel\Init.obj
+.\WinRel\Intpol.obj
+.\WinRel\Lakecomp.obj
+.\WinRel\Linksys.obj
+.\WinRel\Linpack.obj
+.\WinRel\mainfr_w.obj
+.\WinRel\mdi.obj
+.\WinRel\Mixcomp.obj
+.\WinRel\Numpar.obj
+.\WinRel\Othervar.obj
+.\WinRel\plot_w.obj
+.\WinRel\plotdo_w.obj
+.\WinRel\Plotpts.obj
+.\WinRel\Plotsys.obj
+.\WinRel\plotvw_w.obj
+.\WinRel\Procsys.obj
+.\WinRel\readwords.obj
+.\WinRel\Rivcomp.obj
+.\WinRel\Sdlist.obj
+.\WinRel\sedcomp.obj
+.\WinRel\Soilcomp.obj
+.\WinRel\sort.obj
+.\WinRel\stat.obj
+.\WinRel\Statesys.obj
+.\WinRel\stdafx.obj
+.\WinRel\Symbol.obj
+.\WinRel\Varsys.obj
+.\WinRel\Vectors.obj
+.\WinRel\vires_w.obj
+.\WinRel\waidlg_w.obj
+.\WinRel\Zero.obj
+.\WinRel\ZoomD_W.obj
+.\WinRel\AQUASIM.res
+]
+Creating command line "link.exe @C:\DOCUME~1\reichert\LOCALS~1\Temp\RSP37.tmp"
+<h3>Output Window</h3>
+Compiling...
+sedcomp.cpp
+C:\Reichert\aquasim\aq21f\win32\aqcore\sedcomp.cpp(1979) : warning C4018: '>=' : signed/unsigned mismatch
+C:\Reichert\aquasim\aq21f\win32\aqcore\sedcomp.cpp(2001) : warning C4018: '>=' : signed/unsigned mismatch
+C:\Reichert\aquasim\aq21f\win32\aqcore\sedcomp.cpp(2006) : warning C4018: '==' : signed/unsigned mismatch
+Linking...
+
+
+
+<h3>Results</h3>
+aquasim.exe - 0 error(s), 3 warning(s)
+</pre>
+</body>
+</html>

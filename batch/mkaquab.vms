@@ -1,0 +1,61 @@
+$ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$ !                                                                          !
+$ !  mkaquab.vms                                    Peter Reichert 29.01.98  !
+$ !  -----------                                                             !
+$ !                                                                          !
+$ !  command file for batch version of AQUASIM on vms systems                !
+$ !                                                                          !
+$ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$ !
+$ SET DEF [.BIN]
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) all.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) sdlist.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) intpol.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) numpar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) dassl.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) linpack.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) fortran.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) zero.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) das.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) fit.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) init.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) fileio.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) symbol.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) aqvar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) formvar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) othervar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) varsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) aqproc.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) procsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) aqcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) mixcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) filmcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) advcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) soilcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) rivcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) lakecomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) compsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) aqlink.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) linksys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) calcsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) fitsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) statesys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) plotsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) vectors.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) drawpts.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) plotpts.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) aquasys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_BATCH) main_b.cpp
+$ LINK /MAP=aquasimb /EXE=aquasimb.exe -
+       all.obj,sdlist.obj, -
+       intpol.obj,numpar.obj,dassl.obj,linpack.obj, -
+       fortran.obj,zero.obj,das.obj,fit.obj, -
+       init.obj,fileio.obj,symbol.obj, -
+       aqvar.obj,formvar.obj,othervar.obj,varsys.obj, -
+       aqproc.obj,procsys.obj, -
+       aqcomp.obj,mixcomp.obj,filmcomp.obj,advcomp.obj, -
+       soilcomp.obj,rivcomp.obj,lakecomp.obj,compsys.obj, -
+       aqlink.obj,linksys.obj, -
+       calcsys.obj,fitsys.obj,statesys.obj,plotsys.obj, -
+       vectors.obj,drawpts.obj,plotpts.obj,aquasys.obj, -
+       main_b.obj

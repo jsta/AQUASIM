@@ -1,0 +1,549 @@
+##############################################################################
+#                                                                            #
+#  mkaquac.sun                                      Peter Reichert 11.03.02  #
+#  -----------                                                               #
+#                                                                            #
+#  makefile for character version of AQUASIM on sun systems                  #
+#                                                                            #
+##############################################################################
+
+#  tested with SunC++ version 4.0
+
+
+#  changing compilation flags:
+CFLAGS = -O
+LFLAGS = -O
+
+#CFLAGS = -g -DHEAPTEST
+#LFLAGS = -g
+
+#CFLAGS = -g
+#LFLAGS = -g
+
+#CFLAGS = -g -DDEBUG
+#LFLAGS = -g
+
+
+#  directories:
+COREDIR = ../win32/aqcore           # AQUASIM core files
+INTDIR  = .                         # AQUASIM character interface files
+OBJDIR  = ../../bin/sunchar         # directory for object files
+BINDIR  = ../../bin/sunchar         # directory for binary files
+
+#  libraries:
+#LIBS = -Bstatic -lC -Bdynamic -lm
+#LIBS = -lC -lm
+LIBS = -lm
+
+#  compiler and linker:
+COMP = CC                           # sun C++ compiler
+LINK = CC                           # sun linker
+#COMP = g++                          # gnu C++ compiler
+#LINK = g++                          # gnu linker
+
+#  general compiler and linker options:
+COPT =   -c -I$(COREDIR) -I$(INTDIR) \
+	 -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR
+LOPT = 
+
+#.KEEP_STATE :                       # automatic dependency checking
+
+#  program linking:
+$(BINDIR)/aquasimc : \
+	        $(OBJDIR)/all.o \
+	        $(OBJDIR)/sort.o \
+	        $(OBJDIR)/mdi.o \
+	        $(OBJDIR)/gamma.o \
+	        $(OBJDIR)/stat.o \
+	        $(OBJDIR)/sdlist.o \
+	        $(OBJDIR)/intpol.o \
+	        $(OBJDIR)/numpar.o \
+	        $(OBJDIR)/dassl.o \
+	        $(OBJDIR)/linpack.o \
+	        $(OBJDIR)/fortran.o \
+	        $(OBJDIR)/zero.o \
+	        $(OBJDIR)/das.o \
+	        $(OBJDIR)/fit.o \
+	        $(OBJDIR)/init.o \
+	        $(OBJDIR)/fileio.o \
+	        $(OBJDIR)/symbol.o \
+	        $(OBJDIR)/aqvar.o \
+	        $(OBJDIR)/formvar.o \
+	        $(OBJDIR)/othervar.o \
+	        $(OBJDIR)/varsys.o \
+	        $(OBJDIR)/aqproc.o \
+	        $(OBJDIR)/procsys.o \
+	        $(OBJDIR)/aqcomp.o \
+	        $(OBJDIR)/mixcomp.o \
+	        $(OBJDIR)/filmcomp.o \
+	        $(OBJDIR)/advcomp.o \
+	        $(OBJDIR)/soilcomp.o \
+	        $(OBJDIR)/rivcomp.o \
+	        $(OBJDIR)/lakecomp.o \
+	        $(OBJDIR)/sedcomp.o \
+	        $(OBJDIR)/compsys.o \
+	        $(OBJDIR)/aqlink.o \
+	        $(OBJDIR)/linksys.o \
+	        $(OBJDIR)/calcsys.o \
+	        $(OBJDIR)/fitsys.o \
+	        $(OBJDIR)/statesys.o \
+	        $(OBJDIR)/plotsys.o \
+	        $(OBJDIR)/vectors.o \
+	        $(OBJDIR)/drawpts.o \
+	        $(OBJDIR)/plotpts.o \
+	        $(OBJDIR)/readwords.o \
+	        $(OBJDIR)/aquasys.o \
+	        $(OBJDIR)/scrio_c.o \
+	        $(OBJDIR)/edvar_c.o \
+	        $(OBJDIR)/edproc_c.o \
+	        $(OBJDIR)/edopt_c.o \
+	        $(OBJDIR)/edmix_c.o \
+	        $(OBJDIR)/edfilm_c.o \
+	        $(OBJDIR)/edadv_c.o \
+	        $(OBJDIR)/edsoil_c.o \
+	        $(OBJDIR)/edriv_c.o \
+	        $(OBJDIR)/edlake_c.o \
+	        $(OBJDIR)/edcomp_c.o \
+	        $(OBJDIR)/edlink_c.o \
+	        $(OBJDIR)/ednum_c.o \
+	        $(OBJDIR)/edstat_c.o \
+	        $(OBJDIR)/file_c.o \
+	        $(OBJDIR)/calc_c.o \
+	        $(OBJDIR)/view_c.o \
+	        $(OBJDIR)/main_c.o
+	   @ echo .
+	   @ echo -------------------- LINKING --------------------
+	   /bin/cp $(COREDIR)/aquasim.ini $(BINDIR)/.
+	   $(LINK) $(LOPT) $(LFLAGS) -o $(BINDIR)/aquasimc \
+	        $(OBJDIR)/all.o \
+	        $(OBJDIR)/sort.o \
+	        $(OBJDIR)/mdi.o \
+	        $(OBJDIR)/gamma.o \
+	        $(OBJDIR)/stat.o \
+	        $(OBJDIR)/sdlist.o \
+	        $(OBJDIR)/intpol.o \
+	        $(OBJDIR)/numpar.o \
+	        $(OBJDIR)/dassl.o \
+	        $(OBJDIR)/linpack.o \
+	        $(OBJDIR)/fortran.o \
+	        $(OBJDIR)/zero.o \
+	        $(OBJDIR)/das.o \
+	        $(OBJDIR)/fit.o \
+	        $(OBJDIR)/init.o \
+	        $(OBJDIR)/fileio.o \
+	        $(OBJDIR)/symbol.o \
+	        $(OBJDIR)/aqvar.o \
+	        $(OBJDIR)/formvar.o \
+	        $(OBJDIR)/othervar.o \
+	        $(OBJDIR)/varsys.o \
+	        $(OBJDIR)/aqproc.o \
+	        $(OBJDIR)/procsys.o \
+	        $(OBJDIR)/aqcomp.o \
+	        $(OBJDIR)/mixcomp.o \
+	        $(OBJDIR)/filmcomp.o \
+	        $(OBJDIR)/advcomp.o \
+	        $(OBJDIR)/soilcomp.o \
+	        $(OBJDIR)/rivcomp.o \
+	        $(OBJDIR)/lakecomp.o \
+	        $(OBJDIR)/sedcomp.o \
+	        $(OBJDIR)/compsys.o \
+	        $(OBJDIR)/aqlink.o \
+	        $(OBJDIR)/linksys.o \
+	        $(OBJDIR)/calcsys.o \
+	        $(OBJDIR)/fitsys.o \
+	        $(OBJDIR)/statesys.o \
+	        $(OBJDIR)/plotsys.o \
+	        $(OBJDIR)/vectors.o \
+	        $(OBJDIR)/drawpts.o \
+	        $(OBJDIR)/plotpts.o \
+	        $(OBJDIR)/readwords.o \
+	        $(OBJDIR)/aquasys.o \
+	        $(OBJDIR)/scrio_c.o \
+	        $(OBJDIR)/edvar_c.o \
+	        $(OBJDIR)/edproc_c.o \
+	        $(OBJDIR)/edopt_c.o \
+	        $(OBJDIR)/edmix_c.o \
+	        $(OBJDIR)/edfilm_c.o \
+	        $(OBJDIR)/edriv_c.o \
+	        $(OBJDIR)/edadv_c.o \
+	        $(OBJDIR)/edlake_c.o \
+	        $(OBJDIR)/edsoil_c.o \
+	        $(OBJDIR)/edcomp_c.o \
+	        $(OBJDIR)/edlink_c.o \
+	        $(OBJDIR)/ednum_c.o \
+	        $(OBJDIR)/edstat_c.o \
+	        $(OBJDIR)/file_c.o \
+	        $(OBJDIR)/calc_c.o \
+	        $(OBJDIR)/view_c.o \
+	        $(OBJDIR)/main_c.o \
+	        $(LIBS)
+
+#  program compilation:
+
+$(OBJDIR)/all.o: $(COREDIR)/all.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/all.o $(COREDIR)/all.cpp
+
+$(OBJDIR)/sort.o: $(COREDIR)/sort.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/sort.o $(COREDIR)/sort.cpp
+
+$(OBJDIR)/mdi.o: $(COREDIR)/mdi.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/mdi.o $(COREDIR)/mdi.cpp
+
+$(OBJDIR)/gamma.o: $(COREDIR)/gamma.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/gamma.o $(COREDIR)/gamma.cpp
+
+$(OBJDIR)/stat.o: $(COREDIR)/stat.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/stat.o $(COREDIR)/stat.cpp
+
+$(OBJDIR)/sdlist.o: $(COREDIR)/sdlist.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/sdlist.o $(COREDIR)/sdlist.cpp
+
+$(OBJDIR)/intpol.o: $(COREDIR)/intpol.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/intpol.o $(COREDIR)/intpol.cpp
+
+$(OBJDIR)/numpar.o: $(COREDIR)/numpar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/numpar.o $(COREDIR)/numpar.cpp
+
+$(OBJDIR)/dassl.o: $(COREDIR)/dassl.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/dassl.o $(COREDIR)/dassl.cpp
+
+$(OBJDIR)/linpack.o: $(COREDIR)/linpack.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/linpack.o $(COREDIR)/linpack.cpp
+
+$(OBJDIR)/fortran.o: $(COREDIR)/fortran.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/fortran.o $(COREDIR)/fortran.cpp
+
+$(OBJDIR)/zero.o: $(COREDIR)/zero.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/zero.o $(COREDIR)/zero.cpp
+
+$(OBJDIR)/das.o: $(COREDIR)/das.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/das.o $(COREDIR)/das.cpp
+
+$(OBJDIR)/fit.o: $(COREDIR)/fit.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/fit.o $(COREDIR)/fit.cpp
+
+$(OBJDIR)/init.o: $(COREDIR)/init.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/init.o $(COREDIR)/init.cpp
+
+$(OBJDIR)/fileio.o: $(COREDIR)/fileio.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/fileio.o $(COREDIR)/fileio.cpp
+
+$(OBJDIR)/symbol.o: $(COREDIR)/symbol.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/symbol.o $(COREDIR)/symbol.cpp
+
+$(OBJDIR)/aqvar.o: $(COREDIR)/aqvar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/aqvar.o $(COREDIR)/aqvar.cpp
+
+$(OBJDIR)/formvar.o: $(COREDIR)/formvar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/formvar.o $(COREDIR)/formvar.cpp
+
+$(OBJDIR)/othervar.o: $(COREDIR)/othervar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/othervar.o $(COREDIR)/othervar.cpp
+
+$(OBJDIR)/varsys.o: $(COREDIR)/varsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/varsys.o $(COREDIR)/varsys.cpp
+
+$(OBJDIR)/aqproc.o: $(COREDIR)/aqproc.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/aqproc.o $(COREDIR)/aqproc.cpp
+
+$(OBJDIR)/procsys.o: $(COREDIR)/procsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/procsys.o $(COREDIR)/procsys.cpp
+
+$(OBJDIR)/aqcomp.o: $(COREDIR)/aqcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/aqcomp.o $(COREDIR)/aqcomp.cpp
+
+$(OBJDIR)/mixcomp.o: $(COREDIR)/mixcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/mixcomp.o $(COREDIR)/mixcomp.cpp
+
+$(OBJDIR)/filmcomp.o: $(COREDIR)/filmcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/filmcomp.o $(COREDIR)/filmcomp.cpp
+
+$(OBJDIR)/advcomp.o: $(COREDIR)/advcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/advcomp.o $(COREDIR)/advcomp.cpp
+
+$(OBJDIR)/soilcomp.o: $(COREDIR)/soilcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/soilcomp.o $(COREDIR)/soilcomp.cpp
+
+$(OBJDIR)/rivcomp.o: $(COREDIR)/rivcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/rivcomp.o $(COREDIR)/rivcomp.cpp
+
+$(OBJDIR)/lakecomp.o: $(COREDIR)/lakecomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/lakecomp.o $(COREDIR)/lakecomp.cpp
+
+$(OBJDIR)/sedcomp.o: $(COREDIR)/sedcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/sedcomp.o $(COREDIR)/sedcomp.cpp
+
+$(OBJDIR)/compsys.o: $(COREDIR)/compsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/compsys.o $(COREDIR)/compsys.cpp
+
+$(OBJDIR)/aqlink.o: $(COREDIR)/aqlink.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/aqlink.o $(COREDIR)/aqlink.cpp
+
+$(OBJDIR)/linksys.o: $(COREDIR)/linksys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/linksys.o $(COREDIR)/linksys.cpp
+
+$(OBJDIR)/calcsys.o: $(COREDIR)/calcsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/calcsys.o $(COREDIR)/calcsys.cpp
+
+$(OBJDIR)/fitsys.o: $(COREDIR)/fitsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/fitsys.o $(COREDIR)/fitsys.cpp
+
+$(OBJDIR)/statesys.o: $(COREDIR)/statesys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/statesys.o $(COREDIR)/statesys.cpp
+
+$(OBJDIR)/plotsys.o: $(COREDIR)/plotsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/plotsys.o $(COREDIR)/plotsys.cpp
+
+$(OBJDIR)/vectors.o: $(COREDIR)/vectors.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/vectors.o $(COREDIR)/vectors.cpp
+
+$(OBJDIR)/drawpts.o: $(COREDIR)/drawpts.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/drawpts.o $(COREDIR)/drawpts.cpp
+
+$(OBJDIR)/plotpts.o: $(COREDIR)/plotpts.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/plotpts.o $(COREDIR)/plotpts.cpp
+
+$(OBJDIR)/readwords.o: $(COREDIR)/readwords.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/readwords.o $(COREDIR)/readwords.cpp
+
+$(OBJDIR)/aquasys.o: $(COREDIR)/aquasys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/aquasys.o $(COREDIR)/aquasys.cpp
+
+$(OBJDIR)/scrio_c.o: $(INTDIR)/scrio_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/scrio_c.o $(INTDIR)/scrio_c.cpp
+
+$(OBJDIR)/edvar_c.o: $(INTDIR)/edvar_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edvar_c.o $(INTDIR)/edvar_c.cpp
+
+$(OBJDIR)/edproc_c.o: $(INTDIR)/edproc_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edproc_c.o $(INTDIR)/edproc_c.cpp
+
+$(OBJDIR)/edopt_c.o: $(INTDIR)/edopt_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edopt_c.o $(INTDIR)/edopt_c.cpp
+
+$(OBJDIR)/edmix_c.o: $(INTDIR)/edmix_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edmix_c.o $(INTDIR)/edmix_c.cpp
+
+$(OBJDIR)/edfilm_c.o: $(INTDIR)/edfilm_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edfilm_c.o $(INTDIR)/edfilm_c.cpp
+
+$(OBJDIR)/edadv_c.o: $(INTDIR)/edadv_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edadv_c.o $(INTDIR)/edadv_c.cpp
+
+$(OBJDIR)/edsoil_c.o: $(INTDIR)/edsoil_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edsoil_c.o $(INTDIR)/edsoil_c.cpp
+
+$(OBJDIR)/edriv_c.o: $(INTDIR)/edriv_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edriv_c.o $(INTDIR)/edriv_c.cpp
+
+$(OBJDIR)/edlake_c.o: $(INTDIR)/edlake_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edlake_c.o $(INTDIR)/edlake_c.cpp
+
+$(OBJDIR)/edcomp_c.o: $(INTDIR)/edcomp_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edcomp_c.o $(INTDIR)/edcomp_c.cpp
+
+$(OBJDIR)/edlink_c.o: $(INTDIR)/edlink_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edlink_c.o $(INTDIR)/edlink_c.cpp
+
+$(OBJDIR)/ednum_c.o: $(INTDIR)/ednum_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/ednum_c.o $(INTDIR)/ednum_c.cpp
+
+$(OBJDIR)/edstat_c.o: $(INTDIR)/edstat_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/edstat_c.o $(INTDIR)/edstat_c.cpp
+
+$(OBJDIR)/file_c.o: $(INTDIR)/file_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/file_c.o $(INTDIR)/file_c.cpp
+
+$(OBJDIR)/calc_c.o: $(INTDIR)/calc_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/calc_c.o $(INTDIR)/calc_c.cpp
+
+$(OBJDIR)/view_c.o: $(INTDIR)/view_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/view_c.o $(INTDIR)/view_c.cpp
+
+$(OBJDIR)/main_c.o: $(INTDIR)/main_c.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+	        -o $(OBJDIR)/main_c.o $(INTDIR)/main_c.cpp
+
+############################## end of makefile ###############################

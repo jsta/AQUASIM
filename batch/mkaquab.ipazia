@@ -1,0 +1,391 @@
+##############################################################################
+#                                                                            #
+#  mkaquab.ipazia                                   Peter Reichert 16.01.09  #
+#  --------------                                                            #
+#                                                                            #
+#  makefile for batch version of AQUASIM on ipazia cluster                   #
+#                                                                            #
+##############################################################################
+
+#  tested with SuSE Linux version 7.0
+
+
+#  changing compilation flags:
+CFLAGS =
+LFLAGS =
+
+
+#  libraries:
+LIBS = -lm
+
+#  compiler and linker:
+COMP = icc                          # Intel C++ compiler
+LINK = icc                          # Intel linker
+
+#  general compiler and linker options:
+COPT = -c -DAQUA_OS=AQUA_LNX -DAQUA_VERSION=AQUA_BATCH
+LOPT =
+
+
+#  program linking:
+aquasimb : \
+		all.o \
+		sort.o \
+		mdi.o \
+		gamma.o \
+		stat.o \
+		sdlist.o \
+		intpol.o \
+		numpar.o \
+		dassl.o \
+		linpack.o \
+		fortran.o \
+		zero.o \
+		das.o \
+		fit.o \
+		init.o \
+		fileio.o \
+		symbol.o \
+		aqvar.o \
+		formvar.o \
+		othervar.o \
+		varsys.o \
+		aqproc.o \
+		procsys.o \
+		aqcomp.o \
+		mixcomp.o \
+		filmcomp.o \
+		advcomp.o \
+		soilcomp.o \
+		rivcomp.o \
+		lakecomp.o \
+		sedcomp.o \
+		compsys.o \
+		aqlink.o \
+		linksys.o \
+		calcsys.o \
+		fitsys.o \
+		statesys.o \
+		plotsys.o \
+		vectors.o \
+		drawpts.o \
+		plotpts.o \
+		readwords.o \
+		aquasys.o \
+		main_b.o
+	   @ echo .
+	   @ echo -------------------- LINKING --------------------
+	   $(LINK) $(LOPT) $(LFLAGS) -o aquasimb \
+		all.o \
+		sort.o \
+		mdi.o \
+		gamma.o \
+		stat.o \
+		sdlist.o \
+		intpol.o \
+		numpar.o \
+		dassl.o \
+		linpack.o \
+		fortran.o \
+		zero.o \
+		das.o \
+		fit.o \
+		init.o \
+		fileio.o \
+		symbol.o \
+		aqvar.o \
+		formvar.o \
+		othervar.o \
+		varsys.o \
+		aqproc.o \
+		procsys.o \
+		aqcomp.o \
+		mixcomp.o \
+		filmcomp.o \
+		advcomp.o \
+		soilcomp.o \
+		rivcomp.o \
+		lakecomp.o \
+		sedcomp.o \
+		compsys.o \
+		aqlink.o \
+		linksys.o \
+		calcsys.o \
+		fitsys.o \
+		statesys.o \
+		plotsys.o \
+		vectors.o \
+		drawpts.o \
+		plotpts.o \
+		readwords.o \
+		aquasys.o \
+		main_b.o \
+		$(LIBS)
+
+#  program compilation:
+
+all.o: all.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o all.o all.cpp
+
+sort.o: sort.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o sort.o sort.cpp
+
+mdi.o: mdi.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o mdi.o mdi.cpp
+
+gamma.o: gamma.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o gamma.o gamma.cpp
+
+stat.o: stat.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o stat.o stat.cpp
+
+sdlist.o: sdlist.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o sdlist.o sdlist.cpp
+
+intpol.o: intpol.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o intpol.o intpol.cpp
+
+numpar.o: numpar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o numpar.o numpar.cpp
+
+dassl.o: dassl.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o dassl.o dassl.cpp
+
+linpack.o: linpack.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o linpack.o linpack.cpp
+
+fortran.o: fortran.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o fortran.o fortran.cpp
+
+zero.o: zero.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o zero.o zero.cpp
+
+das.o: das.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o das.o das.cpp
+
+fit.o: fit.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o fit.o fit.cpp
+
+init.o: init.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o init.o init.cpp
+
+fileio.o: fileio.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o fileio.o fileio.cpp
+
+symbol.o: symbol.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o symbol.o symbol.cpp
+
+aqvar.o: aqvar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o aqvar.o aqvar.cpp
+
+formvar.o: formvar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o formvar.o formvar.cpp
+
+othervar.o: othervar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o othervar.o othervar.cpp
+
+varsys.o: varsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o varsys.o varsys.cpp
+
+aqproc.o: aqproc.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o aqproc.o aqproc.cpp
+
+procsys.o: procsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o procsys.o procsys.cpp
+
+aqcomp.o: aqcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o aqcomp.o aqcomp.cpp
+
+mixcomp.o: mixcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o mixcomp.o mixcomp.cpp
+
+filmcomp.o: filmcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o filmcomp.o filmcomp.cpp
+
+advcomp.o: advcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o advcomp.o advcomp.cpp
+
+soilcomp.o: soilcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o soilcomp.o soilcomp.cpp
+
+rivcomp.o: rivcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o rivcomp.o rivcomp.cpp
+
+lakecomp.o: lakecomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o lakecomp.o lakecomp.cpp
+
+sedcomp.o: sedcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o sedcomp.o sedcomp.cpp
+
+compsys.o: compsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o compsys.o compsys.cpp
+
+aqlink.o: aqlink.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o aqlink.o aqlink.cpp
+
+linksys.o: linksys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o linksys.o linksys.cpp
+
+calcsys.o: calcsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o calcsys.o calcsys.cpp
+
+fitsys.o: fitsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o fitsys.o fitsys.cpp
+
+statesys.o: statesys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o statesys.o statesys.cpp
+
+plotsys.o: plotsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o plotsys.o plotsys.cpp
+
+vectors.o: vectors.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o vectors.o vectors.cpp
+
+drawpts.o: drawpts.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o drawpts.o drawpts.cpp
+
+plotpts.o: plotpts.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o plotpts.o plotpts.cpp
+
+readwords.o: readwords.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o readwords.o readwords.cpp
+
+aquasys.o: aquasys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o aquasys.o aquasys.cpp
+
+main_b.o: main_b.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) \
+		-o main_b.o main_b.cpp
+
+############################## end of makefile ###############################

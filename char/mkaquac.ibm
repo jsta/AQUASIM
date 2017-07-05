@@ -1,0 +1,47 @@
+##############################################################################
+#                                                                            #
+#  mkaquac.ibm                                      Peter Reichert 30.09.94  #
+#  -----------                                                               #
+#                                                                            #
+#  makefile for character version of AQUASIM on IBM/RISC systems             #
+#                                                                            #
+##############################################################################
+
+#  tested with gnu C++
+
+#  changing compilation flags:
+CFLAGS = -O
+#CFLAGS = -g -DDEBUG
+#CFLAGS = -g
+LFLAGS = -O
+#LFLAGS = -g
+
+#  file names:
+include mkaqua.fil
+
+#  libraries:
+LIBS = -lg++ -lm
+
+#  compiler and linker:
+COMP = gcc                             # C++ compiler
+LINK = gcc                             # linker
+
+#  general compiler and linker options:
+COPT = -c -DAQUA_OS=AQUA_IBM -DAQUA_VERSION=AQUA_CHAR
+LOPT = 
+
+.SUFFIXES : .C                         # suffix for implicit rules
+
+#  program linking:
+aquasimc : $(AQCORE) $(AQCHAR)
+	     @ echo .
+	     @ echo -------------------- LINKING --------------------
+	     $(LINK) $(LOPT) $(LFLAGS) -o aquasimc $(AQCORE) $(AQCHAR) $(LIBS)
+
+#  program compilation:
+.C.o :
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) $<
+
+############################## end of makefile ###############################

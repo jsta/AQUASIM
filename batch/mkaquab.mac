@@ -1,0 +1,62 @@
+##############################################################################
+#                                                                            #
+#  mkaquab.mac                                      Peter Reichert 26.11.93  #
+#  -----------                                                               #
+#                                                                            #
+#  makefile for batch version of AQUASIM on the Apple Macintosh              #
+#                                                                            #
+##############################################################################
+
+#  tested with MPW 3.3 / MPW C++ 3.3 / MPW C 3.3
+
+#  application specific compilation flags:
+CFLAGS =
+LFLAGS =
+
+#  file names:
+AQCORE = all.o sdlist.o ¶
+	   intpol.o numpar.o dassl.o linpack.o ¶
+	   fortran.o zero.o das.o fit.o ¶
+	   init.o fileio.o symbol.o ¶
+	   aqvar.o formvar.o othervar.o varsys.o ¶
+	   aqproc.o procsys.o ¶
+	   aqcomp.o mixcomp.o filmcomp.o rivcomp.o ¶
+	   compsys.o ¶
+	   aqlink.o linksys.o ¶
+	   senssys.o fitsys.o statesys.o plotsys.o ¶
+	   plotpts.o drawpts.o vectors.o aquasys.o
+AQBAT  = main_b.o
+
+#  libraries:
+MPWLIB = "{Libraries}"SIOW.o ¶
+	     "{Libraries}"Runtime.o ¶
+	     "{Libraries}"Interface.o ¶
+	     "{CLibraries}"CPlusLib.o ¶
+	     "{CLibraries}"StdCLib.o ¶
+	     "{CLibraries}"CSANELib.o ¶
+	     "{CLibraries}"Math.o
+LIBS   = {MPWLIB}
+
+#  compilers and linkers:
+RESC = Rez
+COMP = CPlus
+LINK = Link
+
+#  general compiler and linker options:
+COPTS = -model far -i "{CIncludes}" -D AQUA_OS=AQUA_MAC -D AQUA_VERSION=AQUA_BAT
+LOPTS = -model far -d -c 'AQUB' -t APPL
+
+#  program linking and resource binding:
+aquasimb Ä {AQCORE} {AQBAT}
+	Echo "."
+	Echo "---------- LINKING PROGRAM ----------"
+	{LINK} {LOPTS} {LFLAGS} {AQCORE} {AQBAT} {LIBS} -o aquasimb 
+	{RESC} -a "{MPW}"Interfaces:Rincludes:SIOW.r -o aquasimb
+
+#  program compilation:
+.o Ä .C
+	Echo "."
+	Echo "---------- COMPILING PROGRAM "{default}".C ----------"
+	{COMP} {default}.C {CFLAGS} {COPTS} -s aqua{default} -o {default}.o
+
+############################## end of makefile ###############################

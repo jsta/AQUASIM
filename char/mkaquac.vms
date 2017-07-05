@@ -1,0 +1,84 @@
+$ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$ !                                                                          !
+$ !  mkaquac.vms                                    Peter Reichert 29.01.98  !
+$ !  -----------                                                             !
+$ !                                                                          !
+$ !  command file for character version of AQUASIM on vms systems            !
+$ !                                                                          !
+$ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$ !
+$ SET DEF [.BIN]
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) all.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) sdlist.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) intpol.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) numpar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) dassl.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) linpack.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) fortran.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) zero.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) das.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) fit.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) init.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) fileio.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) symbol.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) aqvar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) formvar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) othervar.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) varsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) aqproc.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) procsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) aqcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) mixcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) filmcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) advcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) soilcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) rivcomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) lakecomp.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) compsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) aqlink.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) linksys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) calcsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) fitsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) statesys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) plotsys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) vectors.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) drawpts.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) plotpts.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) aquasys.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) scrio_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edvar_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edproc_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edopt_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edmix_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edfilm_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edadv_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edsoil_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edriv_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edlake_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edcomp_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edlink_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) ednum_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) edstat_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) file_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) calc_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) view_c.cpp
+$ CXX /DEF=(AQUA_OS=AQUA_VMS,AQUA_VERSION=AQUA_CHAR) main_c.cpp
+$ LINK /MAP=aquasimc /EXE=aquasimc.exe -
+       all.obj,sdlist.obj, -
+       intpol.obj,numpar.obj,dassl.obj,linpack.obj, -
+       fortran.obj,zero.obj,das.obj,fit.obj, -
+       init.obj,fileio.obj,symbol.obj, -
+       aqvar.obj,formvar.obj,othervar.obj,varsys.obj, -
+       aqproc.obj,procsys.obj, -
+       aqcomp.obj,mixcomp.obj,filmcomp.obj,advcomp.obj, -
+       soilcomp.obj,rivcomp.obj,lakecomp.obj,compsys.obj, -
+       aqlink.obj,linksys.obj, -
+       calcsys.obj,fitsys.obj,statesys.obj,plotsys.obj, -
+       vectors.obj,drawpts.obj,plotpts.obj,aquasys.obj, -
+       scrio_c.obj, -
+       edvar_c.obj,edproc_c.obj, -
+       edopt_c.obj,edmix_c.obj,edfilm_c.obj,edadv_c.obj, -
+       edsoil_c.obj,edriv_c.obj,edlake_c.obj,edcomp_c.obj, -
+       edlink_c.obj,ednum_c.obj,edstat_c.obj, -
+       file_c.obj,calc_c.obj,view_c.obj, -
+       main_c.obj

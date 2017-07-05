@@ -1,0 +1,79 @@
+************************************************************************
+
+AQUASIM Version 2.1_beta01 (win/mfc) - Parameter Estimation File
+
+************************************************************************
+
+Date and time of listing:  09/14/1999  23:54:25
+
+
+Number of parameters  = 3
+Number of data points = 16
+Estimation method     = secant
+
+
+Parameters:
+
+ Name            Unit            Start           Minimum         Maximum
+ K               m^2/uE          3.6e-006        0               1e-005
+ P_max           mgO2/l/h        1.65            0               5
+ tau_r           s               240             10              1000
+
+
+Calculations:
+
+ K               P_max           tau_r           Chi^2
+ [m^2/uE]        [mgO2/l/h]      [s]
+
+ 3.6e-006        1.65            240             0.027793456
+ 3.7e-006        1.65            240             0.024727737
+ 3.6e-006        1.7             240             0.036930928
+ 3.6e-006        1.65            249.9           0.024605736
+ 3.417401e-006   1.55            251.98615       0.017434413
+ 3.147246e-006   1.4025626       255.99965       0.013407003
+ 3.423623e-006   1.5262813       247.99982       0.016156092
+ 3.1419689e-006  1.3991997       255.07753       0.013406723
+ 3.282796e-006   1.4627405       251.53868       0.014024849
+ 3.0966426e-006  1.391257        252.77344       0.013391058
+ 3.1123081e-006  1.3938519       253.10994       0.013388097
+ 3.2648545e-006  1.471926        252.54804       0.014434909
+ 3.1123081e-006  1.3938519       253.10994       0.013388097
+
+
+Parameter estimation successfully finished (convergence criterion met)
+
+
+ K               P_max           tau_r
+ [m^2/uE]        [mgO2/l/h]      [s]
+
+
+Estimated values of the parameters:
+
+ 3.1123081e-006  1.3938519       253.10994
+
+
+Estimated standard errors of the parameters:
+
+ 4.639645e-007   0.15075756      33.162159
+
+
+Estimated correlation matrix of the parameters:
+
+ 1               0.91935186      0.45008147
+ 0.91935186      1               0.65641624
+ 0.45008147      0.65641624      1
+
+
+Contribution of data series to Chi^2:
+
+ Calculation:        Data Series:        Chi^2 ini:      Chi^2 end:
+ fit1                Prod1               0.0069259662    0.0047284455
+ fit2                Prod2               0.02086749      0.0086596517
+                                         ------------    ------------
+                                         0.027793456     0.013388097
+
+
+Number of steps performed       = 5
+Number of simulations performed = 13
+
+

@@ -1,0 +1,55 @@
+************************************************************************
+
+AQUASIM Version 2.0a_beta1 (win/mfc) - Sensitivity Analysis File
+
+************************************************************************
+
+Date and time of listing:  11/04/1998  22:29:24
+
+
+Ranking of mean absolute sensitivities and error contributions:
+
+
+Calculation Number: 1
+  Compartment: Reactor
+     Zone: Bulk Volume
+        Variable: P_star
+               Parameter:      |Sens AR|:    Sens AR:        Parameter:      |Err Cont|:   Err Cont:
+                               []            []                              []            []
+           1   I_k             0.1019       -0.1019          I_k             0.01289      -0.01289
+           2   tau_r           0.009009     -0.009009        tau_r           0.002252     -0.002252
+           3   I_crit          2.761e-008    1.934e-008      I_crit          5.521e-009    3.869e-009
+           4   K               2.254e-008   -1.571e-008      K               3.757e-009   -2.618e-009
+           5   tau_i           1.025e-010    8.333e-011      tau_i           2.563e-011    2.083e-011
+           6   P_max           0             0               P_max           0             0
+        Variable: Psi
+               Parameter:      |Sens AR|:    Sens AR:        Parameter:      |Err Cont|:   Err Cont:
+                               []            []                              []            []
+           1   I_crit          0.1364       -0.1364          I_crit          0.02729      -0.02729
+           2   K               0.1092        0.1092          K               0.01819       0.01819
+           3   tau_i           0.05932       0.05932         tau_i           0.01483       0.01483
+           4   tau_r           6.46e-008     6.46e-008       tau_r           1.615e-008    1.615e-008
+           5   I_k             2.819e-008    2.819e-008      I_k             3.568e-009    3.568e-009
+           6   P_max           0             0               P_max           0             0
+
+Calculation Number: 2
+  Compartment: Reactor
+     Zone: Bulk Volume
+        Variable: P_star
+               Parameter:      |Sens AR|:    Sens AR:        Parameter:      |Err Cont|:   Err Cont:
+                               []            []                              []            []
+           1   I_k             0.2102       -0.2102          I_k             0.02661      -0.02661
+           2   tau_r           0.07372      -0.07372         tau_r           0.01843      -0.01843
+           3   K               2.987e-006   -1.227e-006      K               4.978e-007   -2.044e-007
+           4   I_crit          4.964e-008   -1.388e-008      I_crit          9.927e-009   -2.776e-009
+           5   tau_i           9.176e-012   -5.793e-012      tau_i           2.294e-012   -1.448e-012
+           6   P_max           0             0               P_max           0             0
+        Variable: Psi
+               Parameter:      |Sens AR|:    Sens AR:        Parameter:      |Err Cont|:   Err Cont:
+                               []            []                              []            []
+           1   K               3.411         3.411           K               0.5685        0.5685
+           2   tau_i           1.854         1.854           tau_i           0.4635        0.4635
+           3   I_crit          0.1364       -0.1364          I_crit          0.02729      -0.02729
+           4   tau_r           1.388e-007   -1.417e-008      tau_r           3.471e-008   -3.542e-009
+           5   I_k             2.77e-008    -1.245e-008      I_k             3.506e-009   -1.576e-009
+           6   P_max           0             0               P_max           0             0

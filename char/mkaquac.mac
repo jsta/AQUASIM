@@ -1,0 +1,66 @@
+##############################################################################
+#                                                                            #
+#  mkaquac.mac                                      Peter Reichert 14.03.94  #
+#  -----------                                                               #
+#                                                                            #
+#  makefile for character version of AQUASIM on the Apple Macintosh          #
+#                                                                            #
+##############################################################################
+
+#  tested with MPW 3.3 / MPW C++ 3.3 / MPW C 3.3
+
+#  application specific compilation flags:
+CFLAGS =
+LFLAGS =
+
+#  file names:
+AQCORE = all.o sdlist.o ¶
+	   intpol.o numpar.o dassl.o linpack.o ¶
+	   fortran.o zero.o das.o fit.o ¶
+	   init.o fileio.o symbol.o ¶
+	   aqvar.o formvar.o othervar.o varsys.o ¶
+	   aqproc.o procsys.o ¶
+	   aqcomp.o mixcomp.o filmcomp.o rivcomp.o ¶
+	   compsys.o ¶
+	   aqlink.o linksys.o ¶
+	   senssys.o fitsys.o statesys.o plotsys.o ¶
+	   plotpts.o drawpts.o vectors.o aquasys.o
+AQCHAR = scrio_c.o ¶
+	   edvar_c.o edproc_c.o edopt_c.o edmix_c.o edfilm_c.o edriv_c.o ¶
+	   edcomp_c.o edlink_c.o ednum_c.o edstat_c.o ¶
+	   file_c.o calc_c.o view_c.o ¶
+	   main_c.o
+
+#  libraries:
+MPWLIB = "{Libraries}"SIOW.o ¶
+	     "{Libraries}"Runtime.o ¶
+	     "{Libraries}"Interface.o ¶
+	     "{CLibraries}"CPlusLib.o ¶
+	     "{CLibraries}"StdCLib.o ¶
+	     "{CLibraries}"CSANELib.o ¶
+	     "{CLibraries}"Math.o
+LIBS   = {MPWLIB}
+
+#  compilers and linkers:
+RESC = Rez
+COMP = CPlus
+LINK = Link
+
+#  general compiler and linker options:
+COPTS = -model far -i "{CIncludes}" -D AQUA_OS=AQUA_MAC -D AQUA_VERSION=AQUA_CHAR
+LOPTS = -model far -d -c 'AQUC' -t APPL
+
+#  program linking and resource binding:
+aquasimc Ä {AQCORE} {AQCHAR}
+	Echo "."
+	Echo "---------- LINKING PROGRAM ----------"
+	{LINK} {LOPTS} {LFLAGS} {AQCORE} {AQCHAR} {LIBS} -o aquasimc 
+	{RESC} -a "{MPW}"Interfaces:Rincludes:SIOW.r -o aquasimc
+
+#  program compilation:
+.o Ä .C
+	Echo "."
+	Echo "---------- COMPILING PROGRAM "{default}".C ----------"
+	{COMP} {default}.C {CFLAGS} {COPTS} -s aqua{default} -o {default}.o
+
+############################## end of makefile ###############################

@@ -1,0 +1,269 @@
+##############################################################################
+#                                                                            #
+#  mkaquab.nt                                       Peter Reichert 09.03.01  #
+#  ----------                                                                #
+#                                                                            #
+#  makefile for batch version of AQUASIM on Intel/Windows95 or NT systems    #
+#                                                                            #
+##############################################################################
+
+#  tested with VisualStudio version 6.0
+
+#  changing compilation flags:
+#CFLAGS = -Zd
+#LFLAGS = -debug:full
+CFLAGS = -O2
+LFLAGS = 
+
+#  directories:
+SYSDIR  = C:\programs\msdev\vc98           # system directory
+COREDIR = ..\win32\aqcore                  # AQUASIM core files
+INTDIR  = .                                # AQUASIM batch interface files
+OBJDIR  = ..\..\bin\winbatch               # directory for object files
+BINDIR  = ..\..\bin\winbatch               # directory for binary files
+
+#  derived directories:
+SYSIDIR = $(SYSDIR)\include                # system include directory
+SYSLDIR = $(SYSDIR)\lib                    # system library directory
+SYSBDIR = $(SYSDIR)\bin                    # system executable directory
+
+#  libraries:
+LIBS = $(SYSLDIR)\libc.lib $(SYSLDIR)\libcp.lib $(SYSLDIR)\libci.lib $(SYSLDIR)\kernel32.lib $(SYSLDIR)\oldnames.lib
+
+#  compiler and linker:
+COMP = $(SYSBDIR)\cl                       # C++ compiler
+LINK = $(SYSBDIR)\link                     # linker
+
+#  general compiler and linker options:
+COPT = -c -W3 -D_X86_=1 -DWIN32 -I$(SYSIDIR) -DAQUA_OS=AQUA_NT -DAQUA_VERSION=AQUA_BATCH
+LOPT = -subsystem:console -entry:mainCRTStartup
+
+#  program linking:
+$(BINDIR)\aquasimb.exe : $(OBJDIR)\all.o $(OBJDIR)\sort.o $(OBJDIR)\mdi.o $(OBJDIR)\gamma.o $(OBJDIR)\stat.o $(OBJDIR)\sdlist.o $(OBJDIR)\intpol.o $(OBJDIR)\numpar.o $(OBJDIR)\dassl.o $(OBJDIR)\linpack.o $(OBJDIR)\fortran.o $(OBJDIR)\zero.o $(OBJDIR)\das.o $(OBJDIR)\fit.o $(OBJDIR)\init.o $(OBJDIR)\fileio.o $(OBJDIR)\symbol.o $(OBJDIR)\aqvar.o $(OBJDIR)\formvar.o $(OBJDIR)\othervar.o $(OBJDIR)\varsys.o $(OBJDIR)\aqproc.o $(OBJDIR)\procsys.o $(OBJDIR)\aqcomp.o $(OBJDIR)\mixcomp.o $(OBJDIR)\filmcomp.o $(OBJDIR)\advcomp.o $(OBJDIR)\soilcomp.o $(OBJDIR)\rivcomp.o $(OBJDIR)\lakecomp.o $(OBJDIR)\sedcomp.o $(OBJDIR)\compsys.o $(OBJDIR)\aqlink.o $(OBJDIR)\linksys.o $(OBJDIR)\calcsys.o $(OBJDIR)\fitsys.o $(OBJDIR)\statesys.o $(OBJDIR)\plotsys.o $(OBJDIR)\vectors.o $(OBJDIR)\drawpts.o $(OBJDIR)\plotpts.o $(OBJDIR)\readwords.o $(OBJDIR)\aquasys.o $(OBJDIR)\main_b.o
+	     @ echo .
+	     @ echo -------------------- LINKING --------------------
+	     copy $(COREDIR)\aquasim.ini $(BINDIR)
+	     $(LINK) $(LOPT) $(LFLAGS) -out:$(BINDIR)\aquasimb.exe $(OBJDIR)\all.o $(OBJDIR)\sort.o $(OBJDIR)\mdi.o $(OBJDIR)\gamma.o $(OBJDIR)\stat.o $(OBJDIR)\sdlist.o $(OBJDIR)\intpol.o $(OBJDIR)\numpar.o $(OBJDIR)\dassl.o $(OBJDIR)\linpack.o $(OBJDIR)\fortran.o $(OBJDIR)\zero.o $(OBJDIR)\das.o $(OBJDIR)\fit.o $(OBJDIR)\init.o $(OBJDIR)\fileio.o $(OBJDIR)\symbol.o $(OBJDIR)\aqvar.o $(OBJDIR)\formvar.o $(OBJDIR)\othervar.o $(OBJDIR)\varsys.o $(OBJDIR)\aqproc.o $(OBJDIR)\procsys.o $(OBJDIR)\aqcomp.o $(OBJDIR)\mixcomp.o $(OBJDIR)\filmcomp.o $(OBJDIR)\advcomp.o $(OBJDIR)\soilcomp.o $(OBJDIR)\rivcomp.o $(OBJDIR)\lakecomp.o $(OBJDIR)\sedcomp.o $(OBJDIR)\compsys.o $(OBJDIR)\aqlink.o $(OBJDIR)\linksys.o $(OBJDIR)\calcsys.o $(OBJDIR)\fitsys.o $(OBJDIR)\statesys.o $(OBJDIR)\plotsys.o $(OBJDIR)\vectors.o $(OBJDIR)\drawpts.o $(OBJDIR)\plotpts.o $(OBJDIR)\readwords.o $(OBJDIR)\aquasys.o $(OBJDIR)\main_b.o $(LIBS)
+
+#  program compilation:
+$(BINDIR)\all.o : $(COREDIR)\all.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\all.o -Tp $(COREDIR)\all.cpp
+
+$(BINDIR)\sort.o : $(COREDIR)\sort.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\sort.o -Tp $(COREDIR)\sort.cpp
+
+$(BINDIR)\mdi.o : $(COREDIR)\mdi.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\mdi.o -Tp $(COREDIR)\mdi.cpp
+
+$(BINDIR)\gamma.o : $(COREDIR)\gamma.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\gamma.o -Tp $(COREDIR)\gamma.cpp
+
+$(BINDIR)\stat.o : $(COREDIR)\stat.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\stat.o -Tp $(COREDIR)\stat.cpp
+
+$(BINDIR)\sdlist.o : $(COREDIR)\sdlist.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\sdlist.o -Tp $(COREDIR)\sdlist.cpp
+
+$(BINDIR)\intpol.o : $(COREDIR)\intpol.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\intpol.o -Tp $(COREDIR)\intpol.cpp
+
+$(BINDIR)\numpar.o : $(COREDIR)\numpar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\numpar.o -Tp $(COREDIR)\numpar.cpp
+
+$(BINDIR)\dassl.o : $(COREDIR)\dassl.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\dassl.o -Tp $(COREDIR)\dassl.cpp
+
+$(BINDIR)\linpack.o : $(COREDIR)\linpack.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\linpack.o -Tp $(COREDIR)\linpack.cpp
+
+$(BINDIR)\fortran.o : $(COREDIR)\fortran.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\fortran.o -Tp $(COREDIR)\fortran.cpp
+
+$(BINDIR)\zero.o :
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\zero.o -Tp $(COREDIR)\zero.cpp
+
+$(BINDIR)\das.o : $(COREDIR)\zero.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\das.o -Tp $(COREDIR)\das.cpp
+
+$(BINDIR)\fit.o : $(COREDIR)\fit.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\fit.o -Tp $(COREDIR)\fit.cpp
+
+$(BINDIR)\init.o : $(COREDIR)\init.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\init.o -Tp $(COREDIR)\init.cpp
+
+$(BINDIR)\fileio.o : $(COREDIR)\fileio.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\fileio.o -Tp $(COREDIR)\fileio.cpp
+
+$(BINDIR)\symbol.o : $(COREDIR)\symbol.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\symbol.o -Tp $(COREDIR)\symbol.cpp
+
+$(BINDIR)\aqvar.o : $(COREDIR)\aqvar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\aqvar.o -Tp $(COREDIR)\aqvar.cpp
+
+$(BINDIR)\formvar.o : $(COREDIR)\formvar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\formvar.o -Tp $(COREDIR)\formvar.cpp
+
+$(BINDIR)\othervar.o : $(COREDIR)\othervar.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\othervar.o -Tp $(COREDIR)\othervar.cpp
+
+$(BINDIR)\varsys.o : $(COREDIR)\varsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\varsys.o -Tp $(COREDIR)\varsys.cpp
+
+$(BINDIR)\aqproc.o : $(COREDIR)\aqproc.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\aqproc.o -Tp $(COREDIR)\aqproc.cpp
+
+$(BINDIR)\procsys.o : $(COREDIR)\procsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\procsys.o -Tp $(COREDIR)\procsys.cpp
+
+$(BINDIR)\aqcomp.o : $(COREDIR)\aqcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\aqcomp.o -Tp $(COREDIR)\aqcomp.cpp
+
+$(BINDIR)\mixcomp.o : $(COREDIR)\mixcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\mixcomp.o -Tp $(COREDIR)\mixcomp.cpp
+
+$(BINDIR)\filmcomp.o : $(COREDIR)\filmcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\filmcomp.o -Tp $(COREDIR)\filmcomp.cpp
+
+$(BINDIR)\advcomp.o : $(COREDIR)\advcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\advcomp.o -Tp $(COREDIR)\advcomp.cpp
+
+$(BINDIR)\soilcomp.o : $(COREDIR)\soilcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\soilcomp.o -Tp $(COREDIR)\soilcomp.cpp
+
+$(BINDIR)\rivcomp.o : $(COREDIR)\rivcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\rivcomp.o -Tp $(COREDIR)\rivcomp.cpp
+
+$(BINDIR)\lakecomp.o : $(COREDIR)\lakecomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\lakecomp.o -Tp $(COREDIR)\lakecomp.cpp
+
+$(BINDIR)\sedcomp.o : $(COREDIR)\sedcomp.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\sedcomp.o -Tp $(COREDIR)\sedcomp.cpp
+
+$(BINDIR)\compsys.o : $(COREDIR)\compsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\compsys.o -Tp $(COREDIR)\compsys.cpp
+
+$(BINDIR)\aqlink.o : $(COREDIR)\aqlink.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\aqlink.o -Tp $(COREDIR)\aqlink.cpp
+
+$(BINDIR)\linksys.o : $(COREDIR)\linksys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\linksys.o -Tp $(COREDIR)\linksys.cpp
+
+$(BINDIR)\calcsys.o : $(COREDIR)\calcsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\calcsys.o -Tp $(COREDIR)\calcsys.cpp
+
+$(BINDIR)\fitsys.o : $(COREDIR)\fitsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\fitsys.o -Tp $(COREDIR)\fitsys.cpp
+
+$(BINDIR)\statesys.o : $(COREDIR)\statesys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\statesys.o -Tp $(COREDIR)\statesys.cpp
+
+$(BINDIR)\plotsys.o : $(COREDIR)\plotsys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\plotsys.o -Tp $(COREDIR)\plotsys.cpp
+
+$(BINDIR)\vectors.o : $(COREDIR)\vectors.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\vectors.o -Tp $(COREDIR)\vectors.cpp
+
+$(BINDIR)\drawpts.o : $(COREDIR)\drawpts.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\drawpts.o -Tp $(COREDIR)\drawpts.cpp
+
+$(BINDIR)\plotpts.o : $(COREDIR)\plotpts.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\plotpts.o -Tp $(COREDIR)\plotpts.cpp
+
+$(BINDIR)\readwords.o : $(COREDIR)\readwords.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\readwords.o -Tp $(COREDIR)\readwords.cpp
+
+$(BINDIR)\aquasys.o : $(COREDIR)\aquasys.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -Fo$(BINDIR)\aquasys.o -Tp $(COREDIR)\aquasys.cpp
+
+$(BINDIR)\main_b.o : $(INTDIR)\main_b.cpp
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) -I$(COREDIR) -Fo$(BINDIR)\main_b.o -Tp $(INTDIR)\main_b.cpp
+
+############################## end of makefile ###############################

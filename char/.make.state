@@ -1,0 +1,968 @@
+.MAKE_VERSION:	VERSION-1.0
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edproc_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edproc_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h edproc_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edproc_c.o ./edproc_c.cpp
+../../bin/sunchar21/fileio.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/fileio.o ../win32/aqcore/fileio.cpp
+../../bin/sunchar21/edproc_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edproc_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h edproc_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edproc_c.o ./edproc_c.cpp
+../../bin/sunchar21/aqvar.o:	../win32/aqcore/aqvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+../../bin/sunchar21/aqvar.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/aqvar.o ../win32/aqcore/aqvar.cpp
+../../bin/sunchar21/plotsys.o:	../win32/aqcore/plotsys.h ../win32/aqcore/othervar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h
+../../bin/sunchar21/plotsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/drawpts.h ../win32/aqcore/vectors.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/plotsys.o ../win32/aqcore/plotsys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/advcomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/advcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/advcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/advcomp.o ../win32/aqcore/advcomp.cpp
+../../bin/sunchar21/aqlink.o:	../win32/aqcore/aqlink.h ../win32/aqcore/aqcomp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+../../bin/sunchar21/aqlink.o:	../win32/aqcore/aqproc.h ../win32/aqcore/init.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/aqlink.o ../win32/aqcore/aqlink.cpp
+../../bin/sunchar21/view_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h view_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/view_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/view_c.o ./view_c.cpp
+../../bin/sunchar21/linpack.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/linpack.o:	../win32/aqcore/linpack.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/linpack.o ../win32/aqcore/linpack.cpp
+../../bin/sunchar21/numpar.o:	../win32/aqcore/numpar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/numpar.o ../win32/aqcore/numpar.cpp
+../../bin/sunchar21/plotpts.o:	../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h
+../../bin/sunchar21/plotpts.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h ../win32/aqcore/drawpts.h ../win32/aqcore/vectors.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/plotpts.o ../win32/aqcore/plotpts.cpp
+../../bin/sunchar21/file_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h file_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/file_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/file_c.o ./file_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/drawpts.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h /usr/include/ctype.h ../win32/aqcore/drawpts.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/drawpts.o:	/usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/vectors.h ../win32/aqcore/plotsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/drawpts.o ../win32/aqcore/drawpts.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/compsys.o:	../win32/aqcore/varsys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/compsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/filmcomp.h ../win32/aqcore/rivcomp.h ../win32/aqcore/advcomp.h ../win32/aqcore/lakecomp.h ../win32/aqcore/soilcomp.h ../win32/aqcore/sedcomp.h ../win32/aqcore/compsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/compsys.o ../win32/aqcore/compsys.cpp
+../../bin/sunchar21/edopt_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+../../bin/sunchar21/edopt_c.o:	../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/filmcomp.h ../win32/aqcore/rivcomp.h scrio_c.h edmix_c.h edfilm_c.h edriv_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/compsys.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h
+../../bin/sunchar21/edopt_c.o:	../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edopt_c.o ./edopt_c.cpp
+../../bin/sunchar21/edriv_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edriv_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edriv_c.h ../win32/aqcore/rivcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edriv_c.o ./edriv_c.cpp
+../../bin/sunchar21/rivcomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/rivcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/rivcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/rivcomp.o ../win32/aqcore/rivcomp.cpp
+../../bin/sunchar21/ednum_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h ednum_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/ednum_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/ednum_c.o ./ednum_c.cpp
+../../bin/sunchar21/fortran.o:	../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/fortran.o ../win32/aqcore/fortran.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/main_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/main_c.o:	../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h file_c.h edvar_c.h edproc_c.h edcomp_c.h edlink_c.h ednum_c.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/main_c.o:	edstat_c.h calc_c.h view_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/main_c.o ./main_c.cpp
+../../bin/sunchar21/edvar_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edvar_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h edvar_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edvar_c.o ./edvar_c.cpp
+../../bin/sunchar21/aqcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+../../bin/sunchar21/aqcomp.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/aqcomp.o ../win32/aqcore/aqcomp.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aquasimc:	/usr/lib/libdl.so.1 /usr/lib/libc.so /usr/lang/SC4.2/lib/libcx.a /usr/lib/libw.so /usr/lang/SC4.2/lib/libC_mtstubs.a /usr/lang/lib/libm.so /usr/lang/lib/libC.so 
+	echo .
+	echo -------------------- LINKING --------------------
+	/bin/cp ../win32/aqcore/aquasim.ini ../../bin/sunchar/.
+	CC  -O -o ../../bin/sunchar/aquasimc \
+	        ../../bin/sunchar/all.o \
+	        ../../bin/sunchar/sort.o \
+	        ../../bin/sunchar/mdi.o \
+	        ../../bin/sunchar/gamma.o \
+	        ../../bin/sunchar/stat.o \
+	        ../../bin/sunchar/sdlist.o \
+	        ../../bin/sunchar/intpol.o \
+	        ../../bin/sunchar/numpar.o \
+	        ../../bin/sunchar/dassl.o \
+	        ../../bin/sunchar/linpack.o \
+	        ../../bin/sunchar/fortran.o \
+	        ../../bin/sunchar/zero.o \
+	        ../../bin/sunchar/das.o \
+	        ../../bin/sunchar/fit.o \
+	        ../../bin/sunchar/init.o \
+	        ../../bin/sunchar/fileio.o \
+	        ../../bin/sunchar/symbol.o \
+	        ../../bin/sunchar/aqvar.o \
+	        ../../bin/sunchar/formvar.o \
+	        ../../bin/sunchar/othervar.o \
+	        ../../bin/sunchar/varsys.o \
+	        ../../bin/sunchar/aqproc.o \
+	        ../../bin/sunchar/procsys.o \
+	        ../../bin/sunchar/aqcomp.o \
+	        ../../bin/sunchar/mixcomp.o \
+	        ../../bin/sunchar/filmcomp.o \
+	        ../../bin/sunchar/advcomp.o \
+	        ../../bin/sunchar/soilcomp.o \
+	        ../../bin/sunchar/rivcomp.o \
+	        ../../bin/sunchar/lakecomp.o \
+	        ../../bin/sunchar/sedcomp.o \
+	        ../../bin/sunchar/compsys.o \
+	        ../../bin/sunchar/aqlink.o \
+	        ../../bin/sunchar/linksys.o \
+	        ../../bin/sunchar/calcsys.o \
+	        ../../bin/sunchar/fitsys.o \
+	        ../../bin/sunchar/statesys.o \
+	        ../../bin/sunchar/plotsys.o \
+	        ../../bin/sunchar/vectors.o \
+	        ../../bin/sunchar/drawpts.o \
+	        ../../bin/sunchar/plotpts.o \
+	        ../../bin/sunchar/readwords.o \
+	        ../../bin/sunchar/aquasys.o \
+	        ../../bin/sunchar/scrio_c.o \
+	        ../../bin/sunchar/edvar_c.o \
+	        ../../bin/sunchar/edproc_c.o \
+	        ../../bin/sunchar/edopt_c.o \
+	        ../../bin/sunchar/edmix_c.o \
+	        ../../bin/sunchar/edfilm_c.o \
+	        ../../bin/sunchar/edriv_c.o \
+	        ../../bin/sunchar/edadv_c.o \
+	        ../../bin/sunchar/edlake_c.o \
+	        ../../bin/sunchar/edsoil_c.o \
+	        ../../bin/sunchar/edcomp_c.o \
+	        ../../bin/sunchar/edlink_c.o \
+	        ../../bin/sunchar/ednum_c.o \
+	        ../../bin/sunchar/edstat_c.o \
+	        ../../bin/sunchar/file_c.o \
+	        ../../bin/sunchar/calc_c.o \
+	        ../../bin/sunchar/view_c.o \
+	        ../../bin/sunchar/main_c.o \
+	        -lC -lm
+../../bin/sunchar21/gamma.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/gamma.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/gamma.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/gamma.o ../win32/aqcore/gamma.cpp
+../../bin/sunchar21/dassl.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/dassl.o:	../win32/aqcore/fortran.h ../win32/aqcore/linpack.h ../win32/aqcore/dassl.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/dassl.o ../win32/aqcore/dassl.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqvar.o:	../win32/aqcore/aqvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqvar.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/aqvar.o ../win32/aqcore/aqvar.cpp
+../../bin/sunchar21/vectors.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/vectors.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/vectors.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/vectors.o ../win32/aqcore/vectors.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/mixcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/mixcomp.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/mixcomp.o ../win32/aqcore/mixcomp.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqproc.o:	../win32/aqcore/aqproc.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqproc.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/aqproc.o ../win32/aqcore/aqproc.cpp
+../../bin/sunchar21/formvar.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/formvar.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/formvar.o ../win32/aqcore/formvar.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/othervar.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/othervar.o:	../win32/aqcore/init.h ../win32/aqcore/intpol.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/varsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/othervar.o ../win32/aqcore/othervar.cpp
+../../bin/sunchar21/othervar.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/othervar.o:	../win32/aqcore/init.h ../win32/aqcore/intpol.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/varsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/othervar.o ../win32/aqcore/othervar.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/calcsys.o:	../win32/aqcore/calcsys.h ../win32/aqcore/othervar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/calcsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/calcsys.o ../win32/aqcore/calcsys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aquasys.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h /usr/include/time.h /usr/include/sys/time.h /usr/include/sys/types.h /usr/include/sys/isa_defs.h /usr/include/sys/machtypes.h /usr/include/sys/int_types.h /usr/include/sys/select.h /usr/include/sys/siginfo.h /usr/include/sys/machsig.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/int_limits.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aquasys.o:	/usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aquasys.o:	../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h ../win32/aqcore/das.h ../win32/aqcore/fit.h ../win32/aqcore/fortran.h ../win32/aqcore/linpack.h ../win32/aqcore/sort.h ../win32/aqcore/stat.h ../win32/aqcore/readwords.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/aquasys.o ../win32/aqcore/aquasys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edadv_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edadv_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edadv_c.h ../win32/aqcore/advcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edadv_c.o ./edadv_c.cpp
+../../bin/sunchar21/edmix_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edmix_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edmix_c.h ../win32/aqcore/mixcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edmix_c.o ./edmix_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/varsys.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/varsys.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/varsys.o ../win32/aqcore/varsys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/gamma.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/gamma.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/gamma.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/gamma.o ../win32/aqcore/gamma.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/dassl.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/dassl.o:	../win32/aqcore/fortran.h ../win32/aqcore/linpack.h ../win32/aqcore/dassl.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/dassl.o ../win32/aqcore/dassl.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/fileio.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/fileio.o ../win32/aqcore/fileio.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/sedcomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/sedcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/sedcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/sedcomp.o ../win32/aqcore/sedcomp.cpp
+../../bin/sunchar21/sdlist.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/sdlist.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/sdlist.o ../win32/aqcore/sdlist.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqlink.o:	../win32/aqcore/aqlink.h ../win32/aqcore/aqcomp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqlink.o:	../win32/aqcore/aqproc.h ../win32/aqcore/init.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/aqlink.o ../win32/aqcore/aqlink.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/statesys.o:	../win32/aqcore/init.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/statesys.h ../win32/aqcore/fileio.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/statesys.o:	../win32/aqcore/sdlist.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/statesys.o ../win32/aqcore/statesys.cpp
+../../bin/sunchar21/statesys.o:	../win32/aqcore/init.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/statesys.h ../win32/aqcore/fileio.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h
+../../bin/sunchar21/statesys.o:	../win32/aqcore/sdlist.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/statesys.o ../win32/aqcore/statesys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/view_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h view_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/view_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/view_c.o ./view_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/numpar.o:	../win32/aqcore/numpar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/numpar.o ../win32/aqcore/numpar.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/readwords.o:	../win32/aqcore/readwords.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/readwords.o ../win32/aqcore/readwords.cpp
+../../bin/sunchar21/readwords.o:	../win32/aqcore/readwords.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/readwords.o ../win32/aqcore/readwords.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/zero.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/linpack.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/zero.o:	/usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/zero.h ../win32/aqcore/numpar.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/zero.o ../win32/aqcore/zero.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/file_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h file_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/file_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/file_c.o ./file_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/mdi.o:	/usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/mdi.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h ../win32/aqcore/all.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/mdi.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/mdi.o ../win32/aqcore/mdi.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/sort.o:	/usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h ../win32/aqcore/sort.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/sort.o ../win32/aqcore/sort.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/fit.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/linpack.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/fit.o:	/usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/fit.h ../win32/aqcore/numpar.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/fit.o ../win32/aqcore/fit.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/stat.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/stat.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/stat.o:	../win32/aqcore/mdi.h ../win32/aqcore/sort.h ../win32/aqcore/intpol.h ../win32/aqcore/fortran.h ../win32/aqcore/linpack.h ../win32/aqcore/gamma.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/stat.o ../win32/aqcore/stat.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/aqcomp.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/aqcomp.o ../win32/aqcore/aqcomp.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/lakecomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/lakecomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/lakecomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/lakecomp.o ../win32/aqcore/lakecomp.cpp
+../../bin/sunchar21/lakecomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/lakecomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/lakecomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/lakecomp.o ../win32/aqcore/lakecomp.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/linksys.o:	../win32/aqcore/linksys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqlink.h ../win32/aqcore/aqcomp.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/linksys.o:	../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/init.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/varsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/linksys.o ../win32/aqcore/linksys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/all.o:	/usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/time.h /usr/include/sys/time.h /usr/include/sys/types.h /usr/include/sys/isa_defs.h /usr/include/sys/machtypes.h /usr/include/sys/int_types.h /usr/include/sys/select.h /usr/include/sys/siginfo.h /usr/include/sys/machsig.h /usr/include/math.h /usr/include/floatingpoint.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/int_limits.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/all.o:	/usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h /usr/include/ieeefp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/all.o ../win32/aqcore/all.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/das.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/das.o:	../win32/aqcore/linpack.h ../win32/aqcore/fortran.h ../win32/aqcore/dassl.h ../win32/aqcore/das.h ../win32/aqcore/numpar.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/das.o ../win32/aqcore/das.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/procsys.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/procsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/procsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/procsys.o ../win32/aqcore/procsys.cpp
+../../bin/sunchar21/intpol.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/intpol.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/intpol.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/intpol.o ../win32/aqcore/intpol.cpp
+../../bin/sunchar21/scrio_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/scrio_c.o ./scrio_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edlink_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edlink_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h edlink_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edlink_c.o ./edlink_c.cpp
+../../bin/sunchar21/edlink_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edlink_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h edlink_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edlink_c.o ./edlink_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/plotsys.o:	../win32/aqcore/plotsys.h ../win32/aqcore/othervar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/plotsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/drawpts.h ../win32/aqcore/vectors.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/plotsys.o ../win32/aqcore/plotsys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/sdlist.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/sdlist.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/sdlist.o ../win32/aqcore/sdlist.cpp
+../../bin/sunchar21/advcomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/advcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/advcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/advcomp.o ../win32/aqcore/advcomp.cpp
+../../bin/sunchar21/calc_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h calc_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/calc_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/calc_c.o ./calc_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/init.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/fileio.h ../win32/aqcore/init.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/init.o ../win32/aqcore/init.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/linpack.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/linpack.o:	../win32/aqcore/linpack.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/linpack.o ../win32/aqcore/linpack.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/filmcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/filmcomp.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/fortran.h ../win32/aqcore/filmcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/filmcomp.o ../win32/aqcore/filmcomp.cpp
+../../bin/sunchar21/filmcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+../../bin/sunchar21/filmcomp.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/fortran.h ../win32/aqcore/filmcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/filmcomp.o ../win32/aqcore/filmcomp.cpp
+../../bin/sunchar21/mdi.o:	/usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/mdi.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h ../win32/aqcore/all.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/mdi.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/mdi.o ../win32/aqcore/mdi.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/plotpts.o:	../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/plotpts.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h ../win32/aqcore/drawpts.h ../win32/aqcore/vectors.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/plotpts.o ../win32/aqcore/plotpts.cpp
+../../bin/sunchar21/fit.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/linpack.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h
+../../bin/sunchar21/fit.o:	/usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/fit.h ../win32/aqcore/numpar.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/fit.o ../win32/aqcore/fit.cpp
+../../bin/sunchar21/drawpts.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h /usr/include/ctype.h ../win32/aqcore/drawpts.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h
+../../bin/sunchar21/drawpts.o:	/usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/vectors.h ../win32/aqcore/plotsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/drawpts.o ../win32/aqcore/drawpts.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edopt_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edopt_c.o:	../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/filmcomp.h ../win32/aqcore/rivcomp.h scrio_c.h edmix_c.h edfilm_c.h edriv_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/compsys.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edopt_c.o:	../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edopt_c.o ./edopt_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edriv_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edriv_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edriv_c.h ../win32/aqcore/rivcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edriv_c.o ./edriv_c.cpp
+../../bin/sunchar21/compsys.o:	../win32/aqcore/varsys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h
+../../bin/sunchar21/compsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/filmcomp.h ../win32/aqcore/rivcomp.h ../win32/aqcore/advcomp.h ../win32/aqcore/lakecomp.h ../win32/aqcore/soilcomp.h ../win32/aqcore/compsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/compsys.o ../win32/aqcore/compsys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/rivcomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/rivcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/rivcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/rivcomp.o ../win32/aqcore/rivcomp.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/ednum_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h ednum_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/ednum_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/ednum_c.o ./ednum_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/fortran.o:	../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/fortran.o ../win32/aqcore/fortran.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edvar_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edopt_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edvar_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h edvar_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edvar_c.o ./edvar_c.cpp
+../../bin/sunchar21/all.o:	/usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/time.h /usr/include/sys/time.h /usr/include/sys/types.h /usr/include/sys/isa_defs.h /usr/include/sys/machtypes.h /usr/include/sys/int_types.h /usr/include/sys/select.h /usr/include/sys/siginfo.h /usr/include/sys/machsig.h /usr/include/math.h /usr/include/floatingpoint.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/int_limits.h
+../../bin/sunchar21/all.o:	/usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h /usr/include/ieeefp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/all.o ../win32/aqcore/all.cpp
+../../bin/sunchar21/das.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/das.o:	../win32/aqcore/linpack.h ../win32/aqcore/fortran.h ../win32/aqcore/dassl.h ../win32/aqcore/das.h ../win32/aqcore/numpar.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/das.o ../win32/aqcore/das.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/vectors.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/vectors.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/vectors.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/vectors.o ../win32/aqcore/vectors.cpp
+../../bin/sunchar21/mixcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+../../bin/sunchar21/mixcomp.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/mixcomp.o ../win32/aqcore/mixcomp.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/formvar.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/formvar.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/formvar.o ../win32/aqcore/formvar.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/intpol.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/intpol.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/intpol.o:	
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/intpol.o ../win32/aqcore/intpol.cpp
+../../bin/sunchar21/symbol.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/symbol.o ../win32/aqcore/symbol.cpp
+../../bin/sunchar21/calcsys.o:	../win32/aqcore/calcsys.h ../win32/aqcore/othervar.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h
+../../bin/sunchar21/calcsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/calcsys.o ../win32/aqcore/calcsys.cpp
+../../bin/sunchar21/aquasys.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h /usr/include/time.h /usr/include/sys/time.h /usr/include/sys/types.h /usr/include/sys/isa_defs.h /usr/include/sys/machtypes.h /usr/include/sys/int_types.h /usr/include/sys/select.h /usr/include/sys/siginfo.h /usr/include/sys/machsig.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/int_limits.h
+../../bin/sunchar21/aquasys.o:	/usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h
+../../bin/sunchar21/aquasys.o:	../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h ../win32/aqcore/das.h ../win32/aqcore/fit.h ../win32/aqcore/fortran.h ../win32/aqcore/linpack.h ../win32/aqcore/sort.h ../win32/aqcore/stat.h ../win32/aqcore/readwords.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/aquasys.o ../win32/aqcore/aquasys.cpp
+../../bin/sunchar21/edadv_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edadv_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edadv_c.h ../win32/aqcore/advcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edadv_c.o ./edadv_c.cpp
+../../bin/sunchar21/fitsys.o:	../win32/aqcore/fitsys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+../../bin/sunchar21/fitsys.o:	../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/fitsys.o ../win32/aqcore/fitsys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edmix_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edmix_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edmix_c.h ../win32/aqcore/mixcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edmix_c.o ./edmix_c.cpp
+../../bin/sunchar21/zero.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/linpack.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h
+../../bin/sunchar21/zero.o:	/usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/zero.h ../win32/aqcore/numpar.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/zero.o ../win32/aqcore/zero.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/soilcomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/soilcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/soilcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/soilcomp.o ../win32/aqcore/soilcomp.cpp
+../../bin/sunchar21/soilcomp.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/fortran.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/soilcomp.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h ../win32/aqcore/soilcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/aqlink.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/soilcomp.o ../win32/aqcore/soilcomp.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/calc_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h calc_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/calc_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/calc_c.o ./calc_c.cpp
+../../bin/sunchar21/sort.o:	/usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h ../win32/aqcore/sort.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/sort.o ../win32/aqcore/sort.cpp
+../../bin/sunchar21/stat.o:	/usr/include/math.h /usr/include/floatingpoint.h /usr/include/stdio.h /usr/include/sys/feature_tests.h /usr/include/sys/va_list.h /usr/include/sys/ieeefp.h ../win32/aqcore/stat.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h
+../../bin/sunchar21/stat.o:	../win32/aqcore/mdi.h ../win32/aqcore/sort.h ../win32/aqcore/intpol.h ../win32/aqcore/fortran.h ../win32/aqcore/linpack.h ../win32/aqcore/gamma.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/stat.o ../win32/aqcore/stat.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edlake_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edlake_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edlake_c.h ../win32/aqcore/lakecomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edlake_c.o ./edlake_c.cpp
+../../bin/sunchar21/edlake_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edlake_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edlake_c.h ../win32/aqcore/lakecomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edlake_c.o ./edlake_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edcomp_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edcomp_c.o:	../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/filmcomp.h ../win32/aqcore/rivcomp.h scrio_c.h edmix_c.h edfilm_c.h edriv_c.h edadv_c.h ../win32/aqcore/advcomp.h edlake_c.h ../win32/aqcore/lakecomp.h edsoil_c.h ../win32/aqcore/soilcomp.h edcomp_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/compsys.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edcomp_c.o:	../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edcomp_c.o ./edcomp_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edstat_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edstat_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edstat_c.o:	../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edstat_c.o ./edstat_c.cpp
+../../bin/sunchar21/edcomp_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/mixcomp.h ../win32/aqcore/aqcomp.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+../../bin/sunchar21/edcomp_c.o:	../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/filmcomp.h ../win32/aqcore/rivcomp.h scrio_c.h edmix_c.h edfilm_c.h edriv_c.h edadv_c.h ../win32/aqcore/advcomp.h edlake_c.h ../win32/aqcore/lakecomp.h edsoil_c.h ../win32/aqcore/soilcomp.h edcomp_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/compsys.h
+../../bin/sunchar21/edcomp_c.o:	../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edcomp_c.o ./edcomp_c.cpp
+../../bin/sunchar21/edstat_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h edstat_c.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h
+../../bin/sunchar21/edstat_c.o:	../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edstat_c.o ./edstat_c.cpp
+../../bin/sunchar21/main_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/fileio.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h
+../../bin/sunchar21/main_c.o:	../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h file_c.h edvar_c.h edproc_c.h edcomp_c.h edlink_c.h ednum_c.h
+../../bin/sunchar21/main_c.o:	edstat_c.h calc_c.h view_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/main_c.o ./main_c.cpp
+../../bin/sunchar21/linksys.o:	../win32/aqcore/linksys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/aqlink.h ../win32/aqcore/aqcomp.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+../../bin/sunchar21/linksys.o:	../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/init.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h ../win32/aqcore/varsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/linksys.o ../win32/aqcore/linksys.cpp
+../../bin/sunchar21/aquasimc:	/usr/lib/libdl.so.1 /usr/lib/libc.so /usr/lang/SC4.2/lib/libcx.a /usr/lib/libw.so /usr/lang/SC4.2/lib/libC_mtstubs.a /usr/lang/lib/libm.so /usr/lang/lib/libC.so 
+	echo .
+	echo -------------------- LINKING --------------------
+	/bin/cp ../win32/aqcore/aquasim.ini ../../bin/sunchar21/.
+	CC  -O -o ../../bin/sunchar21/aquasimc \
+	        ../../bin/sunchar21/all.o \
+	        ../../bin/sunchar21/sort.o \
+	        ../../bin/sunchar21/mdi.o \
+	        ../../bin/sunchar21/gamma.o \
+	        ../../bin/sunchar21/stat.o \
+	        ../../bin/sunchar21/sdlist.o \
+	        ../../bin/sunchar21/intpol.o \
+	        ../../bin/sunchar21/numpar.o \
+	        ../../bin/sunchar21/dassl.o \
+	        ../../bin/sunchar21/linpack.o \
+	        ../../bin/sunchar21/fortran.o \
+	        ../../bin/sunchar21/zero.o \
+	        ../../bin/sunchar21/das.o \
+	        ../../bin/sunchar21/fit.o \
+	        ../../bin/sunchar21/init.o \
+	        ../../bin/sunchar21/fileio.o \
+	        ../../bin/sunchar21/symbol.o \
+	        ../../bin/sunchar21/aqvar.o \
+	        ../../bin/sunchar21/formvar.o \
+	        ../../bin/sunchar21/othervar.o \
+	        ../../bin/sunchar21/varsys.o \
+	        ../../bin/sunchar21/aqproc.o \
+	        ../../bin/sunchar21/procsys.o \
+	        ../../bin/sunchar21/aqcomp.o \
+	        ../../bin/sunchar21/mixcomp.o \
+	        ../../bin/sunchar21/filmcomp.o \
+	        ../../bin/sunchar21/advcomp.o \
+	        ../../bin/sunchar21/soilcomp.o \
+	        ../../bin/sunchar21/rivcomp.o \
+	        ../../bin/sunchar21/lakecomp.o \
+	        ../../bin/sunchar21/compsys.o \
+	        ../../bin/sunchar21/aqlink.o \
+	        ../../bin/sunchar21/linksys.o \
+	        ../../bin/sunchar21/calcsys.o \
+	        ../../bin/sunchar21/fitsys.o \
+	        ../../bin/sunchar21/statesys.o \
+	        ../../bin/sunchar21/plotsys.o \
+	        ../../bin/sunchar21/vectors.o \
+	        ../../bin/sunchar21/drawpts.o \
+	        ../../bin/sunchar21/plotpts.o \
+	        ../../bin/sunchar21/readwords.o \
+	        ../../bin/sunchar21/aquasys.o \
+	        ../../bin/sunchar21/scrio_c.o \
+	        ../../bin/sunchar21/edvar_c.o \
+	        ../../bin/sunchar21/edproc_c.o \
+	        ../../bin/sunchar21/edopt_c.o \
+	        ../../bin/sunchar21/edmix_c.o \
+	        ../../bin/sunchar21/edfilm_c.o \
+	        ../../bin/sunchar21/edriv_c.o \
+	        ../../bin/sunchar21/edadv_c.o \
+	        ../../bin/sunchar21/edlake_c.o \
+	        ../../bin/sunchar21/edsoil_c.o \
+	        ../../bin/sunchar21/edcomp_c.o \
+	        ../../bin/sunchar21/edlink_c.o \
+	        ../../bin/sunchar21/ednum_c.o \
+	        ../../bin/sunchar21/edstat_c.o \
+	        ../../bin/sunchar21/file_c.o \
+	        ../../bin/sunchar21/calc_c.o \
+	        ../../bin/sunchar21/view_c.o \
+	        ../../bin/sunchar21/main_c.o \
+	        -lC -lm
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edfilm_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edfilm_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edfilm_c.h ../win32/aqcore/filmcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edfilm_c.o ./edfilm_c.cpp
+../../bin/sunchar21/edfilm_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edfilm_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edfilm_c.h ../win32/aqcore/filmcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edfilm_c.o ./edfilm_c.cpp
+../../bin/sunchar21/aqproc.o:	../win32/aqcore/aqproc.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+../../bin/sunchar21/aqproc.o:	../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/othervar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/aqproc.o ../win32/aqcore/aqproc.cpp
+../../bin/sunchar21/procsys.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/procsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h
+../../bin/sunchar21/procsys.o:	../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/procsys.o ../win32/aqcore/procsys.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/symbol.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/symbol.o ../win32/aqcore/symbol.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edsoil_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/edsoil_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edsoil_c.h ../win32/aqcore/soilcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/edsoil_c.o ./edsoil_c.cpp
+../../bin/sunchar21/edsoil_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/aquasys.h ../win32/aqcore/varsys.h ../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h
+../../bin/sunchar21/edsoil_c.o:	../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h ../win32/aqcore/procsys.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/compsys.h ../win32/aqcore/aqcomp.h ../win32/aqcore/numpar.h ../win32/aqcore/linksys.h ../win32/aqcore/aqlink.h ../win32/aqcore/calcsys.h ../win32/aqcore/fitsys.h ../win32/aqcore/statesys.h ../win32/aqcore/plotsys.h scrio_c.h edopt_c.h edsoil_c.h ../win32/aqcore/soilcomp.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/edsoil_c.o ./edsoil_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/scrio_c.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h scrio_c.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/scrio_c.o ./scrio_c.cpp
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/fitsys.o:	../win32/aqcore/fitsys.h ../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h ../win32/aqcore/fileio.h
+.BUILT_LAST_MAKE_RUN:
+../../bin/sunchar/fitsys.o:	../win32/aqcore/othervar.h ../win32/aqcore/aqvar.h ../win32/aqcore/aqcomp.h ../win32/aqcore/aqproc.h ../win32/aqcore/formvar.h ../win32/aqcore/procsys.h ../win32/aqcore/numpar.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar/fitsys.o ../win32/aqcore/fitsys.cpp
+../../bin/sunchar21/init.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/fileio.h ../win32/aqcore/init.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/init.o ../win32/aqcore/init.cpp
+../../bin/sunchar21/varsys.o:	../win32/aqcore/all.h /usr/include/limits.h /usr/include/sys/feature_tests.h /usr/include/sys/isa_defs.h /usr/include/sys/int_limits.h /usr/include/stdlib.h /usr/include/string.h /usr/lang/SC4.2/include/CC/iostream.h /usr/lang/SC4.2/include/CC/rlocks.h /usr/lang/SC4.2/include/CC/fstream.h /usr/lang/SC4.2/include/CC/strstream.h ../win32/aqcore/init.h ../win32/aqcore/formvar.h ../win32/aqcore/aqvar.h ../win32/aqcore/symbol.h ../win32/aqcore/sdlist.h
+../../bin/sunchar21/varsys.o:	../win32/aqcore/fileio.h ../win32/aqcore/othervar.h ../win32/aqcore/varsys.h 
+	echo .
+	echo -------------- COMPILING PROGRAM ----------------
+	CC -c -I../win32/aqcore -I.  -DAQUA_OS=AQUA_SUN -DAQUA_VERSION=AQUA_CHAR -O \
+	        -o ../../bin/sunchar21/varsys.o ../win32/aqcore/varsys.cpp

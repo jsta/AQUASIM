@@ -1,0 +1,42 @@
+/////////////////////////////////   zero.h   /////////////////////////////////
+//
+//              date:       person:           comments:
+//
+// creation:    09.12.91    Peter Reichert
+// revisions:
+//
+//////////////////////////////////////////////////////////////////////////////
+//
+// Procedures for multidimensional root finding
+//
+//////////////////////////////////////////////////////////////////////////////
+
+#ifndef ZERO_H
+#define ZERO_H
+
+#include "numpar.h"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// ZeroNewton implements the modified Newton algorithm according to
+// Stoer, Einfuehrung in die Numerische Mathematik 1, Vierte verbesserte
+// Auflage, pp 246-249.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+JOBSTATUS ZeroNewton(REAL          x[],
+                     const REAL    relacc[],
+                     const REAL    absacc[],
+                     CARDINAL      nx,
+                     ZEROFUN       f,
+                     CARDINAL      maxstep,
+                     REAL          delta[],
+                     const NUMPAR& numpar,
+                     NUMINFO&      numinfo);
+
+//////////////////////////////////////////////////////////////////////////////
+
+#endif
+
+//////////////////////////////////////////////////////////////////////////////
+

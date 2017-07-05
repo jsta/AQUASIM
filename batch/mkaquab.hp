@@ -1,0 +1,50 @@
+##############################################################################
+#                                                                            #
+#  mkaquab.hp                                       Peter Reichert 30.09.94  #
+#  ----------                                                                #
+#                                                                            #
+#  makefile for batch version of AQUASIM on sun systems                      #
+#                                                                            #
+##############################################################################
+
+#  tested with SunC++ version 2.1
+
+#  changing compilation flags:
+CFLAGS = -O
+#CFLAGS = -g -DDEBUG
+#CFLAGS = -g
+LFLAGS = -O
+#LFLAGS = -g
+
+#  file names:
+include mkaqua.fil
+
+#  libraries:
+LIBS = -lm
+
+#  compiler and linker:
+COMP = CC                              # HP C++ compiler
+LINK = CC                              # HP linker
+#COMP = g++                             # gnu C++ compiler
+#LINK = g++                             # gnu linker
+
+#  general compiler and linker options:
+COPT = -c -DAQUA_OS=AQUA_HP -DAQUA_VERSION=AQUA_BATCH
+#LOPT =
+LOPT = +A	# link with archive, not with shared libs
+
+.SUFFIXES : .C                         # suffix for implicit rules
+
+#  program linking:
+aquasimb : $(AQCORE) $(AQBAT)
+	     @ echo .
+	     @ echo -------------------- LINKING --------------------
+	     $(LINK) $(LOPT) $(LFLAGS) -o aquasimb $(AQCORE) $(AQBAT) $(LIBS)
+
+#  program compilation:
+.C.o :
+	     @ echo .
+	     @ echo -------------- COMPILING PROGRAM ----------------
+	     $(COMP) $(COPT) $(CFLAGS) $<
+
+############################## end of makefile ###############################

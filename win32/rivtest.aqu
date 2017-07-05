@@ -1,0 +1,116 @@
+
+AQUASIM
+Version 2.1_beta01 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{PROGVAR}
+{{1}{A}{Cross sectioninal area}{m^2}{A}}{STATEVAR}{{1}{C}{Conc
+entration}{mg/l}{VOL}{1e-006}{1e-006}}{PROGVAR}{{1}{calcnum}{C
+alculation number}{}{CALC}}{FORMVAR}{{1}{h_sed}{Depth of mixed
+ sediment layer}{m}{0.2}}{FORMVAR}{{1}{K_st}{Friction coeffici
+ent according to Strickler}{m^(1/3)/s}{20}}{PROGVAR}{{1}{P}{Pe
+rimeter length}{m}{P}}{PROGVAR}{{1}{Qday}{Discharge}{m^3/d}{Q}
+}{FORMVAR}{{1}{Q_river}{River discharge}{m^3/s}{2}}{FORMVAR}{{
+1}{S_0}{Slope of river bed}{}{0.001}}{PROGVAR}{{1}{S_f}{Fricti
+on slope}{}{Sf}}{FORMVAR}{{1}{T}{}{degC}{15}}{PROGVAR}{{1}{t}{
+Time}{d}{T}}{PROGVAR}{{1}{theta}{}{}{EPSL}}{FORMVAR}{{1}{theta
+_sed}{Porosity of mixed sediment layer}{}{0.9}}{FORMVAR}{{1}{v
+_ex}{Water-sediment exchange velocity for dissolved substances
+ (in this version substance independence assumed)}{m/d}{0*1}}{
+PROGVAR}{{1}{w}{Surface width}{m}{W}}{FORMVAR}{{1}{w_river}{Su
+rface width of river bed  (rectangular channel assumed)}{m}{15
+}}{PROGVAR}{{1}{x}{Space coordinate along the river}{m}{X}}{PR
+OGVAR}{{1}{z_0}{Water level elevation}{m}{Z0}}{FORMVAR}{{1}{z_
+B}{Elevation of river bed}{m}{-S_0*x}}{FORMVAR}{{1}{C_in}{}{mg
+/l}{exp(-(t-0.1)^2/(2*0.1^2))}}{FORMVAR}{{1}{d}{Mean river dep
+th}{m}{A/w}}{FORMVAR}{{1}{h_river}{Maximum river depth}{m}{z_0
+-z_B}}{FORMVAR}{{1}{h_wat}{Mean water depth}{m}{A/w}}{FORMVAR}
+{{1}{Q}{Discharge}{m^3/s}{Qday/(24*3600)}}{FORMVAR}{{1}{Qsed}{
+}{}{ if x<5000 then 0 else  if x<15000 then 0.5*24*3600*(x-500
+0)/10000 else 0.5*24*3600 endif  endif }}{FORMVAR}{{1}{v}{Velo
+city}{m/s}{Q/(theta*A)}}}{PROCSYS}{}{COMPSYS}{{RIVCOMP}{{6}{Ri
+ver1}{Rectangular channel of 5 km length}{0}{{C}}{}{TRUE}{24*3
+600*Q_river}{{C}{24*3600*Q_river*C_in}}{{0}{Qday}{24*3600*Q_ri
+ver}}{0}{}{102}{FALSE}{0.001}{0.1}{0.001}{0.001}{0}{1e-006}{1e
+-006}{1e-006}{0}{20000}{127000000}{h_river*w_river}{2*h_river+
+w_river}{w_river}{1/K_st^2*(P/A)^(4/3)*v^2}{FALSE}{}{TRUE}{{SE
+DLAY}{{1}{h_sed*w_river}{theta_sed}{Qsed}{0}{w_river*v_ex}}}{1
+}{NORMAL}{KIN}}{RIVCOMP}{{6}{River2}{Rectangular channel of 5 
+km length}{0}{{C}}{}{FALSE}{0}{}{{0}{Qday}{24*3600*Q_river}}{0
+}{}{102}{FALSE}{0.001}{0.1}{0.001}{0.001}{0}{1e-006}{1e-006}{1
+e-006}{20000}{40000}{127000000}{h_river*w_river}{2*h_river+w_r
+iver}{w_river}{1/K_st^2*(P/A)^(4/3)*v^2}{FALSE}{}{TRUE}{{SEDLA
+Y}{{1}{h_sed*w_river}{theta_sed}{ if x>30000 then 0 else 0.5*2
+4*3600 endif }{0}{w_river*v_ex}}}{1}{NORMAL}{KIN}}}{LINKSYS}{{
+ADVLINK}{{2}{link1}{}{0}{River1}{0}{River2}{0}{}}}{CALCSYS}{{C
+ALC}{{2}{calc}{}{0}{0}{FALSE}{{0.01}{200}}{TRUE}{FALSE}}}{FITS
+YS}{}{NUMPAR}{{2}{10}{20}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{
+PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}
+{2}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{600
+}{400}{25}{25}{25}{25}{50}{20}{14}{10}{12}}{PLOT}{{2}{Area}{}{
+Area Profile}{distance [m]}{area [m2]}{SPACE}{0}{TRUE}{25000}{
+TRUE}{0}{TRUE}{5000}{TRUE}{3}{TRUE}{6.5}{TRUE}{3}{TRUE}{0.5}{T
+RUE}{{A}{0}{River1}{0}{0}{FALSE}{VAL}{}{water column, 0d}{TRUE
+}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{A}{0}{River1}{1}{0}{FALSE
+}{VAL}{}{sediment, 0d}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{6}{BLA}
+{A}{0}{River1}{0}{1}{FALSE}{VAL}{}{water column, 1d}{TRUE}{LDA
+SH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{A}{0}{River1}{1}{1}{FALSE}{VA
+L}{}{sediment, 1d}{TRUE}{SDASH}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{A
+}{0}{River2}{0}{0}{FALSE}{VAL}{}{}{TRUE}{DASH}{2}{BLU}{FALSE}{
+CIRC}{6}{BLA}{A}{0}{River2}{1}{0}{FALSE}{VAL}{}{}{TRUE}{DOT}{2
+}{RED}{FALSE}{CIRC}{6}{BLA}{A}{0}{River2}{0}{1}{FALSE}{VAL}{}{
+}{TRUE}{LDASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{A}{0}{River2}{1}{1
+}{FALSE}{VAL}{}{}{TRUE}{SDASH}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{
+PLOT}{{2}{C_t}{}{}{t [d]}{C [mg/l]}{TIME}{0}{FALSE}{2}{FALSE}{
+0}{FALSE}{0.5}{FALSE}{-0.1}{TRUE}{1}{TRUE}{-0.1}{TRUE}{0.1}{TR
+UE}{{C}{0}{River1}{0}{0}{TRUE}{VAL}{}{input}{TRUE}{SOL}{2}{BLA
+}{FALSE}{CIRC}{6}{BLA}{C}{0}{River1}{0}{1}{TRUE}{VAL}{}{water 
+column}{TRUE}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C}{0}{River1}
+{1}{1}{TRUE}{VAL}{}{sediment}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{
+6}{BLA}}}{PLOT}{{2}{C_x_05}{}{}{x [m]}{C [mg/l]}{SPACE}{0}{TRU
+E}{20000}{TRUE}{0}{TRUE}{5000}{TRUE}{0}{TRUE}{1}{TRUE}{0}{TRUE
+}{0.1}{TRUE}{{C}{0}{River1}{0}{0.5}{FALSE}{VAL}{}{water column
+}{TRUE}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C}{0}{River1}{1}{0.
+5}{FALSE}{VAL}{}{sediment}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{6}{
+BLA}}}{PLOT}{{2}{C_x_07}{}{}{x [m]}{C [mg/l]}{SPACE}{0}{TRUE}{
+20000}{TRUE}{0}{TRUE}{5000}{TRUE}{0}{TRUE}{1}{TRUE}{0}{TRUE}{0
+.1}{TRUE}{{C}{0}{River1}{0}{0.7}{FALSE}{VAL}{}{water column}{T
+RUE}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C}{0}{River1}{1}{0.7}{
+FALSE}{VAL}{}{sediment}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{6}{BLA
+}}}{PLOT}{{2}{C_x_09}{}{}{x [m]}{C [mg/l]}{SPACE}{0}{TRUE}{250
+00}{TRUE}{0}{TRUE}{5000}{TRUE}{-0.1}{TRUE}{0.7}{TRUE}{-0.1}{TR
+UE}{0.1}{TRUE}{{C}{0}{River1}{0}{0.9}{FALSE}{VAL}{}{water colu
+mn}{TRUE}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C}{0}{River1}{1}{
+0.9}{FALSE}{VAL}{}{sediment}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{6
+}{BLA}}}{PLOT}{{2}{Depth}{}{Mean Water Depth Profile}{distance
+ [m]}{mean depth [m]}{SPACE}{0}{TRUE}{20000}{TRUE}{0}{TRUE}{50
+00}{TRUE}{0}{TRUE}{0.5}{TRUE}{0}{TRUE}{0.1}{TRUE}{{d}{0}{River
+1}{0}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BL
+A}}}{PLOT}{{2}{Disch}{}{Discharge Profile}{distance [m]}{disch
+arge [m3/s]}{SPACE}{0}{TRUE}{25000}{TRUE}{0}{TRUE}{5000}{TRUE}
+{0}{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{TRUE}{{Q}{0}{River1}{0}{0}{
+FALSE}{VAL}{}{water column, 0d}{TRUE}{DASH}{2}{BLU}{FALSE}{CIR
+C}{6}{BLA}{Q}{0}{River1}{1}{0}{FALSE}{VAL}{}{sediment, 0d}{TRU
+E}{DOT}{2}{RED}{FALSE}{CIRC}{6}{BLA}{Q}{0}{River1}{0}{1}{FALSE
+}{VAL}{}{water column, 1d}{TRUE}{LDASH}{2}{GRE}{FALSE}{CIRC}{6
+}{BLA}{Q}{0}{River1}{1}{1}{FALSE}{VAL}{}{sediment, 1d}{TRUE}{S
+DASH}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{Q}{0}{River2}{0}{0}{FALSE}{
+VAL}{}{}{TRUE}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Q}{0}{River2
+}{1}{0}{FALSE}{VAL}{}{}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{6}{BLA
+}{Q}{0}{River2}{0}{1}{FALSE}{VAL}{}{}{TRUE}{LDASH}{2}{GRE}{FAL
+SE}{CIRC}{6}{BLA}{Q}{0}{River2}{1}{1}{FALSE}{VAL}{}{}{TRUE}{SD
+ASH}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Elevat}{}{Water 
+Level Profile}{distance [m]}{bed and water level [m]}{SPACE}{0
+}{TRUE}{20000}{TRUE}{0}{TRUE}{5000}{TRUE}{-20}{TRUE}{5}{TRUE}{
+-20}{TRUE}{5}{TRUE}{{z_B}{0}{River1}{0}{0}{FALSE}{VAL}{}{zB}{T
+RUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{z_0}{0}{River1}{0}{0}{F
+ALSE}{VAL}{}{z0}{TRUE}{DOT}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLO
+T}{{2}{Veloc}{}{Velocity Profile}{distance [m]}{mean velocity 
+[m/s]}{SPACE}{0}{TRUE}{25000}{TRUE}{0}{TRUE}{5000}{TRUE}{0.15}
+{TRUE}{0.35}{TRUE}{0.15}{TRUE}{0.05}{TRUE}{{v}{0}{River1}{0}{1
+}{FALSE}{VAL}{}{water column}{TRUE}{DASH}{2}{BLU}{FALSE}{CIRC}
+{6}{BLA}{v}{0}{River1}{1}{1}{FALSE}{VAL}{}{sediment}{TRUE}{DOT
+}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Width}{}{Surface Wi
+dth Profile}{distance [m]}{surface width [m]}{SPACE}{0}{TRUE}{
+20000}{TRUE}{0}{TRUE}{5000}{TRUE}{0}{TRUE}{20}{TRUE}{0}{TRUE}{
+5}{TRUE}{{w}{0}{River1}{0}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{2}{BL
+A}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

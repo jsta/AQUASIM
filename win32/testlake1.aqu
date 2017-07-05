@@ -1,0 +1,232 @@
+
+AQUASIM
+Version 2.0delta (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{PROGVAR}
+{{1}{A}{Cross-sectional area of the lake}{m^2}{A}}{FORMVAR}{{1
+}{c1}{Coefficient of k-eps model}{}{1.44}}{FORMVAR}{{1}{c2}{Co
+efficient of k-eps model}{}{1.92}}{FORMVAR}{{1}{c3}{Coefficien
+t of k-eps model}{}{0}}{FORMVAR}{{1}{cmu}{Coefficient of k-eps
+ model}{}{0.09}}{PROGVAR}{{1}{dAdz}{Gradient of cross-sectiona
+l area of the lake}{m}{DADZ}}{PROGVAR}{{1}{Dissprog}{Dissipati
+on of specific turbulent kinetic energy}{m^2/d^3}{EPS}}{FORMVA
+R}{{1}{Diss_ini}{Initial values for dissipation}{W/kg}{1e-007}
+}{FORMVAR}{{1}{Diss_log}{Logarithm of dissipation of specific 
+turbulent kinetic energy}{-}{log10(Dissprog/86400^3)}}{PROGVAR
+}{{1}{Gprog}{Buoyancy production of specific turbulent kinetic
+ energy}{m^2/d^3}{BUOP}}{FORMVAR}{{1}{Kz_min}{Minimum vertical
+ turbulent diffusivity}{m^2/d}{0.1}}{PROGVAR}{{1}{N2prog}{Brun
+t-Vaisala frequency}{1/d^2}{N2}}{PROGVAR}{{1}{Pprog}{Shear pro
+duction of specific turbulent kinetic energy}{m^2/d^3}{SHEARP}
+}{FORMVAR}{{1}{Pr}{Prantl number}{}{1}}{STATEVAR}{{1}{T}{Tempe
+rature}{deg C}{VOL}{1e-006}{1e-006}}{PROGVAR}{{1}{t}{Time}{d}{
+T}}{PROGVAR}{{1}{TKEprog}{Specific turbulent kinetic energy}{m
+^2/d^2}{TKE}}{FORMVAR}{{1}{TKE_ini}{Initial values for TKE}{J/
+kg}{0.0001}}{FORMVAR}{{1}{TKE_log}{Logarithm of specific turbu
+lent kinetic energy}{-}{log10(TKEprog/86400^2)}}{FORMVAR}{{1}{
+TKE_min}{}{m^2/d^2}{1e-008*86400^2}}{FORMVAR}{{1}{TKE_source}{
+}{m^2/d^3}{Pprog+Gprog-Dissprog}}{PROGVAR}{{1}{Uprog}{Horizont
+al velocity}{m/d}{UH}}{PROGVAR}{{1}{z}{Distance from lake surf
+ace}{m}{Z}}{FORMVAR}{{1}{Diss}{Dissipation of specific turbule
+nt kinetic energy}{W/kg}{Dissprog/86400^3}}{FORMVAR}{{1}{Diss_
+source}{}{m^2/d^4}{c1*(Pprog+c3*Gprog)*Dissprog/TKEprog-c2*Dis
+sprog^2/TKEprog}}{FORMVAR}{{1}{G}{Buoyancy production of speci
+fic turbulent kinetic energy}{W/kg}{Gprog/86400^3}}{FORMVAR}{{
+1}{Kz_fact}{}{}{ if TKEprog>2*TKE_min then 1 else  if TKEprog<
+TKE_min then 0 else (TKEprog-TKE_min)/TKE_min endif  endif }}{
+FORMVAR}{{1}{Kz_prog_calc}{}{m^2/d}{cmu*TKEprog^2/Dissprog/Pr*
+Kz_fact}}{FORMVAR}{{1}{N2}{Brunt-Vaisala frequency}{1/s^2}{N2p
+rog/86400^2}}{FORMVAR}{{1}{P}{Shear production of specific tur
+bulent kinetic energy}{W/kg}{Pprog/86400^3}}{FORMVAR}{{1}{rho}
+{Density}{kg/m^3}{999.843+0.001*(65.4891*T-8.56272*T^2+0.05938
+5*T^3)}}{FORMVAR}{{1}{TKE}{Specific turbulent kinetic energy}{
+J/kg}{TKEprog/86400^2}}{FORMVAR}{{1}{TKE_fact}{}{}{ if TKE_sou
+rce>0 then 1 else  if TKEprog>2*TKE_min then 1 else  if TKEpro
+g<TKE_min then 0 else (TKEprog-TKE_min)/TKE_min endif  endif  
+endif }}{FORMVAR}{{1}{T_ini}{Temperature}{deg C}{10-z/10}}{FOR
+MVAR}{{1}{U}{Horizontal velocity}{m/s}{Uprog/86400}}{FORMVAR}{
+{1}{Kz_prog}{Vertical turbulent diffusivity}{m^2/d}{ if Kz_pro
+g_calc>Kz_min then Kz_prog_calc else Kz_min endif }}{FORMVAR}{
+{1}{Kz}{Diffusivity}{m2/s}{Kz_prog/86400}}}{PROCSYS}{}{COMPSYS
+}{{LAKECOMP}{{5}{testlake}{}{0}{{T}}{}{{0}{TKEprog}{TKE_ini*86
+400^2}{0}{Dissprog}{Diss_ini*86400^3}{0}{T}{T_ini}}{{T}{-100/1
+000/4186*86400*0}}{0}{}{}{}{52}{FALSE}{0.0001}{0.0001}{0.0001}
+{1000}{0.0001}{0.01}{0.0001}{0.01}{0.001}{0.001}{0}{10}{7.03e+
+010}{}{}{100000}{rho}{Kz_prog}{FALSE}{0}{0}{0.5}{0.1}{TRUE}{Pr
+}{1}{1.3}{0}{0}{0}{0}{TKE_source*(TKE_fact-1)}{c1*(Pprog+c3*Gp
+rog)*Dissprog/TKEprog-c2*Dissprog^2/TKEprog}}}{LINKSYS}{}{CALC
+SYS}{{CALC}{{2}{calc1}{}{0}{0}{FALSE}{{0.01}{201}}{TRUE}{FALSE
+}}}{FITSYS}{}{NUMPAR}{{1}{1}{10}{0}{TRUE}{5}{1000}}{PLOTSYS}{{
+PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}
+{2.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{6
+00}{400}{25}{25}{25}{25}{50}{20}{14}{10}{12}}{PLOT}{{1}{A}{}{L
+ake Cross-Sectional Area}{z [m]}{A [m^2]}{SPACE}{0}{TRUE}{10}{
+TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{150000}{TRUE}{0}{TRUE}{50000}
+{TRUE}{{A}{0}{testlake}{0}{0}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALS
+E}{CIRC}{6}{BLA}}}{PLOT}{{1}{dAdz}{}{Gradient of Lake Cross-Se
+ctional Area}{z [m]}{dAdz [m]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TR
+UE}{5}{TRUE}{-1e-006}{TRUE}{1e-006}{TRUE}{-1e-006}{TRUE}{5e-00
+7}{TRUE}{{dAdz}{0}{testlake}{0}{0}{VAL}{}{}{TRUE}{SOL}{2}{BLA}
+{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}{Diss_t}{}{Dissipation of spe
+cific turbulent kinetic energy}{t [d]}{P [W/kg]}{TIME}{0}{TRUE
+}{0.25}{TRUE}{0}{TRUE}{0.05}{TRUE}{-13}{TRUE}{-6}{TRUE}{-13}{T
+RUE}{1}{TRUE}{{Diss_log}{0}{testlake}{0}{0}{VAL}{}{0 m}{TRUE}{
+SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{Diss_log}{0}{testlake}{0}{1}
+{VAL}{}{1 m}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{Diss_lo
+g}{0}{testlake}{0}{2}{VAL}{}{2 m}{TRUE}{DASH}{2}{GRE}{FALSE}{C
+IRC}{6}{BLA}{Diss_log}{0}{testlake}{0}{3}{VAL}{}{3 m}{TRUE}{SD
+ASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Diss_log}{0}{testlake}{0}{4}
+{VAL}{}{4 m}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{Diss_log}
+{0}{testlake}{0}{5}{VAL}{}{5 m}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC
+}{6}{BLA}{Diss_log}{0}{testlake}{0}{10}{VAL}{}{10 m}{TRUE}{SDD
+}{2}{YEL}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}{Diss_z}{}{Dissipati
+on of specific turbulent kinetic energy}{z [m]}{P [W/kg]}{SPAC
+E}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}{-8}{TRUE}{0}{TRUE}{-8}
+{TRUE}{1}{TRUE}{{Diss_log}{0}{testlake}{0}{0}{VAL}{}{0 d}{TRUE
+}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{Diss_log}{0}{testlake}{0}{
+0.1}{VAL}{}{0.1 d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{D
+iss_log}{0}{testlake}{0}{0.2}{VAL}{}{0.2 d}{TRUE}{DASH}{2}{GRE
+}{FALSE}{CIRC}{6}{BLA}{Diss_log}{0}{testlake}{0}{0.3}{VAL}{}{0
+.3 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Diss_log}{0}{t
+estlake}{0}{0.4}{VAL}{}{0.4 d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}
+{6}{BLA}{Diss_log}{0}{testlake}{0}{0.5}{VAL}{}{0.5 d}{TRUE}{LD
+D}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{Diss_log}{0}{testlake}{0}{1}{V
+AL}{}{1 d}{TRUE}{SDD}{2}{YEL}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}
+{G}{}{Buoyancy production of specific turbulent kinetic energy
+}{z [m]}{G [W/kg]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}
+{-8e-007}{TRUE}{1e-007}{TRUE}{-8e-007}{TRUE}{1e-007}{TRUE}{{G}
+{0}{testlake}{0}{0}{VAL}{}{0 d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC
+}{6}{BLA}{G}{0}{testlake}{0}{0.01}{VAL}{}{0.01 d}{TRUE}{LDASH}
+{2}{RED}{FALSE}{CIRC}{6}{BLA}{G}{0}{testlake}{0}{0.02}{VAL}{}{
+0.02 d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{G}{0}{testlak
+e}{0}{0.03}{VAL}{}{0.03 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6
+}{BLA}{G}{0}{testlake}{0}{0.04}{VAL}{}{0.04 d}{TRUE}{DOT}{2}{C
+YA}{FALSE}{CIRC}{6}{BLA}{G}{0}{testlake}{0}{0.05}{VAL}{}{0.05 
+d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{G}{0}{testlake}{0}{
+0.1}{VAL}{}{0.1 d}{TRUE}{SDD}{2}{YEL}{FALSE}{CIRC}{6}{BLA}}}{P
+LOT}{{1}{Kz_t}{}{Vertical Turbulent Diffusivity}{t [d]}{Kz [m^
+2/s]}{TIME}{0}{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{TRUE}{0}{TRUE}{0
+.01}{TRUE}{0}{TRUE}{0.001}{TRUE}{{Kz}{0}{testlake}{0}{0}{VAL}{
+}{0 m}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{Kz}{0}{testlake
+}{0}{1}{VAL}{}{1 m}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{
+Kz}{0}{testlake}{0}{2}{VAL}{}{2 m}{TRUE}{DASH}{2}{GRE}{FALSE}{
+CIRC}{6}{BLA}{Kz}{0}{testlake}{0}{3}{VAL}{}{3 m}{TRUE}{SDASH}{
+2}{BLU}{FALSE}{CIRC}{6}{BLA}{Kz}{0}{testlake}{0}{4}{VAL}{}{4 m
+}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{Kz}{0}{testlake}{0}{
+5}{VAL}{}{5 m}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{Kz}{0}{
+testlake}{0}{10}{VAL}{}{10 m}{TRUE}{SDD}{2}{YEL}{FALSE}{CIRC}{
+6}{BLA}}}{PLOT}{{1}{Kz_z}{}{Vertical Turbulent Diffusivity}{z 
+[m]}{Kz [m^2/s]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}{0
+}{TRUE}{0.01}{TRUE}{0}{TRUE}{0.001}{TRUE}{{Kz}{0}{testlake}{0}
+{0}{VAL}{}{0 d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{Kz}{0}
+{testlake}{0}{0.01}{VAL}{}{0.01 d}{TRUE}{LDASH}{2}{RED}{FALSE}
+{CIRC}{6}{BLA}{Kz}{0}{testlake}{0}{0.02}{VAL}{}{0.02 d}{TRUE}{
+DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{Kz}{0}{testlake}{0}{0.03}{V
+AL}{}{0.03 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Kz}{0}
+{testlake}{0}{0.04}{VAL}{}{0.04 d}{TRUE}{DOT}{2}{CYA}{FALSE}{C
+IRC}{6}{BLA}{Kz}{0}{testlake}{0}{0.05}{VAL}{}{0.05 d}{TRUE}{LD
+D}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{Kz}{0}{testlake}{0}{0.1}{VAL}{
+}{0.1 d}{TRUE}{SDD}{2}{YEL}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}{N
+2}{}{Brund-Vaisala frequency}{z [m]}{N2 [1/s^2]}{SPACE}{0}{TRU
+E}{10}{TRUE}{0}{TRUE}{5}{TRUE}{-5e-005}{TRUE}{0.00015}{TRUE}{-
+5e-005}{TRUE}{5e-005}{TRUE}{{N2}{0}{testlake}{0}{0}{VAL}{}{0 d
+}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{N2}{0}{testlake}{0}{
+0.01}{VAL}{}{0.01 d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}
+{N2}{0}{testlake}{0}{0.02}{VAL}{}{0.02 d}{TRUE}{DASH}{2}{GRE}{
+FALSE}{CIRC}{6}{BLA}{N2}{0}{testlake}{0}{0.03}{VAL}{}{0.03 d}{
+TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{N2}{0}{testlake}{0}{
+0.04}{VAL}{}{0.04 d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{N
+2}{0}{testlake}{0}{0.05}{VAL}{}{0.05 d}{TRUE}{LDD}{2}{MAG}{FAL
+SE}{CIRC}{6}{BLA}{N2}{0}{testlake}{0}{0.1}{VAL}{}{0.1 d}{TRUE}
+{SDD}{2}{YEL}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}{P}{}{Shear prod
+uction of specific turbulent kinetic energy}{z [m]}{P [W/kg]}{
+SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{2e-024}{T
+RUE}{0}{TRUE}{5e-025}{TRUE}{{P}{0}{testlake}{0}{0}{VAL}{}{0 d}
+{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{P}{0}{testlake}{0}{0.
+01}{VAL}{}{0.01 d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{P
+}{0}{testlake}{0}{0.02}{VAL}{}{0.02 d}{TRUE}{DASH}{2}{GRE}{FAL
+SE}{CIRC}{6}{BLA}{P}{0}{testlake}{0}{0.03}{VAL}{}{0.03 d}{TRUE
+}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{P}{0}{testlake}{0}{0.04}
+{VAL}{}{0.04 d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{P}{0}{
+testlake}{0}{0.05}{VAL}{}{0.05 d}{TRUE}{LDD}{2}{MAG}{FALSE}{CI
+RC}{6}{BLA}{P}{0}{testlake}{0}{0.1}{VAL}{}{0.1 d}{TRUE}{SDD}{2
+}{YEL}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}{rho_t}{}{Density}{t [d
+]}{rho [kg/m^3]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}{9
+99.7}{TRUE}{999.73}{TRUE}{999.7}{TRUE}{0.005}{TRUE}{{rho}{0}{t
+estlake}{0}{0}{VAL}{}{0 m}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{
+BLA}{rho}{0}{testlake}{0}{1}{VAL}{}{1 m}{TRUE}{LDASH}{2}{RED}{
+FALSE}{CIRC}{6}{BLA}{rho}{0}{testlake}{0}{2}{VAL}{}{2 m}{TRUE}
+{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{rho}{0}{testlake}{0}{3}{VA
+L}{}{3 m}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{rho}{0}{te
+stlake}{0}{4}{VAL}{}{4 m}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{B
+LA}{rho}{0}{testlake}{0}{5}{VAL}{}{5 m}{TRUE}{LDD}{2}{MAG}{FAL
+SE}{CIRC}{6}{BLA}{rho}{0}{testlake}{0}{10}{VAL}{}{10 m}{TRUE}{
+SDD}{2}{YEL}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}{rho_z}{}{Density
+}{z [m]}{rho [kg/m^3]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{T
+RUE}{999}{TRUE}{1000}{TRUE}{999.7}{TRUE}{0.005}{TRUE}{{rho}{0}
+{testlake}{0}{0}{VAL}{}{0 d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6
+}{BLA}{rho}{0}{testlake}{0}{0.01}{VAL}{}{0.01 d}{TRUE}{LDASH}{
+2}{RED}{FALSE}{CIRC}{6}{BLA}{rho}{0}{testlake}{0}{0.02}{VAL}{}
+{0.02 d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{rho}{0}{test
+lake}{0}{0.03}{VAL}{}{0.03 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC
+}{6}{BLA}{rho}{0}{testlake}{0}{0.04}{VAL}{}{0.04 d}{TRUE}{DOT}
+{2}{CYA}{FALSE}{CIRC}{6}{BLA}{rho}{0}{testlake}{0}{0.05}{VAL}{
+}{0.05 d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{rho}{0}{test
+lake}{0}{0.1}{VAL}{}{0.1 d}{TRUE}{SDD}{2}{YEL}{FALSE}{CIRC}{6}
+{BLA}}}{PLOT}{{1}{TKE_t}{}{Specific turbulent kinetic energy}{
+t [d]}{TKE [J/kg]}{TIME}{0}{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{TRU
+E}{-10}{TRUE}{-4}{TRUE}{-10}{TRUE}{1}{TRUE}{{TKE_log}{0}{testl
+ake}{0}{0}{VAL}{}{0 m}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}
+{TKE_log}{0}{testlake}{0}{1}{VAL}{}{1 m}{TRUE}{LDASH}{2}{RED}{
+FALSE}{CIRC}{6}{BLA}{TKE_log}{0}{testlake}{0}{2}{VAL}{}{2 m}{T
+RUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{TKE_log}{0}{testlake}{
+0}{3}{VAL}{}{3 m}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{TK
+E_log}{0}{testlake}{0}{4}{VAL}{}{4 m}{TRUE}{DOT}{2}{CYA}{FALSE
+}{CIRC}{6}{BLA}{TKE_log}{0}{testlake}{0}{5}{VAL}{}{5 m}{TRUE}{
+DOT}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{TKE_log}{0}{testlake}{0}{10}
+{VAL}{}{10 m}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{
+{1}{TKE_z}{}{Specific turbulent kinetic energy}{z [m]}{TKE [J/
+kg]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}{-5}{TRUE}{-2.
+5}{TRUE}{-5}{TRUE}{0.5}{TRUE}{{TKE_log}{0}{testlake}{0}{0}{VAL
+}{}{0 d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{TKE_log}{0}{t
+estlake}{0}{0.1}{VAL}{}{0.1 d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIR
+C}{6}{BLA}{TKE_log}{0}{testlake}{0}{0.2}{VAL}{}{0.2 d}{TRUE}{D
+ASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{TKE_log}{0}{testlake}{0}{0.3
+}{VAL}{}{0.3 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{TKE_
+log}{0}{testlake}{0}{0.4}{VAL}{}{0.4 d}{TRUE}{DOT}{2}{CYA}{FAL
+SE}{CIRC}{6}{BLA}{TKE_log}{0}{testlake}{0}{0.5}{VAL}{}{0.5 d}{
+TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{TKE_log}{0}{testlake}{
+0}{1}{VAL}{}{1 d}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{6}{BLA}{TKE_
+log}{0}{testlake}{0}{2}{VAL}{}{2 d}{TRUE}{DOT}{2}{GRE}{FALSE}{
+CIRC}{6}{BLA}}}{PLOT}{{1}{T_t}{}{T}{t [d]}{T [deg C]}{TIME}{0}
+{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{TRUE}{9}{TRUE}{10}{TRUE}{9}{TR
+UE}{0.1}{TRUE}{{T}{0}{testlake}{0}{0}{VAL}{}{0 m}{TRUE}{SOL}{2
+}{BLA}{FALSE}{CIRC}{6}{BLA}{T}{0}{testlake}{0}{1}{VAL}{}{1 m}{
+TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{T}{0}{testlake}{0}{2
+}{VAL}{}{2 m}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{T}{0}{t
+estlake}{0}{4}{VAL}{}{4 m}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6
+}{BLA}{T}{0}{testlake}{0}{5}{VAL}{}{5 m}{TRUE}{DOT}{2}{CYA}{FA
+LSE}{CIRC}{6}{BLA}{T}{0}{testlake}{0}{10}{VAL}{}{10 m}{TRUE}{L
+DD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{1}{T_z}{}{T}{z [m]}{
+T [deg C]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}{9}{TRUE
+}{10}{TRUE}{9}{TRUE}{0.1}{TRUE}{{T}{0}{testlake}{0}{0}{VAL}{}{
+0 d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{T}{0}{testlake}{0
+}{0.1}{VAL}{}{0.1 d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}
+{T}{0}{testlake}{0}{0.2}{VAL}{}{0.2 d}{TRUE}{DASH}{2}{GRE}{FAL
+SE}{CIRC}{6}{BLA}{T}{0}{testlake}{0}{0.4}{VAL}{}{0.4 d}{TRUE}{
+SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{T}{0}{testlake}{0}{0.5}{VA
+L}{}{0.5 d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{T}{0}{test
+lake}{0}{1}{VAL}{}{1 d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA
+}{T}{0}{testlake}{0}{2}{VAL}{}{2 d}{TRUE}{LDASH}{2}{YEL}{FALSE
+}{CIRC}{6}{BLA}}}{PLOT}{{1}{U}{}{Horizontal velocity}{z [m]}{U
+ [m/s]}{SPACE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{1
+.5e-011}{TRUE}{0}{TRUE}{5e-012}{TRUE}{{U}{0}{testlake}{0}{0}{V
+AL}{}{0 d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{U}{0}{testl
+ake}{0}{0.01}{VAL}{}{0.01 d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}
+{6}{BLA}{U}{0}{testlake}{0}{0.02}{VAL}{}{0.02 d}{TRUE}{DASH}{2
+}{GRE}{FALSE}{CIRC}{6}{BLA}{U}{0}{testlake}{0}{0.03}{VAL}{}{0.
+03 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{U}{0}{testlake
+}{0}{0.04}{VAL}{}{0.04 d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{B
+LA}{U}{0}{testlake}{0}{0.05}{VAL}{}{0.05 d}{TRUE}{LDD}{2}{MAG}
+{FALSE}{CIRC}{6}{BLA}{U}{0}{testlake}{0}{0.1}{VAL}{}{0.1 d}{TR
+UE}{SDD}{2}{YEL}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

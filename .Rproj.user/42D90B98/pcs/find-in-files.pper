@@ -1,0 +1,10 @@
+{
+    "dialog-state" : {
+        "caseSensitive" : false,
+        "filePatterns" : [
+        ],
+        "path" : "~/Documents/Science/Models/aquasim",
+        "query" : "lic",
+        "regex" : false
+    }
+}

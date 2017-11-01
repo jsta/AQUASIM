@@ -1,0 +1,4 @@
+# example "Dynamic Modelling of Algal Photosynthesis":
+
+-a dyph_sen.log dyphora.aqu dyph_res.aqu             # sens. anal.
+-p dyph_plt.log dyph_res.aqu dyphora.plt             # plot results

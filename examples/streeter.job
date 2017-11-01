@@ -1,0 +1,4 @@
+# example "Oxygen Balance in a Heavily Polluted River":
+
+-s stre_sim.log streeter.aqu stre_res.aqu            # simulation
+-p stre_plt.log stre_res.aqu streeter.plt            # plot results

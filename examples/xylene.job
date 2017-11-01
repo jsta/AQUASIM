@@ -1,0 +1,4 @@
+# example "Xylene Degradation in a Membrane-Bound Biofilm":
+
+-s xyle_sim.log xylene.aqu xyle_res.aqu              # simulation
+-p xyle_plt.log xyle_res.aqu xylene.plt              # plot results

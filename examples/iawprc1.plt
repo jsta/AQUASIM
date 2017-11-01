@@ -1,0 +1,15 @@
+Q          iawprc1.ps
+C_ALK      iawprc1.ps
+C_I        iawprc1.ps
+C_ND       iawprc1.ps
+C_NH4      iawprc1.ps
+C_NO3      iawprc1.ps
+C_O2       iawprc1.ps
+C_S        iawprc1.ps
+X_A        iawprc1.ps
+X_H        iawprc1.ps
+X_I        iawprc1.ps
+X_ND       iawprc1.ps
+X_P        iawprc1.ps
+X_S        iawprc1.ps
+X_relax_3  iawprc1.ps

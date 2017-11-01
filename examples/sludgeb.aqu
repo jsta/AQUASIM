@@ -1,0 +1,98 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{CONSTVAR
+}{{1}{b_H}{Specific heterotrophic lysis rate}{1/d}{0.6}{0.3}{0
+.3}{1.2}{TRUE}{FALSE}}{FORMVAR}{{1}{C_O2}{Oxygen}{gO/m^3}{2}}{
+STATEVAR}{{1}{C_S}{Dissolved substrate}{gCOD/m^3}{VOL}{1e-005}
+{0.0001}}{CONSTVAR}{{1}{C_Sin}{Inflow concentration of C_S}{gC
+OD/m^3}{110}{1}{90}{130}{FALSE}{FALSE}}{CONSTVAR}{{1}{k_h}{Max
+imum specific hydrolysis rate}{1/d}{2}{1}{1}{4}{TRUE}{FALSE}}{
+CONSTVAR}{{1}{K_O2H}{Monod coefficient of het. growth due to o
+xygen}{gO/m^3}{0.1}{0.1}{-0.05}{0.2}{TRUE}{FALSE}}{CONSTVAR}{{
+1}{K_S}{Monod coefficient of het. growth due to substrate}{gCO
+D/m^3}{5}{1}{2.5}{10}{TRUE}{FALSE}}{CONSTVAR}{{1}{K_X}{Monod c
+oefficient of hydrolysis due to XS/XH}{}{0.04}{1}{0.02}{0.08}{
+TRUE}{FALSE}}{CONSTVAR}{{1}{mue_H}{Maximum specific growth rat
+e of heterotrophic bacteria}{1/d}{4}{1}{2}{8}{TRUE}{FALSE}}{PR
+OGVAR}{{1}{Q}{Discharge}{m^3/d}{Q}}{CONSTVAR}{{1}{Q_in}{Water 
+inflow}{m^3/d}{0.036}{0.001}{0.034}{0.038}{FALSE}{FALSE}}{CONS
+TVAR}{{1}{recircX}{Recirculating fraction of outflowing partic
+ulate substances}{}{0.85}{0.1}{0}{1}{FALSE}{FALSE}}{PROGVAR}{{
+1}{t}{Time}{d}{T}}{FORMVAR}{{1}{thour}{Hours of the day (since
+ midnight)}{h}{((t+10) mod 1)*24}}{STATEVAR}{{1}{X_H}{Heterotr
+ophic biomass}{gCOD/m^3}{VOL}{1e-005}{0.01}}{CONSTVAR}{{1}{X_H
+ini}{Initial concentration of XH}{gCOD/m^3}{100}{1}{0}{1000}{F
+ALSE}{FALSE}}{STATEVAR}{{1}{X_S}{Slowly biodegradable substrat
+e}{gCOD/m^3}{VOL}{1e-005}{0.001}}{CONSTVAR}{{1}{X_Sin}{Inflow 
+concentration of XS}{gCOD/m^3}{430}{43}{350}{510}{FALSE}{FALSE
+}}{FORMVAR}{{1}{Y_H}{Heterotrophic yield coefficient}{}{0.67}}
+{FORMVAR}{{1}{r_HetGro}{Process rate of heterotrophic growth}{
+gCOD/m^3/d}{mue_H*C_S/(K_S+C_S)*C_O2/(K_O2H+C_O2)*X_H}}{FORMVA
+R}{{1}{r_O2}{Respiration}{gO/m^3/d}{(1-Y_H)/Y_H*r_HetGro}}{REA
+LLISTVAR}{{1}{r_O2meas}{Measured respiration rate}{gO/m^3/d}{t
+}{TRUE}{0}{1}{0}{2000}{LINEAR}{1}{FALSE}{FALSE}{{0}{350.4}{0.0
+10417}{362.4}{0.01875}{367.2}{0.025}{331.2}{0.041667}{345.6}{0
+.052083}{362.4}{0.0625}{336}{0.075}{340.8}{0.079167}{360}{0.08
+3333}{345.6}{0.089583}{612}{0.097917}{715.2}{0.104167}{770.4}{
+0.1125}{801.6}{0.125}{844.8}{0.141667}{876}{0.1625}{888}{0.187
+5}{909.6}{0.20625}{921.6}{0.233333}{940.8}{0.241667}{924}{0.25
+}{960}{0.264583}{950.4}{0.277083}{962.4}{0.302083}{972}{0.3208
+33}{988.8}{0.341667}{960}{0.36875}{979.2}{0.38125}{931.2}{0.38
+9583}{960}{0.40625}{940.8}{0.425}{960}{0.447917}{962.4}{0.475}
+{972}{0.495833}{967.2}{0.5125}{962.4}{0.529167}{960}{0.545833}
+{964.8}{0.566667}{964.8}{0.579167}{972}{0.5875}{768}{0.595833}
+{775.2}{0.608333}{804}{0.616667}{811.2}{0.635417}{784.8}{0.65}
+{777.6}{0.666667}{760.8}{0.6875}{768}{0.697917}{751.2}{0.7125}
+{705.6}{0.727083}{680.88}{0.75}{672}{0.758333}{652.8}{0.770833
+}{624}{0.7875}{561.6}{0.80625}{552}{0.822917}{518.4}{0.841667}
+{496.8}{0.854167}{484.8}{0.870833}{460.8}{0.883333}{444}{0.895
+833}{417.6}{0.90625}{400.8}{0.916667}{393.6}{0.9375}{391.2}{0.
+958333}{393.6}{0.979167}{379.2}{0.9875}{360}{1}{350.4}}}{REALL
+ISTVAR}{{1}{switch}{Switch for dayly turning on and off input}
+{}{thour}{TRUE}{0}{1}{0}{1}{LINEAR}{1}{FALSE}{FALSE}{{1.95}{0}
+{2.05}{1}{13.95}{1}{14.05}{0}}}}{PROCSYS}{{DYNPROC}{{1}{HetDec
+ay}{Decay of heterotrophs}{b_H*X_H}{{X_H}{-1}{X_S}{1}}}{DYNPRO
+C}{{1}{HetGro}{Aerobic growth of heterotrophs}{r_HetGro}{{C_O2
+}{-(1-Y_H)/Y_H}{C_S}{-1/Y_H}{X_H}{1}}}{DYNPROC}{{1}{HydrolOrg}
+{Hydrolysis of entrapped organics}{ if X_S>0 then k_h*X_S/(K_X
+*X_H+X_S)*X_H else 0 endif }{{C_S}{1}{X_S}{-1}}}}{COMPSYS}{{MI
+XCOMP}{{4}{Reactor}{}{0}{{C_O2}{C_S}{X_H}{X_S}}{{HetGro}{Hydro
+lOrg}{HetDecay}}{TRUE}{switch*Q_in}{{C_S}{switch*Q_in*C_Sin}{X
+_S}{switch*Q_in*X_Sin}}{{0}{X_H}{X_Hini}}{TRUE}{0.00673}{}{0.0
+01}{0.001}{0.001}{0.001}}}{LINKSYS}{{ADVLINK}{{2}{Outflow}{}{0
+}{Reactor}{0}{}{0}{{BIF}{Recirc}{}{Reactor}{0}{0}{GIVEN}{{X_H}
+{recircX*Q*X_H}{X_S}{recircX*Q*X_S}}}}}{CALCSYS}{{CALC}{{2}{ca
+lc1}{}{0}{-6}{FALSE}{{0.01}{700}}{TRUE}{TRUE}}}{FITSYS}{}{NUMP
+AR}{{2}{1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOP
+T}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{FALSE}{1.5}{1.5}{1.5}{1.5}
+{2.5}{2}{2}{12}{10}{10}{10}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1
+}{500}{400}{40}{40}{40}{40}{80}{20}{14}{10}{12}}{PLOT}{{2}{Sen
+sR_Resp}{}{Sensitivity of Respiration}{time [d]}{relative sens
+itivities [-]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FALSE}
+{-4}{FALSE}{3}{FALSE}{0}{FALSE}{1}{FALSE}{{r_O2}{0}{Reactor}{0
+}{0}{FALSE}{SENSRR}{mue_H}{mue_H}{TRUE}{SOL}{2}{BLA}{FALSE}{CI
+RC}{6}{BLA}{r_O2}{0}{Reactor}{0}{0}{FALSE}{SENSRR}{K_S}{K_S}{T
+RUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{r_O2}{0}{Reactor}{0}{
+0}{FALSE}{SENSRR}{K_O2H}{K_O2H}{TRUE}{DASH}{2}{GRE}{FALSE}{CIR
+C}{6}{BLA}{r_O2}{0}{Reactor}{0}{0}{FALSE}{SENSRR}{b_H}{b_H}{TR
+UE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{r_O2}{0}{Reactor}{0}{0
+}{FALSE}{SENSRR}{k_h}{k_h}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{
+BLA}{r_O2}{0}{Reactor}{0}{0}{FALSE}{SENSRR}{K_X}{K_X}{TRUE}{LD
+D}{2}{MAG}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Val_Biomass}{}{Bio
+mass}{time [d]}{biomass [gCOD/m3]}{TIME}{-6}{FALSE}{1}{FALSE}{
+0}{FALSE}{1}{FALSE}{0}{FALSE}{2000}{FALSE}{0}{FALSE}{500}{FALS
+E}{{X_H}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{X_H}{TRUE}{SOL}{2}{RE
+D}{FALSE}{CIRC}{6}{BLA}{X_S}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{X
+_S}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Val_R
+esp}{}{Respiration}{time [d]}{respiration [gO/m3/d]}{TIME}{0}{
+FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{1200}{FALSE}{
+0}{FALSE}{200}{FALSE}{{r_O2}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{}
+{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{r_O2meas}{0}{Reactor}
+{0}{0}{FALSE}{VAL}{}{}{FALSE}{SOL}{2}{BLA}{TRUE}{CIRC}{2}{BLA}
+}}{PLOT}{{2}{Val_Subst}{}{Substrate}{time [d]}{substrate [gCOD
+/m^3]}{TIME}{-6}{FALSE}{1}{FALSE}{0}{FALSE}{1}{FALSE}{0}{FALSE
+}{35}{FALSE}{0}{FALSE}{5}{FALSE}{{C_S}{0}{Reactor}{0}{0}{FALSE
+}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS
+}{}}

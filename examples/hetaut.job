@@ -1,0 +1,4 @@
+# example "Heterotrophic-Autotrophic Competition in a Biofilm":
+
+-s heta_sim.log hetaut.aqu heta_res.aqu hetaut.sim   # simulation
+-p heta_plt.log heta_res.aqu hetaut.plt              # plot results

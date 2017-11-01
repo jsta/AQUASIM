@@ -1,0 +1,6 @@
+# example "Simple Activated Sludge Model":
+
+-s slud_sim.log sludgeb.aqu slud_res.aqu             # simulation
+-p slud_pl1.log slud_res.aqu sludgeb1.plt            # plot sim. res.
+-a slud_sen.log sludgeb.aqu slud_res.aqu             # sens. anal.
+-p slud_pl2.log slud_res.aqu sludgeb2.plt            # plot s.a. res.

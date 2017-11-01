@@ -1,0 +1,344 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SIMPLEX}{100}{FALSE}}{VARSYS}{{CONSTVA
+R}{{1}{b_A20}{Decay coefficient for autotrophic biomass at 20 
+deg}{1/d}{0.15}{0.03}{0.05}{0.3}{FALSE}{FALSE}}{CONSTVAR}{{1}{
+b_H20}{Decay coefficient for hererotrophic biomass at 20 deg}{
+1/d}{0.62}{0.2}{0.1}{1.6}{FALSE}{FALSE}}{STATEVAR}{{1}{C_ALK}{
+Alcalinity}{mol/m^3}{VOL}{0.0001}{0.0001}}{STATEVAR}{{1}{C_I}{
+Soluble inert organic matter}{gCOD/m^3}{VOL}{0.0001}{0.0001}}{
+STATEVAR}{{1}{C_ND}{Soluble biodegradable organic nitrogen}{gN
+/m^3}{VOL}{0.0001}{0.0001}}{STATEVAR}{{1}{C_NH4}{NH4 + NH3 nit
+rogen}{gN/m^3}{VOL}{0.0001}{0.0001}}{STATEVAR}{{1}{C_NO3}{Nitr
+ate and nitrite nitrogen}{gN/m^3}{VOL}{0.0001}{0.0001}}{STATEV
+AR}{{1}{C_O2}{Oxygen}{gO/m^3}{VOL}{0.0001}{0.0001}}{FORMVAR}{{
+1}{C_O2aera}{Oxygen concentration in areation tanks}{g/m^3}{2}
+}{STATEVAR}{{1}{C_S}{Readily biodegradable substrate}{gCOD/m^3
+}{VOL}{0.0001}{0.0001}}{CONSTVAR}{{1}{eta_g}{Correction factor
+ for mueH under anoxic conditions}{}{0.8}{0.1}{0.5}{1}{FALSE}{
+FALSE}}{CONSTVAR}{{1}{eta_h}{Correction factor for hydrolysis 
+under anoxic conditions}{}{0.4}{0.1}{0.2}{0.8}{FALSE}{FALSE}}{
+FORMVAR}{{1}{f_CALK}{Factor stopping process for low C_ALK val
+ues}{}{C_ALK/(0.01+C_ALK)}}{FORMVAR}{{1}{f_CNH4}{Factor stoppi
+ng process for low C_NH4 values}{}{C_NH4/(0.01+C_NH4)}}{CONSTV
+AR}{{1}{f_p}{Fraction of biomass leading to inert particulate 
+products}{}{0.08}{0.02}{0.04}{0.2}{FALSE}{FALSE}}{FORMVAR}{{1}
+{InCALK}{Mean total C_ALK inflow concentration}{mol/m^3}{5}}{F
+ORMVAR}{{1}{InCNO3}{Mean nitrate (C_NO3) inflow concentration}
+{gN/m^3}{1}}{FORMVAR}{{1}{InCOD}{Mean total COD inflow concent
+ration}{gCSB/m^3}{250}}{FORMVAR}{{1}{InKN}{Mean total Kjeldahl
+ nitrogen inflow concentration}{gN/m^3}{30}}{FORMVAR}{{1}{InQ}
+{Average water inflow rate}{m^3/d}{10000}}{CONSTVAR}{{1}{i_CI}
+{Mass of nitrogen per mass of inert dissolved COD }{}{0.06}{0.
+01}{0.02}{0.12}{FALSE}{FALSE}}{CONSTVAR}{{1}{i_XB}{Mass of nit
+rogen per mass of COD in biomass}{}{0.086}{0.01}{0.06}{0.11}{F
+ALSE}{FALSE}}{CONSTVAR}{{1}{i_XI}{Mass of nitrogen per mass of
+ inert particulate COD }{}{0.04}{0.01}{0.02}{0.08}{FALSE}{FALS
+E}}{CONSTVAR}{{1}{i_XP}{Mass of nitrogen per mass of COD in pr
+oducts from biomass}{}{0.06}{0.01}{0.03}{0.09}{FALSE}{FALSE}}{
+CONSTVAR}{{1}{k_a20}{Ammonification rate at 20 deg}{m^3/(gCODd
+)}{0.08}{0.02}{0.02}{0.4}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_exO2}
+{}{1/d}{5}{1}{0}{10}{FALSE}{FALSE}}{CONSTVAR}{{1}{k_h20}{Maxim
+um specific hydrolysis rate at 20 deg}{1/d}{3}{1}{0.5}{20}{FAL
+SE}{FALSE}}{CONSTVAR}{{1}{K_NH4}{Ammonia half-saturation coeff
+icient for autotrophic biomass}{gN/m^3}{1}{0.5}{0.2}{10}{FALSE
+}{FALSE}}{CONSTVAR}{{1}{K_NO3}{Nitrate half-saturation coeffic
+ient for denitrifying heterotrophic biomass}{gN/m^3}{0.5}{0.1}
+{0.1}{1}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_O2A}{Oxygen half-satur
+ation coefficient for autotrophic biomass}{gO/m^3}{0.4}{0.1}{0
+.04}{4}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_O2H}{Oxygen half-satura
+tion coefficient for heterotrophic biomass}{gO/m^3}{0.2}{0.1}{
+0.02}{2}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_S}{Half-saturation coe
+fficient for heterotrophic biomass}{gCOD/m^3}{20}{5}{10}{200}{
+FALSE}{FALSE}}{CONSTVAR}{{1}{K_X20}{Half-saturation coefficien
+t for hydrolysis of slowly biodegradable substrate}{}{0.03}{0.
+01}{0.01}{0.1}{FALSE}{FALSE}}{CONSTVAR}{{1}{mue_A20}{Maximum s
+pecific growth rate for autotrophic biomass at 20 deg}{1/d}{0.
+8}{0.1}{0.3}{1.2}{FALSE}{FALSE}}{CONSTVAR}{{1}{mue_H20}{Maximu
+m specific growth rate for heterotrophic biomass at 20 deg}{1/
+d}{6}{2}{3}{15}{FALSE}{FALSE}}{PROGVAR}{{1}{Q}{Discharge}{m^3/
+d}{Q}}{FORMVAR}{{1}{Q_recirc}{}{m^3/d}{15000}}{FORMVAR}{{1}{Sl
+udgeAge}{}{d}{15}}{FORMVAR}{{1}{T}{Temperature}{degC}{15}}{PRO
+GVAR}{{1}{t}{Time}{d}{T}}{CONSTVAR}{{1}{the_bA}{Coefficient fo
+r temperature dependence of bA}{1/degC}{0.0981}{0.01}{0}{0.12}
+{FALSE}{FALSE}}{CONSTVAR}{{1}{the_bH}{Coefficient for temperat
+ure dependence of bH}{1/degC}{0.1132}{0.01}{0}{0.12}{FALSE}{FA
+LSE}}{CONSTVAR}{{1}{the_ka}{Coefficient for temperature depend
+ence of ka}{1/degC}{0.0693}{0.01}{0}{0.12}{FALSE}{FALSE}}{CONS
+TVAR}{{1}{the_kh}{Coefficient for temperature dependence of kh
+}{1/degC}{0.1098}{0.01}{0}{0.12}{FALSE}{FALSE}}{CONSTVAR}{{1}{
+the_KX}{Coefficient for temperature dependence of KX}{1/degC}{
+0.1098}{0.01}{0}{0.12}{FALSE}{FALSE}}{CONSTVAR}{{1}{the_mueA}{
+Coefficient for temperature dependence of MueA}{1/degC}{0.0981
+}{0.01}{0}{0.12}{FALSE}{FALSE}}{CONSTVAR}{{1}{the_mueH}{Coeffi
+cient for temperature dependence of MueH}{1/degC}{0.0981}{0.01
+}{0}{0.12}{FALSE}{FALSE}}{REALLISTVAR}{{1}{varCODin}{Variation
+ of total inflowing COD}{}{t}{TRUE}{0}{1}{0}{2}{SPLINE}{1}{FAL
+SE}{FALSE}{{-1.5}{1}{-0.9583}{0.87}{-0.875}{0.73}{-0.7917}{0.6
+4}{-0.7083}{0.52}{-0.625}{0.75}{-0.5417}{1.16}{-0.4583}{1.19}{
+-0.375}{1.24}{-0.2917}{1.26}{-0.2083}{1.12}{-0.125}{1.02}{-0.0
+417}{1.02}{0.0417}{0.87}{0.125}{0.73}{0.2083}{0.64}{0.2917}{0.
+52}{0.375}{0.75}{0.4583}{1.16}{0.5417}{1.19}{0.625}{1.24}{0.70
+83}{1.26}{0.7917}{1.12}{0.875}{1.02}{0.9583}{1.02}}}{REALLISTV
+AR}{{1}{varNin}{Inflow variation of total Kjeldahl nitrogen}{}
+{t}{TRUE}{0}{1}{0}{2}{SPLINE}{1}{FALSE}{FALSE}{{-1.5}{1}{-0.95
+83}{0.97}{-0.875}{1.07}{-0.7917}{1.05}{-0.7083}{0.93}{-0.625}{
+1.17}{-0.5417}{1.37}{-0.4583}{1.01}{-0.375}{0.91}{-0.2917}{0.8
+9}{-0.2083}{0.92}{-0.125}{0.84}{-0.0417}{0.89}{0.0417}{0.97}{0
+.125}{1.07}{0.2083}{1.05}{0.2917}{0.93}{0.375}{1.17}{0.4583}{1
+.37}{0.5417}{1.01}{0.625}{0.91}{0.7083}{0.89}{0.7917}{0.92}{0.
+875}{0.84}{0.9583}{0.89}}}{REALLISTVAR}{{1}{varQin}{Inflow var
+iation of water flow}{}{t}{TRUE}{0}{1}{0}{2}{SPLINE}{1}{FALSE}
+{FALSE}{{-1.5}{1}{-0.9583}{0.72}{-0.875}{0.65}{-0.7917}{0.52}{
+-0.7083}{0.89}{-0.625}{1.24}{-0.5417}{1.24}{-0.4583}{1.23}{-0.
+375}{1.2}{-0.2917}{1.1}{-0.2083}{1.1}{-0.125}{1.17}{-0.0417}{0
+.93}{0.0417}{0.72}{0.125}{0.65}{0.2083}{0.52}{0.2917}{0.89}{0.
+375}{1.24}{0.4583}{1.24}{0.5417}{1.23}{0.625}{1.2}{0.7083}{1.1
+}{0.7917}{1.1}{0.875}{1.17}{0.9583}{0.93}}}{FORMVAR}{{1}{wwDeg
+COD}{Fraction of  biodegradable COD on total COD}{}{0.75}}{FOR
+MVAR}{{1}{wwDissI}{Fraction of  dissolved inert COD on total i
+nert COD}{}{0.4}}{FORMVAR}{{1}{wwDissKN}{Fraction of dissolved
+ nitrogen on Kjeldahl nitrogen}{}{0.666667}}{FORMVAR}{{1}{wwDi
+ssS}{Fraction of dissolved biodegradable COD on total biodegra
+dable COD}{}{0.2}}{FORMVAR}{{1}{wwNH4dissKN}{Fraction of CNH4 
+on dissolved Kjeldahl nitrogen}{}{0.8}}{FORMVAR}{{1}{wwXA}{Fra
+ction of autotrophic bacteria on particulate biodegradable COD
+}{}{0.001}}{FORMVAR}{{1}{wwXH}{Fraction of heterotrophic bacte
+ria on particulate biodegradable COD}{}{0.01}}{STATEVAR}{{1}{X
+_A}{Active autotrophic biomass}{gCOD/m^3}{VOL}{0.0001}{0.0001}
+}{FORMVAR}{{1}{X_Ain}{Inflow concentration of X_A}{gCOD/m^3}{I
+nCOD*wwDegCOD*(1-wwDissS)*wwXA*varCODin}}{FORMVAR}{{1}{X_Aini}
+{Initial concentration of X_A}{gCOD/m^3}{50}}{STATEVAR}{{1}{X_
+H}{Active heterotrophic biomass}{gCOD/m^3}{VOL}{0.0001}{0.0001
+}}{FORMVAR}{{1}{X_Hin}{Inflow concentration of X_H}{gCOD/m^3}{
+InCOD*wwDegCOD*(1-wwDissS)*wwXH*varCODin}}{FORMVAR}{{1}{X_Hini
+}{Initial concentration of X_H}{gCOD/m^3}{1500}}{STATEVAR}{{1}
+{X_I}{Particulate inert organic matter}{gCOD/m^3}{VOL}{0.0001}
+{0.0001}}{FORMVAR}{{1}{X_Iin}{Inflow concentration of X_I}{gCO
+D/m^3}{InCOD*(1-wwDegCOD)*(1-wwDissI)*varCODin}}{FORMVAR}{{1}{
+X_Iini}{Initial concentration of X_I}{gCOD/m^3}{1000}}{STATEVA
+R}{{1}{X_ND}{Particulate biodegradable organic nitrogen}{gN/m^
+3}{VOL}{0.0001}{0.0001}}{FORMVAR}{{1}{X_NDin}{Inflow concentra
+tion of X_ND}{gN/m^3}{max(InKN*(1-wwDissKN)*varNin-i_XI*X_Iin-
+i_XB*(X_Ain+X_Hin),0)}}{STATEVAR}{{1}{X_P}{Particulate product
+s arising from biomass decay}{gCOD/m^3}{VOL}{0.0001}{0.0001}}{
+FORMVAR}{{1}{X_Pini}{Initial concentration of X_P}{gCOD/m^3}{5
+00}}{STATEVAR}{{1}{X_S}{Slowly biodegradable substrate}{gCOD/m
+^3}{VOL}{0.0001}{0.0001}}{FORMVAR}{{1}{X_Sin}{Inflow concentra
+tion of X_S}{gCOD/m^3}{InCOD*wwDegCOD*(1-wwDissS)*(1-wwXA-wwXH
+)*varCODin}}{CONSTVAR}{{1}{Y_A}{Yield for autotrophic biomass}
+{}{0.24}{0.05}{0.05}{0.3}{FALSE}{FALSE}}{CONSTVAR}{{1}{Y_H}{Yi
+eld for heterotrophic biomass}{}{0.67}{0.1}{0.4}{0.8}{FALSE}{F
+ALSE}}{FORMVAR}{{1}{b_A}{Decay coefficient for autotrophic bio
+mass}{1/d}{b_A20*exp(the_bA*(T-20))}}{FORMVAR}{{1}{b_H}{Decay 
+coefficient for heterotrophic biomass}{1/d}{b_H20*exp(the_bH*(
+T-20))}}{FORMVAR}{{1}{C_ALKin}{Inflow concentration of C_ALK}{
+mol/m^3}{InCALK*varNin}}{FORMVAR}{{1}{C_Iin}{Inflow concentrat
+ion of C_I}{gCOD/m^3}{InCOD*(1-wwDegCOD)*wwDissI*varCODin}}{FO
+RMVAR}{{1}{C_NDin}{Inflow concentration of C_ND}{gN/m^3}{max(I
+nKN*wwDissKN*(1-wwNH4dissKN)*varNin-i_CI*C_Iin,0)}}{FORMVAR}{{
+1}{C_NH4in}{Inflow concentration of C_NH4}{gN/m^3}{InKN*wwDiss
+KN*wwNH4dissKN*varNin}}{FORMVAR}{{1}{C_NO3in}{Inflow concentra
+tion of C_NO3}{gN/m^3}{InCNO3*varNin}}{FORMVAR}{{1}{C_O2sat}{S
+aturation concentration of oxygen}{gO/m^3}{exp(7.7117-1.31403*
+log(T+45.93))}}{FORMVAR}{{1}{C_Sin}{Inflow concentration of C_
+S}{gCOD/m^3}{InCOD*wwDegCOD*wwDissS*varCODin}}{FORMVAR}{{1}{k_
+a}{Ammonification rate}{1/d}{k_a20*exp(the_ka*(T-20))}}{FORMVA
+R}{{1}{k_h}{Maximum specific hydrolysis rate}{1/d}{k_h20*exp(t
+he_kh*(T-20))}}{FORMVAR}{{1}{K_X}{Half-saturation coefficient 
+for hydrolysis of slowly biodegradable substrate}{}{K_X20*exp(
+the_KX*(T-20))}}{FORMVAR}{{1}{mue_A}{Maximum specific growth r
+ate for autotrophic biomass}{1/d}{mue_A20*exp(the_mueA*(T-20))
+}}{FORMVAR}{{1}{mue_H}{Maximum specific growth rate for hetero
+trophic biomass}{1/d}{mue_H20*exp(the_mueH*(T-20))}}{FORMVAR}{
+{1}{Q_in}{Inflow discharge}{m^3/d}{InQ*varQin}}}{PROCSYS}{{DYN
+PROC}{{1}{AerationR1}{Aeration of reactor 1}{K_exO2*(C_O2sat-C
+_O2)}{{C_O2}{1}}}{DYNPROC}{{1}{AerationR23}{Aeration of reacto
+rs 2 and 3}{10000*(C_O2aera-C_O2)}{{C_O2}{1}}}{DYNPROC}{{1}{Am
+monific}{Ammonification of soluble organic nitrogen}{k_a*C_ND*
+X_H}{{C_NH4}{1}{C_ND}{-1}{C_ALK}{1/14}}}{DYNPROC}{{1}{AutDecay
+}{Decay of Autotrophs}{b_A*X_A}{{X_S}{1-f_p}{X_A}{-1}{X_P}{f_p
+}{X_ND}{i_XB-f_p*i_XP}}}{DYNPROC}{{1}{AutGroAero}{Aerobic grow
+th of autotrophs}{mue_A*C_NH4/(K_NH4+C_NH4)*C_O2/(K_O2A+C_O2)*
+X_A*f_CALK}{{X_A}{1}{C_O2}{-(4.57-Y_A)/Y_A}{C_NO3}{1/Y_A}{C_NH
+4}{-i_XB-1/Y_A}{C_ALK}{-i_XB/14-1/(7*Y_A)}}}{DYNPROC}{{1}{HetD
+ecay}{Decay of heterotrophs}{b_H*X_H}{{X_S}{1-f_p}{X_H}{-1}{X_
+P}{f_p}{X_ND}{i_XB-f_p*i_XP}}}{DYNPROC}{{1}{HetGroAero}{Aerobi
+c growth of heterotrophs}{mue_H*C_S/(K_S+C_S)*C_O2/(K_O2H+C_O2
+)*X_H*f_CNH4*f_CALK}{{C_S}{-1/Y_H}{X_H}{1}{C_O2}{-(1-Y_H)/Y_H}
+{C_NH4}{-i_XB}{C_ALK}{-i_XB/14}}}{DYNPROC}{{1}{HetGroAnox}{Ano
+xic growth of heterotrophs}{mue_H*C_S/(K_S+C_S)*K_O2H/(K_O2H+C
+_O2)*C_NO3/(K_NO3+C_NO3)*eta_g*X_H*f_CNH4}{{C_S}{-1/Y_H}{X_H}{
+1}{C_NO3}{-(1-Y_H)/(2.86*Y_H)}{C_NH4}{-i_XB}{C_ALK}{(1-Y_H)/(1
+4*2.86*Y_H)-i_XB/14}}}{DYNPROC}{{1}{HydrolOrg}{Hydrolysis of e
+ntrapped organics}{ if X_S>0 then k_h*X_S/(K_X*X_H+X_S)*(C_O2/
+(K_O2H+C_O2)+eta_h*K_O2H/(K_O2H+C_O2)*C_NO3/(K_NO3+C_NO3))*X_H
+ else 0 endif }{{C_S}{1}{X_S}{-1}}}{DYNPROC}{{1}{HydrolOrgN}{H
+ydrolysis of entrapped organic nitrogen}{ if X_H>0 then k_h*X_
+ND/(K_X*X_H+X_S)*(C_O2/(K_O2H+C_O2)+eta_h*K_O2H/(K_O2H+C_O2)*C
+_NO3/(K_NO3+C_NO3))*X_H else 0 endif }{{C_ND}{1}{X_ND}{-1}}}{D
+YNPROC}{{1}{SludgeRemoval}{Excess sludge removal}{1/SludgeAge}
+{{X_A}{-X_A}{X_H}{-X_H}{X_I}{-X_I}{X_ND}{-X_ND}{X_P}{-X_P}{X_S
+}{-X_S}}}}{COMPSYS}{{MIXCOMP}{{4}{Clarifier}{}{0}{{C_ALK}{C_I}
+{C_ND}{C_NH4}{C_NO3}{C_O2}{C_S}}{}{TRUE}{0}{}{}{TRUE}{4000}{}{
+0.001}{0.001}{0.001}{0.001}}{MIXCOMP}{{4}{Reactor1}{}{0}{{C_AL
+K}{C_I}{C_ND}{C_NH4}{C_NO3}{C_O2}{C_S}{X_A}{X_H}{X_ND}{X_I}{X_
+S}{X_P}}{{AerationR1}{Ammonific}{AutDecay}{HetDecay}{AutGroAer
+o}{HetGroAero}{HetGroAnox}{HydrolOrg}{HydrolOrgN}{SludgeRemova
+l}}{TRUE}{Q_in}{{C_ALK}{Q_in*C_ALKin}{C_I}{Q_in*C_Iin}{C_ND}{Q
+_in*C_NDin}{C_NH4}{Q_in*C_NH4in}{C_NO3}{Q_in*C_NO3in}{C_S}{Q_i
+n*C_Sin}{X_A}{Q_in*X_Ain}{X_H}{Q_in*X_Hin}{X_I}{Q_in*X_Iin}{X_
+ND}{Q_in*X_NDin}{X_S}{Q_in*X_Sin}}{{0}{X_A}{X_Aini}{0}{X_H}{X_
+Hini}{0}{X_I}{X_Iini}{0}{X_P}{X_Pini}}{TRUE}{2000}{}{0.001}{0.
+001}{0.001}{0.001}}{MIXCOMP}{{4}{Reactor2}{}{0}{{C_ALK}{C_I}{C
+_ND}{C_NH4}{C_NO3}{C_O2}{C_S}{X_A}{X_H}{X_ND}{X_I}{X_S}{X_P}}{
+{AerationR23}{Ammonific}{AutDecay}{HetDecay}{AutGroAero}{HetGr
+oAero}{HetGroAnox}{HydrolOrg}{HydrolOrgN}{SludgeRemoval}}{TRUE
+}{0}{}{{0}{X_A}{X_Aini}{0}{X_H}{X_Hini}{0}{X_I}{X_Iini}{0}{X_P
+}{X_Pini}}{TRUE}{2000}{}{0.001}{0.001}{0.001}{0.001}}{MIXCOMP}
+{{4}{Reactor3}{}{0}{{C_ALK}{C_I}{C_ND}{C_NH4}{C_NO3}{C_O2}{C_S
+}{X_A}{X_H}{X_ND}{X_I}{X_S}{X_P}}{{AerationR23}{Ammonific}{Aut
+Decay}{HetDecay}{AutGroAero}{HetGroAero}{HetGroAnox}{HydrolOrg
+}{HydrolOrgN}{SludgeRemoval}}{TRUE}{0}{}{{0}{X_A}{X_Aini}{0}{X
+_H}{X_Hini}{0}{X_I}{X_Iini}{0}{X_P}{X_Pini}}{TRUE}{2000}{}{0.0
+01}{0.001}{0.001}{0.001}}}{LINKSYS}{{ADVLINK}{{2}{Link12}{}{0}
+{Reactor1}{0}{Reactor2}{0}{}}{ADVLINK}{{2}{Link23}{}{0}{Reacto
+r2}{0}{Reactor3}{0}{}}{ADVLINK}{{2}{Link3C}{}{0}{Reactor3}{0}{
+Clarifier}{0}{{BIF}{Recirc}{}{Reactor1}{0}{Q_recirc}{GIVEN}{{C
+_ALK}{Q_recirc*C_ALK}{C_I}{Q_recirc*C_I}{C_ND}{Q_recirc*C_ND}{
+C_NH4}{Q_recirc*C_NH4}{C_NO3}{Q_recirc*C_NO3}{C_O2}{Q_recirc*C
+_O2}{C_S}{Q_recirc*C_S}{X_A}{Q*X_A}{X_H}{Q*X_H}{X_I}{Q*X_I}{X_
+ND}{Q*X_ND}{X_P}{Q*X_P}{X_S}{Q*X_S}}}}}{CALCSYS}{{CALC}{{2}{ca
+lc}{}{0}{-50}{FALSE}{{1}{50}{0.02}{50}}{TRUE}{FALSE}}}{FITSYS}
+{}{NUMPAR}{{2}{1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PL
+OTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2
+.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{500
+}{400}{40}{40}{40}{40}{80}{20}{14}{10}{12}}{PLOT}{{2}{C_ALK}{}
+{Alkalinity}{time [d]}{C_ALK [mol/m3]}{TIME}{0}{FALSE}{1}{FALS
+E}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{10}{FALSE}{0}{FALSE}{2}{FAL
+SE}{{C_ALKin}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{inflow}{TRUE}{S
+OL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_ALK}{0}{Reactor1}{0}{0}{FAL
+SE}{VAL}{}{react 1}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{
+C_ALK}{0}{Reactor2}{0}{0}{FALSE}{VAL}{}{react 2}{TRUE}{DASH}{2
+}{GRE}{FALSE}{CIRC}{6}{BLA}{C_ALK}{0}{Reactor3}{0}{0}{FALSE}{V
+AL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_ALK
+}{0}{Clarifier}{0}{0}{FALSE}{VAL}{}{clarifier}{TRUE}{DOT}{2}{C
+YA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{C_I}{}{Inert Substrate}{t
+ime [d]}{C_I [gCOD/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0.
+2}{FALSE}{0}{FALSE}{40}{FALSE}{0}{FALSE}{5}{FALSE}{{C_Iin}{0}{
+Reactor1}{0}{0}{FALSE}{VAL}{}{inflow}{TRUE}{SOL}{2}{BLA}{FALSE
+}{CIRC}{6}{BLA}{C_I}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{react 1}
+{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_I}{0}{Reactor2}{0
+}{0}{FALSE}{VAL}{}{react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6
+}{BLA}{C_I}{0}{Reactor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SD
+ASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_I}{0}{Clarifier}{0}{0}{FAL
+SE}{VAL}{}{clarifier}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}
+}{PLOT}{{2}{C_ND}{}{Dissolved Organic Nitrogen}{time [d]}{C_ND
+ [gN/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{F
+ALSE}{5}{FALSE}{0}{FALSE}{1}{FALSE}{{C_NDin}{0}{Reactor1}{0}{0
+}{FALSE}{VAL}{}{inflow}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA
+}{C_ND}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}
+{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_ND}{0}{Reactor2}{0}{0}{FALSE}{
+VAL}{}{react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_ND}
+{0}{Reactor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU
+}{FALSE}{CIRC}{6}{BLA}{C_ND}{0}{Clarifier}{0}{0}{FALSE}{VAL}{}
+{clarifier}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2
+}{C_NH4}{}{Ammonium Nitrogen}{time [d]}{C_NH4 [gN/m3]}{TIME}{0
+}{FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{25}{FALSE}{
+0}{FALSE}{5}{FALSE}{{C_NH4in}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}
+{inflow}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_NH4}{0}{Rea
+ctor1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}{2}{RED}{FALSE
+}{CIRC}{6}{BLA}{C_NH4}{0}{Reactor2}{0}{0}{FALSE}{VAL}{}{react 
+2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_NH4}{0}{Reactor3
+}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIR
+C}{6}{BLA}{C_NH4}{0}{Clarifier}{0}{0}{FALSE}{VAL}{}{clarifier}
+{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{C_NO3}{}{
+Nitrate Nitrogen}{time [d]}{C_NO3 [gN/m3]}{TIME}{0}{FALSE}{1}{
+FALSE}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{12}{FALSE}{0}{FALSE}{2}
+{FALSE}{{C_NO3in}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{inflow}{TRU
+E}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_NO3}{0}{Reactor1}{0}{0}
+{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{B
+LA}{C_NO3}{0}{Reactor2}{0}{0}{FALSE}{VAL}{}{react 2}{TRUE}{DAS
+H}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_NO3}{0}{Reactor3}{0}{0}{FALS
+E}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C
+_NO3}{0}{Clarifier}{0}{0}{FALSE}{VAL}{}{clarifier}{TRUE}{DOT}{
+2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{C_O2}{}{Oxygen}{time 
+[d]}{C_O2 [gO/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FA
+LSE}{0}{FALSE}{3}{FALSE}{0}{FALSE}{0.5}{FALSE}{{C_O2}{0}{React
+or1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}{2}{RED}{FALSE}{
+CIRC}{6}{BLA}{C_O2}{0}{Reactor2}{0}{0}{FALSE}{VAL}{}{react 2}{
+TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_O2}{0}{Reactor3}{0}
+{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6
+}{BLA}}}{PLOT}{{2}{C_S}{}{Dissolved Substrate}{time [d]}{C_S [
+gCOD/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{F
+ALSE}{50}{FALSE}{0}{FALSE}{10}{FALSE}{{C_Sin}{0}{Reactor1}{0}{
+0}{FALSE}{VAL}{}{inflow}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BL
+A}{C_S}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}
+{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_S}{0}{Reactor2}{0}{0}{FALSE}{V
+AL}{}{react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_S}{0
+}{Reactor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{
+FALSE}{CIRC}{6}{BLA}{C_S}{0}{Clarifier}{0}{0}{FALSE}{VAL}{}{cl
+arifier}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Q
+}{}{Water Inflow}{time [d]}{Q [m3/d]}{TIME}{0}{FALSE}{1}{FALSE
+}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{15000}{FALSE}{0}{FALSE}{5000
+}{FALSE}{{Q_in}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{
+2}{BLA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{X_A}{}{Autotrophic Ba
+cteria}{time [d]}{X_A [gCOD/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{
+FALSE}{0.2}{FALSE}{0}{FALSE}{100}{FALSE}{0}{FALSE}{20}{FALSE}{
+{X_A}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}{2
+}{RED}{FALSE}{CIRC}{6}{BLA}{X_A}{0}{Reactor2}{0}{0}{FALSE}{VAL
+}{}{react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_A}{0}{
+Reactor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FA
+LSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{X_H}{}{Heterotrophic Bacteria}{
+time [d]}{X_H [gCOD/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0
+.2}{FALSE}{0}{FALSE}{2000}{FALSE}{0}{FALSE}{500}{FALSE}{{X_Hin
+}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{inflow}{TRUE}{SOL}{2}{BLA}{
+FALSE}{CIRC}{6}{BLA}{X_H}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{rea
+ct 1}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_H}{0}{Reacto
+r2}{0}{0}{FALSE}{VAL}{}{react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CI
+RC}{6}{BLA}{X_H}{0}{Reactor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRU
+E}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{X_I}{}{Iner
+t Organic Particles}{time [d]}{X_I [gCOD/m3]}{TIME}{0}{FALSE}{
+1}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{1500}{FALSE}{0}{FALS
+E}{500}{FALSE}{{X_Iin}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{inflow
+}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_I}{0}{Reactor1}{0}
+{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6
+}{BLA}{X_I}{0}{Reactor2}{0}{0}{FALSE}{VAL}{}{react 2}{TRUE}{DA
+SH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_I}{0}{Reactor3}{0}{0}{FALSE
+}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{
+PLOT}{{2}{X_ND}{}{Particulate Organic Nitrogen}{time [d]}{X_ND
+ [gN/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{F
+ALSE}{14}{FALSE}{0}{FALSE}{2}{FALSE}{{X_NDin}{0}{Reactor1}{0}{
+0}{FALSE}{VAL}{}{inflow}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BL
+A}{X_ND}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH
+}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_ND}{0}{Reactor2}{0}{0}{FALSE}
+{VAL}{}{react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_ND
+}{0}{Reactor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BL
+U}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{X_P}{}{Inert Decay Particl
+es}{time [d]}{X_P [gCOD/m3]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALS
+E}{0.2}{FALSE}{0}{FALSE}{1000}{FALSE}{0}{FALSE}{200}{FALSE}{{X
+_P}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}{2}{
+RED}{FALSE}{CIRC}{6}{BLA}{X_P}{0}{Reactor2}{0}{0}{FALSE}{VAL}{
+}{react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_P}{0}{Re
+actor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FALS
+E}{CIRC}{6}{BLA}}}{PLOT}{{2}{X_relax_3}{}{Particulate Fraction
+s Reactor 3}{time [d]}{X [gCOD/m^3]}{TIME}{-50}{FALSE}{0}{FALS
+E}{0}{FALSE}{10}{FALSE}{0}{FALSE}{2000}{FALSE}{0}{FALSE}{500}{
+FALSE}{{X_H}{0}{Reactor3}{0}{0}{FALSE}{VAL}{}{XH}{TRUE}{SOL}{2
+}{BLA}{FALSE}{CIRC}{6}{BLA}{X_A}{0}{Reactor3}{0}{0}{FALSE}{VAL
+}{}{XA}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_S}{0}{Reac
+tor3}{0}{0}{FALSE}{VAL}{}{XS}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}
+{6}{BLA}{X_I}{0}{Reactor3}{0}{0}{FALSE}{VAL}{}{XI}{TRUE}{SDASH
+}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_P}{0}{Reactor3}{0}{0}{FALSE}{
+VAL}{}{XP}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}
+{X_S}{}{Slowly Biodegradable Substrate}{time [d]}{X_S [gCOD/m3
+]}{TIME}{0}{FALSE}{1}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{2
+00}{FALSE}{0}{FALSE}{50}{FALSE}{{X_Sin}{0}{Reactor1}{0}{0}{FAL
+SE}{VAL}{}{inflow}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_S
+}{0}{Reactor1}{0}{0}{FALSE}{VAL}{}{react 1}{TRUE}{LDASH}{2}{RE
+D}{FALSE}{CIRC}{6}{BLA}{X_S}{0}{Reactor2}{0}{0}{FALSE}{VAL}{}{
+react 2}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_S}{0}{Reac
+tor3}{0}{0}{FALSE}{VAL}{}{react 3}{TRUE}{SDASH}{2}{BLU}{FALSE}
+{CIRC}{6}{BLA}}}}{STATESYS}{}}

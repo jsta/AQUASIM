@@ -1,0 +1,159 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{FORMVAR}
+{{1}{A}{Interface area between film and membrane}{m^2}{0.0578}
+}{CONSTVAR}{{1}{b_H}{Heterotrophic biomass endogenous decay ra
+te constant}{1/d}{0.66}{0.01}{0.3}{1}{FALSE}{FALSE}}{CONSTVAR}
+{{1}{c_de}{Coefficient for detachment velocity}{}{0.2}{0.1}{0.
+1}{0.9}{FALSE}{TRUE}}{STATEVAR}{{1}{C_MET}{Methylcatechol conc
+entration}{gCOD/m^3}{VOL}{1e-006}{1e-005}}{STATEVAR}{{1}{C_O2}
+{Dissolved oxygen concentration}{gO/m^3}{VOL}{1e-006}{1e-006}}
+{FORMVAR}{{1}{C_O2inR}{Dissolved oxygen inflow concentration i
+nto reactor}{gO/m^3}{3.5}}{FORMVAR}{{1}{C_O2inT}{Dissolved oxy
+gen inflow concentration into tubing}{gO/m^3}{1308}}{STATEVAR}
+{{1}{C_XYL}{Xylene concentration}{gCOD/m^3}{VOL}{1e-006}{0.000
+1}}{FORMVAR}{{1}{C_XYLinR}{Xylene inflow concentration into re
+actor}{gCOD/m^3}{200}}{FORMVAR}{{1}{D_H}{Suspended heterotroph
+ic cells diffusivity in pure water}{m^2/d}{0.0001}}{FORMVAR}{{
+1}{D_I}{Suspended inactivated cells and particles diffusivity 
+in pure water}{m^2/d}{0.0001}}{FORMVAR}{{1}{D_MET}{Methylcatec
+hol diffusivity in pure water}{m^2/d}{8e-005}}{FORMVAR}{{1}{D_
+O2}{Dissolved oxygen diffusivity in pure water}{m^2/d}{0.00021
+}}{FORMVAR}{{1}{D_XYL}{Xylene diffusivity in pure water}{m^2/d
+}{7.8e-005}}{CONSTVAR}{{1}{eps_Hini}{Heterotrophic biomass ini
+tial volume fraction}{}{0.2}{0.01}{0}{1}{FALSE}{FALSE}}{CONSTV
+AR}{{1}{eps_Iini}{Inert biomass initial volume fraction}{}{0}{
+0.01}{0}{1}{FALSE}{FALSE}}{FORMVAR}{{1}{f}{Ratio of diffusivit
+y in the biofilm and in pure water}{}{0.8}}{CONSTVAR}{{1}{H_O2
+}{Henry coefficient of dissolved oxygen}{}{32.7}{0.01}{0}{32.7
+}{FALSE}{FALSE}}{CONSTVAR}{{1}{H_XYL}{Henry coefficient of xyl
+ene}{}{0.245}{0.01}{0}{0.245}{FALSE}{FALSE}}{CONSTVAR}{{1}{k_H
+}{Heterotrophic biomass inactivation rate constant}{1/d}{0.2}{
+0.01}{0.1}{0.4}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_MET}{Methylcate
+chol half-saturation coefficient}{gCOD/m^3}{2.9}{0.01}{2}{3.5}
+{FALSE}{FALSE}}{CONSTVAR}{{1}{k_MO2}{Dissolved oxygen membrane
+ mass transfer coefficient}{m/d}{2.57}{0.01}{0}{5}{FALSE}{FALS
+E}}{CONSTVAR}{{1}{k_MXYL}{Xylene membrane mass transfer coeffi
+cient}{m/d}{10}{0.01}{0}{20}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_O2
+}{Oxygen half-saturation coefficient for endogenous decay}{gO/
+m^3}{0.11}{0.01}{0.09}{0.13}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_O2
+MET}{Oxygen half-saturation coefficient for heterotrophic grow
+th}{gO/m^3}{0.13}{0.01}{0.001}{0.15}{FALSE}{FALSE}}{CONSTVAR}{
+{1}{K_O2XYL}{Oxygen half-saturation coefficient for xylene con
+version}{gO/m^3}{0.09}{0.01}{0.01}{0.3}{FALSE}{FALSE}}{CONSTVA
+R}{{1}{K_XYL}{Xylene half-saturation coefficient}{gCOD/m^3}{0.
+5}{0.01}{0.1}{1}{FALSE}{FALSE}}{CONSTVAR}{{1}{k_XYL}{Maximum s
+pecific xylene conversion rate constant}{1/d}{40}{0.01}{30}{70
+0}{FALSE}{FALSE}}{PROGVAR}{{1}{L_F}{Biofilm thickness}{m}{LF}}
+{CONSTVAR}{{1}{L_Fini}{Initial biofilm thickness}{m}{1e-006}{0
+.01}{0}{0.01}{FALSE}{FALSE}}{FORMVAR}{{1}{L_L}{Liquid boundary
+ layer thickness}{m}{0.0002}}{CONSTVAR}{{1}{mue_H}{Heterotroph
+ic biomass maximum specific growth rate constant}{1/d}{7}{0.01
+}{3}{12}{FALSE}{TRUE}}{FORMVAR}{{1}{Q_inR}{Bulk fluid volumetr
+ic influent rate}{m^3/d}{0.005}}{FORMVAR}{{1}{Q_inT}{Gas phase
+ volumetric influent rate}{m^3/d}{0.2}}{CONSTVAR}{{1}{rho_H}{H
+eterotrophic biomass density (mass per unit solid phase volume
+)}{gCOD/m^3}{64200}{0.01}{0}{100000}{FALSE}{FALSE}}{CONSTVAR}{
+{1}{rho_I}{Inert biomass density (mass per unit solid phase vo
+lume)}{gCOD/m^3}{64200}{0.01}{0}{100000}{FALSE}{FALSE}}{PROGVA
+R}{{1}{t}{Simulation time}{d}{T}}{PROGVAR}{{1}{u_F}{Advective 
+velocity of the biofilm solid matrix}{m/d}{UF}}{STATEVAR}{{1}{
+X_H}{Heterotrophic biomass concentration}{gCOD/m^3}{VOL}{1e-00
+6}{0.001}}{STATEVAR}{{1}{X_I}{Inert biomass concentration}{gCO
+D/m^3}{VOL}{1e-006}{0.001}}{FORMVAR}{{1}{X_tot}{Total biomass 
+concentration}{gCOD/m^3}{X_H+X_I}}{CONSTVAR}{{1}{Y_H}{Heterotr
+ophic biomass true yield for methylcatechol}{}{0.35}{0.01}{0.2
+5}{0.45}{FALSE}{TRUE}}{PROGVAR}{{1}{z}{Radial distance from th
+e membrane surface}{m}{Z}}{FORMVAR}{{1}{eps_H}{Heterotrophic b
+iomass volume fraction}{}{X_H/rho_H}}{FORMVAR}{{1}{eps_I}{Iner
+t biomass volume fraction}{}{X_I/rho_I}}}{PROCSYS}{{DYNPROC}{{
+1}{ConvXyl}{Xylene conversion}{k_XYL*C_XYL/(K_XYL+C_XYL)*C_O2/
+(K_O2XYL+C_O2)*X_H}{{C_XYL}{-1}{C_MET}{16/21}{C_O2}{-5/21}}}{D
+YNPROC}{{1}{HetDecay}{Endogenous decay}{b_H*C_O2/(K_O2+C_O2)*X
+_H}{{X_H}{-1}{C_O2}{-1}}}{DYNPROC}{{1}{HetGro}{Heterotrophic g
+rowth}{mue_H*C_MET/(K_MET+C_MET)*C_O2/(K_O2MET+C_O2)*X_H}{{X_H
+}{1}{C_MET}{-1/Y_H}{C_O2}{1-1/Y_H}}}{DYNPROC}{{1}{HetInact}{He
+terotrophic biomass inactivation}{k_H*X_H}{{X_H}{-1}{X_I}{1}}}
+}{COMPSYS}{{FILMCOMP}{{5}{Reactor}{Bulk + Boundary Layer + Bio
+film ( - Tubing )}{0}{{X_H}{X_I}{C_XYL}{C_MET}{C_O2}}{{ConvXyl
+}{HetGro}{HetDecay}{HetInact}}{TRUE}{Q_inR}{{C_XYL}{Q_inR*C_XY
+LinR}{C_O2}{Q_inR*C_O2inR}}{{1}{X_H}{rho_H*eps_Hini}{1}{X_I}{r
+ho_I*eps_Iini}{0}{C_XYL}{C_XYLinR}{1}{C_XYL}{C_XYLinR}{0}{C_ME
+T}{5}{1}{C_MET}{5}{0}{C_O2}{C_O2inT/H_O2}{1}{C_O2}{C_O2inT/H_O
+2}{1}{L_F}{L_Fini}}{{X_H}{rho_H}{0}{0}{0}{0}{L_L/D_H}{0}{0}{X_
+I}{rho_I}{0}{0}{0}{0}{L_L/D_I}{0}{0}}{{C_XYL}{L_L/D_XYL}{f*D_X
+YL}{C_MET}{L_L/D_MET}{f*D_MET}{C_O2}{L_L/D_O2}{f*D_O2}}{TRUE}{
+0.0017}{0.001}{FALSE}{FALSE}{TRUE}{ if u_F>0 then c_de*u_F els
+e 0 endif }{28.9*(0.002+z)}{0}{12}{FALSE}{0.001}{0.001}{0.001}
+{0.001}{0.001}{1e-007}{0.001}{0.001}}{MIXCOMP}{{4}{Tubing}{Gas
+ Phase + Membrane}{0}{{C_XYL}{C_O2}}{}{TRUE}{Q_inT}{{C_O2}{Q_i
+nT*C_O2inT}}{{0}{C_O2}{C_O2inT}}{TRUE}{3.25e-005}{}{0.001}{0.0
+01}{0.001}{0.001}}}{LINKSYS}{{DIFFLINK}{{2}{Membrane}{Silicone
+ tube 4 mm in diameter}{0}{Tubing}{0}{Reactor}{1}{{C_XYL}{A*k_
+MXYL}{1/H_XYL}{C_O2}{A*k_MO2}{1/H_O2}}}}{CALCSYS}{{CALC}{{2}{c
+alc}{}{0}{0}{FALSE}{{1}{100}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR}
+{{2}{1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{
+{1}{10}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}
+{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{500}{400}{40
+}{40}{40}{40}{80}{20}{14}{10}{12}}{PLOT}{{2}{t_LF}{}{Film Dept
+h}{time [d]}{L_F [m]}{TIME}{0}{FALSE}{100}{FALSE}{0}{FALSE}{20
+}{FALSE}{0}{FALSE}{0.003}{FALSE}{0}{FALSE}{0.0005}{FALSE}{{L_F
+}{0}{Reactor}{1}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{
+CIRC}{6}{BLA}}}{PLOT}{{2}{t_O2}{}{Oxygen in Bulk Fluid}{time [
+d]}{C_O2 [gO/ m3]}{TIME}{0}{FALSE}{100}{FALSE}{0}{FALSE}{20}{F
+ALSE}{0}{FALSE}{30}{FALSE}{0}{FALSE}{5}{FALSE}{{C_O2}{0}{React
+or}{0}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{B
+LA}}}{PLOT}{{2}{t_X}{}{X_tot in bulk fluid}{time [d]}{X [gCOD/
+m3]}{TIME}{0}{FALSE}{100}{FALSE}{0}{FALSE}{20}{FALSE}{0}{FALSE
+}{50}{FALSE}{0}{FALSE}{10}{FALSE}{{X_tot}{0}{Reactor}{0}{0}{FA
+LSE}{VAL}{}{X_tot}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_H
+}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{X_H}{TRUE}{DASH}{2}{RED}{FAL
+SE}{CIRC}{6}{BLA}{X_I}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{X_I}{TR
+UE}{DOT}{2}{GRE}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{t_XYL}{}{Xyl
+ene in Bulk Fluid}{time [d]}{C_XYL  [gCOD/m3]}{TIME}{0}{FALSE}
+{100}{FALSE}{0}{FALSE}{20}{FALSE}{0}{FALSE}{250}{FALSE}{0}{FAL
+SE}{50}{FALSE}{{C_XYLinR}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{C_XY
+LinR}{TRUE}{SOL}{2}{BLA}{FALSE}{TRI}{3}{BLA}{C_XYL}{0}{Reactor
+}{0}{0}{FALSE}{VAL}{}{C_XYL}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{
+6}{BLA}}}{PLOT}{{2}{z_H}{}{Heterotrophic profiles}{z [m]}{eps_
+H [-]}{SPACE}{0}{FALSE}{0.003}{FALSE}{0}{FALSE}{0.0005}{FALSE}
+{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{0.05}{FALSE}{{eps_H}{0}{React
+or}{1}{20}{FALSE}{VAL}{}{t=20d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC
+}{6}{BLA}{eps_H}{0}{Reactor}{1}{40}{FALSE}{VAL}{}{t=40d}{TRUE}
+{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{eps_H}{0}{Reactor}{1}{60}
+{FALSE}{VAL}{}{t=60d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}
+{eps_H}{0}{Reactor}{1}{80}{FALSE}{VAL}{}{t=80d}{TRUE}{SDASH}{2
+}{BLU}{FALSE}{CIRC}{6}{BLA}{eps_H}{0}{Reactor}{1}{100}{FALSE}{
+VAL}{}{t=100d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}
+{{2}{z_I}{}{Inert profiles}{z [m]}{eps_I [-]}{SPACE}{0}{FALSE}
+{0.003}{FALSE}{0}{FALSE}{0.0005}{FALSE}{0}{FALSE}{0.2}{FALSE}{
+0}{FALSE}{0.05}{FALSE}{{eps_I}{0}{Reactor}{1}{20}{FALSE}{VAL}{
+}{t=20d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{eps_I}{0}{Rea
+ctor}{1}{40}{FALSE}{VAL}{}{t=40d}{TRUE}{LDASH}{2}{RED}{FALSE}{
+CIRC}{6}{BLA}{eps_I}{0}{Reactor}{1}{60}{FALSE}{VAL}{}{t=60d}{T
+RUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{eps_I}{0}{Reactor}{1}{
+80}{FALSE}{VAL}{}{t=80d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{
+BLA}{eps_I}{0}{Reactor}{1}{100}{FALSE}{VAL}{}{t=100d}{TRUE}{DO
+T}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{z_O2}{}{Oxygen Pro
+files}{z [m]}{C_O2 [gO/m3]}{SPACE}{0}{FALSE}{0.003}{FALSE}{0}{
+FALSE}{0.001}{FALSE}{0}{FALSE}{40}{FALSE}{0}{FALSE}{5}{FALSE}{
+{C_O2}{0}{Reactor}{1}{20}{FALSE}{VAL}{}{t=20d}{TRUE}{SOL}{2}{B
+LA}{FALSE}{CIRC}{6}{BLA}{C_O2}{0}{Reactor}{1}{40}{FALSE}{VAL}{
+}{t=40d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_O2}{0}{Re
+actor}{1}{60}{FALSE}{VAL}{}{t=60d}{TRUE}{DASH}{2}{GRE}{FALSE}{
+CIRC}{6}{BLA}{C_O2}{0}{Reactor}{1}{80}{FALSE}{VAL}{}{t=80d}{TR
+UE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_O2}{0}{Reactor}{1}{1
+00}{FALSE}{VAL}{}{t=100d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{B
+LA}}}{PLOT}{{2}{z_XYL}{}{Xylene Profiles}{z [m]}{C_XYL [gCOD/m
+3]}{SPACE}{0}{FALSE}{0.003}{FALSE}{0}{FALSE}{0.001}{FALSE}{0}{
+FALSE}{200}{FALSE}{0}{FALSE}{50}{FALSE}{{C_XYL}{0}{Reactor}{1}
+{20}{FALSE}{VAL}{}{t=20d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{B
+LA}{C_XYL}{0}{Reactor}{1}{40}{FALSE}{VAL}{}{t=40d}{TRUE}{LDASH
+}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_XYL}{0}{Reactor}{1}{60}{FALSE
+}{VAL}{}{t=60d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_XYL
+}{0}{Reactor}{1}{80}{FALSE}{VAL}{}{t=80d}{TRUE}{SDASH}{2}{BLU}
+{FALSE}{CIRC}{6}{BLA}{C_XYL}{0}{Reactor}{1}{100}{FALSE}{VAL}{}
+{t=100d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{
+}}

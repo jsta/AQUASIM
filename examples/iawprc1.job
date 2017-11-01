@@ -1,0 +1,4 @@
+# example "IAWPRC Activated Sludge Model No. 1":
+
+-s iawp_sim.log iawprc1.aqu iawp_res.aqu iawprc1.sim # simulation
+-p iawp_plt.log iawp_res.aqu iawprc1.plt             # plot results

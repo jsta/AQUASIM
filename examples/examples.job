@@ -1,0 +1,32 @@
+# example "Dynamic Modelling of Algal Photosynthesis":
+
+-a dyph_sen.log dyphora.aqu dyph_res.aqu             # sens. anal.
+-p dyph_plt.log dyph_res.aqu dyphora.plt             # plot results
+
+# example "Simple Activated Sludge Model":
+
+-s slud_sim.log sludgeb.aqu slud_res.aqu             # simulation
+-p slud_pl1.log slud_res.aqu sludgeb1.plt            # plot sim. res.
+-a slud_sen.log sludgeb.aqu slud_res.aqu             # sens. anal.
+-p slud_pl2.log slud_res.aqu sludgeb2.plt            # plot s.a. res.
+
+# example "IAWPRC Activated Sludge Model No. 1":
+
+-s iawp_sim.log iawprc1.aqu iawp_res.aqu iawprc1.sim # simulation
+-p iawp_plt.log iawp_res.aqu iawprc1.plt             # plot results
+
+# example "Heterotrophic-Autotrophic Competition in a Biofilm":
+
+-s heta_sim.log hetaut.aqu heta_res.aqu hetaut.sim   # simulation
+-p heta_plt.log heta_res.aqu hetaut.plt              # plot results
+
+# example "Xylene Degradation in a Membrane-Bound Biofilm":
+
+-s xyle_sim.log xylene.aqu xyle_res.aqu              # simulation
+-p xyle_plt.log xyle_res.aqu xylene.plt              # plot results
+
+# example "Oxygen Balance in a Heavily Polluted River":
+
+-s stre_sim.log streeter.aqu stre_res.aqu            # simulation
+-p stre_plt.log stre_res.aqu streeter.plt            # plot results
+

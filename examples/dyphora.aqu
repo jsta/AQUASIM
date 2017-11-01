@@ -1,0 +1,109 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{PROGVAR}
+{{1}{calcnum}{Calculation number}{}{CALC}}{REALLISTVAR}{{1}{I}
+{Light intensity (as a function of calculation number)}{uE/m^2
+/s}{calcnum}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALS
+E}{{1}{90}{2}{1300}}}{CONSTVAR}{{1}{I_crit}{Critical light int
+ensity for onset of light inhibition}{uE/m^2/s}{50}{10}{0}{500
+}{TRUE}{FALSE}}{FORMVAR}{{1}{I_ex}{Inhibiting excess light int
+ensity}{uE/m^2/s}{max(I-I_crit,0)}}{CONSTVAR}{{1}{I_k}{Charact
+eristic light intensity for equilibrium production}{uE/m^2/s}{
+790}{100}{100}{2000}{TRUE}{FALSE}}{CONSTVAR}{{1}{K}{Inhibition
+ growth constant}{m^2/uE}{3.6e-006}{6e-007}{0}{1e-005}{TRUE}{F
+ALSE}}{STATEVAR}{{1}{Psi}{Light inhibition function}{}{VOL}{1e
+-006}{1e-006}}{CONSTVAR}{{1}{P_max}{Factor between absolute an
+d relative rate of photosynthesis}{mgO2/l/h}{1.65}{0.165}{0}{5
+}{TRUE}{TRUE}}{STATEVAR}{{1}{P_star}{Potential relative rate o
+f photosynthesis without inhibition }{}{VOL}{1e-006}{1e-006}}{
+FORMVAR}{{1}{P_stareq}{Relative equilibrium rate of photosynth
+esis}{}{tanh(I/I_k)}}{PROGVAR}{{1}{t}{Time}{s}{T}}{CONSTVAR}{{
+1}{tau_i}{Inhibition decay time constant}{s}{1200}{300}{500}{5
+0000}{TRUE}{FALSE}}{CONSTVAR}{{1}{tau_r}{Photosynthesis adapta
+tion time constant}{s}{240}{60}{10}{1000}{TRUE}{TRUE}}{FORMVAR
+}{{1}{P}{Relative rate of photosynthesis}{}{ if P_star<P_stare
+q then P_star/(1+Psi) else P_stareq/(1+Psi) endif }}{FORMVAR}{
+{1}{Prod}{Absolute rate of photosynthesis}{mgO/l/h}{P_max*P}}{
+REALLISTVAR}{{1}{Prod1}{Measured absolute rate of photosynthes
+is for light intensity 1}{mgO/l/h}{t}{TRUE}{0}{1}{0}{100000000
+0}{LINEAR}{1}{FALSE}{FALSE}{{150}{0.095}{300}{0.16}{600}{0.16}
+{900}{0.14}{1200}{0.13}{1500}{0.13}{1800}{0.13}{2100}{0.13}}}{
+REALLISTVAR}{{1}{Prod2}{Measured absolute rate of photosynthes
+is for light intensity 2}{mgO/l/h}{t}{TRUE}{0}{1}{0}{100000000
+0}{LINEAR}{1}{FALSE}{FALSE}{{150}{0.33}{300}{0.44}{600}{0.49}{
+900}{0.36}{1200}{0.31}{1500}{0.28}{1800}{0.27}{2100}{0.25}}}}{
+PROCSYS}{{DYNPROC}{{1}{ProcPsi}{Change of light inhibition fun
+ction}{K*I_ex-1/tau_i*Psi}{{Psi}{1}}}{DYNPROC}{{1}{ProcPstar}{
+Change of potential relative rate of photosynthesis}{1/tau_r*(
+P_star-P_stareq)}{{P_star}{-1}}}}{COMPSYS}{{MIXCOMP}{{4}{React
+or}{}{0}{{P_star}{Psi}}{{ProcPstar}{ProcPsi}}{TRUE}{0}{}{{0}{P
+_star}{0}{0}{Psi}{0}}{TRUE}{1}{}{0.001}{0.001}{0.001}{0.001}}}
+{LINKSYS}{}{CALCSYS}{{CALC}{{2}{calc1}{}{1}{0}{FALSE}{{20}{150
+}}{TRUE}{TRUE}}{CALC}{{2}{calc2}{}{2}{0}{FALSE}{{20}{150}}{TRU
+E}{TRUE}}}{FITSYS}{{FIT}{{3}{fit1}{}{1}{0}{FALSE}{0}{100000000
+0}{TRUE}{{Prod}{Reactor}{0}{0}{FALSE}{Prod1}}}{FIT}{{3}{fit2}{
+}{2}{0}{FALSE}{0}{1000000000}{TRUE}{{Prod}{Reactor}{0}{0}{FALS
+E}{Prod2}}}}{NUMPAR}{{2}{100}{10}{0}{TRUE}{5}{1000}{0.005}}{PL
+OTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{
+1}{1}{1}{3}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}
+{{1}{500}{400}{40}{40}{40}{40}{80}{20}{14}{10}{12}}{PLOT}{{2}{
+Error_Prod1}{}{Error Contributions at 90uE/m2/s}{time [s]}{err
+or contributions [mgO/l/h]}{TIME}{0}{FALSE}{3000}{FALSE}{0}{FA
+LSE}{1000}{FALSE}{-0.1}{FALSE}{0.05}{FALSE}{0}{FALSE}{0.05}{FA
+LSE}{{Prod}{1}{Reactor}{0}{0}{FALSE}{SENSERR}{P_max}{P_max}{TR
+UE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{Prod}{1}{Reactor}{0}{0}{
+FALSE}{SENSERR}{tau_i}{tau_i}{TRUE}{LDASH}{2}{BLU}{FALSE}{CIRC
+}{6}{BLA}{Prod}{1}{Reactor}{0}{0}{FALSE}{SENSERR}{tau_r}{tau_r
+}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{Prod}{1}{Reactor}{0
+}{0}{FALSE}{SENSERR}{I_k}{I_k}{TRUE}{SDASH}{2}{MAG}{FALSE}{CIR
+C}{6}{BLA}{Prod}{1}{Reactor}{0}{0}{FALSE}{SENSERR}{I_crit}{I_c
+rit}{TRUE}{DOT}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{Prod}{1}{Reactor}
+{0}{0}{FALSE}{SENSERR}{K}{K}{TRUE}{LDD}{2}{CYA}{FALSE}{CIRC}{6
+}{BLA}}}{PLOT}{{2}{Error_Prod2}{}{Error Contributions at 1300u
+E/m2/s}{time [s]}{error contributions [mgO/l/h]}{TIME}{0}{FALS
+E}{3000}{FALSE}{0}{FALSE}{1000}{FALSE}{-0.1}{FALSE}{0.05}{FALS
+E}{0}{FALSE}{0.05}{FALSE}{{Prod}{2}{Reactor}{0}{0}{FALSE}{SENS
+ERR}{P_max}{P_max}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{Pro
+d}{2}{Reactor}{0}{0}{FALSE}{SENSERR}{tau_i}{tau_i}{TRUE}{LDASH
+}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Prod}{2}{Reactor}{0}{0}{FALSE}{
+SENSERR}{tau_r}{tau_r}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{6}{BLA
+}{Prod}{2}{Reactor}{0}{0}{FALSE}{SENSERR}{I_k}{I_k}{TRUE}{SDAS
+H}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{Prod}{2}{Reactor}{0}{0}{FALSE}
+{SENSERR}{I_crit}{I_crit}{TRUE}{DOT}{2}{GRE}{FALSE}{CIRC}{6}{B
+LA}{Prod}{2}{Reactor}{0}{0}{FALSE}{SENSERR}{K}{K}{TRUE}{LDD}{2
+}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{SensR_Prod1}{}{Sensiti
+vities at 90uE/m2/s}{time [s]}{relative sensitivities [-]}{TIM
+E}{0}{FALSE}{3000}{FALSE}{0}{FALSE}{1000}{FALSE}{-1.2}{FALSE}{
+1.2}{FALSE}{0}{FALSE}{0.5}{FALSE}{{Prod}{1}{Reactor}{0}{0}{FAL
+SE}{SENSRR}{P_max}{P_max}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{B
+LA}{Prod}{1}{Reactor}{0}{0}{FALSE}{SENSRR}{tau_i}{tau_i}{TRUE}
+{LDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Prod}{1}{Reactor}{0}{0}{F
+ALSE}{SENSRR}{tau_r}{tau_r}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{6
+}{BLA}{Prod}{1}{Reactor}{0}{0}{FALSE}{SENSRR}{I_k}{I_k}{TRUE}{
+SDASH}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{Prod}{1}{Reactor}{0}{0}{FA
+LSE}{SENSRR}{I_crit}{I_crit}{TRUE}{DOT}{2}{GRE}{FALSE}{CIRC}{6
+}{BLA}{Prod}{1}{Reactor}{0}{0}{FALSE}{SENSRR}{K}{K}{TRUE}{LDD}
+{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{SensR_Prod2}{}{Sensi
+tivities at 1300uE/m2/s}{time [s]}{relative sensitivities [-]}
+{TIME}{0}{FALSE}{3000}{FALSE}{0}{FALSE}{1000}{FALSE}{-1.2}{FAL
+SE}{1.2}{FALSE}{0}{FALSE}{0.5}{FALSE}{{Prod}{2}{Reactor}{0}{0}
+{FALSE}{SENSRR}{P_max}{P_max}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{
+6}{BLA}{Prod}{2}{Reactor}{0}{0}{FALSE}{SENSRR}{tau_i}{tau_i}{T
+RUE}{LDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Prod}{2}{Reactor}{0}{
+0}{FALSE}{SENSRR}{tau_r}{tau_r}{TRUE}{DASH}{2}{RED}{FALSE}{CIR
+C}{6}{BLA}{Prod}{2}{Reactor}{0}{0}{FALSE}{SENSRR}{I_k}{I_k}{TR
+UE}{SDASH}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{Prod}{2}{Reactor}{0}{0
+}{FALSE}{SENSRR}{I_crit}{I_crit}{TRUE}{DOT}{2}{GRE}{FALSE}{CIR
+C}{6}{BLA}{Prod}{2}{Reactor}{0}{0}{FALSE}{SENSRR}{K}{K}{TRUE}{
+LDD}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Val_Prod}{}{Prod
+uction}{time [s]}{Prod [mgO/l/h]}{TIME}{0}{FALSE}{3000}{FALSE}
+{0}{FALSE}{1000}{FALSE}{0}{FALSE}{0.6}{FALSE}{0}{FALSE}{0.1}{F
+ALSE}{{Prod1}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{90uE/m2/s}{FALSE
+}{SOL}{2}{BLA}{TRUE}{TRI}{2}{BLU}{Prod2}{0}{Reactor}{0}{0}{FAL
+SE}{VAL}{}{1300uE/m2/s}{FALSE}{SOL}{2}{BLA}{TRUE}{SQARE}{2}{GR
+E}{Prod}{1}{Reactor}{0}{0}{FALSE}{VAL}{}{90uE/m2/s}{TRUE}{SOL}
+{2}{BLU}{FALSE}{CIRC}{6}{BLA}{Prod}{2}{Reactor}{0}{0}{FALSE}{V
+AL}{}{1300uE/m2/s}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}}}}
+{STATESYS}{}}

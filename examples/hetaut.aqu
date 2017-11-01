@@ -1,0 +1,139 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{CONSTVAR
+}{{1}{alp_A}{Conversion factor for oxygen to ammonium}{gO/gCOD
+}{4.57}{1}{4}{6}{FALSE}{FALSE}}{CONSTVAR}{{1}{alp_H}{Conversio
+n factor for oxygen to substrate}{gO/gCOD}{1}{1}{0.5}{1.5}{FAL
+SE}{FALSE}}{CONSTVAR}{{1}{b_A}{Endogeneous respiration coeffic
+ient for autotrophic biomass}{1/d}{0.05}{1}{0.02}{0.1}{FALSE}{
+FALSE}}{CONSTVAR}{{1}{b_H}{Endogeneous respiration coefficient
+ for heterotrophic biomass}{1/d}{0.2}{1}{0.1}{0.4}{FALSE}{FALS
+E}}{PROGVAR}{{1}{calcnum}{}{}{CALC}}{STATEVAR}{{1}{C_NH4}{Conc
+entration of ammonium}{gN/m^3}{VOL}{1e-006}{1e-006}}{FORMVAR}{
+{1}{C_NH4in}{Inflow concentration of C_NH4}{gN/m^3}{13}}{STATE
+VAR}{{1}{C_O2}{Concentration of dissolved oxygen}{gO/m^3}{VOL}
+{1e-006}{1e-006}}{FORMVAR}{{1}{C_O2in}{Inflow concentration of
+ C_O2}{gO/m^3}{8}}{STATEVAR}{{1}{C_S}{Concentration of organic
+ substrate}{gCOD/m^3}{VOL}{1e-006}{1e-006}}{REALLISTVAR}{{1}{C
+_Sin}{Inflow concentration of C_S}{gCOD/m^3}{calcnum}{TRUE}{0}
+{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{1}{0}{2}{3}{3}{13
+}{4}{30}}}{FORMVAR}{{1}{D_NH4}{Diffusivity of NH4+}{m2/d}{0.00
+0186}}{FORMVAR}{{1}{D_O2}{Diffusivity of O2}{m2/d}{0.000219}}{
+FORMVAR}{{1}{D_S}{Diffusivity of organic substrate}{m2/d}{0.00
+0104}}{FORMVAR}{{1}{eps_Aini}{Initial volume fraction of autot
+rophic bacteria}{}{0.04}}{FORMVAR}{{1}{eps_Hini}{Initial volum
+e fraction of heterotrophic bacteria}{}{0.16}}{CONSTVAR}{{1}{k
+_A}{Inactivation rate constant for autotrophic bacteria}{1/d}{
+0.1}{1}{0}{0.5}{FALSE}{FALSE}}{CONSTVAR}{{1}{k_H}{Inactivation
+ rate constant for heterotrophic bacteria}{1/d}{0.1}{1}{0}{0.5
+}{FALSE}{FALSE}}{CONSTVAR}{{1}{K_NH4}{Ammonium half-saturation
+ coefficient for autotrophic biomass}{gN/m^3}{1}{1}{0.5}{5}{FA
+LSE}{FALSE}}{CONSTVAR}{{1}{K_O2A}{Oxygen half-saturation coeff
+icient for autotrophic biomass}{gO/m^3}{0.1}{1}{0.05}{0.2}{FAL
+SE}{FALSE}}{CONSTVAR}{{1}{K_O2H}{Oxygen half-saturation coeffi
+cient for heterotrophic biomass}{gO/m^3}{0.1}{1}{0.05}{0.2}{FA
+LSE}{FALSE}}{CONSTVAR}{{1}{K_S}{Substrate half-saturation coef
+ficient for heterotrophic biomass}{gCOD/m^3}{5}{1}{1}{10}{FALS
+E}{FALSE}}{PROGVAR}{{1}{L_F}{Film depth}{m}{LF}}{FORMVAR}{{1}{
+L_Fini}{Initial film depth}{m}{0.0005}}{CONSTVAR}{{1}{mue_A}{M
+aximum specific growth rate of autotrophic biomass}{1/d}{0.95}
+{1}{0.5}{2}{FALSE}{FALSE}}{CONSTVAR}{{1}{mue_H}{Maximum specif
+ic growth rate of heterotrophic biomass}{1/d}{4.8}{1}{2}{10}{F
+ALSE}{FALSE}}{FORMVAR}{{1}{Q_in}{Water inflow}{m^3/d}{10}}{FOR
+MVAR}{{1}{rho_X}{Density of bacteria}{gCOD/m^3}{25000}}{PROGVA
+R}{{1}{u_F}{Advective velocity in biofilm}{m/d}{UF}}{STATEVAR}
+{{1}{X_A}{Concentration of autotrophic bacteria}{gCOD/m^3}{VOL
+}{1e-006}{1e-006}}{STATEVAR}{{1}{X_H}{Concentration of heterot
+rophic bacteria}{gCOD/m^3}{VOL}{1e-006}{1e-006}}{STATEVAR}{{1}
+{X_I}{Concentration of inert particles}{gCOD/m^3}{VOL}{1e-006}
+{1e-006}}{FORMVAR}{{1}{Y_A}{Yield for autotrophic biomass}{}{0
+.22}}{FORMVAR}{{1}{Y_H}{Yield for heterotrophic biomass}{}{0.4
+}}{PROGVAR}{{1}{z}{Distance from substratum}{m}{Z}}{FORMVAR}{{
+1}{eps_A}{Volume fraction of autotrophic bacteria}{}{X_A/rho_X
+}}{FORMVAR}{{1}{eps_H}{Volume fraction of heterotrophic bacter
+ia}{}{X_H/rho_X}}{FORMVAR}{{1}{eps_I}{Volume fraction of inert
+  particles}{}{X_I/rho_X}}}{PROCSYS}{{DYNPROC}{{1}{AutGro}{}{m
+ue_A*C_O2/(K_O2A+C_O2)*C_NH4/(K_NH4+C_NH4)*X_A}{{C_O2}{-(alp_A
+-Y_A)/Y_A}{X_A}{1}{C_NH4}{-1/Y_A}}}{DYNPROC}{{1}{AutInact}{}{k
+_A*X_A}{{X_A}{-1}{X_I}{1}}}{DYNPROC}{{1}{AutResp}{}{b_A*C_O2/(
+K_O2A+C_O2)*X_A}{{X_A}{-1}{C_O2}{-1}}}{DYNPROC}{{1}{HetGro}{}{
+mue_H*C_O2/(K_O2H+C_O2)*C_S/(K_S+C_S)*X_H}{{X_H}{1}{C_S}{-1/Y_
+H}{C_O2}{-(alp_H-Y_H)/Y_H}}}{DYNPROC}{{1}{HetInact}{}{k_H*X_H}
+{{X_H}{-1}{X_I}{1}}}{DYNPROC}{{1}{HetResp}{}{b_H*C_O2/(K_O2H+C
+_O2)*X_H}{{X_H}{-1}{C_O2}{-1}}}}{COMPSYS}{{FILMCOMP}{{5}{React
+or}{}{0}{{C_NH4}{C_O2}{C_S}{X_A}{X_H}{X_I}}{{AutGro}{AutInact}
+{AutResp}{HetGro}{HetInact}{HetResp}}{TRUE}{Q_in}{{C_NH4}{Q_in
+*C_NH4in}{C_O2}{Q_in*C_O2in}{C_S}{Q_in*C_Sin}}{{1}{L_F}{L_Fini
+}{1}{X_A}{rho_X*eps_Aini}{1}{X_H}{rho_X*eps_Hini}}{{X_H}{rho_X
+}{0}{0}{0}{0}{0}{0}{0}{X_A}{rho_X}{0}{0}{0}{0}{0}{0}{0}{X_I}{r
+ho_X}{0}{0}{0}{0}{0}{0}{0}}{{C_S}{0}{D_S}{C_NH4}{0}{D_NH4}{C_O
+2}{0}{D_O2}}{FALSE}{0.01}{0.0001}{FALSE}{FALSE}{TRUE}{ if u_F>
+0 then u_F else 0 endif }{0.1}{0}{10}{FALSE}{0.001}{0.001}{0.0
+01}{0.001}{0.001}{1e-007}{0.001}{0.001}}}{LINKSYS}{}{CALCSYS}{
+{CALC}{{2}{calc1}{}{1}{0}{FALSE}{{1}{100}}{TRUE}{FALSE}}{CALC}
+{{2}{calc2}{}{2}{0}{FALSE}{{1}{100}}{TRUE}{FALSE}}{CALC}{{2}{c
+alc3}{}{3}{0}{FALSE}{{1}{100}}{TRUE}{FALSE}}{CALC}{{2}{calc4}{
+}{4}{0}{FALSE}{{1}{100}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR}{{2}{
+1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{1
+0}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}{10}{
+8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{500}{400}{40}{40}
+{40}{40}{80}{20}{14}{10}{12}}{PLOT}{{2}{C1}{}{Substrate Profil
+es C_S=0gCOD/m3}{z [m]}{C [g(O,COD,N)/m3]}{SPACE}{0}{FALSE}{0.
+0005}{FALSE}{0}{FALSE}{0.0001}{FALSE}{0}{FALSE}{30}{FALSE}{0}{
+FALSE}{5}{FALSE}{{C_O2}{1}{Reactor}{1}{100}{FALSE}{VAL}{}{C_O2
+}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_S}{1}{Reactor}{1}{
+100}{FALSE}{VAL}{}{C_S}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BL
+A}{C_NH4}{1}{Reactor}{1}{100}{FALSE}{VAL}{}{C_NH4}{TRUE}{DOT}{
+2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{C2}{}{Substrate Profi
+les C_S=3gCOD/m3}{z [m]}{C [g(O,COD,N)/m3]}{SPACE}{0}{FALSE}{0
+.0005}{FALSE}{0}{FALSE}{0.0001}{FALSE}{0}{FALSE}{30}{FALSE}{0}
+{FALSE}{5}{FALSE}{{C_O2}{2}{Reactor}{1}{100}{FALSE}{VAL}{}{C_O
+2}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_S}{2}{Reactor}{1}
+{100}{FALSE}{VAL}{}{C_S}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{B
+LA}{C_NH4}{2}{Reactor}{1}{100}{FALSE}{VAL}{}{C_NH4}{TRUE}{DOT}
+{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{C3}{}{Substrate Prof
+iles C_S=13gCOD/m3}{z [m]}{C [g(O,COD,N)/m3]}{SPACE}{0}{FALSE}
+{0.0005}{FALSE}{0}{FALSE}{0.0001}{FALSE}{0}{FALSE}{30}{FALSE}{
+0}{FALSE}{5}{FALSE}{{C_O2}{3}{Reactor}{1}{100}{FALSE}{VAL}{}{C
+_O2}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_S}{3}{Reactor}{
+1}{100}{FALSE}{VAL}{}{C_S}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}
+{BLA}{C_NH4}{3}{Reactor}{1}{100}{FALSE}{VAL}{}{C_NH4}{TRUE}{DO
+T}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{C4}{}{Substrate Pr
+ofiles C_S=30gCOD/m3}{z [m]}{C [g(O,COD,N)/m3]}{SPACE}{0}{FALS
+E}{0.0005}{FALSE}{0}{FALSE}{0.0001}{FALSE}{0}{FALSE}{30}{FALSE
+}{0}{FALSE}{5}{FALSE}{{C_O2}{4}{Reactor}{1}{100}{FALSE}{VAL}{}
+{C_O2}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_S}{4}{Reactor
+}{1}{100}{FALSE}{VAL}{}{C_S}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{
+6}{BLA}{C_NH4}{4}{Reactor}{1}{100}{FALSE}{VAL}{}{C_NH4}{TRUE}{
+DOT}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{eps1}{}{Spatial 
+Profiles of Bacteria C_S=0gCOD/m3}{z [m]}{eps [-]}{SPACE}{0}{F
+ALSE}{0.0005}{FALSE}{0}{FALSE}{0.0001}{FALSE}{0}{FALSE}{0.2}{F
+ALSE}{0}{FALSE}{0.05}{FALSE}{{eps_H}{1}{Reactor}{1}{100}{FALSE
+}{VAL}{}{eps_H}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{eps_A}
+{1}{Reactor}{1}{100}{FALSE}{VAL}{}{eps_A}{TRUE}{DASH}{2}{GRE}{
+FALSE}{CIRC}{6}{BLA}{eps_I}{1}{Reactor}{1}{100}{FALSE}{VAL}{}{
+eps_I}{TRUE}{DOT}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{eps
+2}{}{Spatial Profiles of Bacteria C_S=3gCOD/m3}{z [m]}{eps [-]
+}{SPACE}{0}{FALSE}{0.0005}{FALSE}{0}{FALSE}{0.0001}{FALSE}{0}{
+FALSE}{0.2}{FALSE}{0}{FALSE}{0.05}{FALSE}{{eps_H}{2}{Reactor}{
+1}{100}{FALSE}{VAL}{}{eps_H}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6
+}{BLA}{eps_A}{2}{Reactor}{1}{100}{FALSE}{VAL}{}{eps_A}{TRUE}{D
+ASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{eps_I}{2}{Reactor}{1}{100}{F
+ALSE}{VAL}{}{eps_I}{TRUE}{DOT}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{
+PLOT}{{2}{eps3}{}{Spatial Profiles of Bacteria C_S=13gCOD/m3}{
+z [m]}{eps [-]}{SPACE}{0}{FALSE}{0.0005}{FALSE}{0}{FALSE}{0.00
+01}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{0.05}{FALSE}{{eps_H
+}{3}{Reactor}{1}{100}{FALSE}{VAL}{}{eps_H}{TRUE}{SOL}{2}{RED}{
+FALSE}{CIRC}{6}{BLA}{eps_A}{3}{Reactor}{1}{100}{FALSE}{VAL}{}{
+eps_A}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{eps_I}{3}{Reac
+tor}{1}{100}{FALSE}{VAL}{}{eps_I}{TRUE}{DOT}{2}{BLU}{FALSE}{CI
+RC}{6}{BLA}}}{PLOT}{{2}{eps4}{}{Spatial Profiles of Bacteria C
+_S=30gCOD/m3}{z [m]}{eps [-]}{SPACE}{0}{FALSE}{0.0005}{FALSE}{
+0}{FALSE}{0.0001}{FALSE}{0}{FALSE}{0.2}{FALSE}{0}{FALSE}{0.05}
+{FALSE}{{eps_H}{4}{Reactor}{1}{100}{FALSE}{VAL}{}{eps_H}{TRUE}
+{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{eps_A}{4}{Reactor}{1}{100}{
+FALSE}{VAL}{}{eps_A}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{
+eps_I}{4}{Reactor}{1}{100}{FALSE}{VAL}{}{eps_I}{TRUE}{DOT}{2}{
+BLU}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

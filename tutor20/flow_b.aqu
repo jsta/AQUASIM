@@ -1,0 +1,54 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C_A}{Concentration of substance A}{mg/l}{VOL}{1e-006}{1e
+-006}}{PROGVAR}{{1}{Q}{Discharge}{l/h}{Q}}{FORMVAR}{{1}{Qin}{W
+ater inflow }{l/h}{10}}{FORMVAR}{{1}{Qout}{Outflow}{l/h}{5}}{F
+ORMVAR}{{1}{Qrec}{Water recirculation}{l/h}{50}}{PROGVAR}{{1}{
+t}{Time}{h}{T}}{PROGVAR}{{1}{V}{Reactor volume}{l}{VOL}}{REALL
+ISTVAR}{{1}{C_Ain}{Inflow concentration of substance A}{mg/l}{
+t}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{0}{10}
+{4.9}{10}{5.1}{0}}}{FORMVAR}{{1}{tau}{}{h}{V/Q}}}{PROCSYS}{}{C
+OMPSYS}{{MIXCOMP}{{4}{Reactor_1}{}{0}{{C_A}}{}{TRUE}{Qin}{{C_A
+}{Qin*C_Ain}}{}{TRUE}{10}{}{0.001}{0.001}{0.001}{0.001}}{MIXCO
+MP}{{4}{Reactor_2}{}{0}{{C_A}}{}{TRUE}{0}{}{}{TRUE}{10}{}{0.00
+1}{0.001}{0.001}{0.001}}{MIXCOMP}{{4}{Reactor_3}{}{0}{{C_A}}{}
+{TRUE}{0}{}{}{TRUE}{1}{}{0.001}{0.001}{0.001}{0.001}}{MIXCOMP}
+{{4}{Reactor_4}{}{0}{{C_A}}{}{TRUE}{0}{}{}{TRUE}{10}{}{0.001}{
+0.001}{0.001}{0.001}}}{LINKSYS}{{ADVLINK}{{2}{Link_12}{}{0}{Re
+actor_1}{0}{Reactor_2}{0}{}}{ADVLINK}{{2}{Link_24}{}{0}{Reacto
+r_2}{0}{Reactor_4}{0}{{BIF}{Out}{}{}{0}{Qout}{WATER}{}{BIF}{Re
+c}{}{Reactor_3}{0}{Qrec}{WATER}{}}}{ADVLINK}{{2}{Link_32}{}{0}
+{Reactor_3}{0}{Reactor_2}{0}{}}}{CALCSYS}{{CALC}{{2}{Calculati
+on}{}{0}{0}{FALSE}{{0.1}{100}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR
+}{{2}{1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}
+{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}
+{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{450}{300}{25
+}{25}{25}{25}{25}{20}{14}{10}{12}}{PLOT}{{2}{C_A}{}{Concentrat
+ion of A}{time [h]}{C_A [mg/l]}{TIME}{0}{TRUE}{10}{TRUE}{0}{TR
+UE}{1}{TRUE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{1}{TRUE}{{C_A}{0}{Rea
+ctor_1}{0}{0}{FALSE}{VAL}{}{Reactor 1}{TRUE}{SOL}{2}{BLA}{FALS
+E}{CIRC}{6}{BLA}{C_A}{0}{Reactor_2}{0}{0}{FALSE}{VAL}{}{Reacto
+r 2}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_A}{0}{Reactor
+_3}{0}{0}{FALSE}{VAL}{}{Reactor 3}{TRUE}{DASH}{2}{GRE}{FALSE}{
+CIRC}{6}{BLA}{C_A}{0}{Reactor_4}{0}{0}{FALSE}{VAL}{}{Reactor 4
+}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Q}{}{D
+ischarge}{time [h]}{Q [l/h]}{TIME}{0}{TRUE}{0.1}{TRUE}{0}{TRUE
+}{0.05}{TRUE}{0}{FALSE}{80}{FALSE}{0}{FALSE}{10}{FALSE}{{Q}{0}
+{Reactor_1}{0}{0}{FALSE}{VAL}{}{Reactor 1}{TRUE}{SOL}{2}{BLA}{
+FALSE}{CIRC}{6}{BLA}{Q}{0}{Reactor_2}{0}{0}{FALSE}{VAL}{}{Reac
+tor 2}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{Q}{0}{Reactor
+_3}{0}{0}{FALSE}{VAL}{}{Reactor 3}{TRUE}{DASH}{2}{GRE}{FALSE}{
+CIRC}{6}{BLA}{Q}{0}{Reactor_4}{0}{0}{FALSE}{VAL}{}{Reactor 4}{
+TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{tau}{}{R
+etention Time}{time [h]}{tau [h]}{TIME}{0}{TRUE}{0.1}{TRUE}{0}
+{TRUE}{0.05}{TRUE}{0}{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{TRUE}{{ta
+u}{0}{Reactor_1}{0}{0}{FALSE}{VAL}{}{Reactor 1}{TRUE}{SOL}{2}{
+BLA}{FALSE}{CIRC}{6}{BLA}{tau}{0}{Reactor_2}{0}{0}{FALSE}{VAL}
+{}{Reactor 2}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{tau}{0
+}{Reactor_3}{0}{0}{FALSE}{VAL}{}{Reactor 3}{TRUE}{DASH}{2}{GRE
+}{FALSE}{CIRC}{6}{BLA}{tau}{0}{Reactor_4}{0}{0}{FALSE}{VAL}{}{
+Reactor 4}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}}{STATES
+YS}{}}

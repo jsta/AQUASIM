@@ -1,0 +1,26 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C1}{Concentration of dissolved substance 1}{mg/l}{VOL}{1
+e-006}{1e-006}}{FORMVAR}{{1}{Qin}{Water inflow}{m3/s}{1}}{FORM
+VAR}{{1}{sigma}{Standard deviation of the Gaussian input pulse
+}{s}{500}}{PROGVAR}{{1}{t}{Time}{s}{T}}{FORMVAR}{{1}{t0}{Spill
+ time}{s}{1500}}{FORMVAR}{{1}{tadv}{Travel time}{s}{1000}}{FOR
+MVAR}{{1}{C1in}{}{mg/l}{10*exp(-(t-t0)^2/(2*sigma^2))}}{FORMVA
+R}{{1}{C1out}{}{mg/l}{10*exp(-(t-t0-tadv)^2/(2*sigma^2))}}}{PR
+OCSYS}{}{COMPSYS}{{ADVCOMP}{{5}{PlugFlowReact}{}{0}{{C1}}{}{TR
+UE}{Qin}{{C1}{Qin*C1in}}{}{0}{}{52}{FALSE}{0.001}{1e-006}{1e-0
+06}{1e-006}{0}{200}{5}{FALSE}{}{}}}{LINKSYS}{}{CALCSYS}{{CALC}
+{{2}{Calc}{}{0}{0}{FALSE}{{10}{400}}{TRUE}{FALSE}}}{FITSYS}{}{
+NUMPAR}{{2}{100}{8}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLOTLI
+SOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{
+2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{450}{30
+0}{25}{25}{25}{25}{50}{20}{14}{10}{12}}{PLOT}{{2}{C1_t}{}{Outl
+et Concentration Time Series}{t [s]}{C1 [mg/l]}{TIME}{0}{TRUE}
+{4000}{TRUE}{0}{TRUE}{1000}{TRUE}{0}{FALSE}{10}{FALSE}{0}{FALS
+E}{2}{FALSE}{{C1}{0}{PlugFlowReact}{0}{200}{FALSE}{VAL}{}{nume
+rical}{TRUE}{DOT}{2}{RED}{FALSE}{CIRC}{2}{BLA}{C1out}{0}{PlugF
+lowReact}{0}{0}{FALSE}{VAL}{}{analytical}{TRUE}{DASH}{2}{BLA}{
+FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

@@ -1,0 +1,52 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{FORMVAR}
+{{1}{A}{Cross-sectional area}{m^2}{0.001}}{FORMVAR}{{1}{alpha}
+{}{}{0.5}}{STATEVAR}{{1}{C}{Dissolved concentration}{mg/m^3}{V
+OL}{1e-006}{1e-006}}{PROGVAR}{{1}{calcnum}{}{}{CALC}}{FORMVAR}
+{{1}{C_crit}{}{mg/m^3}{0.01}}{FORMVAR}{{1}{K}{}{mg/m^3}{0.5}}{
+FORMVAR}{{1}{k}{Relaxation rate constant for sorption of B}{1/
+h}{100}}{FORMVAR}{{1}{Kd}{}{m^3/kg}{0.00058}}{FORMVAR}{{1}{KF}
+{}{}{0.00025}}{FORMVAR}{{1}{Qin}{}{m^3/h}{0.001}}{FORMVAR}{{1}
+{rho_s}{Density of solid material}{kg/m^3}{2300}}{STATEVAR}{{1
+}{S}{Adsorbed concentration}{mg/kg}{SURF}{1e-006}{1e-009}}{FOR
+MVAR}{{1}{Smax}{}{mg/kg}{0.00029}}{FORMVAR}{{1}{S_eq_0}{Isothe
+rm for no sorption}{mg/kg}{0}}{FORMVAR}{{1}{S_eq_Freundlich}{F
+reundlich isotherm}{mg/kg}{ if C>C_crit then KF*C^alpha else K
+F*C_crit^alpha*C/C_crit endif }}{FORMVAR}{{1}{S_eq_Langmuir}{L
+angmuir isotherm}{mg/kg}{Smax*C/(K+C)}}{FORMVAR}{{1}{S_eq_lin}
+{Linear isotherm}{mg/kg}{Kd*C}}{PROGVAR}{{1}{t}{Time}{h}{T}}{F
+ORMVAR}{{1}{theta}{Porosity}{}{0.4}}{REALLISTVAR}{{1}{C_in_1}{
+}{mg/m^3}{t}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALS
+E}{{0}{0}{0.01}{1}{0.5}{1}{0.51}{0}}}{REALLISTVAR}{{1}{C_in_2}
+{}{mg/m^3}{t}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FAL
+SE}{{0}{0}{0.01}{0.2}{0.5}{0.2}{0.51}{0}}}{VARLISTVAR}{{1}{S_e
+q}{Isotherm}{mg/kg}{calcnum}{LINEAR}{1}{{0}{S_eq_0}{1}{S_eq_li
+n}{2}{S_eq_Langmuir}{3}{S_eq_Langmuir}{4}{S_eq_Freundlich}}}{V
+ARLISTVAR}{{1}{C_in}{}{mg/m^3}{calcnum}{LINEAR}{1}{{0}{C_in_1}
+{1}{C_in_1}{2}{C_in_1}{3}{C_in_2}{4}{C_in_1}}}}{PROCSYS}{{DYNP
+ROC}{{1}{Sorption}{}{k*(S_eq-S)}{{C}{-rho_s*(1-theta)/theta}{S
+}{1}}}}{COMPSYS}{{SOILCOMP}{{4}{column}{}{0}{{C}{S}}{{Sorption
+}}{TRUE}{52}{TRUE}{0.0001}{1e-006}{1e-006}{1e-006}{0}{1}{A}{th
+eta}{FALSE}{}{}{}{Qin}{{C}{Qin*C_in}}{0}{}}}{LINKSYS}{}{CALCSY
+S}{{CALC}{{2}{calc_0}{}{0}{0}{FALSE}{{0.01}{200}}{TRUE}{FALSE}
+}{CALC}{{2}{calc_1}{}{1}{0}{FALSE}{{0.01}{200}}{TRUE}{FALSE}}{
+CALC}{{2}{calc_2}{}{2}{0}{FALSE}{{0.01}{200}}{TRUE}{FALSE}}{CA
+LC}{{2}{calc_3}{}{3}{0}{FALSE}{{0.01}{200}}{TRUE}{FALSE}}{CALC
+}{{2}{calc_4}{}{4}{0}{FALSE}{{0.01}{200}}{TRUE}{FALSE}}}{FITSY
+S}{}{NUMPAR}{{2}{1}{8}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLO
+TLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.
+5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{450}
+{300}{25}{25}{25}{25}{25}{20}{14}{10}{12}}{PLOT}{{2}{plot}{}{B
+reak through curves}{t [h]}{C [mg/m^3]}{TIME}{0}{FALSE}{2}{FAL
+SE}{0}{FALSE}{0.5}{FALSE}{0}{FALSE}{1.1}{FALSE}{0}{FALSE}{0.2}
+{FALSE}{{C}{0}{column}{0}{1}{FALSE}{VAL}{}{no sorption}{TRUE}{
+SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C}{1}{column}{0}{1}{FALSE}{V
+AL}{}{linear}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C}{2}{
+column}{0}{1}{FALSE}{VAL}{}{Langmuir}{TRUE}{DASH}{2}{GRE}{FALS
+E}{CIRC}{6}{BLA}{C}{3}{column}{0}{1}{FALSE}{VAL}{}{Langmuir}{T
+RUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C}{4}{column}{0}{1}{F
+ALSE}{VAL}{}{Freundlich}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BL
+A}}}}{STATESYS}{}}

@@ -1,0 +1,38 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C}{Concentration}{mg/l}{VOL}{1e-006}{1e-006}}{CONSTVAR}{
+{1}{K}{Half-saturatino concentration}{mg/l}{2}{0.2}{0.01}{10}{
+TRUE}{TRUE}}{CONSTVAR}{{1}{rmax}{Maximum conversion rate}{mg/l
+/h}{2}{0.2}{0.01}{10}{TRUE}{TRUE}}{PROGVAR}{{1}{t}{Time}{h}{T}
+}{REALLISTVAR}{{1}{Cmeas}{}{mg/l}{t}{TRUE}{0.03}{0.1}{0}{20}{L
+INEAR}{1}{FALSE}{FALSE}{{0}{10.5}{1.5}{8.3}{3}{7.4}{4.5}{6.2}{
+6}{4.9}{7.5}{3.2}{9}{2.4}{10.5}{1.3}{12}{0.7}{13.5}{0.1}{15}{0
+.1}}}}{PROCSYS}{{DYNPROC}{{1}{Degradation}{Degradation}{rmax*C
+/(K+C)}{{C}{-1}}}}{COMPSYS}{{MIXCOMP}{{4}{Reactor}{}{0}{{C}}{{
+Degradation}}{TRUE}{0}{}{{0}{C}{Cmeas}}{TRUE}{10}{}{0.001}{0.0
+01}{0.001}{0.001}}}{LINKSYS}{}{CALCSYS}{{CALC}{{2}{Calculation
+}{}{0}{0}{FALSE}{{0.1}{151}}{TRUE}{TRUE}}}{FITSYS}{{FIT}{{3}{F
+it1}{}{0}{0}{FALSE}{0}{1000000000}{TRUE}{{C}{Reactor}{0}{0}{FA
+LSE}{Cmeas}}}}{NUMPAR}{{2}{1}{10}{0}{TRUE}{5}{1000}{0.005}}{PL
+OTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{2.5
+}{2.5}{1}{1}{2}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCR
+OPT}{{1}{450}{300}{25}{25}{25}{25}{50}{20}{14}{10}{12}}{PLOT}{
+{2}{Conc}{}{Concentration}{time [h]}{C [mg/l]}{TIME}{0}{TRUE}{
+20}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{15}{TRUE}{0}{TRUE}{5}{TRU
+E}{{Cmeas}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{}{FALSE}{SOL}{2}{BL
+A}{TRUE}{CIRC}{4}{BLA}{C}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{}{TR
+UE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Err}{}{Error
+ Contributions}{time [h]}{Err(C) [mg/l]}{TIME}{0}{TRUE}{15}{TR
+UE}{0}{TRUE}{5}{TRUE}{-6}{TRUE}{2}{TRUE}{-6}{TRUE}{1}{TRUE}{{C
+}{0}{Reactor}{0}{0}{FALSE}{SENSERR}{K}{K}{TRUE}{SOL}{2}{RED}{F
+ALSE}{CIRC}{6}{BLA}{C}{0}{Reactor}{0}{0}{FALSE}{SENSERR}{rmax}
+{rmax}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Se
+ns}{}{Sensitivity}{time [h]}{SensAR(C) [mg/l]}{TIME}{0}{TRUE}{
+15}{TRUE}{0}{TRUE}{5}{TRUE}{-6}{TRUE}{2}{TRUE}{-6}{TRUE}{1}{TR
+UE}{{C}{0}{Reactor}{0}{0}{FALSE}{SENSAR}{K}{K}{TRUE}{SOL}{2}{R
+ED}{FALSE}{CIRC}{6}{BLA}{C}{0}{Reactor}{0}{0}{FALSE}{SENSAR}{r
+max}{rmax}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}}}}{STATESY
+S}{}}

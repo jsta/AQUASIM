@@ -1,0 +1,59 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C_A}{Concentration of substance A}{mg/l}{VOL}{1e-006}{1e
+-006}}{CONSTVAR}{{1}{C_Aini}{Initial concentration of substanc
+e A}{mg/l}{1}{0.1}{0}{10}{TRUE}{FALSE}}{STATEVAR}{{1}{C_B}{Con
+centration of substance B}{mg/l}{VOL}{1e-006}{1e-006}}{STATEVA
+R}{{1}{C_C}{Concentration of substance C}{mg/l}{VOL}{1e-006}{1
+e-006}}{CONSTVAR}{{1}{k_A}{Degradation rate constant for subst
+ance A}{1/h}{1}{0.1}{0}{10}{TRUE}{FALSE}}{CONSTVAR}{{1}{K_B}{H
+alf saturation concentration for conversion of B to C}{mg/l}{1
+}{0.1}{0}{10}{TRUE}{FALSE}}{CONSTVAR}{{1}{rmax_B}{Maximum conv
+ersion rate of substance B}{mg/l/h}{0.375}{0.0375}{0}{10}{TRUE
+}{FALSE}}}{PROCSYS}{{DYNPROC}{{1}{Conversion_AB}{Conversion of
+ substance A to B}{k_A*C_A}{{C_A}{-1}{C_B}{0.5}}}{DYNPROC}{{1}
+{Conversion_BC}{Conversion of substance B to C}{rmax_B*C_B/(K_
+B+C_B)}{{C_B}{-1}{C_C}{2}}}}{COMPSYS}{{MIXCOMP}{{4}{Reactor}{}
+{0}{{C_A}{C_B}{C_C}}{{Conversion_AB}{Conversion_BC}}{TRUE}{0}{
+}{{0}{C_A}{C_Aini}}{TRUE}{10}{}{0.001}{0.001}{0.001}{0.001}}}{
+LINKSYS}{}{CALCSYS}{{CALC}{{2}{Calculation}{}{0}{0}{FALSE}{{0.
+1}{100}}{TRUE}{TRUE}}}{FITSYS}{}{NUMPAR}{{2}{1}{1000}{0}{TRUE}
+{5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOP
+T}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRU
+E}{FALSE}}{PLOTSCROPT}{{1}{450}{300}{25}{25}{25}{25}{25}{20}{1
+4}{10}{12}}{PLOT}{{2}{Conc}{}{Concentrations of A, B and C}{ti
+me [h]}{C [mg/l]}{TIME}{0}{TRUE}{10}{TRUE}{0}{TRUE}{1}{TRUE}{0
+}{TRUE}{1}{TRUE}{0}{TRUE}{0.5}{TRUE}{{C_A}{0}{Reactor}{0}{0}{F
+ALSE}{VAL}{}{C_A}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_B}
+{0}{Reactor}{0}{0}{FALSE}{VAL}{}{C_B}{TRUE}{DASH}{2}{RED}{FALS
+E}{CIRC}{6}{BLA}{C_C}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{C_C}{TRU
+E}{DOT}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{SensAR_A}{}{S
+ensitivity Functions for A}{time [h]}{SensAR [mg/l]}{TIME}{0}{
+TRUE}{10}{TRUE}{0}{TRUE}{1}{TRUE}{-0.5}{TRUE}{1}{TRUE}{-0.5}{T
+RUE}{0.5}{TRUE}{{C_A}{0}{Reactor}{0}{0}{FALSE}{SENSAR}{C_Aini}
+{C_Aini}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_A}{0}{React
+or}{0}{0}{FALSE}{SENSAR}{k_A}{k_A}{TRUE}{LDASH}{2}{GRE}{FALSE}
+{CIRC}{6}{BLA}{C_A}{0}{Reactor}{0}{0}{FALSE}{SENSAR}{K_B}{K_B}
+{TRUE}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_A}{0}{Reactor}{0}{
+0}{FALSE}{SENSAR}{rmax_B}{rmax_B}{TRUE}{SDASH}{2}{CYA}{FALSE}{
+CIRC}{6}{BLA}}}{PLOT}{{2}{SensAR_B}{}{Sensitivity Functions fo
+r B}{time [h]}{SensAR [mg/l]}{TIME}{0}{TRUE}{10}{TRUE}{0}{TRUE
+}{1}{TRUE}{-0.3}{TRUE}{0.4}{TRUE}{-0.3}{TRUE}{0.1}{TRUE}{{C_B}
+{0}{Reactor}{0}{0}{FALSE}{SENSAR}{C_Aini}{C_Aini}{TRUE}{SOL}{2
+}{RED}{FALSE}{CIRC}{6}{BLA}{C_B}{0}{Reactor}{0}{0}{FALSE}{SENS
+AR}{k_A}{k_A}{TRUE}{LDASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_B}{0
+}{Reactor}{0}{0}{FALSE}{SENSAR}{K_B}{K_B}{TRUE}{DASH}{2}{BLU}{
+FALSE}{CIRC}{6}{BLA}{C_B}{0}{Reactor}{0}{0}{FALSE}{SENSAR}{rma
+x_B}{rmax_B}{TRUE}{SDASH}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}
+{{2}{SensAR_C}{}{Sensitivity Functions for C}{time [h]}{SensAR
+ [mg/l]}{TIME}{0}{TRUE}{10}{TRUE}{0}{TRUE}{1}{TRUE}{-0.5}{TRUE
+}{1}{TRUE}{-0.5}{TRUE}{0.5}{TRUE}{{C_C}{0}{Reactor}{0}{0}{FALS
+E}{SENSAR}{C_Aini}{C_Aini}{TRUE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{
+BLA}{C_C}{0}{Reactor}{0}{0}{FALSE}{SENSAR}{k_A}{k_A}{TRUE}{LDA
+SH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C_C}{0}{Reactor}{0}{0}{FALSE}
+{SENSAR}{K_B}{K_B}{TRUE}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_
+C}{0}{Reactor}{0}{0}{FALSE}{SENSAR}{rmax_B}{rmax_B}{TRUE}{SDAS
+H}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

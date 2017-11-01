@@ -1,0 +1,70 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C}{Concentration}{mg/l}{VOL}{1e-006}{1e-006}}{PROGVAR}{{
+1}{calcnum}{Calculation number}{}{CALC}}{CONSTVAR}{{1}{Cini1}{
+Initial conc.}{mg/l}{12}{1.2}{0}{20}{TRUE}{TRUE}}{CONSTVAR}{{1
+}{Cini2}{Initial conc.}{mg/l}{1.2}{0.12}{0}{2}{TRUE}{TRUE}}{CO
+NSTVAR}{{1}{K}{Half-saturation concentration}{mg/l}{2}{0.2}{0.
+01}{10}{TRUE}{TRUE}}{CONSTVAR}{{1}{rmax}{Maximum conversion ra
+te}{mg/l/h}{2}{0.2}{0.01}{10}{TRUE}{TRUE}}{PROGVAR}{{1}{t}{Tim
+e}{h}{T}}{VARLISTVAR}{{1}{Cini}{Initial conc.}{mg/l}{calcnum}{
+LINEAR}{1}{{1}{Cini1}{2}{Cini2}}}{REALLISTVAR}{{1}{Cmeas1}{}{m
+g/l}{t}{TRUE}{0.03}{0.1}{0}{20}{LINEAR}{1}{FALSE}{FALSE}{{0}{1
+0.5}{1.5}{8.3}{3}{7.4}{4.5}{6.2}{6}{4.9}{7.5}{3.2}{9}{2.4}{10.
+5}{1.3}{12}{0.7}{13.5}{0.1}{15}{0.1}}}{REALLISTVAR}{{1}{Cmeas2
+}{}{mg/l}{t}{TRUE}{0.03}{0.02}{0}{20}{LINEAR}{1}{FALSE}{FALSE}
+{{0}{1.08}{0.5}{0.75}{1}{0.57}{1.5}{0.45}{2}{0.31}{2.5}{0.15}{
+3}{0.13}{3.5}{0.08}{4}{0.05}{4.5}{0.02}{5}{0.02}}}}{PROCSYS}{{
+DYNPROC}{{1}{Degradation}{Degradation}{rmax*C/(K+C)}{{C}{-1}}}
+}{COMPSYS}{{MIXCOMP}{{4}{Reactor}{}{0}{{C}}{{Degradation}}{TRU
+E}{0}{}{{0}{C}{Cini}}{TRUE}{10}{}{0.001}{0.001}{0.001}{0.001}}
+}{LINKSYS}{}{CALCSYS}{{CALC}{{2}{Calculation1}{}{1}{0}{FALSE}{
+{0.1}{151}}{TRUE}{TRUE}}{CALC}{{2}{Calculation2}{}{2}{0}{FALSE
+}{{0.1}{100}}{TRUE}{TRUE}}}{FITSYS}{{FIT}{{3}{Fit1}{}{1}{0}{FA
+LSE}{0}{1000000000}{TRUE}{{C}{Reactor}{0}{0}{FALSE}{Cmeas1}}}{
+FIT}{{3}{Fit2}{}{2}{0}{FALSE}{0}{1000000000}{TRUE}{{C}{Reactor
+}{0}{0}{FALSE}{Cmeas2}}}}{NUMPAR}{{2}{1}{10}{0}{TRUE}{5}{1000}
+{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4
+}{TRUE}{2.5}{2.5}{1}{1}{2}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALS
+E}}{PLOTSCROPT}{{1}{450}{300}{25}{25}{25}{25}{50}{20}{14}{10}{
+12}}{PLOT}{{2}{Conc1}{}{Conc. Exp. 1}{time [h]}{C [mg/l]}{TIME
+}{0}{TRUE}{15}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{15}{TRUE}{0}{T
+RUE}{5}{TRUE}{{Cmeas1}{1}{Reactor}{0}{0}{FALSE}{VAL}{}{}{FALSE
+}{SOL}{2}{BLA}{TRUE}{CIRC}{4}{BLA}{C}{1}{Reactor}{0}{0}{FALSE}
+{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{
+Conc2}{}{Conc. Exp. 2}{time [h]}{C [mg/l]}{TIME}{0}{TRUE}{10}{
+TRUE}{0}{TRUE}{1}{TRUE}{0}{TRUE}{1.5}{TRUE}{0}{TRUE}{0.5}{TRUE
+}{{Cmeas2}{2}{Reactor}{0}{0}{FALSE}{VAL}{}{}{FALSE}{SOL}{2}{BL
+A}{TRUE}{CIRC}{4}{BLA}{C}{2}{Reactor}{0}{0}{FALSE}{VAL}{}{}{TR
+UE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Err1}{}{Erro
+r Contributions for Exp. 1}{time [h]}{SensAR(C) [mg/l]}{TIME}{
+0}{TRUE}{15}{TRUE}{0}{TRUE}{5}{TRUE}{-10}{TRUE}{15}{TRUE}{-10}
+{TRUE}{5}{TRUE}{{C}{1}{Reactor}{0}{0}{FALSE}{SENSERR}{K}{K}{TR
+UE}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C}{1}{Reactor}{0}{0}{FAL
+SE}{SENSERR}{rmax}{rmax}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{B
+LA}{C}{1}{Reactor}{0}{0}{FALSE}{SENSERR}{Cini1}{Cini}{TRUE}{DO
+T}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Err2}{}{Error Cont
+ributions for Exp. 2}{time [h]}{SensAR(C) [mg/l]}{TIME}{0}{TRU
+E}{15}{TRUE}{0}{TRUE}{5}{TRUE}{-10}{TRUE}{15}{TRUE}{-10}{TRUE}
+{5}{TRUE}{{C}{2}{Reactor}{0}{0}{FALSE}{SENSERR}{K}{K}{TRUE}{SO
+L}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C}{2}{Reactor}{0}{0}{FALSE}{SE
+NSERR}{rmax}{rmax}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C}
+{2}{Reactor}{0}{0}{FALSE}{SENSERR}{Cini2}{Cini}{TRUE}{DOT}{2}{
+BLU}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Sens1}{}{Sensitivities f
+or Exp. 1}{time [h]}{SensAR(C) [mg/l]}{TIME}{0}{TRUE}{15}{TRUE
+}{0}{TRUE}{5}{TRUE}{-10}{TRUE}{15}{TRUE}{-10}{TRUE}{5}{TRUE}{{
+C}{1}{Reactor}{0}{0}{FALSE}{SENSAR}{K}{K}{TRUE}{SOL}{2}{RED}{F
+ALSE}{CIRC}{6}{BLA}{C}{1}{Reactor}{0}{0}{FALSE}{SENSAR}{rmax}{
+rmax}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C}{1}{Reactor}{
+0}{0}{FALSE}{SENSAR}{Cini1}{Cini}{TRUE}{DOT}{2}{BLU}{FALSE}{CI
+RC}{6}{BLA}}}{PLOT}{{2}{Sens2}{}{Sensitivities for Exp. 2}{tim
+e [h]}{SensAR(C) [mg/l]}{TIME}{0}{TRUE}{10}{TRUE}{0}{TRUE}{1}{
+TRUE}{-0.5}{TRUE}{1.5}{TRUE}{-0.5}{TRUE}{0.5}{TRUE}{{C}{2}{Rea
+ctor}{0}{0}{FALSE}{SENSAR}{K}{K}{TRUE}{SOL}{2}{RED}{FALSE}{CIR
+C}{6}{BLA}{C}{2}{Reactor}{0}{0}{FALSE}{SENSAR}{rmax}{rmax}{TRU
+E}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C}{2}{Reactor}{0}{0}{FAL
+SE}{SENSAR}{Cini2}{Cini}{TRUE}{DOT}{2}{BLU}{FALSE}{CIRC}{6}{BL
+A}}}}{STATESYS}{}}

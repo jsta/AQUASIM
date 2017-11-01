@@ -1,0 +1,27 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C}{}{}{VOL}{1e-006}{1e-006}}{FORMVAR}{{1}{D}{}{}{0.1}}{F
+ORMVAR}{{1}{Qin}{}{}{1}}{PROGVAR}{{1}{t}{}{}{T}}{REALLISTVAR}{
+{1}{Cin}{}{}{t}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{F
+ALSE}{{0}{0}{0.01}{1}{1}{1}{1.01}{0}}}}{PROCSYS}{}{COMPSYS}{{A
+DVCOMP}{{5}{column}{}{0}{{C}}{}{TRUE}{Qin}{{C}{Qin*Cin}}{}{0}{
+}{102}{TRUE}{0.001}{1e-006}{1e-006}{1e-006}{0}{1}{1}{TRUE}{D}{
+}}{MIXCOMP}{{4}{sampler}{}{0}{{C}}{}{TRUE}{0}{}{}{TRUE}{0.01}{
+}{0.001}{0.001}{0.001}{0.001}}}{LINKSYS}{{ADVLINK}{{2}{link}{}
+{0}{column}{0}{sampler}{0}{}}}{CALCSYS}{{CALC}{{2}{calc}{}{0}{
+0}{FALSE}{{0.01}{300}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR}{{2}{1}
+{10}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{4}{TA
+B}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}{10}{8}{8}
+{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{500}{300}{25}{25}{25}{
+25}{85}{16}{14}{10}{10}}{PLOT}{{2}{C_t}{}{}{t}{C}{TIME}{-0.5}{
+FALSE}{3}{FALSE}{0}{FALSE}{0.5}{FALSE}{0}{FALSE}{1.2}{FALSE}{0
+}{FALSE}{0.2}{FALSE}{{Cin}{0}{column}{0}{0}{FALSE}{VAL}{}{Cin 
+(flux-averaged)}{TRUE}{LDASH}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C}{
+0}{column}{0}{0}{FALSE}{VAL}{}{C at inlet (resident)}{TRUE}{DA
+SH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C}{0}{column}{0}{1}{FALSE}{VA
+L}{}{C at outlet (resident)}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{
+6}{BLA}{C}{0}{sampler}{0}{0}{FALSE}{VAL}{}{Cout (flux-averaged
+)}{TRUE}{DOT}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

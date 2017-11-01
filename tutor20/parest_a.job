@@ -1,0 +1,5 @@
+-e parest_1.log parest_a.aqu res.aqu parest_1.fit
+-e parest_2.log res.aqu      res.aqu parest_2.fit
+-e parest_3.log res.aqu      res.aqu parest_3.fit
+-a parest_4.log res.aqu      res.aqu parest_a.ran parest_a.sen parest_a.def
+-p parest_5.log res.aqu      parest_a.plt

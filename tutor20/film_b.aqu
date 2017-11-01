@@ -1,0 +1,79 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{FORMVAR}
+{{1}{b_X1}{Resp. rate of X1}{1/d}{0.05}}{FORMVAR}{{1}{b_X2}{Re
+sp. rate of X2}{1/d}{0.002}}{FORMVAR}{{1}{D_S1}{Diffusivity of
+ S1}{m^2/d}{2e-005}}{FORMVAR}{{1}{D_S2}{Diffusivity of S2}{m^2
+/d}{2e-005}}{FORMVAR}{{1}{D_X}{Diffusivity of X1/2}{m^2/d}{1e-
+007}}{FORMVAR}{{1}{K_S1}{Half-saturation concentration of S1}{
+gCOD/m^3}{5}}{FORMVAR}{{1}{K_S2}{Half-saturation concentration
+ of S2}{gCOD/m^3}{5}}{PROGVAR}{{1}{LF}{Biofilm thickness}{m}{L
+F}}{FORMVAR}{{1}{LL}{Thickness of boundary layer}{m}{0.0001}}{
+FORMVAR}{{1}{mu_X1}{Maximum specific growth rate of X1}{1/d}{0
+.4}}{FORMVAR}{{1}{mu_X2}{Maximum specific growth rate of X2}{1
+/d}{0.1}}{FORMVAR}{{1}{Qin}{Water inflow}{m^3/d}{1}}{FORMVAR}{
+{1}{rho}{Bacterial density}{gCOD/m^3}{25000}}{STATEVAR}{{1}{S1
+}{Conc. of substr. 1}{gCOD/m^3}{VOL}{1e-006}{1e-006}}{FORMVAR}
+{{1}{S1in}{Inflow conc. of S1}{gCOD/m^3}{10}}{STATEVAR}{{1}{S2
+}{Conc. of substr. 2}{gCOD/m^3}{VOL}{1e-006}{1e-006}}{FORMVAR}
+{{1}{S2in}{Inflow conc. of S2}{gCOD/m^3}{10}}{PROGVAR}{{1}{uF}
+{Growth velocity of biofilm}{m/d}{UF}}{STATEVAR}{{1}{X1}{Conc.
+ of organ. 1}{gCOD/m^3}{VOL}{1e-006}{1e-006}}{STATEVAR}{{1}{X2
+}{Conc. of organ. 2}{gCOD/m^3}{VOL}{1e-006}{1e-006}}{FORMVAR}{
+{1}{Y1}{Yield of X1 on S1}{}{0.01}}{FORMVAR}{{1}{Y2}{Yield of 
+X2 on S2}{}{0.5}}{FORMVAR}{{1}{eps_X1}{Volume fract. of X1}{}{
+X1/rho}}{FORMVAR}{{1}{eps_X2}{Volume fract. of X2}{}{X2/rho}}}
+{PROCSYS}{{DYNPROC}{{1}{Gro_X1}{Growth of X1}{mu_X1*S1/(K_S1+S
+1)*X1}{{X1}{1}{S1}{-1/Y1}}}{DYNPROC}{{1}{Gro_X2}{Growth of X2}
+{mu_X2*S2/(K_S2+S2)*X2}{{X2}{1}{S2}{-1/Y2}}}{DYNPROC}{{1}{Resp
+_X1}{Respiration of X1}{b_X1*X1}{{X1}{-1}}}{DYNPROC}{{1}{Resp_
+X2}{Respiration of X2}{b_X2*X2}{{X2}{-1}}}}{COMPSYS}{{FILMCOMP
+}{{5}{Reactor}{Biofilm reactor}{0}{{S1}{S2}{X1}{X2}}{{Gro_X1}{
+Gro_X2}{Resp_X1}{Resp_X2}}{TRUE}{Qin}{{S1}{Qin*S1in}{S2}{Qin*S
+2in}}{{1}{LF}{0.0001}{1}{X1}{0.1*rho}{1}{X2}{0.1*rho}}{{X1}{rh
+o}{0}{0}{0}{0}{LL/D_X}{0}{0}{X2}{rho}{0}{0}{0}{0}{LL/D_X}{0}{0
+}}{{S1}{LL/D_S1}{D_S1}{S2}{LL/D_S2}{D_S2}}{FALSE}{0.1}{0.001}{
+FALSE}{FALSE}{TRUE}{ if uF>0 then 0.5*uF else 0 endif }{1}{0}{
+10}{FALSE}{0.001}{0.001}{0.001}{0.001}{0.001}{1e-007}{0.001}{0
+.001}}}{LINKSYS}{}{CALCSYS}{{CALC}{{2}{calc}{}{0}{0}{FALSE}{{1
+}{50}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR}{{2}{1}{1000}{0}{TRUE}{
+5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT
+}{{2}{A4}{TRUE}{2.5}{2.5}{1}{1}{2}{2}{4}{10}{8}{8}{8}{TRUE}{TR
+UE}{FALSE}}{PLOTSCROPT}{{1}{450}{300}{25}{15}{25}{15}{35}{20}{
+14}{12}{14}}{PLOT}{{2}{LF_t}{}{Biofilm Thickness}{time [h]}{LF
+ [m]}{TIME}{0}{TRUE}{50}{TRUE}{0}{TRUE}{10}{TRUE}{0}{TRUE}{0.0
+004}{TRUE}{0}{TRUE}{5e-005}{TRUE}{{LF}{0}{Reactor}{1}{0}{FALSE
+}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}
+{S_z}{}{Substrate Profiles}{z [m]}{S [gCOD/m^3]}{SPACE}{0}{FAL
+SE}{0.0004}{FALSE}{0}{FALSE}{0.0001}{FALSE}{0}{TRUE}{10}{TRUE}
+{0}{TRUE}{1}{TRUE}{{S1}{0}{Reactor}{2}{10}{FALSE}{VAL}{}{S1, 1
+0 d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{S1}{0}{Reactor}{0
+}{10}{FALSE}{VAL}{}{}{FALSE}{SOL}{2}{BLA}{TRUE}{CIRC}{6}{BLA}{
+S1}{0}{Reactor}{2}{25}{FALSE}{VAL}{}{S1, 25 d}{TRUE}{LDASH}{2}
+{RED}{FALSE}{CIRC}{6}{BLA}{S1}{0}{Reactor}{0}{25}{FALSE}{VAL}{
+}{}{FALSE}{SOL}{2}{BLA}{TRUE}{CIRC}{6}{RED}{S1}{0}{Reactor}{2}
+{50}{FALSE}{VAL}{}{S1, 50 d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{
+6}{BLA}{S1}{0}{Reactor}{0}{50}{FALSE}{VAL}{}{}{FALSE}{SOL}{2}{
+BLA}{TRUE}{CIRC}{6}{GRE}{S2}{0}{Reactor}{2}{10}{FALSE}{VAL}{}{
+S2, 10 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{S2}{0}{Rea
+ctor}{0}{10}{FALSE}{VAL}{}{}{FALSE}{SOL}{2}{BLA}{TRUE}{CIRC}{6
+}{BLU}{S2}{0}{Reactor}{2}{25}{FALSE}{VAL}{}{S2, 25 d}{TRUE}{DO
+T}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{S2}{0}{Reactor}{0}{25}{FALSE}{
+VAL}{}{}{FALSE}{SOL}{2}{BLA}{TRUE}{CIRC}{6}{CYA}{S2}{0}{Reacto
+r}{2}{50}{FALSE}{VAL}{}{S2, 50 d}{TRUE}{LDD}{2}{MAG}{FALSE}{CI
+RC}{6}{BLA}{S2}{0}{Reactor}{0}{50}{FALSE}{VAL}{}{}{FALSE}{SOL}
+{2}{BLA}{TRUE}{CIRC}{6}{MAG}}}{PLOT}{{2}{X_z}{}{Bacteria Profi
+les X}{z [m]}{eps_X [-]}{SPACE}{0}{FALSE}{0.0004}{FALSE}{0}{FA
+LSE}{0.0001}{FALSE}{0}{TRUE}{0.2}{TRUE}{0}{TRUE}{0.05}{TRUE}{{
+eps_X1}{0}{Reactor}{1}{10}{FALSE}{VAL}{}{X1, 10 d}{TRUE}{SOL}{
+2}{BLA}{FALSE}{CIRC}{6}{BLA}{eps_X1}{0}{Reactor}{1}{25}{FALSE}
+{VAL}{}{X1, 25 d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{ep
+s_X1}{0}{Reactor}{1}{50}{FALSE}{VAL}{}{X1, 50 d}{TRUE}{DASH}{2
+}{GRE}{FALSE}{CIRC}{6}{BLA}{eps_X2}{0}{Reactor}{1}{10}{FALSE}{
+VAL}{}{X2, 10 d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{eps
+_X2}{0}{Reactor}{1}{25}{FALSE}{VAL}{}{X2, 25 d}{TRUE}{DOT}{2}{
+CYA}{FALSE}{CIRC}{6}{BLA}{eps_X2}{0}{Reactor}{1}{50}{FALSE}{VA
+L}{}{X2, 50 d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}}}}{STAT
+ESYS}{}}

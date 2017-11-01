@@ -1,0 +1,64 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{FORMVAR}
+{{1}{A}{Cross-sectional area}{m^2}{0.001}}{FORMVAR}{{1}{alpha}
+{}{}{0.5}}{STATEVAR}{{1}{C}{Dissolved concentration}{mg/m^3}{V
+OL}{1e-006}{1e-006}}{PROGVAR}{{1}{calcnum}{}{}{CALC}}{FORMVAR}
+{{1}{C_crit}{}{mg/m^3}{0.01}}{FORMVAR}{{1}{f_im_sorption}{Frac
+tion of immobile sorption sites}{}{0.5}}{FORMVAR}{{1}{f_im_the
+ta}{Fraction of immobile pore volume}{}{0.1}}{FORMVAR}{{1}{K}{
+}{mg/m^3}{0.5}}{FORMVAR}{{1}{k}{Relaxation rate constant for s
+orption of B}{1/h}{10000}}{FORMVAR}{{1}{Kd}{}{m^3/kg}{0.00058}
+}{FORMVAR}{{1}{KF}{}{}{0.00025}}{FORMVAR}{{1}{Qin}{}{m^3/h}{0.
+001}}{FORMVAR}{{1}{q_ex}{}{m^2/h}{0.025}}{FORMVAR}{{1}{rho_s}{
+Density of solid material}{kg/m^3}{2300}}{STATEVAR}{{1}{S}{Ads
+orbed concentration}{mg/kg}{SURF}{1e-006}{1e-009}}{FORMVAR}{{1
+}{Smax}{}{mg/kg}{0.00029}}{FORMVAR}{{1}{S_eq_0}{Isotherm for n
+o sorption}{mg/kg}{0}}{FORMVAR}{{1}{S_eq_Freundlich}{Freundlic
+h isotherm}{mg/kg}{ if C>C_crit then KF*C^alpha else KF*C_crit
+^alpha*C/C_crit endif }}{FORMVAR}{{1}{S_eq_Langmuir}{Langmuir 
+isotherm}{mg/kg}{Smax*C/(K+C)}}{FORMVAR}{{1}{S_eq_lin}{Linear 
+isotherm}{mg/kg}{Kd*C}}{PROGVAR}{{1}{t}{Time}{h}{T}}{FORMVAR}{
+{1}{theta}{Porosity}{}{0.4}}{FORMVAR}{{1}{theta_im}{Porosity o
+f immobile zone}{}{f_im_theta*theta}}{FORMVAR}{{1}{theta_mob}{
+Porosity of mobile zone}{}{(1-f_im_theta)*theta}}{PROGVAR}{{1}
+{zoneind}{Zone index}{}{ZONE}}{REALLISTVAR}{{1}{C_in_1}{}{mg/m
+^3}{t}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{0}
+{0}{0.01}{1}{0.5}{1}{0.51}{0}}}{REALLISTVAR}{{1}{C_in_2}{}{mg/
+m^3}{t}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{0
+}{0}{0.01}{0.2}{0.5}{0.2}{0.51}{0}}}{VARLISTVAR}{{1}{S_eq}{Iso
+therm}{mg/kg}{calcnum}{LINEAR}{1}{{0}{S_eq_0}{1}{S_eq_lin}{2}{
+S_eq_Langmuir}{3}{S_eq_Langmuir}{4}{S_eq_Freundlich}}}{FORMVAR
+}{{1}{S_eq_im}{Isotherm for immobile zone}{mg/kg}{f_im_sorptio
+n*S_eq}}{FORMVAR}{{1}{S_eq_mob}{Isotherm for mobile zone}{mg/k
+g}{(1-f_im_sorption)*S_eq}}{VARLISTVAR}{{1}{S_eq_zone}{Isother
+m}{mg/kg}{zoneind}{LINEAR}{1}{{0}{S_eq_mob}{1}{S_eq_im}}}{VARL
+ISTVAR}{{1}{theta_zone}{Porosity of zones}{}{zoneind}{LINEAR}{
+1}{{0}{theta_mob}{1}{theta_im}}}{VARLISTVAR}{{1}{C_in}{}{mg/m^
+3}{calcnum}{LINEAR}{1}{{0}{C_in_1}{1}{C_in_1}{2}{C_in_1}{3}{C_
+in_2}{4}{C_in_1}}}}{PROCSYS}{{DYNPROC}{{1}{Sorption}{}{k*(S_eq
+_zone-S)}{{C}{-rho_s*(1-theta)/theta_zone}{S}{1}}}}{COMPSYS}{{
+SOILCOMP}{{4}{column}{}{0}{{C}{S}}{{Sorption}}{TRUE}{52}{TRUE}
+{0.0001}{1e-006}{1e-006}{1e-006}{0}{1}{A}{theta_mob}{FALSE}{}{
+{{immob}{}{{{1}{theta_im}{{C}{q_ex}{1}}}}}}{}{Qin}{{C}{Qin*C_i
+n}}{0}{}}}{LINKSYS}{}{CALCSYS}{{CALC}{{2}{calc_0}{}{0}{0}{FALS
+E}{{0.01}{200}}{TRUE}{FALSE}}{CALC}{{2}{calc_1}{}{1}{0}{FALSE}
+{{0.01}{200}}{TRUE}{FALSE}}{CALC}{{2}{calc_2}{}{2}{0}{FALSE}{{
+0.01}{200}}{TRUE}{FALSE}}{CALC}{{2}{calc_3}{}{3}{0}{FALSE}{{0.
+01}{200}}{TRUE}{FALSE}}{CALC}{{2}{calc_4}{}{4}{0}{FALSE}{{0.01
+}{200}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR}{{2}{1}{8}{0}{TRUE}{5}
+{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{
+{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{
+FALSE}}{PLOTSCROPT}{{1}{450}{300}{25}{25}{25}{25}{25}{20}{14}{
+10}{12}}{PLOT}{{2}{plot}{}{Break through curves}{t [h]}{C [mg/
+m^3]}{TIME}{0}{FALSE}{2}{FALSE}{0}{FALSE}{0.5}{FALSE}{0}{FALSE
+}{1.1}{FALSE}{0}{FALSE}{0.2}{FALSE}{{C}{0}{column}{0}{1}{FALSE
+}{VAL}{}{no sorption}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{
+C}{1}{column}{0}{1}{FALSE}{VAL}{}{linear}{TRUE}{LDASH}{2}{RED}
+{FALSE}{CIRC}{6}{BLA}{C}{2}{column}{0}{1}{FALSE}{VAL}{}{Langmu
+ir}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{C}{3}{column}{0}{
+1}{FALSE}{VAL}{}{Langmuir}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6
+}{BLA}{C}{4}{column}{0}{1}{FALSE}{VAL}{}{Freundlich}{TRUE}{DOT
+}{2}{CYA}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

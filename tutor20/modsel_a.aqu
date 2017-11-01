@@ -1,0 +1,121 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C1}{Concentration of substrate 1}{mg/l}{VOL}{1e-006}{1e-
+006}}{STATEVAR}{{1}{C2}{Concentration of substrate 2}{mg/l}{VO
+L}{1e-006}{1e-006}}{PROGVAR}{{1}{calcnum}{Calculation number}{
+}{CALC}}{CONSTVAR}{{1}{M1_C1ini}{Initial value for concentrati
+on of substrate 1 for model 1}{mg/l}{1}{0.1}{0}{100}{FALSE}{FA
+LSE}}{CONSTVAR}{{1}{M1_k1}{Specific degradation rate of substr
+ate 1 for model 1}{1/h}{1}{0.1}{0}{100}{FALSE}{FALSE}}{CONSTVA
+R}{{1}{M2_C1ini}{Initial value for concentration of substrate 
+1 for model 2}{mg/l}{1}{0.1}{0}{100}{FALSE}{FALSE}}{CONSTVAR}{
+{1}{M2_K1}{Half-saturation concentration of sustrate 1 for mod
+el 2}{mg/l}{1}{0.1}{0.1}{100}{FALSE}{FALSE}}{CONSTVAR}{{1}{M2_
+rmax1}{Maximum degradation rate of substrate 1 for model 2}{mg
+/l/h}{1}{0.1}{0}{100}{FALSE}{FALSE}}{CONSTVAR}{{1}{M3_C1ini}{I
+nitial value for concentration of substrate 1 for model 3}{mg/
+l}{1}{0.1}{0}{100}{FALSE}{FALSE}}{CONSTVAR}{{1}{M3_C2ini}{Init
+ial value for concentration of substrate 2 for model 3}{mg/l}{
+1}{0.1}{0}{100}{FALSE}{FALSE}}{CONSTVAR}{{1}{M3_k1}{Specific d
+egradation rate of substrate 1 for model 3}{1/h}{1}{0.1}{0}{10
+0}{FALSE}{FALSE}}{CONSTVAR}{{1}{M3_k2}{Specific degradation ra
+te of substrate 2 for model 3}{1/h}{1}{0.1}{0}{100}{FALSE}{FAL
+SE}}{CONSTVAR}{{1}{M4_C1ini}{Initial value for concentration o
+f substrate 1 for model 4}{mg/l}{1}{0.1}{0}{100}{FALSE}{TRUE}}
+{CONSTVAR}{{1}{M4_C2ini}{Initial value for concentration of su
+bstrate 2 for model 4}{mg/l}{1}{0.1}{0}{100}{FALSE}{TRUE}}{CON
+STVAR}{{1}{M4_k1}{Specific degradation rate of substrate 1 for
+ model 4}{1/h}{1}{0.1}{0}{10}{FALSE}{TRUE}}{CONSTVAR}{{1}{M4_K
+2}{Half-saturation concentration of substrate 2 for model 4}{m
+g/l/h}{1}{0.1}{0.1}{100}{FALSE}{TRUE}}{CONSTVAR}{{1}{M4_rmax2}
+{Maximum degradation rate of substrate 2 for model 4}{mg/l/h}{
+1}{0.1}{0}{100}{FALSE}{TRUE}}{CONSTVAR}{{1}{M5_C1ini}{Initial 
+value for concentration of substrate 1 for model 5}{mg/l}{1}{0
+.1}{0}{100}{FALSE}{FALSE}}{CONSTVAR}{{1}{M5_C2ini}{Initial val
+ue for concentration of substrate 2 for model 5}{mg/l}{1}{0.1}
+{0}{100}{FALSE}{FALSE}}{CONSTVAR}{{1}{M5_K1}{Half-saturation c
+oncentration of substrate 1 for model 5}{mg/l}{1}{0.1}{0.1}{10
+0}{FALSE}{FALSE}}{CONSTVAR}{{1}{M5_K2}{Half-saturation concent
+ration of substrate 2 for model 5}{mg/l}{1}{0.1}{0.1}{100}{FAL
+SE}{FALSE}}{CONSTVAR}{{1}{M5_rmax1}{Maximum degradation rate o
+f substrate 1 for model 5}{mg/l/h}{1}{0.1}{0}{100}{FALSE}{FALS
+E}}{CONSTVAR}{{1}{M5_rmax2}{Maximum degradation rate of substr
+ate 2 for model 5}{mg/l/h}{1}{0.1}{0}{100}{FALSE}{FALSE}}{FORM
+VAR}{{1}{r1_M1}{Degradation rate of substrate 1 for model 1}{m
+g/l/h}{M1_k1*C1}}{FORMVAR}{{1}{r1_M2}{Degradation rate of subs
+trate 1 for model 2}{mg/l/h}{M2_rmax1*C1/(M2_K1+C1)}}{FORMVAR}
+{{1}{r1_M3}{Degradation rate of substrate 1 for model 3}{mg/l/
+h}{M3_k1*C1}}{FORMVAR}{{1}{r1_M4}{Degradation rate of substrat
+e 1 for model 4}{mg/l/h}{M4_k1*C1}}{FORMVAR}{{1}{r1_M5}{Degrad
+ation rate of substrate 1 for model 5}{mg/l/h}{M5_rmax1*C1/(M5
+_K1+C1)}}{FORMVAR}{{1}{r2_M3}{Degradation rate of substrate 2 
+for model 3}{mg/l/h}{M3_k2*C2}}{FORMVAR}{{1}{r2_M4}{Degradatio
+n rate of substrate 2 for model 4}{mg/l/h}{M4_rmax2*C2/(M4_K2+
+C2)}}{FORMVAR}{{1}{r2_M5}{Degradation rate of substrate 2 for 
+model 5}{mg/l/h}{M5_rmax2*C2/(M5_K2+C2)}}{PROGVAR}{{1}{t}{Time
+}{h}{T}}{FORMVAR}{{1}{Y}{Yield}{}{0.67}}{FORMVAR}{{1}{zero}{Ze
+ro}{}{0}}{VARLISTVAR}{{1}{C1ini}{Initial value for concentrati
+on of substrate 1}{mg/l}{calcnum}{LINEAR}{1}{{1}{M1_C1ini}{2}{
+M2_C1ini}{3}{M3_C1ini}{4}{M4_C1ini}{5}{M5_C1ini}}}{VARLISTVAR}
+{{1}{C2ini}{Initial value for concentration of substrate 2}{mg
+/l}{calcnum}{LINEAR}{1}{{1}{zero}{2}{zero}{3}{M3_C2ini}{4}{M4_
+C2ini}{5}{M5_C2ini}}}{VARLISTVAR}{{1}{r1}{Degradation rate of 
+substrate 1}{mg/l/h}{calcnum}{LINEAR}{1}{{1}{r1_M1}{2}{r1_M2}{
+3}{r1_M3}{4}{r1_M4}{5}{r1_M5}}}{VARLISTVAR}{{1}{r2}{Degradatio
+n rate of substrate 2}{mg/l/h}{calcnum}{LINEAR}{1}{{1}{zero}{2
+}{zero}{3}{r2_M3}{4}{r2_M4}{5}{r2_M5}}}{FORMVAR}{{1}{resp_calc
+}{Oxygen uptake rate calculated by the model}{mg/l/h}{(1-Y)*(r
+1+r2)}}{REALLISTVAR}{{1}{resp_meas}{Measured oxygen uptake rat
+es}{mg/l/h}{t}{TRUE}{0}{0.5}{0}{1000000000}{LINEAR}{1}{FALSE}{
+FALSE}{{0}{13.5409}{0.2}{14.0013}{0.4}{13.04085}{0.6}{11.8243}
+{0.8}{11.1471}{1}{8.9011}{1.2}{6.29325}{1.4}{3.99585}{1.6}{3.2
+4105}{1.8}{2.4407}{2}{1.59015}{2.2}{2.10765}{2.4}{1.38195}{2.6
+}{0.9999}{2.8}{1.0105}{3}{0.80955}{3.2}{0.90445}{3.4}{1.19445}
+{3.6}{0.29455}{3.8}{0.9236}{4}{1.2432}{4.2}{0.6873}{4.4}{0.905
+55}{4.6}{0.4751}{4.8}{1.46285}{5}{0.9929}}}}{PROCSYS}{{DYNPROC
+}{{1}{Degrad1}{Degradation of substrate 1}{r1}{{C1}{-1}}}{DYNP
+ROC}{{1}{Degrad2}{Degradation of substrate 2}{r2}{{C2}{-1}}}}{
+COMPSYS}{{MIXCOMP}{{4}{reactor}{}{0}{{C1}{C2}}{{Degrad1}{Degra
+d2}}{TRUE}{0}{}{{0}{C1}{C1ini}{0}{C2}{C2ini}}{TRUE}{1}{}{0.001
+}{0.001}{0.001}{0.001}}}{LINKSYS}{}{CALCSYS}{{CALC}{{2}{Calcul
+ation1}{}{1}{0}{FALSE}{{0.02}{250}}{TRUE}{FALSE}}{CALC}{{2}{Ca
+lculation2}{}{2}{0}{FALSE}{{0.02}{250}}{TRUE}{FALSE}}{CALC}{{2
+}{Calculation3}{}{3}{0}{FALSE}{{0.02}{250}}{TRUE}{FALSE}}{CALC
+}{{2}{Calculation4}{}{4}{0}{FALSE}{{0.02}{250}}{TRUE}{FALSE}}{
+CALC}{{2}{Calculation5}{}{5}{0}{FALSE}{{0.02}{250}}{TRUE}{FALS
+E}}}{FITSYS}{{FIT}{{3}{Fit1}{}{1}{0}{FALSE}{0}{1000000000}{FAL
+SE}{{resp_calc}{reactor}{0}{0}{FALSE}{resp_meas}}}{FIT}{{3}{Fi
+t2}{}{2}{0}{FALSE}{0}{1000000000}{FALSE}{{resp_calc}{reactor}{
+0}{0}{FALSE}{resp_meas}}}{FIT}{{3}{Fit3}{}{3}{0}{FALSE}{0}{100
+0000000}{FALSE}{{resp_calc}{reactor}{0}{0}{FALSE}{resp_meas}}}
+{FIT}{{3}{Fit4}{}{4}{0}{FALSE}{0}{1000000000}{TRUE}{{resp_calc
+}{reactor}{0}{0}{FALSE}{resp_meas}}}{FIT}{{3}{Fit5}{}{5}{0}{FA
+LSE}{0}{1000000000}{FALSE}{{resp_calc}{reactor}{0}{0}{FALSE}{r
+esp_meas}}}}{NUMPAR}{{2}{1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PL
+OTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{
+1}{1}{1}{2.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROP
+T}{{1}{450}{300}{25}{25}{25}{25}{50}{20}{14}{10}{12}}{PLOT}{{2
+}{Resp_12345}{Comparison of model and data}{Respiration}{Time 
+[h]}{OUR [mg/l/h]}{TIME}{0}{TRUE}{5}{TRUE}{0}{TRUE}{1}{TRUE}{0
+}{TRUE}{15}{TRUE}{0}{TRUE}{5}{TRUE}{{resp_meas}{1}{reactor}{0}
+{0}{FALSE}{VAL}{C1}{Data}{FALSE}{SOL}{2}{BLA}{TRUE}{CIRC}{3}{B
+LA}{resp_calc}{1}{reactor}{0}{0}{FALSE}{VAL}{C1}{Model 1}{TRUE
+}{SOL}{2}{RED}{FALSE}{CIRC}{6}{BLA}{resp_calc}{2}{reactor}{0}{
+0}{FALSE}{VAL}{}{Model 2}{TRUE}{LDASH}{2}{GRE}{FALSE}{CIRC}{6}
+{BLA}{resp_calc}{3}{reactor}{0}{0}{FALSE}{VAL}{}{Model 3}{TRUE
+}{DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{resp_calc}{4}{reactor}{0}
+{0}{FALSE}{VAL}{}{Model 4}{TRUE}{SDASH}{2}{CYA}{FALSE}{CIRC}{6
+}{BLA}{resp_calc}{5}{reactor}{0}{0}{FALSE}{VAL}{}{Model 5}{TRU
+E}{DOT}{2}{MAG}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Resp_124}{Com
+parison of model and data}{Respiration}{Time [h]}{OUR [mg/l/h]
+}{TIME}{0}{TRUE}{5}{TRUE}{0}{TRUE}{1}{TRUE}{0}{TRUE}{20}{TRUE}
+{0}{TRUE}{5}{TRUE}{{resp_meas}{1}{reactor}{0}{0}{FALSE}{VAL}{C
+1}{Data}{FALSE}{SOL}{2}{BLA}{TRUE}{CIRC}{3}{BLA}{resp_calc}{1}
+{reactor}{0}{0}{FALSE}{VAL}{C1}{Model 1}{TRUE}{SOL}{2}{RED}{FA
+LSE}{CIRC}{6}{BLA}{resp_calc}{2}{reactor}{0}{0}{FALSE}{VAL}{}{
+Model 2}{TRUE}{LDASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{resp_calc}{
+4}{reactor}{0}{0}{FALSE}{VAL}{}{Model 4}{TRUE}{SDASH}{2}{CYA}{
+FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

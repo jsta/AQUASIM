@@ -1,0 +1,271 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{FORMVAR}
+{{1}{alpha_P}{}{}{0.01}}{STATEVAR}{{1}{C_PO4}{}{gP/m^3}{VOL}{1
+e-006}{1e-006}}{FORMVAR}{{1}{C_PO4_in}{}{mg/l}{0.05}}{FORMVAR}
+{{1}{D}{}{m^2/d}{0.0001}}{FORMVAR}{{1}{k_min}{}{1/d}{0.02}}{FO
+RMVAR}{{1}{k_prod}{}{1/d}{0.5}}{FORMVAR}{{1}{Qin}{}{m^3/d}{10*
+86400}}{FORMVAR}{{1}{rho_org}{}{g/m^3}{100000}}{STATEVAR}{{1}{
+X_Algae}{}{g/m^3}{VOL}{1e-006}{1e-006}}{STATEVAR}{{1}{X_Inert}
+{}{g/m^3}{VOL}{1e-006}{1e-006}}{FORMVAR}{{1}{X_tot}{}{g/m^3}{X
+_Algae+X_Inert}}{PROGVAR}{{1}{z}{}{m}{Z}}{PROGVAR}{{1}{zoneind
+}{}{}{ZONE}}{REALLISTVAR}{{1}{A}{}{m^2}{z}{TRUE}{0}{1}{0}{1000
+000000}{LINEAR}{1}{FALSE}{FALSE}{{0}{10000000}{10}{8000000}{20
+}{5000000}{30}{100000}}}{REALLISTVAR}{{1}{epi_ind}{}{}{z}{TRUE
+}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{0}{1}{4.9}{1}
+{5.1}{0}{30}{0}}}{REALLISTVAR}{{1}{Kz_given}{}{m^2/d}{z}{TRUE}
+{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{0}{10}{4.9}{10
+}{5.1}{0.05}{9.9}{0.05}{10.1}{0.5}{30}{0.5}}}{REALLISTVAR}{{1}
+{vsed}{}{m/d}{z}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{
+FALSE}{{0}{0.1}{5}{0.1}{10}{1}{30}{1}}}{REALLISTVAR}{{1}{water
+_ind}{1 for water column, 0 for all sediment layers}{}{zoneind
+}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{0}{1}{1
+}{0}}}}{PROCSYS}{{DYNPROC}{{1}{mineralization}{}{k_min*X_Algae
+}{{X_Algae}{-1}{X_Inert}{0.2}{C_PO4}{0.8*alpha_P}}}{DYNPROC}{{
+1}{production}{}{water_ind*k_prod*exp(-0.5*z)*C_PO4/(0.01+C_PO
+4)*X_Algae}{{X_Algae}{1}{C_PO4}{-alpha_P}}}}{COMPSYS}{{LAKECOM
+P}{{6}{lake}{}{0}{{C_PO4}{X_Algae}{X_Inert}}{{production}{mine
+ralization}}{TRUE}{{0}{X_Algae}{2*epi_ind+0.3*(1-epi_ind)}}{}{
+0}{}{{PINF}{epi_inp}{}{2.5}{5}{Qin}{{C_PO4}{C_PO4_in}}}{}{32}{
+FALSE}{0.0001}{0.0001}{0.0001}{1000}{0.0001}{100}{0.0001}{100}
+{0.001}{0.001}{0}{30}{7.3e+010}{{C_PO4}{D}}{{X_Algae}{rho_org}
+{vsed}{X_Inert}{rho_org}{vsed}}{A}{1000}{Kz_given}{TRUE}{0}{0}
+{{SEDLAY}{{1}{0.005}{0.8}}{SEDLAY}{{2}{0.01}{0.8}}{SEDLAY}{{3}
+{0.02}{0.8}}}{FALSE}{1}{1}{1.3}{0}{0}{0}{0}{0}{0}{0}}}{LINKSYS
+}{}{CALCSYS}{{CALC}{{2}{calc1}{}{0}{0}{FALSE}{{365}{10}{3650}{
+9}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR}{{2}{365}{32}{0}{TRUE}{5}{
+1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{4}{SPACE}}{PLOTFILOPT}
+{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}
+{FALSE}}{PLOTSCROPT}{{1}{450}{310}{20}{20}{20}{10}{40}{20}{14}
+{10}{12}}{PLOT}{{2}{A}{}{Area profile}{z [m]}{A [m^2]}{SPACE}{
+0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{100000000}{TRUE}
+{0}{TRUE}{10000000}{TRUE}{{A}{0}{lake}{0}{0}{FALSE}{VAL}{}{}{T
+RUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Algae_sed1}
+{}{Algae profile sediment layer 1}{z [m]}{Algae [g/m^3]}{SPACE
+}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{5000}{TRUE}{0}
+{TRUE}{1000}{TRUE}{{X_Algae}{0}{lake}{1}{0}{FALSE}{VAL}{}{t=0d
+}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{1}
+{365}{FALSE}{VAL}{}{t=365d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{
+6}{BLA}{X_Algae}{0}{lake}{1}{730}{FALSE}{VAL}{}{t=730d}{TRUE}{
+DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{1}{1095}{
+FALSE}{VAL}{}{t=1095d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BL
+A}{X_Algae}{0}{lake}{1}{1460}{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT
+}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{1}{1825}{FALS
+E}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{X_A
+lgae}{0}{lake}{1}{3650}{FALSE}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{B
+LA}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{1}{36500}{FALSE}{VA
+L}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT
+}{{2}{Algae_sed2}{}{Algae profile sediment layer 2}{z [m]}{Alg
+ae [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRU
+E}{200}{TRUE}{0}{TRUE}{50}{TRUE}{{X_Algae}{0}{lake}{2}{0}{FALS
+E}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Alga
+e}{0}{lake}{2}{365}{FALSE}{VAL}{}{t=365d}{TRUE}{LDASH}{2}{RED}
+{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{2}{730}{FALSE}{VAL}{}{
+t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{l
+ake}{2}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{SDASH}{2}{BLU}{FALS
+E}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{2}{1460}{FALSE}{VAL}{}{t=14
+60d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}
+{2}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIR
+C}{6}{BLA}{X_Algae}{0}{lake}{2}{3650}{FALSE}{VAL}{}{t=3650d}{T
+RUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{2}{36
+500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{
+6}{BLA}}}{PLOT}{{2}{Algae_sed3}{}{Algae profile sediment layer
+ 3}{z [m]}{Algae [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5
+}{TRUE}{0}{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{TRUE}{{X_Algae}{0}{l
+ake}{3}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}
+{6}{BLA}{X_Algae}{0}{lake}{3}{365}{FALSE}{VAL}{}{t=365d}{TRUE}
+{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{3}{730}
+{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA
+}{X_Algae}{0}{lake}{3}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{SDAS
+H}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{3}{1460}{FAL
+SE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_
+Algae}{0}{lake}{3}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{
+MAG}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{3}{3650}{FALSE}{VA
+L}{}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Algae}
+{0}{lake}{3}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED
+}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Algae_water}{}{Algae profil
+e water column}{z [m]}{Algae [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE
+}{0}{TRUE}{5}{TRUE}{0}{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{TRUE}{{X
+_Algae}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{
+FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{0}{365}{FALSE}{VAL}{}{t
+=365d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{l
+ake}{0}{730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{
+CIRC}{6}{BLA}{X_Algae}{0}{lake}{0}{1095}{FALSE}{VAL}{}{t=1095d
+}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{
+0}{1460}{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC
+}{6}{BLA}{X_Algae}{0}{lake}{0}{1825}{FALSE}{VAL}{}{t=1825d}{TR
+UE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{X_Algae}{0}{lake}{0}{365
+0}{FALSE}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{B
+LA}{X_Algae}{0}{lake}{0}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{
+DASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Inert_sed1}{}{I
+nert profile sediment layer 1}{z [m]}{Inert [g/m^3]}{SPACE}{0}
+{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{20000}{TRUE}{0}{TR
+UE}{5000}{TRUE}{{X_Inert}{0}{lake}{1}{0}{FALSE}{VAL}{}{t=0d}{T
+RUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{1}{36
+5}{FALSE}{VAL}{}{t=365d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{
+BLA}{X_Inert}{0}{lake}{1}{730}{FALSE}{VAL}{}{t=730d}{TRUE}{DAS
+H}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{1}{1095}{FAL
+SE}{VAL}{}{t=1095d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{
+X_Inert}{0}{lake}{1}{1460}{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2
+}{CYA}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{1}{1825}{FALSE}{
+VAL}{}{t=1825d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{X_Iner
+t}{0}{lake}{1}{3650}{FALSE}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{BLA}
+{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{1}{36500}{FALSE}{VAL}{
+}{t=36500d}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{
+2}{Inert_sed2}{}{Inert profile sediment layer 2}{z [m]}{Inert 
+[g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{
+20000}{TRUE}{0}{TRUE}{5000}{TRUE}{{X_Inert}{0}{lake}{2}{0}{FAL
+SE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Ine
+rt}{0}{lake}{2}{365}{FALSE}{VAL}{}{t=365d}{TRUE}{LDASH}{2}{RED
+}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{2}{730}{FALSE}{VAL}{}
+{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{
+lake}{2}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{SDASH}{2}{BLU}{FAL
+SE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{2}{1460}{FALSE}{VAL}{}{t=1
+460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake
+}{2}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{MAG}{FALSE}{CI
+RC}{6}{BLA}{X_Inert}{0}{lake}{2}{3650}{FALSE}{VAL}{}{t=3650d}{
+TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{2}{3
+6500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}
+{6}{BLA}}}{PLOT}{{2}{Inert_sed3}{}{Inert profile sediment laye
+r 3}{z [m]}{Inert [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{
+5}{TRUE}{0}{TRUE}{20000}{TRUE}{0}{TRUE}{5000}{TRUE}{{X_Inert}{
+0}{lake}{3}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{C
+IRC}{6}{BLA}{X_Inert}{0}{lake}{3}{365}{FALSE}{VAL}{}{t=365d}{T
+RUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{3}{
+730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}
+{BLA}{X_Inert}{0}{lake}{3}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{
+SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{3}{1460}
+{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA
+}{X_Inert}{0}{lake}{3}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}
+{2}{MAG}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{3}{3650}{FALSE
+}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_In
+ert}{0}{lake}{3}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}
+{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Inert_water}{}{Inert pr
+ofile water column}{z [m]}{Inert [g/m^3]}{SPACE}{0}{TRUE}{30}{
+TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{0.01}{TRUE}{0}{TRUE}{0.001}{T
+RUE}{{X_Inert}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2
+}{BLA}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{0}{365}{FALSE}{V
+AL}{}{t=365d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_Iner
+t}{0}{lake}{0}{730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{
+FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{0}{1095}{FALSE}{VAL}{}{
+t=1095d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}
+{lake}{0}{1460}{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALS
+E}{CIRC}{6}{BLA}{X_Inert}{0}{lake}{0}{1825}{FALSE}{VAL}{}{t=18
+25d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{X_Inert}{0}{lake}
+{0}{3650}{FALSE}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIR
+C}{6}{BLA}{X_Inert}{0}{lake}{0}{36500}{FALSE}{VAL}{}{t=36500d}
+{TRUE}{DASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{PO4_sed1
+}{}{PO4 profile sediment layer 1}{z [m]}{PO4 [gP/m^3]}{SPACE}{
+0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{0.4}{TRUE}{0}{TR
+UE}{0.05}{TRUE}{{C_PO4}{0}{lake}{1}{0}{FALSE}{VAL}{}{t=0d}{TRU
+E}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{1}{365}{F
+ALSE}{VAL}{}{t=365d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}
+{C_PO4}{0}{lake}{1}{730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{
+GRE}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{1}{1095}{FALSE}{VAL}
+{}{t=1095d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0
+}{lake}{1}{1460}{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FAL
+SE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{1}{1825}{FALSE}{VAL}{}{t=182
+5d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{1}
+{3650}{FALSE}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{
+6}{BLA}{C_PO4}{0}{lake}{1}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE
+}{DASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{PO4_sed2}{}{P
+O4 profile sediment layer 2}{z [m]}{PO4 [g/m^3]}{SPACE}{0}{TRU
+E}{30}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{0.25}{TRUE}{0}{TRUE}{0
+.05}{TRUE}{{C_PO4}{0}{lake}{2}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SO
+L}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{2}{365}{FALSE}
+{VAL}{}{t=365d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_PO
+4}{0}{lake}{2}{730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{
+FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{2}{1095}{FALSE}{VAL}{}{t=
+1095d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lak
+e}{2}{1460}{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{C
+IRC}{6}{BLA}{C_PO4}{0}{lake}{2}{1825}{FALSE}{VAL}{}{t=1825d}{T
+RUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{2}{3650
+}{FALSE}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BL
+A}{C_PO4}{0}{lake}{2}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DAS
+H}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{PO4_sed3}{}{PO4 pr
+ofile sediment layer 3}{z [m]}{PO4 [gP/m^3]}{SPACE}{0}{TRUE}{3
+0}{TRUE}{0}{TRUE}{5}{TRUE}{0}{TRUE}{2.5}{TRUE}{0}{TRUE}{0.5}{T
+RUE}{{C_PO4}{0}{lake}{3}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{
+BLA}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{3}{365}{FALSE}{VAL}{
+}{t=365d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{
+lake}{3}{730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}
+{CIRC}{6}{BLA}{C_PO4}{0}{lake}{3}{1095}{FALSE}{VAL}{}{t=1095d}
+{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{3}{
+1460}{FALSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6
+}{BLA}{C_PO4}{0}{lake}{3}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{L
+DD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{3}{3650}{FALS
+E}{VAL}{}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_P
+O4}{0}{lake}{3}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{
+RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{PO4_water}{}{PO4 profile
+ water column}{z [m]}{PO4 [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0
+}{TRUE}{5}{TRUE}{0}{TRUE}{0.35}{TRUE}{0}{TRUE}{0.05}{TRUE}{{C_
+PO4}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FAL
+SE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{0}{365}{FALSE}{VAL}{}{t=365d
+}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{0}
+{730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6
+}{BLA}{C_PO4}{0}{lake}{0}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{S
+DASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{0}{1460}{FA
+LSE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{C
+_PO4}{0}{lake}{0}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{M
+AG}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{lake}{0}{3650}{FALSE}{VAL}{
+}{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{C_PO4}{0}{l
+ake}{0}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FAL
+SE}{CIRC}{6}{BLA}}}{PLOT}{{2}{Xtot_sed1}{}{Xtot profile sedime
+nt layer 1}{z [m]}{Xtot [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{
+TRUE}{5}{TRUE}{0}{TRUE}{20000}{TRUE}{0}{TRUE}{5000}{TRUE}{{X_t
+ot}{0}{lake}{1}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALS
+E}{CIRC}{6}{BLA}{X_tot}{0}{lake}{1}{365}{FALSE}{VAL}{}{t=365d}
+{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{1}{
+730}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}
+{BLA}{X_tot}{0}{lake}{1}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{SD
+ASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{1}{1460}{FAL
+SE}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_
+tot}{0}{lake}{1}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{MA
+G}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{1}{3650}{FALSE}{VAL}{}
+{t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{la
+ke}{1}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FALS
+E}{CIRC}{6}{BLA}}}{PLOT}{{2}{Xtot_sed2}{}{Xtot profile sedimen
+t layer 2}{z [m]}{Xtot [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{T
+RUE}{5}{TRUE}{0}{TRUE}{20000}{TRUE}{0}{TRUE}{5000}{TRUE}{{X_to
+t}{0}{lake}{2}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE
+}{CIRC}{6}{BLA}{X_tot}{0}{lake}{2}{365}{FALSE}{VAL}{}{t=365d}{
+TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{2}{7
+30}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{
+BLA}{X_tot}{0}{lake}{2}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{SDA
+SH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{2}{1460}{FALS
+E}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_t
+ot}{0}{lake}{2}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{MAG
+}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{2}{3650}{FALSE}{VAL}{}{
+t=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lak
+e}{2}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FALSE
+}{CIRC}{6}{BLA}}}{PLOT}{{2}{Xtot_sed3}{}{Xtot profile sediment
+ layer 3}{z [m]}{Xtot [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TR
+UE}{5}{TRUE}{0}{TRUE}{20000}{TRUE}{0}{TRUE}{5000}{TRUE}{{X_tot
+}{0}{lake}{3}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}
+{CIRC}{6}{BLA}{X_tot}{0}{lake}{3}{365}{FALSE}{VAL}{}{t=365d}{T
+RUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{3}{73
+0}{FALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{B
+LA}{X_tot}{0}{lake}{3}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{SDAS
+H}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{3}{1460}{FALSE
+}{VAL}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_to
+t}{0}{lake}{3}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{MAG}
+{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{3}{3650}{FALSE}{VAL}{}{t
+=3650d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake
+}{3}{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FALSE}
+{CIRC}{6}{BLA}}}{PLOT}{{2}{Xtot_water}{}{Xtot profile water co
+lumn}{z [m]}{Xtot [g/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{
+5}{TRUE}{0}{TRUE}{0.01}{TRUE}{0}{TRUE}{0.001}{TRUE}{{X_tot}{0}
+{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIR
+C}{6}{BLA}{X_tot}{0}{lake}{0}{365}{FALSE}{VAL}{}{t=365d}{TRUE}
+{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{0}{730}{F
+ALSE}{VAL}{}{t=730d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{
+X_tot}{0}{lake}{0}{1095}{FALSE}{VAL}{}{t=1095d}{TRUE}{SDASH}{2
+}{BLU}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{0}{1460}{FALSE}{VA
+L}{}{t=1460d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{X_tot}{0
+}{lake}{0}{1825}{FALSE}{VAL}{}{t=1825d}{TRUE}{LDD}{2}{MAG}{FAL
+SE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{0}{3650}{FALSE}{VAL}{}{t=365
+0d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{X_tot}{0}{lake}{0}
+{36500}{FALSE}{VAL}{}{t=36500d}{TRUE}{DASH}{2}{RED}{FALSE}{CIR
+C}{6}{BLA}}}}{STATESYS}{}}

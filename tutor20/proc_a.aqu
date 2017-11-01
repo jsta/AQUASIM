@@ -1,0 +1,21 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{TRUE}}{VARSYS}{{STATEVAR}
+{{1}{C_A}{Concentration of substance A}{mg/l}{VOL}{1e-006}{1e-
+006}}{FORMVAR}{{1}{C_Aini}{Initial concentration of substance 
+A}{mg/l}{1}}{FORMVAR}{{1}{k_A}{Degradation rate constant for s
+ubstance A}{1/h}{1}}}{PROCSYS}{{DYNPROC}{{1}{Degradation_A}{}{
+k_A*C_A}{{C_A}{-1}}}}{COMPSYS}{{MIXCOMP}{{4}{Reactor}{}{0}{{C_
+A}}{{Degradation_A}}{TRUE}{0}{}{{0}{C_A}{C_Aini}}{TRUE}{10}{}{
+0.001}{0.001}{0.001}{0.001}}}{LINKSYS}{}{CALCSYS}{{CALC}{{2}{C
+alculation}{}{0}{0}{FALSE}{{0.1}{100}}{TRUE}{FALSE}}}{FITSYS}{
+}{NUMPAR}{{2}{1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLO
+TLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.
+5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{450}
+{300}{25}{25}{25}{25}{25}{20}{14}{10}{12}}{PLOT}{{2}{Conc}{}{C
+oncentration of A}{time [h]}{C [mg/l]}{TIME}{0}{TRUE}{10}{TRUE
+}{0}{TRUE}{1}{TRUE}{0}{TRUE}{1}{TRUE}{0}{TRUE}{0.1}{TRUE}{{C_A
+}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{
+CIRC}{6}{BLA}}}}{STATESYS}{}}

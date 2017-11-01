@@ -1,0 +1,21 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{STATEVAR
+}{{1}{C}{}{mg/l}{VOL}{1e-006}{1e-006}}{FORMVAR}{{1}{period}{}{
+h}{1}}{FORMVAR}{{1}{Qin}{}{l/h}{1}}{PROGVAR}{{1}{t}{}{h}{T}}{F
+ORMVAR}{{1}{t_period}{}{h}{t mod period}}{REALLISTVAR}{{1}{Cin
+}{}{mg/l}{t_period}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALS
+E}{FALSE}{{0}{0}{0.001}{100}{0.01}{100}{0.011}{0}}}}{PROCSYS}{
+}{COMPSYS}{{MIXCOMP}{{4}{reactor}{}{0}{{C}}{}{TRUE}{Qin}{{C}{Q
+in*Cin}}{}{TRUE}{1}{}{0.001}{0.001}{0.001}{0.001}}}{LINKSYS}{}
+{CALCSYS}{{CALC}{{2}{calc}{}{0}{0}{FALSE}{{0.01}{1000}}{TRUE}{
+FALSE}}}{FITSYS}{}{NUMPAR}{{2}{0.01}{1000}{0}{TRUE}{5}{1000}{0
+.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{4}{TAB}}{PLOTFILOPT}{{2}{A4}{
+TRUE}{1}{1}{1}{1}{2.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{
+PLOTSCROPT}{{1}{450}{300}{25}{25}{25}{25}{50}{20}{14}{10}{12}}
+{PLOT}{{2}{C}{}{Concentration time series}{t [h]}{C [mg/l]}{TI
+ME}{0}{TRUE}{10}{TRUE}{0}{TRUE}{1}{TRUE}{0}{TRUE}{2}{TRUE}{0}{
+TRUE}{0.5}{TRUE}{{C}{0}{reactor}{0}{0}{FALSE}{VAL}{}{C reactor
+}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

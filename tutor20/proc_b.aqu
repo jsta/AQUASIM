@@ -1,0 +1,31 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{TRUE}}{VARSYS}{{STATEVAR}
+{{1}{C_A}{Concentration of substance A}{mg/l}{VOL}{1e-006}{1e-
+006}}{FORMVAR}{{1}{C_Aini}{Initial concentration of substance 
+A}{mg/l}{1}}{STATEVAR}{{1}{C_B}{Concentration of substance B}{
+mg/l}{VOL}{1e-006}{1e-006}}{STATEVAR}{{1}{C_C}{Concentration o
+f substance C}{mg/l}{VOL}{1e-006}{1e-006}}{FORMVAR}{{1}{k_A}{D
+egradation rate constant for substance A}{1/h}{1}}{FORMVAR}{{1
+}{K_B}{Half saturation concentration for conversion of B to C}
+{mg/l}{0.5}}{FORMVAR}{{1}{rmax_B}{Maximum conversion rate of s
+ubstance B}{mg/l/h}{0.25}}}{PROCSYS}{{DYNPROC}{{1}{Conversion_
+AB}{Conversion of substance A to B}{k_A*C_A}{{C_A}{-1}{C_B}{0.
+5}}}{DYNPROC}{{1}{Conversion_BC}{Conversion of substance B to 
+C}{rmax_B*C_B/(K_B+C_B)}{{C_B}{-1}{C_C}{2}}}}{COMPSYS}{{MIXCOM
+P}{{4}{Reactor}{}{0}{{C_A}{C_B}{C_C}}{{Conversion_AB}{Conversi
+on_BC}}{TRUE}{0}{}{{0}{C_A}{C_Aini}}{TRUE}{10}{}{0.001}{0.001}
+{0.001}{0.001}}}{LINKSYS}{}{CALCSYS}{{CALC}{{2}{Calculation}{}
+{0}{0}{FALSE}{{0.1}{100}}{TRUE}{FALSE}}}{FITSYS}{}{NUMPAR}{{2}
+{1}{1000}{0}{TRUE}{5}{1000}{0.005}}{PLOTSYS}{{PLOTLISOPT}{{1}{
+4}{TAB}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}{2.5}{2}{4}{10}{
+8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{450}{300}{25}{25}
+{25}{25}{25}{20}{14}{10}{12}}{PLOT}{{2}{Conc}{}{Concentration 
+of A}{time [h]}{C [mg/l]}{TIME}{0}{TRUE}{10}{TRUE}{0}{TRUE}{1}
+{TRUE}{0}{TRUE}{1}{TRUE}{0}{TRUE}{0.5}{TRUE}{{C_A}{0}{Reactor}
+{0}{0}{FALSE}{VAL}{}{C_A}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{B
+LA}{C_B}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{C_B}{TRUE}{DASH}{2}{R
+ED}{FALSE}{CIRC}{6}{BLA}{C_C}{0}{Reactor}{0}{0}{FALSE}{VAL}{}{
+C_C}{TRUE}{DOT}{2}{BLU}{FALSE}{CIRC}{6}{BLA}}}}{STATESYS}{}}

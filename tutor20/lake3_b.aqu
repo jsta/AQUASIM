@@ -1,0 +1,149 @@
+
+AQUASIM
+Version 2.0 (win/mfc)
+
+{AQUASYS}{{OPTIONS}{{3}{SECANT}{100}{FALSE}}{VARSYS}{{FORMVAR}
+{{1}{c}{}{J/(kgK)}{4186}}{FORMVAR}{{1}{c1}{}{}{1.44}}{FORMVAR}
+{{1}{c10}{}{}{0.001}}{FORMVAR}{{1}{c2}{}{}{1.92}}{FORMVAR}{{1}
+{c3}{}{}{0}}{FORMVAR}{{1}{cmu}{}{}{0.09}}{PROGVAR}{{1}{dAdz}{}
+{m}{DADZ}}{PROGVAR}{{1}{eps}{}{m^2/d^3}{EPS}}{FORMVAR}{{1}{eps
+_ini}{}{m^2/d^3}{1e+008}}{PROGVAR}{{1}{G}{}{m^2/d^3}{BUOP}}{FO
+RMVAR}{{1}{H}{}{W/m^2}{100}}{FORMVAR}{{1}{Kz_min}{}{m^2/d}{0.0
+5}}{FORMVAR}{{1}{lambda}{}{1/m}{0.5}}{FORMVAR}{{1}{log_eps}{}{
+log10(m^2/s^3)}{log10(eps/86400^3)}}{PROGVAR}{{1}{N2}{}{1/d^2}
+{N2}}{PROGVAR}{{1}{P}{}{m^2/d^3}{SHEARP}}{FORMVAR}{{1}{Pr}{}{}
+{1}}{FORMVAR}{{1}{rho_air}{}{kg/m^3}{1.2}}{STATEVAR}{{1}{T}{}{
+degC}{VOL}{1e-006}{1e-006}}{PROGVAR}{{1}{t}{}{d}{T}}{FORMVAR}{
+{1}{tau_seiche}{}{d}{3}}{PROGVAR}{{1}{tke}{}{m^2/d^2}{TKE}}{FO
+RMVAR}{{1}{tke_ini}{}{m^2/d^2}{100000}}{PROGVAR}{{1}{Uprog}{}{
+m/d}{UH}}{FORMVAR}{{1}{V}{}{m^3}{1.805e+008}}{FORMVAR}{{1}{w10
+}{}{m/s}{2.5*sin(2*pi*t)}}{PROGVAR}{{1}{z}{}{m}{Z}}{REALLISTVA
+R}{{1}{A}{}{m^2}{z}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALS
+E}{FALSE}{{0}{10000000}{10}{8000000}{20}{5000000}{30}{100000}}
+}{FORMVAR}{{1}{Kz}{Turbulent diffusivity}{m^2/d}{max(cmu*tke^2
+/eps/Pr,Kz_min)}}{FORMVAR}{{1}{log_Kz}{}{log10(m^2/s)}{log10(K
+z/86400)}}{FORMVAR}{{1}{log_tke}{}{log10(m^2/s^2)}{log10(tke/8
+6400^2)}}{FORMVAR}{{1}{rho_water}{}{kg/m^3}{999.843+0.001*(65.
+4891*T-8.56272*T^2+0.059385*T^3)}}{REALLISTVAR}{{1}{T_ini}{}{d
+egC}{z}{TRUE}{0}{1}{0}{1000000000}{LINEAR}{1}{FALSE}{FALSE}{{0
+}{5.2}{30}{4.8}}}{FORMVAR}{{1}{U}{}{m/s}{Uprog/86400}}}{PROCSY
+S}{{DYNPROC}{{1}{Heating}{Heating of water column by solar rad
+iation}{H/(rho_water*c)*86400*lambda*exp(-lambda*z)}{{T}{1}}}}
+{COMPSYS}{{LAKECOMP}{{6}{lake}{}{0}{{T}}{{Heating}}{TRUE}{{0}{
+T}{T_ini}{0}{tke}{tke_ini}{0}{eps}{eps_ini}}{}{0}{}{}{}{32}{FA
+LSE}{0.001}{10}{0.001}{10}{0.001}{0}{0.001}{0}{0.001}{0.001}{0
+}{30}{7.3e+010}{}{}{A}{rho_water}{Kz}{FALSE}{0}{0}{}{TRUE}{Pr}
+{1}{1.3}{0.05}{rho_air*c10*(w10*86400)^2*sign(w10)}{0}{0}{0}{0
+}{c1*(P+c3*G)*eps/tke-c2*eps^2/tke}}}{LINKSYS}{}{CALCSYS}{{CAL
+C}{{2}{calc1}{}{0}{0}{FALSE}{{0.1}{101}}{TRUE}{FALSE}}}{FITSYS
+}{}{NUMPAR}{{2}{1}{12}{0}{TRUE}{5}{10000}{0.005}}{PLOTSYS}{{PL
+OTLISOPT}{{1}{4}{SPACE}}{PLOTFILOPT}{{2}{A4}{TRUE}{1}{1}{1}{1}
+{2.5}{2}{4}{10}{8}{8}{8}{TRUE}{TRUE}{FALSE}}{PLOTSCROPT}{{1}{4
+50}{300}{25}{25}{25}{25}{40}{20}{14}{10}{12}}{PLOT}{{2}{A}{}{A
+rea profile}{z [m]}{A [m^2]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE
+}{5}{TRUE}{0}{TRUE}{10000000}{TRUE}{0}{TRUE}{1000000}{TRUE}{{A
+}{0}{lake}{0}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{CIR
+C}{6}{BLA}}}{PLOT}{{2}{dAdz}{}{Area gradient profile}{z [m]}{d
+Adz [m]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{-500000}{
+TRUE}{-200000}{TRUE}{-500000}{TRUE}{50000}{TRUE}{{dAdz}{0}{lak
+e}{0}{0}{FALSE}{VAL}{}{}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BL
+A}}}{PLOT}{{2}{eps}{}{Eps profile}{z [m]}{log10(eps) [log10(m^
+2/s^3)]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{-20}{TRUE
+}{0}{TRUE}{-20}{TRUE}{5}{TRUE}{{log_eps}{0}{lake}{0}{0}{FALSE}
+{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{log_eps}
+{0}{lake}{0}{1}{FALSE}{VAL}{}{t=1d}{TRUE}{LDASH}{2}{RED}{FALSE
+}{CIRC}{6}{BLA}{log_eps}{0}{lake}{0}{2}{FALSE}{VAL}{}{t=2d}{TR
+UE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{log_eps}{0}{lake}{0}{3}
+{FALSE}{VAL}{}{t=3d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6}{BLA}
+{log_eps}{0}{lake}{0}{4}{FALSE}{VAL}{}{t=4d}{TRUE}{DOT}{2}{CYA
+}{FALSE}{CIRC}{6}{BLA}{log_eps}{0}{lake}{0}{5}{FALSE}{VAL}{}{t
+=5d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{log_eps}{0}{lake}
+{0}{10}{FALSE}{VAL}{}{t=10d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6
+}{BLA}}}{PLOT}{{2}{Kz}{}{Diffusivity profile}{z [m]}{log10(Kz)
+ [log10(m^2/d)]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{-
+6.5}{TRUE}{-3.5}{TRUE}{-6.5}{TRUE}{0.5}{TRUE}{{log_Kz}{0}{lake
+}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}
+{BLA}{log_Kz}{0}{lake}{0}{1}{FALSE}{VAL}{}{t=1d}{TRUE}{LDASH}{
+2}{RED}{FALSE}{CIRC}{6}{BLA}{log_Kz}{0}{lake}{0}{2}{FALSE}{VAL
+}{}{t=2d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{log_Kz}{0}{
+lake}{0}{3}{FALSE}{VAL}{}{t=3d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CI
+RC}{6}{BLA}{log_Kz}{0}{lake}{0}{4}{FALSE}{VAL}{}{t=4d}{TRUE}{D
+OT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{log_Kz}{0}{lake}{0}{5}{FALSE}
+{VAL}{}{t=5d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{log_Kz}{
+0}{lake}{0}{10}{FALSE}{VAL}{}{t=10d}{TRUE}{SDD}{2}{BLA}{FALSE}
+{CIRC}{6}{BLA}}}{PLOT}{{2}{N2}{}{Stability frequency profile}{
+z [m]}{log10(N2) [log10(1/d^2)]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{
+TRUE}{5}{TRUE}{0}{TRUE}{5000000}{TRUE}{0}{TRUE}{1000000}{TRUE}
+{{N2}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FA
+LSE}{CIRC}{6}{BLA}{N2}{0}{lake}{0}{1}{FALSE}{VAL}{}{t=1d}{TRUE
+}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{N2}{0}{lake}{0}{2}{FALSE
+}{VAL}{}{t=2d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{N2}{0}
+{lake}{0}{3}{FALSE}{VAL}{}{t=3d}{TRUE}{SDASH}{2}{BLU}{FALSE}{C
+IRC}{6}{BLA}{N2}{0}{lake}{0}{4}{FALSE}{VAL}{}{t=4d}{TRUE}{DOT}
+{2}{CYA}{FALSE}{CIRC}{6}{BLA}{N2}{0}{lake}{0}{5}{FALSE}{VAL}{}
+{t=5d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{N2}{0}{lake}{0}
+{10}{FALSE}{VAL}{}{t=10d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{B
+LA}{N2}{0}{lake}{0}{20}{FALSE}{VAL}{}{t=20d}{TRUE}{SDD}{2}{RED
+}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{rho}{}{Density profile}{z [
+m]}{rho [kg/m^3]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{
+999.75}{TRUE}{1000}{TRUE}{999.75}{TRUE}{0.05}{TRUE}{{rho_water
+}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}
+{CIRC}{6}{BLA}{rho_water}{0}{lake}{0}{1}{FALSE}{VAL}{}{t=1d}{T
+RUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{rho_water}{0}{lake}{0
+}{2}{FALSE}{VAL}{}{t=2d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{B
+LA}{rho_water}{0}{lake}{0}{3}{FALSE}{VAL}{}{t=3d}{TRUE}{SDASH}
+{2}{BLU}{FALSE}{CIRC}{6}{BLA}{rho_water}{0}{lake}{0}{4}{FALSE}
+{VAL}{}{t=4d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{rho_wate
+r}{0}{lake}{0}{5}{FALSE}{VAL}{}{t=5d}{TRUE}{LDD}{2}{MAG}{FALSE
+}{CIRC}{6}{BLA}{rho_water}{0}{lake}{0}{10}{FALSE}{VAL}{}{t=10d
+}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{rho_water}{0}{lake}{
+0}{20}{FALSE}{VAL}{}{t=20d}{TRUE}{SDD}{2}{RED}{FALSE}{CIRC}{6}
+{BLA}}}{PLOT}{{2}{T}{}{Temperature profile}{z [m]}{T [degC]}{S
+PACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{4}{TRUE}{10}{TRUE}{
+4}{TRUE}{1}{TRUE}{{T}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}
+{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{T}{0}{lake}{0}{1}{FALSE}{VA
+L}{}{t=1d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{T}{0}{lak
+e}{0}{2}{FALSE}{VAL}{}{t=2d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{
+6}{BLA}{T}{0}{lake}{0}{3}{FALSE}{VAL}{}{t=3d}{TRUE}{SDASH}{2}{
+BLU}{FALSE}{CIRC}{6}{BLA}{T}{0}{lake}{0}{4}{FALSE}{VAL}{}{t=4d
+}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{T}{0}{lake}{0}{5}{FA
+LSE}{VAL}{}{t=5d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{T}{0
+}{lake}{0}{10}{FALSE}{VAL}{}{t=10d}{TRUE}{SDD}{2}{BLA}{FALSE}{
+CIRC}{6}{BLA}{T}{0}{lake}{0}{20}{FALSE}{VAL}{}{t=20d}{TRUE}{SD
+D}{2}{RED}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{tke}{}{Tke profile
+}{z [m]}{log10(tke) [log10(m^2/s^2)]}{SPACE}{0}{TRUE}{30}{TRUE
+}{0}{TRUE}{5}{TRUE}{-12}{TRUE}{-4}{TRUE}{-12}{TRUE}{1}{TRUE}{{
+log_tke}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}
+{FALSE}{CIRC}{6}{BLA}{log_tke}{0}{lake}{0}{1}{FALSE}{VAL}{}{t=
+1d}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{log_tke}{0}{lake
+}{0}{2}{FALSE}{VAL}{}{t=2d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6
+}{BLA}{log_tke}{0}{lake}{0}{3}{FALSE}{VAL}{}{t=3d}{TRUE}{SDASH
+}{2}{BLU}{FALSE}{CIRC}{6}{BLA}{log_tke}{0}{lake}{0}{4}{FALSE}{
+VAL}{}{t=4d}{TRUE}{DOT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{log_tke}{
+0}{lake}{0}{5}{FALSE}{VAL}{}{t=5d}{TRUE}{LDD}{2}{MAG}{FALSE}{C
+IRC}{6}{BLA}{log_tke}{0}{lake}{0}{10}{FALSE}{VAL}{}{t=10d}{TRU
+E}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{BLA}}}{PLOT}{{2}{U}{}{Horizont
+al velocity profile}{z [m]}{U [m/s]}{SPACE}{0}{TRUE}{30}{TRUE}
+{0}{TRUE}{5}{TRUE}{-0.02}{TRUE}{0.015}{TRUE}{-0.02}{TRUE}{0.00
+5}{TRUE}{{U}{0}{lake}{0}{0}{FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{
+BLA}{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}{0}{1}{FALSE}{VAL}{}{t=1d
+}{TRUE}{LDASH}{2}{RED}{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}{0}{2}{
+FALSE}{VAL}{}{t=2d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{U
+}{0}{lake}{0}{3}{FALSE}{VAL}{}{t=3d}{TRUE}{SDASH}{2}{BLU}{FALS
+E}{CIRC}{6}{BLA}{U}{0}{lake}{0}{4}{FALSE}{VAL}{}{t=4d}{TRUE}{D
+OT}{2}{CYA}{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}{0}{5}{FALSE}{VAL}
+{}{t=5d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}{0
+}{10}{FALSE}{VAL}{}{t=10d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIRC}{6}{
+BLA}}}{PLOT}{{2}{U075}{}{Horizontal velocity profile}{z [m]}{U
+ [m/s]}{SPACE}{0}{TRUE}{30}{TRUE}{0}{TRUE}{5}{TRUE}{-0.005}{TR
+UE}{0.02}{TRUE}{-0.005}{TRUE}{0.005}{TRUE}{{U}{0}{lake}{0}{0}{
+FALSE}{VAL}{}{t=0d}{TRUE}{SOL}{2}{BLA}{FALSE}{CIRC}{6}{BLA}{U}
+{0}{lake}{0}{0.75}{FALSE}{VAL}{}{t=0.75d}{TRUE}{LDASH}{2}{RED}
+{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}{0}{1.75}{FALSE}{VAL}{}{t=1.7
+5d}{TRUE}{DASH}{2}{GRE}{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}{0}{2.
+75}{FALSE}{VAL}{}{t=2.75d}{TRUE}{SDASH}{2}{BLU}{FALSE}{CIRC}{6
+}{BLA}{U}{0}{lake}{0}{3.75}{FALSE}{VAL}{}{t=3.75d}{TRUE}{DOT}{
+2}{CYA}{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}{0}{4.75}{FALSE}{VAL}{
+}{t=4.75d}{TRUE}{LDD}{2}{MAG}{FALSE}{CIRC}{6}{BLA}{U}{0}{lake}
+{0}{9.75}{FALSE}{VAL}{}{t=9.75d}{TRUE}{SDD}{2}{BLA}{FALSE}{CIR
+C}{6}{BLA}}}}{STATESYS}{}}
